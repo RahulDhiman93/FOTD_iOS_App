@@ -149,6 +149,10 @@
 		053C9D8750EC7E408E37B346 /* Pods-InforuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InforuTests/Pods-InforuTests.debug.xcconfig"; sourceTree = "<group>"; };
 		069A5BF91FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTestCases.swift; sourceTree = "<group>"; };
 		069A5BFB1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenterTests.swift; sourceTree = "<group>"; };
+		08D2B36322B527E80063B14C /* Inforu-Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Inforu-Dev.xcconfig"; sourceTree = "<group>"; };
+		08D2B36422B527F90063B14C /* Inforu-Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Inforu-Test.xcconfig"; sourceTree = "<group>"; };
+		08D2B36522B528050063B14C /* Inforu-Live.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Inforu-Live.xcconfig"; sourceTree = "<group>"; };
+		186991D1695881F9A7A28226 /* Pods-InforuTests.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuTests.dev.xcconfig"; path = "Pods/Target Support Files/Pods-InforuTests/Pods-InforuTests.dev.xcconfig"; sourceTree = "<group>"; };
 		1F656B6A4A992448FF7A5B7F /* Pods_InforuUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InforuUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF3A8B14BDC27B07A5430F8 /* Pods-CL-Base-MVPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CL-Base-MVPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CL-Base-MVPTests/Pods-CL-Base-MVPTests.release.xcconfig"; sourceTree = "<group>"; };
 		57491605BEFC66BC7F630DB6 /* Pods-CL-Base-MVPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CL-Base-MVPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CL-Base-MVPUITests/Pods-CL-Base-MVPUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,15 +167,23 @@
 		7EDC2C3F816A6D20E7FFE5B7 /* Pods-CL-Base-MVPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CL-Base-MVPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CL-Base-MVPUITests/Pods-CL-Base-MVPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		83CEFB22E1C735882B4D7EAA /* Pods_CL_Base_MVPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CL_Base_MVPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D203B29B770DF7ED530858 /* Pods_CL_Base_MVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CL_Base_MVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9361E98CCA5E29065595CB3E /* Pods-InforuUITests.live.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuUITests.live.xcconfig"; path = "Pods/Target Support Files/Pods-InforuUITests/Pods-InforuUITests.live.xcconfig"; sourceTree = "<group>"; };
 		9E4F1F0F8703738F4DC3D3B3 /* Pods_Inforu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Inforu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E83D388B9898C13BEF666E /* Pods-InforuUITests.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuUITests.dev.xcconfig"; path = "Pods/Target Support Files/Pods-InforuUITests/Pods-InforuUITests.dev.xcconfig"; sourceTree = "<group>"; };
 		A55DBC810D8E94BDA09C174E /* Pods-Inforu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inforu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Inforu/Pods-Inforu.debug.xcconfig"; sourceTree = "<group>"; };
+		A918DE117C03CCDEDECF369D /* Pods-InforuTests.live.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuTests.live.xcconfig"; path = "Pods/Target Support Files/Pods-InforuTests/Pods-InforuTests.live.xcconfig"; sourceTree = "<group>"; };
 		AAFA64051CD14448D8A5F45B /* Pods-InforuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InforuUITests/Pods-InforuUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B2629EEDB452BA95CD13DCD5 /* Pods-CL-Base-MVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CL-Base-MVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CL-Base-MVP/Pods-CL-Base-MVP.debug.xcconfig"; sourceTree = "<group>"; };
 		B34424439521C3545A872D7B /* Pods-InforuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InforuTests/Pods-InforuTests.release.xcconfig"; sourceTree = "<group>"; };
+		B34FAC99E8DE86B145897C16 /* Pods-Inforu.live.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inforu.live.xcconfig"; path = "Pods/Target Support Files/Pods-Inforu/Pods-Inforu.live.xcconfig"; sourceTree = "<group>"; };
 		B4ACB55E71CCDCEF6D8C4B1E /* Pods-CL-Base-MVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CL-Base-MVP.release.xcconfig"; path = "Pods/Target Support Files/Pods-CL-Base-MVP/Pods-CL-Base-MVP.release.xcconfig"; sourceTree = "<group>"; };
+		BB3179A71EED69397D820D1F /* Pods-InforuTests.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuTests.test.xcconfig"; path = "Pods/Target Support Files/Pods-InforuTests/Pods-InforuTests.test.xcconfig"; sourceTree = "<group>"; };
+		C0420E6721D373429BA806E0 /* Pods-Inforu.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inforu.test.xcconfig"; path = "Pods/Target Support Files/Pods-Inforu/Pods-Inforu.test.xcconfig"; sourceTree = "<group>"; };
 		D0CCC027734C3DCB28345FEA /* Pods_InforuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InforuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7AA77A4C30DF27F062DCAE7 /* Pods-Inforu.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inforu.dev.xcconfig"; path = "Pods/Target Support Files/Pods-Inforu/Pods-Inforu.dev.xcconfig"; sourceTree = "<group>"; };
 		E2FFA497B435804BAFD78148 /* Pods_CL_Base_MVPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CL_Base_MVPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78BE5BF811A159CA4929A16 /* Pods-CL-Base-MVPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CL-Base-MVPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CL-Base-MVPTests/Pods-CL-Base-MVPTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EC43B179FE4B3893D5A25A6D /* Pods-InforuUITests.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuUITests.test.xcconfig"; path = "Pods/Target Support Files/Pods-InforuUITests/Pods-InforuUITests.test.xcconfig"; sourceTree = "<group>"; };
 		F46045291FCC2EEA00DC976D /* Inforu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inforu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46045331FCC2EEA00DC976D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F46045381FCC2EEA00DC976D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -308,6 +320,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08D2B36222B527DA0063B14C /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				08D2B36322B527E80063B14C /* Inforu-Dev.xcconfig */,
+				08D2B36422B527F90063B14C /* Inforu-Test.xcconfig */,
+				08D2B36522B528050063B14C /* Inforu-Live.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		47DE0A722C79D9453130798E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +359,15 @@
 				B34424439521C3545A872D7B /* Pods-InforuTests.release.xcconfig */,
 				AAFA64051CD14448D8A5F45B /* Pods-InforuUITests.debug.xcconfig */,
 				FF8D9D2D72E088E9D1A6E039 /* Pods-InforuUITests.release.xcconfig */,
+				D7AA77A4C30DF27F062DCAE7 /* Pods-Inforu.dev.xcconfig */,
+				B34FAC99E8DE86B145897C16 /* Pods-Inforu.live.xcconfig */,
+				C0420E6721D373429BA806E0 /* Pods-Inforu.test.xcconfig */,
+				186991D1695881F9A7A28226 /* Pods-InforuTests.dev.xcconfig */,
+				A918DE117C03CCDEDECF369D /* Pods-InforuTests.live.xcconfig */,
+				BB3179A71EED69397D820D1F /* Pods-InforuTests.test.xcconfig */,
+				A4E83D388B9898C13BEF666E /* Pods-InforuUITests.dev.xcconfig */,
+				9361E98CCA5E29065595CB3E /* Pods-InforuUITests.live.xcconfig */,
+				EC43B179FE4B3893D5A25A6D /* Pods-InforuUITests.test.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -406,6 +437,7 @@
 		F460452B1FCC2EEA00DC976D /* CL-Base-MVP */ = {
 			isa = PBXGroup;
 			children = (
+				08D2B36222B527DA0063B14C /* Config */,
 				F460455F1FCC30E500DC976D /* Model */,
 				F460455E1FCC30DE00DC976D /* View */,
 				F460455C1FCC30D700DC976D /* Controllers */,
@@ -1181,6 +1213,337 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		08D2B35622B527C90063B14C /* Dev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08D2B36322B527E80063B14C /* Inforu-Dev.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Dev;
+		};
+		08D2B35722B527C90063B14C /* Dev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7AA77A4C30DF27F062DCAE7 /* Pods-Inforu.dev.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = BM93ACT257;
+				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.inforu.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "70e8cf61-ec94-4d3b-b689-1bb0fa28f7eb";
+				PROVISIONING_PROFILE_SPECIFIER = "Inforu-Pro-Dev";
+				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Dev;
+		};
+		08D2B35822B527C90063B14C /* Dev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 186991D1695881F9A7A28226 /* Pods-InforuTests.dev.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 7W7G24P7A2;
+				INFOPLIST_FILE = "CL-Base-MVPTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.CL-Base-MVPTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Inforu.app/Inforu";
+			};
+			name = Dev;
+		};
+		08D2B35922B527C90063B14C /* Dev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4E83D388B9898C13BEF666E /* Pods-InforuUITests.dev.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CL-Base-MVPUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.CL-Base-MVPUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "CL-Base-MVP";
+			};
+			name = Dev;
+		};
+		08D2B35A22B527CD0063B14C /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08D2B36422B527F90063B14C /* Inforu-Test.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Test;
+		};
+		08D2B35B22B527CD0063B14C /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0420E6721D373429BA806E0 /* Pods-Inforu.test.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = BM93ACT257;
+				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.inforu.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";
+				PROVISIONING_PROFILE_SPECIFIER = "Inforu-Pro-Appstore";
+				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Test;
+		};
+		08D2B35C22B527CD0063B14C /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB3179A71EED69397D820D1F /* Pods-InforuTests.test.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 7W7G24P7A2;
+				INFOPLIST_FILE = "CL-Base-MVPTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.CL-Base-MVPTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Inforu.app/Inforu";
+			};
+			name = Test;
+		};
+		08D2B35D22B527CD0063B14C /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC43B179FE4B3893D5A25A6D /* Pods-InforuUITests.test.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CL-Base-MVPUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.CL-Base-MVPUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "CL-Base-MVP";
+			};
+			name = Test;
+		};
+		08D2B35E22B527D10063B14C /* Live */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08D2B36522B528050063B14C /* Inforu-Live.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Live;
+		};
+		08D2B35F22B527D10063B14C /* Live */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B34FAC99E8DE86B145897C16 /* Pods-Inforu.live.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = BM93ACT257;
+				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.inforu.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";
+				PROVISIONING_PROFILE_SPECIFIER = "Inforu-Pro-Appstore";
+				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Live;
+		};
+		08D2B36022B527D10063B14C /* Live */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A918DE117C03CCDEDECF369D /* Pods-InforuTests.live.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 7W7G24P7A2;
+				INFOPLIST_FILE = "CL-Base-MVPTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.CL-Base-MVPTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Inforu.app/Inforu";
+			};
+			name = Live;
+		};
+		08D2B36122B527D10063B14C /* Live */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9361E98CCA5E29065595CB3E /* Pods-InforuUITests.live.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CL-Base-MVPUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.CL-Base-MVPUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "CL-Base-MVP";
+			};
+			name = Live;
+		};
 		F460454F1FCC2EEA00DC976D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1409,7 +1772,10 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F460454F1FCC2EEA00DC976D /* Debug */,
+				08D2B35622B527C90063B14C /* Dev */,
 				F46045501FCC2EEA00DC976D /* Release */,
+				08D2B35E22B527D10063B14C /* Live */,
+				08D2B35A22B527CD0063B14C /* Test */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1418,7 +1784,10 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F46045521FCC2EEA00DC976D /* Debug */,
+				08D2B35722B527C90063B14C /* Dev */,
 				F46045531FCC2EEA00DC976D /* Release */,
+				08D2B35F22B527D10063B14C /* Live */,
+				08D2B35B22B527CD0063B14C /* Test */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1427,7 +1796,10 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F46045551FCC2EEA00DC976D /* Debug */,
+				08D2B35822B527C90063B14C /* Dev */,
 				F46045561FCC2EEA00DC976D /* Release */,
+				08D2B36022B527D10063B14C /* Live */,
+				08D2B35C22B527CD0063B14C /* Test */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1436,7 +1808,10 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F46045581FCC2EEA00DC976D /* Debug */,
+				08D2B35922B527C90063B14C /* Dev */,
 				F46045591FCC2EEA00DC976D /* Release */,
+				08D2B36122B527D10063B14C /* Live */,
+				08D2B35D22B527CD0063B14C /* Test */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
