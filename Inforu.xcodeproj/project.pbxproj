@@ -14,6 +14,7 @@
 		0087B3191FCEBFA000748777 /* SignupButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0087B3171FCEBFA000748777 /* SignupButtonCell.xib */; };
 		069A5BFA1FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A5BF91FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift */; };
 		069A5BFC1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A5BFB1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift */; };
+		08D2B36722B52A120063B14C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D2B36622B52A120063B14C /* Config.swift */; };
 		54A5EB57BE31354671834275 /* Pods_InforuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CCC027734C3DCB28345FEA /* Pods_InforuTests.framework */; };
 		6A0C63DF2070EDB000FAB293 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0C63DE2070EDB000FAB293 /* HomeRouter.swift */; };
 		6A2C47242070D6320019244B /* LoginViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C47232070D6320019244B /* LoginViewRouter.swift */; };
@@ -152,6 +153,7 @@
 		08D2B36322B527E80063B14C /* Inforu-Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Inforu-Dev.xcconfig"; sourceTree = "<group>"; };
 		08D2B36422B527F90063B14C /* Inforu-Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Inforu-Test.xcconfig"; sourceTree = "<group>"; };
 		08D2B36522B528050063B14C /* Inforu-Live.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Inforu-Live.xcconfig"; sourceTree = "<group>"; };
+		08D2B36622B52A120063B14C /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		186991D1695881F9A7A28226 /* Pods-InforuTests.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuTests.dev.xcconfig"; path = "Pods/Target Support Files/Pods-InforuTests/Pods-InforuTests.dev.xcconfig"; sourceTree = "<group>"; };
 		1F656B6A4A992448FF7A5B7F /* Pods_InforuUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InforuUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF3A8B14BDC27B07A5430F8 /* Pods-CL-Base-MVPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CL-Base-MVPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CL-Base-MVPTests/Pods-CL-Base-MVPTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 		08D2B36222B527DA0063B14C /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				08D2B36622B52A120063B14C /* Config.swift */,
 				08D2B36322B527E80063B14C /* Inforu-Dev.xcconfig */,
 				08D2B36422B527F90063B14C /* Inforu-Test.xcconfig */,
 				08D2B36522B528050063B14C /* Inforu-Live.xcconfig */,
@@ -1118,6 +1121,7 @@
 				F4975A081FCE9E3900B8BB6C /* CLValidationRules.swift in Sources */,
 				F46045721FCD435500DC976D /* LoginViewController.swift in Sources */,
 				F4975A5A1FCEA01D00B8BB6C /* ValidationRuleSet.swift in Sources */,
+				08D2B36722B52A120063B14C /* Config.swift in Sources */,
 				F49759C81FCE8E0000B8BB6C /* CLAPP+EnvConfig.swift in Sources */,
 				F4975A0E1FCE9E4300B8BB6C /* LocationBackgroundTaskManager.swift in Sources */,
 				F4975A5B1FCEA01D00B8BB6C /* Validator.swift in Sources */,
