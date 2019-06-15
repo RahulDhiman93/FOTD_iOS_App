@@ -54,7 +54,7 @@ extension String {
   
   // Character count
   public var length: Int {
-    return self.characters.count
+    return self.count
   }
   
   // Count of word
@@ -81,7 +81,7 @@ extension String {
   
   // Capitalizes first character of String, returns a new string
   public func capitalizedFirst() -> String {
-    guard characters.count > 0 else {
+    guard self.count > 0 else {
       return self
     }
     var result = self

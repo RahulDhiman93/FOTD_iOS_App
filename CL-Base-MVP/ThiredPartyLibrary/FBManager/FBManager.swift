@@ -181,13 +181,13 @@ class FacebookManager: NSObject, FBSDKSharingDelegate {
   
   // MARK: - Facebook Share Delegate
   func sharer(_ sharer: FBSDKSharing, didFailWithError error: Error?) {
-    UIAlertController.presentAlert(title: "Facebook", message: "Your Facebook post has been failed.", style: UIAlertControllerStyle.alert).action(title: "Ok".localized, style: UIAlertActionStyle.default, handler: { (action: UIAlertAction) in
+    UIAlertController.presentAlert(title: "Facebook", message: "Your Facebook post has been failed.", style: UIAlertController.Style.alert).action(title: "Ok".localized, style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) in
     })
   }
   
   func sharerDidCancel(_ sharer: FBSDKSharing) {
     print("sharer: \(sharer)")
-    UIAlertController.presentAlert(title: "Facebook", message: "Your Facebook post has been cancelled.", style: UIAlertControllerStyle.alert).action(title: "Ok".localized, style: UIAlertActionStyle.default, handler: { (action: UIAlertAction) in
+    UIAlertController.presentAlert(title: "Facebook", message: "Your Facebook post has been cancelled.", style: UIAlertController.Style.alert).action(title: "Ok".localized, style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) in
       
     })
     
@@ -197,7 +197,7 @@ class FacebookManager: NSObject, FBSDKSharingDelegate {
     print("results :\(results)")
     if results.keys.contains("postId") {
       
-      UIAlertController.presentAlert(title: "Facebook", message: "Success! You've shared your refer a friend code on Facebook.", style: UIAlertControllerStyle.alert).action(title: "Ok".localized, style: UIAlertActionStyle.default, handler: { (action: UIAlertAction) in
+        UIAlertController.presentAlert(title: "Facebook", message: "Success! You've shared your refer a friend code on Facebook.", style: UIAlertController.Style.alert).action(title: "Ok".localized, style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) in
         
       })
     }

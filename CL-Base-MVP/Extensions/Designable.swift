@@ -90,7 +90,7 @@ extension UITextField {
             return self.placeHolderColor
         }
         set {
-            self.attributedPlaceholder = NSAttributedString(string: self.placeholder ?? "", attributes:[NSAttributedStringKey.foregroundColor: newValue ?? .gray])
+            self.attributedPlaceholder = NSAttributedString(string: self.placeholder ?? "", attributes:[NSAttributedString.Key.foregroundColor: newValue ?? .gray])
         }
     }
 }

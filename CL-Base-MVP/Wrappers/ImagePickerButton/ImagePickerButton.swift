@@ -58,7 +58,7 @@ class ImagePickerButton: UIButton {
     
     // MARK: Starting
     override func awakeFromNib() {
-        self.addTarget(self, action: #selector(ImagePickerButton.pressAction(_:)), for: UIControlEvents.touchUpInside)
+        self.addTarget(self, action: #selector(ImagePickerButton.pressAction(_:)), for: UIControl.Event.touchUpInside)
     }
     
     deinit {
@@ -130,7 +130,7 @@ class ImagePickerButton: UIButton {
             return
         }
         
-        let actionSheet = UIAlertController(title: "", message: "", preferredStyle: UIAlertControllerStyle.actionSheet)
+        let actionSheet = UIAlertController(title: "", message: "", preferredStyle: UIAlertController.Style.actionSheet)
         
         switch pickertype {
         case .camera:
@@ -162,9 +162,9 @@ class ImagePickerButton: UIButton {
         self.picker?.delegate = self
         
         let cameraAction = UIAlertAction(title: cameraTitle.localized, style: .default, handler: {  (alert: UIAlertAction!) -> Void in
-            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
                 
-                self.picker?.sourceType = UIImagePickerControllerSourceType.camera
+                self.picker?.sourceType = UIImagePickerController.SourceType.camera
                 guard let rootViewController = UIApplication.shared.keyWindow?.rootViewController,
                     let picker = self.picker else {
                         return
@@ -184,8 +184,8 @@ class ImagePickerButton: UIButton {
         self.picker?.delegate = self
         
         let photoLibraryAction = UIAlertAction(title: photoLibraryTitle.localized, style: .default, handler: { (alert: UIAlertAction!) -> Void in
-            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
-                self.picker?.sourceType = UIImagePickerControllerSourceType.photoLibrary
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
+                self.picker?.sourceType = UIImagePickerController.SourceType.photoLibrary
                 guard let rootViewController = UIApplication.shared.keyWindow?.rootViewController,
                     let picker = self.picker else {
                         return
@@ -206,39 +206,39 @@ extension ImagePickerButton: UIImagePickerControllerDelegate { }
 extension ImagePickerButton: UINavigationControllerDelegate {
     
     // MARK: Image Picker Delgates
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+       if let pickedImage = info[.originalImage] as? UIImage {
             
-            guard let image = UIImageJPEGRepresentation(pickedImage, 1.0) else {
-                return
-            }
-            
-            if image.count > highResolutionSize { //high resolution check
-                if let data = UIImageJPEGRepresentation(pickedImage, 0.2) {
-                    do {
-                        try data.write(to: URL(fileURLWithPath: filePath ?? "no Path"), options: .atomic)
-                    } catch {
-                        print(error)
-                    }
-                }
-            } else {
-                if let data = UIImageJPEGRepresentation(pickedImage, 0.4) {
-                    do {
-                        try data.write(to: URL(fileURLWithPath: filePath ?? "no Path"), options: .atomic)
-                    } catch {
-                        print(error)
-                    }
+        guard let image = pickedImage.jpegData(compressionQuality: 1.0) else {
+            return
+        }
+        
+        if image.count > highResolutionSize { //high resolution check
+            if let data = pickedImage.jpegData(compressionQuality: 0.2) {
+                do {
+                    try data.write(to: URL(fileURLWithPath: filePath ?? "no Path"), options: .atomic)
+                } catch {
+                    print(error)
                 }
             }
-            guard let imageCallBack =  self.imageCallBack,
-                let filepath = filePath else {
-                    return
-            }
-            imageCallBack(.success(filepath))
         } else {
-            if let imageCallBack =  self.imageCallBack {
-                imageCallBack(.error(.imageNotPicked))
+            if let data = pickedImage.jpegData(compressionQuality: 0.4) {
+                do {
+                    try data.write(to: URL(fileURLWithPath: filePath ?? "no Path"), options: .atomic)
+                } catch {
+                    print(error)
+                }
             }
+        }
+        guard let imageCallBack =  self.imageCallBack,
+            let filepath = filePath else {
+                return
+        }
+        imageCallBack(.success(filepath))
+       } else {
+        if let imageCallBack =  self.imageCallBack {
+            imageCallBack(.error(.imageNotPicked))
+        }
         }
         
         picker.dismiss(animated: true, completion: nil)

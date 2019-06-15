@@ -391,7 +391,7 @@ class HTTPRequest {
     if self.isAlertEnable == false {
       return
     }
-    UIAlertController.presentAlert(title: "", message: message, style: UIAlertControllerStyle.alert).action(title: "Ok".localized, style: UIAlertActionStyle.default) { (action: UIAlertAction) in
+    UIAlertController.presentAlert(title: "", message: message, style: UIAlertController.Style.alert).action(title: "Ok".localized, style: UIAlertAction.Style.default) { (action: UIAlertAction) in
     }
   }
   

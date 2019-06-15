@@ -45,7 +45,7 @@ final class LoginManager: LoginManagerRoules {
     let headerWithoutAuth = ["utcoffset": appDelegate.timeZoneOffset, "content-language": appDelegate.currentlanguage]
     
     /// Return true for valid access token, otherwise retrun false
-    open var isAccessTokenValid: Bool {
+    public var isAccessTokenValid: Bool {
         if self.me != nil {
             return true
         }

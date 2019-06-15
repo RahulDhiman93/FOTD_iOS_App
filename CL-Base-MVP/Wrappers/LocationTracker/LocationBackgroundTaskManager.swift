@@ -25,7 +25,7 @@ class LocationShareModel {
 class LocationBackgroundTaskManager: NSObject {
   
   var bgTaskIdList = [UIBackgroundTaskIdentifier]()
-  var masterTaskId = UIBackgroundTaskInvalid
+    var masterTaskId = UIBackgroundTaskIdentifier.invalid
   
   static let shared = LocationBackgroundTaskManager()
   
@@ -34,11 +34,11 @@ class LocationBackgroundTaskManager: NSObject {
   func beginNewBackgroundTask() -> UIBackgroundTaskIdentifier {
     
     let application = UIApplication.shared
-    var bgTaskId = UIBackgroundTaskInvalid
+    var bgTaskId = UIBackgroundTaskIdentifier.invalid
     
     bgTaskId = application.beginBackgroundTask {
       
-      let index = self.bgTaskIdList.index(where: { (id: Int) -> Bool in
+        let index = self.bgTaskIdList.firstIndex(where: { (id) -> Bool in
         return (id == bgTaskId)
       })
       
@@ -47,11 +47,11 @@ class LocationBackgroundTaskManager: NSObject {
       }
       
       application.endBackgroundTask(bgTaskId)
-      bgTaskId = UIBackgroundTaskInvalid
+        bgTaskId = UIBackgroundTaskIdentifier.invalid
       
     }
     
-    if self.masterTaskId == UIBackgroundTaskInvalid {
+    if self.masterTaskId == UIBackgroundTaskIdentifier.invalid {
       self.masterTaskId = bgTaskId
     } else {
       self.bgTaskIdList.append(bgTaskId)

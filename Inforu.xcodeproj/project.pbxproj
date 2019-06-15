@@ -1292,7 +1292,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "Inforu-Pro-Dev";
 				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Dev;
@@ -1400,7 +1400,7 @@
 				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";
 				PROVISIONING_PROFILE_SPECIFIER = "Inforu-Pro-Appstore";
 				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Test;
@@ -1508,7 +1508,7 @@
 				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";
 				PROVISIONING_PROFILE_SPECIFIER = "Inforu-Pro-Appstore";
 				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Live;
@@ -1672,7 +1672,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "Inforu-Pro-Dev";
 				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1694,7 +1694,7 @@
 				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";
 				PROVISIONING_PROFILE_SPECIFIER = "Inforu-Pro-Appstore";
 				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

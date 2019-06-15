@@ -22,20 +22,20 @@ extension UIAlertController {
   }
   
   @discardableResult
-  func action(title: String?, style: UIAlertActionStyle, handler: ((UIAlertAction) -> Void)?) -> UIAlertController {
+    func action(title: String?, style: UIAlertAction.Style, handler: ((UIAlertAction) -> Void)?) -> UIAlertController {
     let action: UIAlertAction = UIAlertAction(title: title, style: style, handler: handler)
     self.addAction(action)
     return self
   }
   
   @discardableResult
-  class func alert(title: String?, message: String?, style: UIAlertControllerStyle) -> UIAlertController {
+    class func alert(title: String?, message: String?, style: UIAlertController.Style) -> UIAlertController {
     let alertController: UIAlertController  = UIAlertController(title: title, message: message, preferredStyle: style)
     return alertController
   }
   
   @discardableResult
-  class func presentAlert(title: String?, message: String?, style: UIAlertControllerStyle) -> UIAlertController {
+    class func presentAlert(title: String?, message: String?, style: UIAlertController.Style) -> UIAlertController {
     let alertController = UIAlertController.alert(title: title, message: message, style: style)
     alertController.present()
     return alertController

@@ -56,7 +56,7 @@ class LocationTracker: NSObject {
         self.lastLocation = self.persistentStore.getLastLocation()
         
         //
-        NotificationCenter.default.addObserver(self, selector: #selector(LocationTracker.applicationEnterBackground), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(LocationTracker.applicationEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
         
     }
     
@@ -133,7 +133,7 @@ class LocationTracker: NSObject {
     // function to open the Settings in app
     private func openSettings() {
         if #available(iOS 10.0, *) {
-            if let url = URL(string: UIApplicationOpenSettingsURLString) {
+            if let url = URL(string: UIApplication.openSettingsURLString) {
                 UIApplication.shared.open(url)
             }
         } else {
@@ -254,7 +254,7 @@ extension UIAlertController {
     }
     
     @discardableResult
-    fileprivate class func showAlert(title: String?, message: String?, style: UIAlertControllerStyle) -> UIAlertController {
+    fileprivate class func showAlert(title: String?, message: String?, style: UIAlertController.Style) -> UIAlertController {
         let alertController = UIAlertController.alert(title: title, message: message, style: style)
         alertController.presentAlertController()
         return alertController

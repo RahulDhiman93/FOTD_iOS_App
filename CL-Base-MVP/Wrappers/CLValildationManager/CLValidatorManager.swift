@@ -36,7 +36,7 @@ class CLValidatorManager {
     if let callBack = failedCallBack {
       callBack(message)
     } else {
-      UIAlertController.presentAlert(title: nil, message: message, style: UIAlertControllerStyle.alert).action(title: "Ok".localized, style: UIAlertActionStyle.default, handler: { (action: UIAlertAction) in
+        UIAlertController.presentAlert(title: nil, message: message, style: UIAlertController.Style.alert).action(title: "Ok".localized, style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) in
       })
     }
   }

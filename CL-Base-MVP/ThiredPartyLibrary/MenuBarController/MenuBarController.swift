@@ -167,9 +167,9 @@ extension UIViewController {
 extension UIViewController {
   
   fileprivate func removeChildCotroller(childController: UIViewController) {
-    childController.willMove(toParentViewController: nil)
+    childController.willMove(toParent: nil)
     childController.view.removeFromSuperview()
-    childController.removeFromParentViewController()
+    childController.removeFromParent()
   }
   
   fileprivate func addChildController(childController: UIViewController, onView: UIView?) {
@@ -177,10 +177,10 @@ extension UIViewController {
     if let onView = onView {
       holderView = onView
     }
-    addChildViewController(childController)
+    addChild(childController)
     holderView?.addSubview(childController.view)
     constrainViewEqual(holderView: holderView!, view: childController.view)
-    childController.didMove(toParentViewController: self)
+    childController.didMove(toParent: self)
   }
   
   fileprivate func constrainViewEqual(holderView: UIView, view: UIView) {
