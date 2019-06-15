@@ -14,6 +14,7 @@
 		0087B3191FCEBFA000748777 /* SignupButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0087B3171FCEBFA000748777 /* SignupButtonCell.xib */; };
 		069A5BFA1FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A5BF91FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift */; };
 		069A5BFC1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A5BFB1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift */; };
+		54A5EB57BE31354671834275 /* Pods_InforuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CCC027734C3DCB28345FEA /* Pods_InforuTests.framework */; };
 		6A0C63DF2070EDB000FAB293 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0C63DE2070EDB000FAB293 /* HomeRouter.swift */; };
 		6A2C47242070D6320019244B /* LoginViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C47232070D6320019244B /* LoginViewRouter.swift */; };
 		6A2C47262070E6D80019244B /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C47252070E6D80019244B /* HomeController.swift */; };
@@ -23,15 +24,15 @@
 		6AFF8B56207386A500D4F1C5 /* LandingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFF8B55207386A500D4F1C5 /* LandingPresenter.swift */; };
 		6AFF8B58207386BC00D4F1C5 /* LandingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFF8B57207386BC00D4F1C5 /* LandingRouter.swift */; };
 		6AFF8B5A20739AE100D4F1C5 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFF8B5920739AE100D4F1C5 /* SignUpRouter.swift */; };
+		81CD391192B27A172D33A94C /* Pods_Inforu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E4F1F0F8703738F4DC3D3B3 /* Pods_Inforu.framework */; };
 		87588011A45DB82CDAD5827C /* Pods_CL_Base_MVPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FFA497B435804BAFD78148 /* Pods_CL_Base_MVPTests.framework */; };
-		F2652142B4B52A16ADB53BAC /* Pods_CL_Base_MVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D203B29B770DF7ED530858 /* Pods_CL_Base_MVP.framework */; };
+		D3B443CB520C6A2BA8549240 /* Pods_InforuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F656B6A4A992448FF7A5B7F /* Pods_InforuUITests.framework */; };
 		F46045341FCC2EEA00DC976D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F46045331FCC2EEA00DC976D /* Assets.xcassets */; };
 		F46045421FCC2EEA00DC976D /* CL_Base_MVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46045411FCC2EEA00DC976D /* CL_Base_MVPTests.swift */; };
 		F460454D1FCC2EEA00DC976D /* CL_Base_MVPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460454C1FCC2EEA00DC976D /* CL_Base_MVPUITests.swift */; };
 		F460456B1FCD3E7200DC976D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460455B1FCC30D000DC976D /* AppDelegate.swift */; };
 		F460456C1FCD3E7F00DC976D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F46045621FCC315400DC976D /* Main.storyboard */; };
 		F460456D1FCD3E8200DC976D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F46045611FCC315400DC976D /* LaunchScreen.storyboard */; };
-		F460456E1FCD3E8700DC976D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F46045381FCC2EEA00DC976D /* Info.plist */; };
 		F460456F1FCD3E9600DC976D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F46045431FCC2EEA00DC976D /* Info.plist */; };
 		F46045701FCD3EA100DC976D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F460454E1FCC2EEA00DC976D /* Info.plist */; };
 		F46045721FCD435500DC976D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46045711FCD435500DC976D /* LoginViewController.swift */; };
@@ -145,8 +146,10 @@
 		0087B30F1FCEBD9000748777 /* SignupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProtocol.swift; sourceTree = "<group>"; };
 		0087B3161FCEBFA000748777 /* SignupButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupButtonCell.swift; sourceTree = "<group>"; };
 		0087B3171FCEBFA000748777 /* SignupButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupButtonCell.xib; sourceTree = "<group>"; };
+		053C9D8750EC7E408E37B346 /* Pods-InforuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InforuTests/Pods-InforuTests.debug.xcconfig"; sourceTree = "<group>"; };
 		069A5BF91FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTestCases.swift; sourceTree = "<group>"; };
 		069A5BFB1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenterTests.swift; sourceTree = "<group>"; };
+		1F656B6A4A992448FF7A5B7F /* Pods_InforuUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InforuUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF3A8B14BDC27B07A5430F8 /* Pods-CL-Base-MVPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CL-Base-MVPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CL-Base-MVPTests/Pods-CL-Base-MVPTests.release.xcconfig"; sourceTree = "<group>"; };
 		57491605BEFC66BC7F630DB6 /* Pods-CL-Base-MVPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CL-Base-MVPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CL-Base-MVPUITests/Pods-CL-Base-MVPUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6A0C63DE2070EDB000FAB293 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -160,17 +163,22 @@
 		7EDC2C3F816A6D20E7FFE5B7 /* Pods-CL-Base-MVPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CL-Base-MVPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CL-Base-MVPUITests/Pods-CL-Base-MVPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		83CEFB22E1C735882B4D7EAA /* Pods_CL_Base_MVPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CL_Base_MVPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D203B29B770DF7ED530858 /* Pods_CL_Base_MVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CL_Base_MVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E4F1F0F8703738F4DC3D3B3 /* Pods_Inforu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Inforu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A55DBC810D8E94BDA09C174E /* Pods-Inforu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inforu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Inforu/Pods-Inforu.debug.xcconfig"; sourceTree = "<group>"; };
+		AAFA64051CD14448D8A5F45B /* Pods-InforuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InforuUITests/Pods-InforuUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B2629EEDB452BA95CD13DCD5 /* Pods-CL-Base-MVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CL-Base-MVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CL-Base-MVP/Pods-CL-Base-MVP.debug.xcconfig"; sourceTree = "<group>"; };
+		B34424439521C3545A872D7B /* Pods-InforuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InforuTests/Pods-InforuTests.release.xcconfig"; sourceTree = "<group>"; };
 		B4ACB55E71CCDCEF6D8C4B1E /* Pods-CL-Base-MVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CL-Base-MVP.release.xcconfig"; path = "Pods/Target Support Files/Pods-CL-Base-MVP/Pods-CL-Base-MVP.release.xcconfig"; sourceTree = "<group>"; };
+		D0CCC027734C3DCB28345FEA /* Pods_InforuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InforuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FFA497B435804BAFD78148 /* Pods_CL_Base_MVPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CL_Base_MVPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78BE5BF811A159CA4929A16 /* Pods-CL-Base-MVPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CL-Base-MVPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CL-Base-MVPTests/Pods-CL-Base-MVPTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F46045291FCC2EEA00DC976D /* CL-Base-MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CL-Base-MVP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F46045291FCC2EEA00DC976D /* Inforu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inforu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46045331FCC2EEA00DC976D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F46045381FCC2EEA00DC976D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F460453D1FCC2EEA00DC976D /* CL-Base-MVPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CL-Base-MVPTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F460453D1FCC2EEA00DC976D /* InforuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InforuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46045411FCC2EEA00DC976D /* CL_Base_MVPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CL_Base_MVPTests.swift; sourceTree = "<group>"; };
 		F46045431FCC2EEA00DC976D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F46045481FCC2EEA00DC976D /* CL-Base-MVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CL-Base-MVPUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F46045481FCC2EEA00DC976D /* InforuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InforuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F460454C1FCC2EEA00DC976D /* CL_Base_MVPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CL_Base_MVPUITests.swift; sourceTree = "<group>"; };
 		F460454E1FCC2EEA00DC976D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F460455B1FCC30D000DC976D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -265,6 +273,8 @@
 		F4975A441FCEA00600B8BB6C /* ContainsNumberValidationPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainsNumberValidationPattern.swift; sourceTree = "<group>"; };
 		F4975A451FCEA00600B8BB6C /* ValidationPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationPattern.swift; sourceTree = "<group>"; };
 		F4975A6D1FCEA22000B8BB6C /* PresistentStoreLocation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PresistentStoreLocation.xcdatamodel; sourceTree = "<group>"; };
+		FDC0FBC886261035535B36D6 /* Pods-Inforu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inforu.release.xcconfig"; path = "Pods/Target Support Files/Pods-Inforu/Pods-Inforu.release.xcconfig"; sourceTree = "<group>"; };
+		FF8D9D2D72E088E9D1A6E039 /* Pods-InforuUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InforuUITests/Pods-InforuUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,7 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F49759B71FCE863C00B8BB6C /* AVKit.framework in Frameworks */,
-				F2652142B4B52A16ADB53BAC /* Pods_CL_Base_MVP.framework in Frameworks */,
+				81CD391192B27A172D33A94C /* Pods_Inforu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87588011A45DB82CDAD5827C /* Pods_CL_Base_MVPTests.framework in Frameworks */,
+				54A5EB57BE31354671834275 /* Pods_InforuTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A2D855A1B99414371A3A9B9 /* Pods_CL_Base_MVPUITests.framework in Frameworks */,
+				D3B443CB520C6A2BA8549240 /* Pods_InforuUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +315,9 @@
 				83D203B29B770DF7ED530858 /* Pods_CL_Base_MVP.framework */,
 				E2FFA497B435804BAFD78148 /* Pods_CL_Base_MVPTests.framework */,
 				83CEFB22E1C735882B4D7EAA /* Pods_CL_Base_MVPUITests.framework */,
+				9E4F1F0F8703738F4DC3D3B3 /* Pods_Inforu.framework */,
+				D0CCC027734C3DCB28345FEA /* Pods_InforuTests.framework */,
+				1F656B6A4A992448FF7A5B7F /* Pods_InforuUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -316,6 +331,12 @@
 				2FF3A8B14BDC27B07A5430F8 /* Pods-CL-Base-MVPTests.release.xcconfig */,
 				7EDC2C3F816A6D20E7FFE5B7 /* Pods-CL-Base-MVPUITests.debug.xcconfig */,
 				57491605BEFC66BC7F630DB6 /* Pods-CL-Base-MVPUITests.release.xcconfig */,
+				A55DBC810D8E94BDA09C174E /* Pods-Inforu.debug.xcconfig */,
+				FDC0FBC886261035535B36D6 /* Pods-Inforu.release.xcconfig */,
+				053C9D8750EC7E408E37B346 /* Pods-InforuTests.debug.xcconfig */,
+				B34424439521C3545A872D7B /* Pods-InforuTests.release.xcconfig */,
+				AAFA64051CD14448D8A5F45B /* Pods-InforuUITests.debug.xcconfig */,
+				FF8D9D2D72E088E9D1A6E039 /* Pods-InforuUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -375,9 +396,9 @@
 		F460452A1FCC2EEA00DC976D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F46045291FCC2EEA00DC976D /* CL-Base-MVP.app */,
-				F460453D1FCC2EEA00DC976D /* CL-Base-MVPTests.xctest */,
-				F46045481FCC2EEA00DC976D /* CL-Base-MVPUITests.xctest */,
+				F46045291FCC2EEA00DC976D /* Inforu.app */,
+				F460453D1FCC2EEA00DC976D /* InforuTests.xctest */,
+				F46045481FCC2EEA00DC976D /* InforuUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -758,9 +779,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F46045281FCC2EEA00DC976D /* CL-Base-MVP */ = {
+		F46045281FCC2EEA00DC976D /* Inforu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F46045511FCC2EEA00DC976D /* Build configuration list for PBXNativeTarget "CL-Base-MVP" */;
+			buildConfigurationList = F46045511FCC2EEA00DC976D /* Build configuration list for PBXNativeTarget "Inforu" */;
 			buildPhases = (
 				7B44CD10015D78C7DEFD3037 /* [CP] Check Pods Manifest.lock */,
 				F46045251FCC2EEA00DC976D /* Sources */,
@@ -774,51 +795,47 @@
 			);
 			dependencies = (
 			);
-			name = "CL-Base-MVP";
+			name = Inforu;
 			productName = "CL-Base-MVP";
-			productReference = F46045291FCC2EEA00DC976D /* CL-Base-MVP.app */;
+			productReference = F46045291FCC2EEA00DC976D /* Inforu.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F460453C1FCC2EEA00DC976D /* CL-Base-MVPTests */ = {
+		F460453C1FCC2EEA00DC976D /* InforuTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F46045541FCC2EEA00DC976D /* Build configuration list for PBXNativeTarget "CL-Base-MVPTests" */;
+			buildConfigurationList = F46045541FCC2EEA00DC976D /* Build configuration list for PBXNativeTarget "InforuTests" */;
 			buildPhases = (
 				3295AA7D7A920A3619F88BDD /* [CP] Check Pods Manifest.lock */,
 				F46045391FCC2EEA00DC976D /* Sources */,
 				F460453A1FCC2EEA00DC976D /* Frameworks */,
 				F460453B1FCC2EEA00DC976D /* Resources */,
-				E34BD285EB4D1B1CD6C77185 /* [CP] Embed Pods Frameworks */,
-				C42A0844B6A31A1CB91EF57A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				F460453F1FCC2EEA00DC976D /* PBXTargetDependency */,
 			);
-			name = "CL-Base-MVPTests";
+			name = InforuTests;
 			productName = "CL-Base-MVPTests";
-			productReference = F460453D1FCC2EEA00DC976D /* CL-Base-MVPTests.xctest */;
+			productReference = F460453D1FCC2EEA00DC976D /* InforuTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F46045471FCC2EEA00DC976D /* CL-Base-MVPUITests */ = {
+		F46045471FCC2EEA00DC976D /* InforuUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F46045571FCC2EEA00DC976D /* Build configuration list for PBXNativeTarget "CL-Base-MVPUITests" */;
+			buildConfigurationList = F46045571FCC2EEA00DC976D /* Build configuration list for PBXNativeTarget "InforuUITests" */;
 			buildPhases = (
 				1DB9DD7FFE38EDFB36A0A449 /* [CP] Check Pods Manifest.lock */,
 				F46045441FCC2EEA00DC976D /* Sources */,
 				F46045451FCC2EEA00DC976D /* Frameworks */,
 				F46045461FCC2EEA00DC976D /* Resources */,
-				00CC894F8261CD99EB28998A /* [CP] Embed Pods Frameworks */,
-				8E4318173F6279DD7D21364B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				F460454A1FCC2EEA00DC976D /* PBXTargetDependency */,
 			);
-			name = "CL-Base-MVPUITests";
+			name = InforuUITests;
 			productName = "CL-Base-MVPUITests";
-			productReference = F46045481FCC2EEA00DC976D /* CL-Base-MVPUITests.xctest */;
+			productReference = F46045481FCC2EEA00DC976D /* InforuUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -848,7 +865,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F46045241FCC2EEA00DC976D /* Build configuration list for PBXProject "CL-Base-MVP" */;
+			buildConfigurationList = F46045241FCC2EEA00DC976D /* Build configuration list for PBXProject "Inforu" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -861,9 +878,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F46045281FCC2EEA00DC976D /* CL-Base-MVP */,
-				F460453C1FCC2EEA00DC976D /* CL-Base-MVPTests */,
-				F46045471FCC2EEA00DC976D /* CL-Base-MVPUITests */,
+				F46045281FCC2EEA00DC976D /* Inforu */,
+				F460453C1FCC2EEA00DC976D /* InforuTests */,
+				F46045471FCC2EEA00DC976D /* InforuUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -873,7 +890,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F460456E1FCD3E8700DC976D /* Info.plist in Resources */,
 				F4975A6B1FCEA04800B8BB6C /* CLCountryPickerController.bundle in Resources */,
 				F4975A6A1FCEA04400B8BB6C /* Images.xcassets in Resources */,
 				F4975A641FCEA04400B8BB6C /* CLCountryCell.xib in Resources */,
@@ -905,21 +921,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00CC894F8261CD99EB28998A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CL-Base-MVPUITests/Pods-CL-Base-MVPUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		06BF18E12018A67A004E2D47 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -939,17 +940,18 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CL-Base-MVP/Pods-CL-Base-MVP-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Inforu/Pods-Inforu-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CL-Base-MVP/Pods-CL-Base-MVP-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Inforu/Pods-Inforu-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1DB9DD7FFE38EDFB36A0A449 /* [CP] Check Pods Manifest.lock */ = {
@@ -963,7 +965,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CL-Base-MVPUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-InforuUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -981,7 +983,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CL-Base-MVPTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-InforuTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -999,56 +1001,11 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CL-Base-MVP-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Inforu-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8E4318173F6279DD7D21364B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CL-Base-MVPUITests/Pods-CL-Base-MVPUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C42A0844B6A31A1CB91EF57A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CL-Base-MVPTests/Pods-CL-Base-MVPTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E34BD285EB4D1B1CD6C77185 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CL-Base-MVPTests/Pods-CL-Base-MVPTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E43664FD2103665A63D99EA0 /* [CP] Embed Pods Frameworks */ = {
@@ -1057,7 +1014,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CL-Base-MVP/Pods-CL-Base-MVP-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Inforu/Pods-Inforu-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFDateHelper/AFDateHelper.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
@@ -1067,7 +1024,6 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1081,12 +1037,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CL-Base-MVP/Pods-CL-Base-MVP-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Inforu/Pods-Inforu-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1215,12 +1170,12 @@
 /* Begin PBXTargetDependency section */
 		F460453F1FCC2EEA00DC976D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F46045281FCC2EEA00DC976D /* CL-Base-MVP */;
+			target = F46045281FCC2EEA00DC976D /* Inforu */;
 			targetProxy = F460453E1FCC2EEA00DC976D /* PBXContainerItemProxy */;
 		};
 		F460454A1FCC2EEA00DC976D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F46045281FCC2EEA00DC976D /* CL-Base-MVP */;
+			target = F46045281FCC2EEA00DC976D /* Inforu */;
 			targetProxy = F46045491FCC2EEA00DC976D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1335,51 +1290,51 @@
 		};
 		F46045521FCC2EEA00DC976D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2629EEDB452BA95CD13DCD5 /* Pods-CL-Base-MVP.debug.xcconfig */;
+			baseConfigurationReference = A55DBC810D8E94BDA09C174E /* Pods-Inforu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 7W7G24P7A2;
+				DEVELOPMENT_TEAM = BM93ACT257;
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.clicklabs.500BelowMVP;
+				PRODUCT_BUNDLE_IDENTIFIER = com.inforu.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "70e8cf61-ec94-4d3b-b689-1bb0fa28f7eb";
-				PROVISIONING_PROFILE_SPECIFIER = "500BelowMvp-Dev";
+				PROVISIONING_PROFILE_SPECIFIER = "Inforu-Pro-Dev";
 				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		F46045531FCC2EEA00DC976D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4ACB55E71CCDCEF6D8C4B1E /* Pods-CL-Base-MVP.release.xcconfig */;
+			baseConfigurationReference = FDC0FBC886261035535B36D6 /* Pods-Inforu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 7W7G24P7A2;
+				DEVELOPMENT_TEAM = BM93ACT257;
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.clicklabs.500BelowMVP;
+				PRODUCT_BUNDLE_IDENTIFIER = com.inforu.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";
-				PROVISIONING_PROFILE_SPECIFIER = "500BelowMvp-dist";
+				PROVISIONING_PROFILE_SPECIFIER = "Inforu-Pro-Appstore";
 				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		F46045551FCC2EEA00DC976D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E78BE5BF811A159CA4929A16 /* Pods-CL-Base-MVPTests.debug.xcconfig */;
+			baseConfigurationReference = 053C9D8750EC7E408E37B346 /* Pods-InforuTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1392,13 +1347,13 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CL-Base-MVP.app/CL-Base-MVP";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Inforu.app/Inforu";
 			};
 			name = Debug;
 		};
 		F46045561FCC2EEA00DC976D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FF3A8B14BDC27B07A5430F8 /* Pods-CL-Base-MVPTests.release.xcconfig */;
+			baseConfigurationReference = B34424439521C3545A872D7B /* Pods-InforuTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1411,13 +1366,13 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CL-Base-MVP.app/CL-Base-MVP";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Inforu.app/Inforu";
 			};
 			name = Release;
 		};
 		F46045581FCC2EEA00DC976D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EDC2C3F816A6D20E7FFE5B7 /* Pods-CL-Base-MVPUITests.debug.xcconfig */;
+			baseConfigurationReference = AAFA64051CD14448D8A5F45B /* Pods-InforuUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1433,7 +1388,7 @@
 		};
 		F46045591FCC2EEA00DC976D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57491605BEFC66BC7F630DB6 /* Pods-CL-Base-MVPUITests.release.xcconfig */;
+			baseConfigurationReference = FF8D9D2D72E088E9D1A6E039 /* Pods-InforuUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1450,7 +1405,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F46045241FCC2EEA00DC976D /* Build configuration list for PBXProject "CL-Base-MVP" */ = {
+		F46045241FCC2EEA00DC976D /* Build configuration list for PBXProject "Inforu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F460454F1FCC2EEA00DC976D /* Debug */,
@@ -1459,7 +1414,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F46045511FCC2EEA00DC976D /* Build configuration list for PBXNativeTarget "CL-Base-MVP" */ = {
+		F46045511FCC2EEA00DC976D /* Build configuration list for PBXNativeTarget "Inforu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F46045521FCC2EEA00DC976D /* Debug */,
@@ -1468,7 +1423,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F46045541FCC2EEA00DC976D /* Build configuration list for PBXNativeTarget "CL-Base-MVPTests" */ = {
+		F46045541FCC2EEA00DC976D /* Build configuration list for PBXNativeTarget "InforuTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F46045551FCC2EEA00DC976D /* Debug */,
@@ -1477,7 +1432,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F46045571FCC2EEA00DC976D /* Build configuration list for PBXNativeTarget "CL-Base-MVPUITests" */ = {
+		F46045571FCC2EEA00DC976D /* Build configuration list for PBXNativeTarget "InforuUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F46045581FCC2EEA00DC976D /* Debug */,

@@ -24,11 +24,8 @@ PODS:
   - GooglePlaces (2.1.1):
     - GoogleMaps/Base (= 2.1.1)
   - IQKeyboardManagerSwift (5.0.8)
-  - KeychainAccess (3.1.0)
+  - KeychainAccess (3.1.2)
   - MBProgressHUD (1.0.0)
-  - R.swift (3.2.0):
-    - R.swift.Library (~> 3.0.2)
-  - R.swift.Library (3.0.2)
   - ReachabilitySwift (3)
   - SwiftLint (0.20.1)
 
@@ -45,9 +42,26 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift (~> 5.0.2)
   - KeychainAccess (~> 3.1.0)
   - MBProgressHUD (~> 1.0.0)
-  - R.swift (~> 3.2.0)
   - ReachabilitySwift (~> 3.0)
   - SwiftLint (~> 0.20.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFDateHelper
+    - Alamofire
+    - Bolts
+    - Crashlytics
+    - Fabric
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FBSDKShareKit
+    - GoogleMaps
+    - GooglePlaces
+    - IQKeyboardManagerSwift
+    - KeychainAccess
+    - MBProgressHUD
+    - ReachabilitySwift
+    - SwiftLint
 
 SPEC CHECKSUMS:
   AFDateHelper: e64bcc4a88a07e1d3e62442741b2a164adc02d77
@@ -61,13 +75,11 @@ SPEC CHECKSUMS:
   GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
   GooglePlaces: 35636d86e5020cba3856eb988c09a5491de0a65a
   IQKeyboardManagerSwift: 2e7dc7f98c111458c1ea2b373f893e8cf95e2b97
-  KeychainAccess: 94c5540b32eabf7bc32bfb976a268e8ea05fd6da
+  KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  R.swift: 207a372a2b5977caef440c696a368009460641d1
-  R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   SwiftLint: f60095dc173a3f3ec505bb34f5229c3dfd779a54
 
-PODFILE CHECKSUM: e62d85dc44296e75eaf4e21712c5c145bfac0b27
+PODFILE CHECKSUM: 8bf5c21f942d035f3aacca81d536c0f2c5f4315a
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.0
