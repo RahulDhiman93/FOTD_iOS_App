@@ -1,0 +1,73 @@
+PODS:
+  - AFDateHelper (3.5.3)
+  - Alamofire (4.2.0)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - Crashlytics (3.8.6):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.13)
+  - FBSDKCoreKit (4.18.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.18.0):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.18.0):
+    - FBSDKCoreKit
+  - GoogleMaps (2.1.1):
+    - GoogleMaps/Maps (= 2.1.1)
+  - GoogleMaps/Base (2.1.1)
+  - GoogleMaps/Maps (2.1.1):
+    - GoogleMaps/Base
+  - GooglePlaces (2.1.1):
+    - GoogleMaps/Base (= 2.1.1)
+  - IQKeyboardManagerSwift (5.0.8)
+  - KeychainAccess (3.1.0)
+  - MBProgressHUD (1.0.0)
+  - R.swift (3.2.0):
+    - R.swift.Library (~> 3.0.2)
+  - R.swift.Library (3.0.2)
+  - ReachabilitySwift (3)
+  - SwiftLint (0.20.1)
+
+DEPENDENCIES:
+  - AFDateHelper (~> 3.5.3)
+  - Alamofire (~> 4.2.0)
+  - Crashlytics (~> 3.8.3)
+  - Fabric (~> 1.6.11)
+  - FBSDKCoreKit (~> 4.18.0)
+  - FBSDKLoginKit (~> 4.18.0)
+  - FBSDKShareKit (~> 4.18.0)
+  - GoogleMaps (~> 2.1.1)
+  - GooglePlaces (~> 2.1.1)
+  - IQKeyboardManagerSwift (~> 5.0.2)
+  - KeychainAccess (~> 3.1.0)
+  - MBProgressHUD (~> 1.0.0)
+  - R.swift (~> 3.2.0)
+  - ReachabilitySwift (~> 3.0)
+  - SwiftLint (~> 0.20.0)
+
+SPEC CHECKSUMS:
+  AFDateHelper: e64bcc4a88a07e1d3e62442741b2a164adc02d77
+  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  Crashlytics: 95d05f4e4c19a771250c4bd9ce344d996de32bbf
+  Fabric: 2fb5676bc811af011a04513451f463dac6803206
+  FBSDKCoreKit: 15fef8804a4629f98c6f4e55e81a76c9d725d85e
+  FBSDKLoginKit: 6773073e970b2b15fb12e451ce7f11da0532b880
+  FBSDKShareKit: 0b8d6cc3f103c75297eb3c62caec284a2ccf1b9e
+  GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
+  GooglePlaces: 35636d86e5020cba3856eb988c09a5491de0a65a
+  IQKeyboardManagerSwift: 2e7dc7f98c111458c1ea2b373f893e8cf95e2b97
+  KeychainAccess: 94c5540b32eabf7bc32bfb976a268e8ea05fd6da
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  R.swift: 207a372a2b5977caef440c696a368009460641d1
+  R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  SwiftLint: f60095dc173a3f3ec505bb34f5229c3dfd779a54
+
+PODFILE CHECKSUM: e62d85dc44296e75eaf4e21712c5c145bfac0b27
+
+COCOAPODS: 1.3.1
