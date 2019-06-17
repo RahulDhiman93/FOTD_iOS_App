@@ -7,24 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		005401EC1FD0183D00DAA936 /* LoginViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005401EB1FD0183D00DAA936 /* LoginViewPresenter.swift */; };
-		0087B30E1FCEBCF700748777 /* SignUpViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087B30D1FCEBCF700748777 /* SignUpViewPresenter.swift */; };
-		0087B3101FCEBD9000748777 /* SignupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087B30F1FCEBD9000748777 /* SignupProtocol.swift */; };
-		0087B3181FCEBFA000748777 /* SignupButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087B3161FCEBFA000748777 /* SignupButtonCell.swift */; };
-		0087B3191FCEBFA000748777 /* SignupButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0087B3171FCEBFA000748777 /* SignupButtonCell.xib */; };
 		069A5BFA1FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A5BF91FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift */; };
 		069A5BFC1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A5BFB1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift */; };
 		08D2B36722B52A120063B14C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D2B36622B52A120063B14C /* Config.swift */; };
 		54A5EB57BE31354671834275 /* Pods_InforuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CCC027734C3DCB28345FEA /* Pods_InforuTests.framework */; };
-		6A0C63DF2070EDB000FAB293 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0C63DE2070EDB000FAB293 /* HomeRouter.swift */; };
-		6A2C47242070D6320019244B /* LoginViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C47232070D6320019244B /* LoginViewRouter.swift */; };
-		6A2C47262070E6D80019244B /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C47252070E6D80019244B /* HomeController.swift */; };
 		6A2D855A1B99414371A3A9B9 /* Pods_CL_Base_MVPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CEFB22E1C735882B4D7EAA /* Pods_CL_Base_MVPUITests.framework */; };
-		6AA639AD206D62F9008D6691 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA639AC206D62F9008D6691 /* Protocols.swift */; };
-		6AFF8B542073868A00D4F1C5 /* LandingVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFF8B532073868A00D4F1C5 /* LandingVc.swift */; };
-		6AFF8B56207386A500D4F1C5 /* LandingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFF8B55207386A500D4F1C5 /* LandingPresenter.swift */; };
-		6AFF8B58207386BC00D4F1C5 /* LandingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFF8B57207386BC00D4F1C5 /* LandingRouter.swift */; };
-		6AFF8B5A20739AE100D4F1C5 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFF8B5920739AE100D4F1C5 /* SignUpRouter.swift */; };
 		81CD391192B27A172D33A94C /* Pods_Inforu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E4F1F0F8703738F4DC3D3B3 /* Pods_Inforu.framework */; };
 		87588011A45DB82CDAD5827C /* Pods_CL_Base_MVPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FFA497B435804BAFD78148 /* Pods_CL_Base_MVPTests.framework */; };
 		D3B443CB520C6A2BA8549240 /* Pods_InforuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F656B6A4A992448FF7A5B7F /* Pods_InforuUITests.framework */; };
@@ -36,10 +23,6 @@
 		F460456D1FCD3E8200DC976D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F46045611FCC315400DC976D /* LaunchScreen.storyboard */; };
 		F460456F1FCD3E9600DC976D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F46045431FCC2EEA00DC976D /* Info.plist */; };
 		F46045701FCD3EA100DC976D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F460454E1FCC2EEA00DC976D /* Info.plist */; };
-		F46045721FCD435500DC976D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46045711FCD435500DC976D /* LoginViewController.swift */; };
-		F46045741FCD437500DC976D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46045731FCD437500DC976D /* SignUpViewController.swift */; };
-		F46045771FCD450200DC976D /* InputTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46045751FCD450200DC976D /* InputTextFieldCell.swift */; };
-		F46045781FCD450200DC976D /* InputTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46045761FCD450200DC976D /* InputTextFieldCell.xib */; };
 		F497599D1FCE859500B8BB6C /* SwiftConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F497599C1FCE858F00B8BB6C /* SwiftConstants.swift */; };
 		F49759B71FCE863C00B8BB6C /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49759B61FCE863B00B8BB6C /* AVKit.framework */; };
 		F49759C71FCE8E0000B8BB6C /* CLAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49759B81FCE8DF700B8BB6C /* CLAlertController+Extension.swift */; };
@@ -142,11 +125,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		005401EB1FD0183D00DAA936 /* LoginViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
-		0087B30D1FCEBCF700748777 /* SignUpViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewPresenter.swift; sourceTree = "<group>"; };
-		0087B30F1FCEBD9000748777 /* SignupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProtocol.swift; sourceTree = "<group>"; };
-		0087B3161FCEBFA000748777 /* SignupButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupButtonCell.swift; sourceTree = "<group>"; };
-		0087B3171FCEBFA000748777 /* SignupButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupButtonCell.xib; sourceTree = "<group>"; };
 		053C9D8750EC7E408E37B346 /* Pods-InforuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InforuTests/Pods-InforuTests.debug.xcconfig"; sourceTree = "<group>"; };
 		069A5BF91FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTestCases.swift; sourceTree = "<group>"; };
 		069A5BFB1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenterTests.swift; sourceTree = "<group>"; };
@@ -158,14 +136,6 @@
 		1F656B6A4A992448FF7A5B7F /* Pods_InforuUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InforuUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF3A8B14BDC27B07A5430F8 /* Pods-CL-Base-MVPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CL-Base-MVPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CL-Base-MVPTests/Pods-CL-Base-MVPTests.release.xcconfig"; sourceTree = "<group>"; };
 		57491605BEFC66BC7F630DB6 /* Pods-CL-Base-MVPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CL-Base-MVPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CL-Base-MVPUITests/Pods-CL-Base-MVPUITests.release.xcconfig"; sourceTree = "<group>"; };
-		6A0C63DE2070EDB000FAB293 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
-		6A2C47232070D6320019244B /* LoginViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewRouter.swift; sourceTree = "<group>"; };
-		6A2C47252070E6D80019244B /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
-		6AA639AC206D62F9008D6691 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		6AFF8B532073868A00D4F1C5 /* LandingVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingVc.swift; sourceTree = "<group>"; };
-		6AFF8B55207386A500D4F1C5 /* LandingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenter.swift; sourceTree = "<group>"; };
-		6AFF8B57207386BC00D4F1C5 /* LandingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingRouter.swift; sourceTree = "<group>"; };
-		6AFF8B5920739AE100D4F1C5 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
 		7EDC2C3F816A6D20E7FFE5B7 /* Pods-CL-Base-MVPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CL-Base-MVPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CL-Base-MVPUITests/Pods-CL-Base-MVPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		83CEFB22E1C735882B4D7EAA /* Pods_CL_Base_MVPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CL_Base_MVPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D203B29B770DF7ED530858 /* Pods_CL_Base_MVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CL_Base_MVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,10 +174,6 @@
 		F46045661FCC328A00DC976D /* CL-Base-MVP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CL-Base-MVP-Bridging-Header.h"; sourceTree = "<group>"; };
 		F46045671FCC328B00DC976D /* Modelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modelable.swift; sourceTree = "<group>"; };
 		F46045681FCC32A200DC976D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		F46045711FCD435500DC976D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		F46045731FCD437500DC976D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		F46045751FCD450200DC976D /* InputTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextFieldCell.swift; sourceTree = "<group>"; };
-		F46045761FCD450200DC976D /* InputTextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputTextFieldCell.xib; sourceTree = "<group>"; };
 		F497599C1FCE858F00B8BB6C /* SwiftConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConstants.swift; sourceTree = "<group>"; };
 		F49759B61FCE863B00B8BB6C /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		F49759B81FCE8DF700B8BB6C /* CLAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLAlertController+Extension.swift"; sourceTree = "<group>"; };
@@ -375,46 +341,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		6A07F2542073AA4B00F278FC /* Landing */ = {
-			isa = PBXGroup;
-			children = (
-				6AFF8B532073868A00D4F1C5 /* LandingVc.swift */,
-				6AFF8B55207386A500D4F1C5 /* LandingPresenter.swift */,
-				6AFF8B57207386BC00D4F1C5 /* LandingRouter.swift */,
-			);
-			path = Landing;
-			sourceTree = "<group>";
-		};
-		6A07F2552073AA6E00F278FC /* LogIn */ = {
-			isa = PBXGroup;
-			children = (
-				F46045711FCD435500DC976D /* LoginViewController.swift */,
-				005401EB1FD0183D00DAA936 /* LoginViewPresenter.swift */,
-				6A2C47232070D6320019244B /* LoginViewRouter.swift */,
-			);
-			path = LogIn;
-			sourceTree = "<group>";
-		};
-		6A07F2562073AA8500F278FC /* SignUp */ = {
-			isa = PBXGroup;
-			children = (
-				6AFF8B5920739AE100D4F1C5 /* SignUpRouter.swift */,
-				F46045731FCD437500DC976D /* SignUpViewController.swift */,
-				0087B30F1FCEBD9000748777 /* SignupProtocol.swift */,
-				0087B30D1FCEBCF700748777 /* SignUpViewPresenter.swift */,
-			);
-			path = SignUp;
-			sourceTree = "<group>";
-		};
-		6A07F2572073AA9900F278FC /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				6A2C47252070E6D80019244B /* HomeController.swift */,
-				6A0C63DE2070EDB000FAB293 /* HomeRouter.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		F46045201FCC2EEA00DC976D = {
 			isa = PBXGroup;
 			children = (
@@ -489,11 +415,6 @@
 		F460455C1FCC30D700DC976D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6A07F2572073AA9900F278FC /* Home */,
-				6A07F2562073AA8500F278FC /* SignUp */,
-				6A07F2552073AA6E00F278FC /* LogIn */,
-				6A07F2542073AA4B00F278FC /* Landing */,
-				6AA639AC206D62F9008D6691 /* Protocols.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -501,10 +422,6 @@
 		F460455E1FCC30DE00DC976D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F46045751FCD450200DC976D /* InputTextFieldCell.swift */,
-				F46045761FCD450200DC976D /* InputTextFieldCell.xib */,
-				0087B3161FCEBFA000748777 /* SignupButtonCell.swift */,
-				0087B3171FCEBFA000748777 /* SignupButtonCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -928,10 +845,8 @@
 				F4975A6B1FCEA04800B8BB6C /* CLCountryPickerController.bundle in Resources */,
 				F4975A6A1FCEA04400B8BB6C /* Images.xcassets in Resources */,
 				F4975A641FCEA04400B8BB6C /* CLCountryCell.xib in Resources */,
-				F46045781FCD450200DC976D /* InputTextFieldCell.xib in Resources */,
 				F4975A661FCEA04400B8BB6C /* CLCountryPickerController.xib in Resources */,
 				F460456D1FCD3E8200DC976D /* LaunchScreen.storyboard in Resources */,
-				0087B3191FCEBFA000748777 /* SignupButtonCell.xib in Resources */,
 				F46045341FCC2EEA00DC976D /* Assets.xcassets in Resources */,
 				F460456C1FCD3E7F00DC976D /* Main.storyboard in Resources */,
 			);
@@ -1107,26 +1022,21 @@
 				F4975A041FCE9E3500B8BB6C /* APNSInfo.swift in Sources */,
 				F4975A531FCEA01700B8BB6C /* ValidationRulePaymentCard.swift in Sources */,
 				F49759C71FCE8E0000B8BB6C /* CLAlertController+Extension.swift in Sources */,
-				6AFF8B542073868A00D4F1C5 /* LandingVc.swift in Sources */,
 				F4975A101FCE9E4300B8BB6C /* PersistentStoreLocation.swift in Sources */,
 				F49759CA1FCE8E0000B8BB6C /* CLCollection+Extension.swift in Sources */,
 				F4975A111FCE9E5000B8BB6C /* LogsConstant.swift in Sources */,
 				F4975A131FCE9E5300B8BB6C /* Network.swift in Sources */,
-				0087B30E1FCEBCF700748777 /* SignUpViewPresenter.swift in Sources */,
 				F4975A071FCE9E3900B8BB6C /* CLTextField.swift in Sources */,
-				6AFF8B58207386BC00D4F1C5 /* LandingRouter.swift in Sources */,
 				F4975A141FCE9E5500B8BB6C /* VersionManager.swift in Sources */,
 				F4975A4B1FCEA01700B8BB6C /* ValidationRuleBlank.swift in Sources */,
 				F4975A091FCE9E3900B8BB6C /* CLValidatorManager.swift in Sources */,
 				F4975A081FCE9E3900B8BB6C /* CLValidationRules.swift in Sources */,
-				F46045721FCD435500DC976D /* LoginViewController.swift in Sources */,
 				F4975A5A1FCEA01D00B8BB6C /* ValidationRuleSet.swift in Sources */,
 				08D2B36722B52A120063B14C /* Config.swift in Sources */,
 				F49759C81FCE8E0000B8BB6C /* CLAPP+EnvConfig.swift in Sources */,
 				F4975A0E1FCE9E4300B8BB6C /* LocationBackgroundTaskManager.swift in Sources */,
 				F4975A5B1FCEA01D00B8BB6C /* Validator.swift in Sources */,
 				F4975A0F1FCE9E4300B8BB6C /* LocationTracker.swift in Sources */,
-				6A2C47242070D6320019244B /* LoginViewRouter.swift in Sources */,
 				F4975A621FCEA03900B8BB6C /* FBManager.swift in Sources */,
 				F4975A571FCEA01D00B8BB6C /* ValidatableInterfaceElement.swift in Sources */,
 				F4975A501FCEA01700B8BB6C /* ValidationRuleLength.swift in Sources */,
@@ -1138,16 +1048,11 @@
 				F49759DA1FCE8F4C00B8BB6C /* CLAppConstants.swift in Sources */,
 				F49759D11FCE8E0000B8BB6C /* Enum+Extension.swift in Sources */,
 				F49759CC1FCE8E0000B8BB6C /* CLString+Extension.swift in Sources */,
-				6AFF8B56207386A500D4F1C5 /* LandingPresenter.swift in Sources */,
 				F460456B1FCD3E7200DC976D /* AppDelegate.swift in Sources */,
 				F4975A0B1FCE9E3C00B8BB6C /* HTTPStatusCodes.swift in Sources */,
-				F46045741FCD437500DC976D /* SignUpViewController.swift in Sources */,
 				F49759E91FCE90A800B8BB6C /* PersistencyManager.swift in Sources */,
-				6AFF8B5A20739AE100D4F1C5 /* SignUpRouter.swift in Sources */,
 				F49759D01FCE8E0000B8BB6C /* Designable.swift in Sources */,
 				F4975A051FCE9E3500B8BB6C /* APNSManager.swift in Sources */,
-				6AA639AD206D62F9008D6691 /* Protocols.swift in Sources */,
-				005401EC1FD0183D00DAA936 /* LoginViewPresenter.swift in Sources */,
 				F49759D51FCE8E0000B8BB6C /* Validation.swift in Sources */,
 				F49759CB1FCE8E0000B8BB6C /* CLObject+Extension.swift in Sources */,
 				F4975A061FCE9E3500B8BB6C /* CLApp+APNS.swift in Sources */,
@@ -1162,7 +1067,6 @@
 				F4975A691FCEA04400B8BB6C /* CountryManager.swift in Sources */,
 				F4975A681FCEA04400B8BB6C /* Country.swift in Sources */,
 				F4975A581FCEA01D00B8BB6C /* ValidationResult.swift in Sources */,
-				0087B3181FCEBFA000748777 /* SignupButtonCell.swift in Sources */,
 				F49759CE1FCE8E0000B8BB6C /* CLViewController+Extension.swift in Sources */,
 				F4975A121FCE9E5000B8BB6C /* LogsControl.swift in Sources */,
 				F4975A671FCEA04400B8BB6C /* Constant.swift in Sources */,
@@ -1170,14 +1074,10 @@
 				F4975A5D1FCEA03100B8BB6C /* MenuBarController.swift in Sources */,
 				F49759E71FCE908A00B8BB6C /* Modelable.swift in Sources */,
 				F4975A591FCEA01D00B8BB6C /* ValidationRule.swift in Sources */,
-				6A0C63DF2070EDB000FAB293 /* HomeRouter.swift in Sources */,
-				F46045771FCD450200DC976D /* InputTextFieldCell.swift in Sources */,
 				F4975A5E1FCEA03100B8BB6C /* MenuBarProtocol.swift in Sources */,
 				F4975A0A1FCE9E3C00B8BB6C /* HTTPRequest.swift in Sources */,
-				0087B3101FCEBD9000748777 /* SignupProtocol.swift in Sources */,
 				F4975A471FCEA01200B8BB6C /* ContainsNumberValidationPattern.swift in Sources */,
 				F4975A5F1FCEA03100B8BB6C /* MenuBarView.swift in Sources */,
-				6A2C47262070E6D80019244B /* HomeController.swift in Sources */,
 				F4975A651FCEA04400B8BB6C /* CLCountryPickerController.swift in Sources */,
 				F497599D1FCE859500B8BB6C /* SwiftConstants.swift in Sources */,
 			);
