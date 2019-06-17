@@ -137,14 +137,14 @@ class CLCountryPickerController: UIViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(true)
-    IQKeyboardManager.sharedManager().enable = false
+    IQKeyboardManager.shared.enable = false
     self.loadDefaultSettings()
     loadCountries()
   }
   
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(true)
-    IQKeyboardManager.sharedManager().enable = true
+    IQKeyboardManager.shared.enable = true
   }
   
   @discardableResult

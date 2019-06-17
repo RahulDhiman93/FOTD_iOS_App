@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		069A5BFA1FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A5BF91FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift */; };
 		069A5BFC1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A5BFB1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift */; };
+		0869E9CF22B79D27006C8CF2 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0869E9CE22B79D27006C8CF2 /* SignIn.storyboard */; };
+		0869E9D122B7A177006C8CF2 /* LoginAndRegisterationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0869E9D022B7A177006C8CF2 /* LoginAndRegisterationViewController.swift */; };
+		0869E9D422B7A1FD006C8CF2 /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = 0869E9D322B7A1FD006C8CF2 /* Roboto */; };
 		08D2B36722B52A120063B14C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D2B36622B52A120063B14C /* Config.swift */; };
 		54A5EB57BE31354671834275 /* Pods_InforuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CCC027734C3DCB28345FEA /* Pods_InforuTests.framework */; };
 		6A2D855A1B99414371A3A9B9 /* Pods_CL_Base_MVPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CEFB22E1C735882B4D7EAA /* Pods_CL_Base_MVPUITests.framework */; };
@@ -19,7 +22,6 @@
 		F46045421FCC2EEA00DC976D /* CL_Base_MVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46045411FCC2EEA00DC976D /* CL_Base_MVPTests.swift */; };
 		F460454D1FCC2EEA00DC976D /* CL_Base_MVPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460454C1FCC2EEA00DC976D /* CL_Base_MVPUITests.swift */; };
 		F460456B1FCD3E7200DC976D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460455B1FCC30D000DC976D /* AppDelegate.swift */; };
-		F460456C1FCD3E7F00DC976D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F46045621FCC315400DC976D /* Main.storyboard */; };
 		F460456D1FCD3E8200DC976D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F46045611FCC315400DC976D /* LaunchScreen.storyboard */; };
 		F460456F1FCD3E9600DC976D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F46045431FCC2EEA00DC976D /* Info.plist */; };
 		F46045701FCD3EA100DC976D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F460454E1FCC2EEA00DC976D /* Info.plist */; };
@@ -128,6 +130,9 @@
 		053C9D8750EC7E408E37B346 /* Pods-InforuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InforuTests/Pods-InforuTests.debug.xcconfig"; sourceTree = "<group>"; };
 		069A5BF91FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTestCases.swift; sourceTree = "<group>"; };
 		069A5BFB1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenterTests.swift; sourceTree = "<group>"; };
+		0869E9CE22B79D27006C8CF2 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		0869E9D022B7A177006C8CF2 /* LoginAndRegisterationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndRegisterationViewController.swift; sourceTree = "<group>"; };
+		0869E9D322B7A1FD006C8CF2 /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Roboto; sourceTree = "<group>"; };
 		08D2B36322B527E80063B14C /* Inforu-Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Inforu-Dev.xcconfig"; sourceTree = "<group>"; };
 		08D2B36422B527F90063B14C /* Inforu-Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Inforu-Test.xcconfig"; sourceTree = "<group>"; };
 		08D2B36522B528050063B14C /* Inforu-Live.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Inforu-Live.xcconfig"; sourceTree = "<group>"; };
@@ -167,7 +172,6 @@
 		F460454E1FCC2EEA00DC976D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F460455B1FCC30D000DC976D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F46045611FCC315400DC976D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F46045621FCC315400DC976D /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F46045631FCC322500DC976D /* Human.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Human.swift; sourceTree = "<group>"; };
 		F46045641FCC325200DC976D /* Me.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Me.swift; sourceTree = "<group>"; };
 		F46045651FCC328100DC976D /* Personable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personable.swift; sourceTree = "<group>"; };
@@ -288,6 +292,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0869E9D222B7A1C7006C8CF2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0869E9D322B7A1FD006C8CF2 /* Roboto */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		08D2B36222B527DA0063B14C /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -415,6 +427,7 @@
 		F460455C1FCC30D700DC976D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0869E9D022B7A177006C8CF2 /* LoginAndRegisterationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -443,7 +456,7 @@
 			isa = PBXGroup;
 			children = (
 				F46045611FCC315400DC976D /* LaunchScreen.storyboard */,
-				F46045621FCC315400DC976D /* Main.storyboard */,
+				0869E9CE22B79D27006C8CF2 /* SignIn.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -520,6 +533,7 @@
 		F49759D81FCE8F2800B8BB6C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0869E9D222B7A1C7006C8CF2 /* Fonts */,
 				F49759D91FCE8F3800B8BB6C /* CLAppConstants.swift */,
 			);
 			path = Resources;
@@ -842,13 +856,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0869E9CF22B79D27006C8CF2 /* SignIn.storyboard in Resources */,
 				F4975A6B1FCEA04800B8BB6C /* CLCountryPickerController.bundle in Resources */,
 				F4975A6A1FCEA04400B8BB6C /* Images.xcassets in Resources */,
+				0869E9D422B7A1FD006C8CF2 /* Roboto in Resources */,
 				F4975A641FCEA04400B8BB6C /* CLCountryCell.xib in Resources */,
 				F4975A661FCEA04400B8BB6C /* CLCountryPickerController.xib in Resources */,
 				F460456D1FCD3E8200DC976D /* LaunchScreen.storyboard in Resources */,
 				F46045341FCC2EEA00DC976D /* Assets.xcassets in Resources */,
-				F460456C1FCD3E7F00DC976D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -891,8 +906,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Inforu/Pods-Inforu-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -974,7 +989,8 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/UIGradient/UIGradient.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -987,7 +1003,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIGradient.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1080,6 +1097,7 @@
 				F4975A5F1FCEA03100B8BB6C /* MenuBarView.swift in Sources */,
 				F4975A651FCEA04400B8BB6C /* CLCountryPickerController.swift in Sources */,
 				F497599D1FCE859500B8BB6C /* SwiftConstants.swift in Sources */,
+				0869E9D122B7A177006C8CF2 /* LoginAndRegisterationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1183,9 +1201,98 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = BM93ACT257;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFDateHelper\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Bolts\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FBSDKCoreKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FBSDKLoginKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FBSDKShareKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/KeychainAccess\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/UIGradient\"",
+					"\"${PODS_ROOT}/Crashlytics/iOS\"",
+					"\"${PODS_ROOT}/Fabric/iOS\"",
+					"\"${PODS_ROOT}/GoogleMaps/Base/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleMaps/Maps/Frameworks\"",
+					"\"${PODS_ROOT}/GooglePlaces/Frameworks\"",
+				);
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AFDateHelper\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"Bolts\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Crashlytics\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-framework",
+					"\"FBSDKShareKit\"",
+					"-framework",
+					"\"Fabric\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"GooglePlaces\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"KeychainAccess\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Reachability\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIGradient\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inforu.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "70e8cf61-ec94-4d3b-b689-1bb0fa28f7eb";
@@ -1295,6 +1402,75 @@
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AFDateHelper\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"Bolts\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Crashlytics\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-framework",
+					"\"FBSDKShareKit\"",
+					"-framework",
+					"\"Fabric\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"GooglePlaces\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"KeychainAccess\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Reachability\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIGradient\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inforu.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";
@@ -1403,6 +1579,75 @@
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AFDateHelper\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"Bolts\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Crashlytics\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-framework",
+					"\"FBSDKShareKit\"",
+					"-framework",
+					"\"Fabric\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"GooglePlaces\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"KeychainAccess\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Reachability\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIGradient\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inforu.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";
@@ -1450,6 +1695,7 @@
 		};
 		F460454F1FCC2EEA00DC976D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08D2B36322B527E80063B14C /* Inforu-Dev.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1563,9 +1809,98 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = BM93ACT257;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFDateHelper\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Bolts\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FBSDKCoreKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FBSDKLoginKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FBSDKShareKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/KeychainAccess\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/UIGradient\"",
+					"\"${PODS_ROOT}/Crashlytics/iOS\"",
+					"\"${PODS_ROOT}/Fabric/iOS\"",
+					"\"${PODS_ROOT}/GoogleMaps/Base/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleMaps/Maps/Frameworks\"",
+					"\"${PODS_ROOT}/GooglePlaces/Frameworks\"",
+				);
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AFDateHelper\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"Bolts\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Crashlytics\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-framework",
+					"\"FBSDKShareKit\"",
+					"-framework",
+					"\"Fabric\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"GooglePlaces\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"KeychainAccess\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Reachability\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIGradient\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inforu.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "70e8cf61-ec94-4d3b-b689-1bb0fa28f7eb";
@@ -1589,6 +1924,75 @@
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AFDateHelper\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"Bolts\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Crashlytics\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-framework",
+					"\"FBSDKShareKit\"",
+					"-framework",
+					"\"Fabric\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"GooglePlaces\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"KeychainAccess\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Reachability\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIGradient\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inforu.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";

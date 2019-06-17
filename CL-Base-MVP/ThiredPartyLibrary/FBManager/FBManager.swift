@@ -164,15 +164,15 @@ class FacebookManager: NSObject, FBSDKSharingDelegate {
     
     let content = FBSDKShareLinkContent()
     content.contentURL = URL(string: urlStr)
-    content.imageURL = URL(string: "")
-    content.contentTitle = "\("")"
+//    content.imageURL = URL(string: "")
+//    content.contentTitle = "\("")"
     let dialog = FBSDKShareDialog()
     dialog.delegate = self
     dialog.fromViewController = controller
     dialog.shareContent = content
     dialog.mode = .native
     // if you don't set this before canShow call, canShow would always return YES
-    if !dialog.canShow() {
+    if !dialog.canShow {
       // fallback presentation when there is no FB app
       dialog.mode = .browser
     }

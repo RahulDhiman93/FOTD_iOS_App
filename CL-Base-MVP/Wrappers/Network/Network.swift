@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import ReachabilitySwift
+import Reachability
 
 extension Notification.Name {
     /// chat manager notifications
@@ -28,7 +28,7 @@ class NetworkHandler {
         } catch {
             print("could not start reachability notifier")
         }
-        NotificationCenter.default.addObserver(self, selector: #selector(self.reachabilityChanged), name: ReachabilityChangedNotification, object: reachability)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reachabilityChanged), name: Notification.Name.reachabilityChanged, object: reachability)
     }
     
     @objc func reachabilityChanged(note: NSNotification) {
