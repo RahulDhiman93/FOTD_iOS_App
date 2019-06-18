@@ -10,8 +10,27 @@
 		069A5BFA1FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A5BF91FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift */; };
 		069A5BFC1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A5BFB1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift */; };
 		0869E9CF22B79D27006C8CF2 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0869E9CE22B79D27006C8CF2 /* SignIn.storyboard */; };
-		0869E9D122B7A177006C8CF2 /* LoginAndRegisterationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0869E9D022B7A177006C8CF2 /* LoginAndRegisterationViewController.swift */; };
-		0869E9D422B7A1FD006C8CF2 /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = 0869E9D322B7A1FD006C8CF2 /* Roboto */; };
+		08CAB83222B8EE0100C2D82C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CAB83122B8EE0100C2D82C /* LoginViewController.swift */; };
+		08CAB84822B8F5E600C2D82C /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB83522B8F5E400C2D82C /* Poppins-Thin.ttf */; };
+		08CAB84922B8F5E600C2D82C /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB83622B8F5E400C2D82C /* Poppins-Italic.ttf */; };
+		08CAB84A22B8F5E600C2D82C /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB83722B8F5E400C2D82C /* Poppins-ThinItalic.ttf */; };
+		08CAB84B22B8F5E600C2D82C /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB83822B8F5E400C2D82C /* Poppins-ExtraLight.ttf */; };
+		08CAB84C22B8F5E600C2D82C /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB83922B8F5E400C2D82C /* Poppins-Light.ttf */; };
+		08CAB84D22B8F5E600C2D82C /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB83A22B8F5E500C2D82C /* OFL.txt */; };
+		08CAB84E22B8F5E600C2D82C /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB83B22B8F5E500C2D82C /* Poppins-SemiBold.ttf */; };
+		08CAB84F22B8F5E600C2D82C /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB83C22B8F5E500C2D82C /* Poppins-ExtraBold.ttf */; };
+		08CAB85022B8F5E600C2D82C /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB83D22B8F5E500C2D82C /* Poppins-BlackItalic.ttf */; };
+		08CAB85122B8F5E600C2D82C /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB83E22B8F5E500C2D82C /* Poppins-BoldItalic.ttf */; };
+		08CAB85222B8F5E600C2D82C /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB83F22B8F5E500C2D82C /* Poppins-LightItalic.ttf */; };
+		08CAB85322B8F5E600C2D82C /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB84022B8F5E500C2D82C /* Poppins-ExtraLightItalic.ttf */; };
+		08CAB85422B8F5E600C2D82C /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB84122B8F5E500C2D82C /* Poppins-MediumItalic.ttf */; };
+		08CAB85522B8F5E600C2D82C /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB84222B8F5E500C2D82C /* Poppins-Bold.ttf */; };
+		08CAB85622B8F5E600C2D82C /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB84322B8F5E500C2D82C /* Poppins-Medium.ttf */; };
+		08CAB85722B8F5E600C2D82C /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB84422B8F5E500C2D82C /* Poppins-ExtraBoldItalic.ttf */; };
+		08CAB85822B8F5E600C2D82C /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB84522B8F5E500C2D82C /* Poppins-Regular.ttf */; };
+		08CAB85922B8F5E600C2D82C /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB84622B8F5E500C2D82C /* Poppins-Black.ttf */; };
+		08CAB85A22B8F5E600C2D82C /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB84722B8F5E600C2D82C /* Poppins-SemiBoldItalic.ttf */; };
+		08CAB85D22B90B1400C2D82C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CAB85C22B90B1400C2D82C /* SignUpViewController.swift */; };
 		08D2B36722B52A120063B14C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D2B36622B52A120063B14C /* Config.swift */; };
 		54A5EB57BE31354671834275 /* Pods_InforuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CCC027734C3DCB28345FEA /* Pods_InforuTests.framework */; };
 		6A2D855A1B99414371A3A9B9 /* Pods_CL_Base_MVPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CEFB22E1C735882B4D7EAA /* Pods_CL_Base_MVPUITests.framework */; };
@@ -131,8 +150,27 @@
 		069A5BF91FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTestCases.swift; sourceTree = "<group>"; };
 		069A5BFB1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenterTests.swift; sourceTree = "<group>"; };
 		0869E9CE22B79D27006C8CF2 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
-		0869E9D022B7A177006C8CF2 /* LoginAndRegisterationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndRegisterationViewController.swift; sourceTree = "<group>"; };
-		0869E9D322B7A1FD006C8CF2 /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Roboto; sourceTree = "<group>"; };
+		08CAB83122B8EE0100C2D82C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		08CAB83522B8F5E400C2D82C /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		08CAB83622B8F5E400C2D82C /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		08CAB83722B8F5E400C2D82C /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		08CAB83822B8F5E400C2D82C /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		08CAB83922B8F5E400C2D82C /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		08CAB83A22B8F5E500C2D82C /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		08CAB83B22B8F5E500C2D82C /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		08CAB83C22B8F5E500C2D82C /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		08CAB83D22B8F5E500C2D82C /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		08CAB83E22B8F5E500C2D82C /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		08CAB83F22B8F5E500C2D82C /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		08CAB84022B8F5E500C2D82C /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		08CAB84122B8F5E500C2D82C /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		08CAB84222B8F5E500C2D82C /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		08CAB84322B8F5E500C2D82C /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		08CAB84422B8F5E500C2D82C /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		08CAB84522B8F5E500C2D82C /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		08CAB84622B8F5E500C2D82C /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		08CAB84722B8F5E600C2D82C /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		08CAB85C22B90B1400C2D82C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		08D2B36322B527E80063B14C /* Inforu-Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Inforu-Dev.xcconfig"; sourceTree = "<group>"; };
 		08D2B36422B527F90063B14C /* Inforu-Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Inforu-Test.xcconfig"; sourceTree = "<group>"; };
 		08D2B36522B528050063B14C /* Inforu-Live.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Inforu-Live.xcconfig"; sourceTree = "<group>"; };
@@ -295,9 +333,43 @@
 		0869E9D222B7A1C7006C8CF2 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				0869E9D322B7A1FD006C8CF2 /* Roboto */,
+				08CAB83A22B8F5E500C2D82C /* OFL.txt */,
+				08CAB84622B8F5E500C2D82C /* Poppins-Black.ttf */,
+				08CAB83D22B8F5E500C2D82C /* Poppins-BlackItalic.ttf */,
+				08CAB84222B8F5E500C2D82C /* Poppins-Bold.ttf */,
+				08CAB83E22B8F5E500C2D82C /* Poppins-BoldItalic.ttf */,
+				08CAB83C22B8F5E500C2D82C /* Poppins-ExtraBold.ttf */,
+				08CAB84422B8F5E500C2D82C /* Poppins-ExtraBoldItalic.ttf */,
+				08CAB83822B8F5E400C2D82C /* Poppins-ExtraLight.ttf */,
+				08CAB84022B8F5E500C2D82C /* Poppins-ExtraLightItalic.ttf */,
+				08CAB83622B8F5E400C2D82C /* Poppins-Italic.ttf */,
+				08CAB83922B8F5E400C2D82C /* Poppins-Light.ttf */,
+				08CAB83F22B8F5E500C2D82C /* Poppins-LightItalic.ttf */,
+				08CAB84322B8F5E500C2D82C /* Poppins-Medium.ttf */,
+				08CAB84122B8F5E500C2D82C /* Poppins-MediumItalic.ttf */,
+				08CAB84522B8F5E500C2D82C /* Poppins-Regular.ttf */,
+				08CAB83B22B8F5E500C2D82C /* Poppins-SemiBold.ttf */,
+				08CAB84722B8F5E600C2D82C /* Poppins-SemiBoldItalic.ttf */,
+				08CAB83522B8F5E400C2D82C /* Poppins-Thin.ttf */,
+				08CAB83722B8F5E400C2D82C /* Poppins-ThinItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		08CAB83022B8EDD900C2D82C /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				08CAB83122B8EE0100C2D82C /* LoginViewController.swift */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		08CAB85B22B90AF300C2D82C /* SignUpVC */ = {
+			isa = PBXGroup;
+			children = (
+				08CAB85C22B90B1400C2D82C /* SignUpViewController.swift */,
+			);
+			path = SignUpVC;
 			sourceTree = "<group>";
 		};
 		08D2B36222B527DA0063B14C /* Config */ = {
@@ -427,7 +499,8 @@
 		F460455C1FCC30D700DC976D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0869E9D022B7A177006C8CF2 /* LoginAndRegisterationViewController.swift */,
+				08CAB85B22B90AF300C2D82C /* SignUpVC */,
+				08CAB83022B8EDD900C2D82C /* LoginVC */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -857,13 +930,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				0869E9CF22B79D27006C8CF2 /* SignIn.storyboard in Resources */,
+				08CAB84F22B8F5E600C2D82C /* Poppins-ExtraBold.ttf in Resources */,
+				08CAB85322B8F5E600C2D82C /* Poppins-ExtraLightItalic.ttf in Resources */,
+				08CAB85A22B8F5E600C2D82C /* Poppins-SemiBoldItalic.ttf in Resources */,
+				08CAB84E22B8F5E600C2D82C /* Poppins-SemiBold.ttf in Resources */,
 				F4975A6B1FCEA04800B8BB6C /* CLCountryPickerController.bundle in Resources */,
 				F4975A6A1FCEA04400B8BB6C /* Images.xcassets in Resources */,
-				0869E9D422B7A1FD006C8CF2 /* Roboto in Resources */,
+				08CAB84922B8F5E600C2D82C /* Poppins-Italic.ttf in Resources */,
 				F4975A641FCEA04400B8BB6C /* CLCountryCell.xib in Resources */,
+				08CAB85222B8F5E600C2D82C /* Poppins-LightItalic.ttf in Resources */,
+				08CAB85422B8F5E600C2D82C /* Poppins-MediumItalic.ttf in Resources */,
 				F4975A661FCEA04400B8BB6C /* CLCountryPickerController.xib in Resources */,
+				08CAB84822B8F5E600C2D82C /* Poppins-Thin.ttf in Resources */,
+				08CAB85122B8F5E600C2D82C /* Poppins-BoldItalic.ttf in Resources */,
+				08CAB85622B8F5E600C2D82C /* Poppins-Medium.ttf in Resources */,
+				08CAB84C22B8F5E600C2D82C /* Poppins-Light.ttf in Resources */,
+				08CAB85822B8F5E600C2D82C /* Poppins-Regular.ttf in Resources */,
+				08CAB84D22B8F5E600C2D82C /* OFL.txt in Resources */,
+				08CAB84B22B8F5E600C2D82C /* Poppins-ExtraLight.ttf in Resources */,
+				08CAB85522B8F5E600C2D82C /* Poppins-Bold.ttf in Resources */,
+				08CAB85022B8F5E600C2D82C /* Poppins-BlackItalic.ttf in Resources */,
+				08CAB84A22B8F5E600C2D82C /* Poppins-ThinItalic.ttf in Resources */,
 				F460456D1FCD3E8200DC976D /* LaunchScreen.storyboard in Resources */,
+				08CAB85722B8F5E600C2D82C /* Poppins-ExtraBoldItalic.ttf in Resources */,
 				F46045341FCC2EEA00DC976D /* Assets.xcassets in Resources */,
+				08CAB85922B8F5E600C2D82C /* Poppins-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1046,10 +1137,12 @@
 				F4975A071FCE9E3900B8BB6C /* CLTextField.swift in Sources */,
 				F4975A141FCE9E5500B8BB6C /* VersionManager.swift in Sources */,
 				F4975A4B1FCEA01700B8BB6C /* ValidationRuleBlank.swift in Sources */,
+				08CAB83222B8EE0100C2D82C /* LoginViewController.swift in Sources */,
 				F4975A091FCE9E3900B8BB6C /* CLValidatorManager.swift in Sources */,
 				F4975A081FCE9E3900B8BB6C /* CLValidationRules.swift in Sources */,
 				F4975A5A1FCEA01D00B8BB6C /* ValidationRuleSet.swift in Sources */,
 				08D2B36722B52A120063B14C /* Config.swift in Sources */,
+				08CAB85D22B90B1400C2D82C /* SignUpViewController.swift in Sources */,
 				F49759C81FCE8E0000B8BB6C /* CLAPP+EnvConfig.swift in Sources */,
 				F4975A0E1FCE9E4300B8BB6C /* LocationBackgroundTaskManager.swift in Sources */,
 				F4975A5B1FCEA01D00B8BB6C /* Validator.swift in Sources */,
@@ -1097,7 +1190,6 @@
 				F4975A5F1FCEA03100B8BB6C /* MenuBarView.swift in Sources */,
 				F4975A651FCEA04400B8BB6C /* CLCountryPickerController.swift in Sources */,
 				F497599D1FCE859500B8BB6C /* SwiftConstants.swift in Sources */,
-				0869E9D122B7A177006C8CF2 /* LoginAndRegisterationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
