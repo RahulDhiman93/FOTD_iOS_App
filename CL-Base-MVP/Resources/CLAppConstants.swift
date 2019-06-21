@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct AppColor {
-  static let themePrimaryColor = UIColor(red: 41.0/255.0, green: 186.0/255.0, blue: 210.0/255.0, alpha: 1.0)
+  static let themePrimaryColor = UIColor(red: 241.0/255.0, green: 63.0/255.0, blue: 74.0/255.0, alpha: 1.0)
   static let themeSecondaryColor = UIColor(red: 168.0/255.0, green: 211.0/255.0, blue: 121.0/255.0, alpha: 1.0)
 }
 

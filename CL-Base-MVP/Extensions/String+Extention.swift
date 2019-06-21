@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension String {
     func containsWhiteSpace() -> Bool {
@@ -18,5 +19,14 @@ extension String {
         } else {
             return false
         }
+    }
+    
+    func heightWithConstrainedWidth(width: CGFloat, font: UIFont) -> CGRect {
+        let constraintRect = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
+        
+        let boundingBox = self.boundingRect(with: constraintRect,
+                                            options: NSStringDrawingOptions.usesLineFragmentOrigin,
+                                            attributes: [NSAttributedString.Key.font: font], context: nil)
+        return boundingBox
     }
 }

@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 // Size
-let kScreenHeight = UIScreen.main.bounds.height
+//let kScreenHeight = UIScreen.main.bounds.height
+let kScreenSize  = UIScreen.main.bounds
 let kScreenWidth = UIScreen.main.bounds.width
 
 let kNavigationBarHeight = 64

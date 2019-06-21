@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		069A5BFA1FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A5BF91FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift */; };
 		069A5BFC1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A5BFB1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift */; };
+		08502A4522BA5C7A00E419F2 /* LoadingShimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08502A4422BA5C7A00E419F2 /* LoadingShimmer.swift */; };
+		0864474822BCB97200531A71 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0864474722BCB97200531A71 /* ErrorView.xib */; };
+		0864474A22BCB98100531A71 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0864474922BCB98100531A71 /* ErrorView.swift */; };
+		0864474D22BCCF2100531A71 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0864474C22BCCF2100531A71 /* AppConstants.swift */; };
+		0864475122BCE21700531A71 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0864475022BCE21700531A71 /* SplashViewController.swift */; };
+		0864475322BCE50C00531A71 /* IJReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0864475222BCE50C00531A71 /* IJReachability.swift */; };
 		0869E9CF22B79D27006C8CF2 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0869E9CE22B79D27006C8CF2 /* SignIn.storyboard */; };
 		08CAB83222B8EE0100C2D82C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CAB83122B8EE0100C2D82C /* LoginViewController.swift */; };
 		08CAB84822B8F5E600C2D82C /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB83522B8F5E400C2D82C /* Poppins-Thin.ttf */; };
@@ -149,6 +155,13 @@
 		053C9D8750EC7E408E37B346 /* Pods-InforuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InforuTests/Pods-InforuTests.debug.xcconfig"; sourceTree = "<group>"; };
 		069A5BF91FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTestCases.swift; sourceTree = "<group>"; };
 		069A5BFB1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenterTests.swift; sourceTree = "<group>"; };
+		08502A4422BA5C7A00E419F2 /* LoadingShimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingShimmer.swift; sourceTree = "<group>"; };
+		0864474722BCB97200531A71 /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		0864474922BCB98100531A71 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		0864474C22BCCF2100531A71 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		0864474E22BCD12F00531A71 /* Inforu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Inforu.entitlements; sourceTree = "<group>"; };
+		0864475022BCE21700531A71 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		0864475222BCE50C00531A71 /* IJReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IJReachability.swift; sourceTree = "<group>"; };
 		0869E9CE22B79D27006C8CF2 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		08CAB83122B8EE0100C2D82C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		08CAB83522B8F5E400C2D82C /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
@@ -330,6 +343,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0864474622BCB95800531A71 /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				0864474922BCB98100531A71 /* ErrorView.swift */,
+				0864474722BCB97200531A71 /* ErrorView.xib */,
+			);
+			path = ErrorView;
+			sourceTree = "<group>";
+		};
+		0864474B22BCCEF700531A71 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				0864474C22BCCF2100531A71 /* AppConstants.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		0864474F22BCE1F800531A71 /* SplashVC */ = {
+			isa = PBXGroup;
+			children = (
+				0864475022BCE21700531A71 /* SplashViewController.swift */,
+			);
+			path = SplashVC;
+			sourceTree = "<group>";
+		};
 		0869E9D222B7A1C7006C8CF2 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +466,7 @@
 		F46045201FCC2EEA00DC976D = {
 			isa = PBXGroup;
 			children = (
+				0864474E22BCD12F00531A71 /* Inforu.entitlements */,
 				F460452B1FCC2EEA00DC976D /* CL-Base-MVP */,
 				F46045401FCC2EEA00DC976D /* CL-Base-MVPTests */,
 				F460454B1FCC2EEA00DC976D /* CL-Base-MVPUITests */,
@@ -451,6 +490,7 @@
 			isa = PBXGroup;
 			children = (
 				08D2B36222B527DA0063B14C /* Config */,
+				0864474B22BCCEF700531A71 /* Constant */,
 				F460455F1FCC30E500DC976D /* Model */,
 				F460455E1FCC30DE00DC976D /* View */,
 				F460455C1FCC30D700DC976D /* Controllers */,
@@ -501,6 +541,7 @@
 			children = (
 				08CAB85B22B90AF300C2D82C /* SignUpVC */,
 				08CAB83022B8EDD900C2D82C /* LoginVC */,
+				0864474F22BCE1F800531A71 /* SplashVC */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -508,6 +549,7 @@
 		F460455E1FCC30DE00DC976D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0864474622BCB95800531A71 /* ErrorView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -608,6 +650,7 @@
 			children = (
 				0869E9D222B7A1C7006C8CF2 /* Fonts */,
 				F49759D91FCE8F3800B8BB6C /* CLAppConstants.swift */,
+				0864475222BCE50C00531A71 /* IJReachability.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -746,6 +789,7 @@
 			isa = PBXGroup;
 			children = (
 				F4975A2D1FCE9F9D00B8BB6C /* CLProgressHUD.swift */,
+				08502A4422BA5C7A00E419F2 /* LoadingShimmer.swift */,
 			);
 			path = HUDView;
 			sourceTree = "<group>";
@@ -891,6 +935,14 @@
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					F460453C1FCC2EEA00DC976D = {
 						CreatedOnToolsVersion = 9.0;
@@ -953,6 +1005,7 @@
 				08CAB84A22B8F5E600C2D82C /* Poppins-ThinItalic.ttf in Resources */,
 				F460456D1FCD3E8200DC976D /* LaunchScreen.storyboard in Resources */,
 				08CAB85722B8F5E600C2D82C /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				0864474822BCB97200531A71 /* ErrorView.xib in Resources */,
 				F46045341FCC2EEA00DC976D /* Assets.xcassets in Resources */,
 				08CAB85922B8F5E600C2D82C /* Poppins-Black.ttf in Resources */,
 			);
@@ -1113,6 +1166,7 @@
 				F4975A0C1FCE9E3C00B8BB6C /* HTTPStatusCodes+Extensions.swift in Sources */,
 				F4975A521FCEA01700B8BB6C /* ValidationRulePattern.swift in Sources */,
 				F49759DD1FCE8FC700B8BB6C /* CustomError.swift in Sources */,
+				0864474A22BCB98100531A71 /* ErrorView.swift in Sources */,
 				F4975A541FCEA01700B8BB6C /* ValidationRuleRequired.swift in Sources */,
 				F4975A631FCEA04400B8BB6C /* CLCountryCell.swift in Sources */,
 				F49759C91FCE8E0000B8BB6C /* CLApp+Extension.swift in Sources */,
@@ -1123,6 +1177,7 @@
 				F49759CF1FCE8E0000B8BB6C /* CLViewController+Tracking.swift in Sources */,
 				F49759E41FCE908600B8BB6C /* Human.swift in Sources */,
 				F49759D41FCE8E0000B8BB6C /* UIFont+Extention.swift in Sources */,
+				0864475322BCE50C00531A71 /* IJReachability.swift in Sources */,
 				F4975A6E1FCEA22500B8BB6C /* PresistentStoreLocation.xcdatamodeld in Sources */,
 				F4975A4E1FCEA01700B8BB6C /* ValidationRuleContains.swift in Sources */,
 				F4975A491FCEA01200B8BB6C /* EmptyValidation.swift in Sources */,
@@ -1133,6 +1188,7 @@
 				F4975A101FCE9E4300B8BB6C /* PersistentStoreLocation.swift in Sources */,
 				F49759CA1FCE8E0000B8BB6C /* CLCollection+Extension.swift in Sources */,
 				F4975A111FCE9E5000B8BB6C /* LogsConstant.swift in Sources */,
+				08502A4522BA5C7A00E419F2 /* LoadingShimmer.swift in Sources */,
 				F4975A131FCE9E5300B8BB6C /* Network.swift in Sources */,
 				F4975A071FCE9E3900B8BB6C /* CLTextField.swift in Sources */,
 				F4975A141FCE9E5500B8BB6C /* VersionManager.swift in Sources */,
@@ -1161,6 +1217,7 @@
 				F460456B1FCD3E7200DC976D /* AppDelegate.swift in Sources */,
 				F4975A0B1FCE9E3C00B8BB6C /* HTTPStatusCodes.swift in Sources */,
 				F49759E91FCE90A800B8BB6C /* PersistencyManager.swift in Sources */,
+				0864475122BCE21700531A71 /* SplashViewController.swift in Sources */,
 				F49759D01FCE8E0000B8BB6C /* Designable.swift in Sources */,
 				F4975A051FCE9E3500B8BB6C /* APNSManager.swift in Sources */,
 				F49759D51FCE8E0000B8BB6C /* Validation.swift in Sources */,
@@ -1174,6 +1231,7 @@
 				F4975A4A1FCEA01200B8BB6C /* ValidationPattern.swift in Sources */,
 				F49759E61FCE908A00B8BB6C /* Personable.swift in Sources */,
 				F49759D21FCE8E0000B8BB6C /* String+Extention.swift in Sources */,
+				0864474D22BCCF2100531A71 /* AppConstants.swift in Sources */,
 				F4975A691FCEA04400B8BB6C /* CountryManager.swift in Sources */,
 				F4975A681FCEA04400B8BB6C /* Country.swift in Sources */,
 				F4975A581FCEA01D00B8BB6C /* ValidationResult.swift in Sources */,
@@ -1291,6 +1349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Inforu.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = BM93ACT257;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1488,6 +1547,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Inforu.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = BM93ACT257;
@@ -1665,6 +1725,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Inforu.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = BM93ACT257;
@@ -1899,6 +1960,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Inforu.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = BM93ACT257;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2010,6 +2072,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Inforu.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = BM93ACT257;

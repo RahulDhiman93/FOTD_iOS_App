@@ -33,7 +33,7 @@ extension UIColor {
     }
     
     @nonobjc class var errorColor: UIColor {
-        return UIColor(red: 104 / 255.0, green: 11 / 255.0, blue: 38 / 255.0, alpha: 1.0)
+        return AppColor.themePrimaryColor
     }
     @nonobjc class var normalLineColor: UIColor {
         return UIColor(red: 155 / 255.0, green: 155 / 255.0, blue: 155 / 255.0, alpha: 1.0)

@@ -38,6 +38,7 @@ protocol NotificationHandler {
 
 extension NotificationHandler {
   func failedToRegisterForNotifications(error: Error) {
+    AppConstants.deviceToken = "deviceToken"
     debugPrint("Error registering for notifications \(error)")
   }
 }
@@ -103,6 +104,7 @@ final class APNSManager: NSObject, NotificationHandler {
   func successfullyRegisteredForNotifications(data: Data) {
     let deviceTokenString = data.reduce("", {$0 + String(format: "%02X", $1)})
     deviceToken = deviceTokenString
+    AppConstants.deviceToken = deviceTokenString
     print("Device Token --", deviceToken ?? "Device token is nil")
   }
   
