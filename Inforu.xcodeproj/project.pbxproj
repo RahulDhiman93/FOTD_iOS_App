@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		069A5BFA1FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A5BF91FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift */; };
 		069A5BFC1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A5BFB1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift */; };
+		0810911A22C368E800002EB5 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0810911922C368E800002EB5 /* Home.storyboard */; };
 		08502A4522BA5C7A00E419F2 /* LoadingShimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08502A4422BA5C7A00E419F2 /* LoadingShimmer.swift */; };
 		0864474822BCB97200531A71 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0864474722BCB97200531A71 /* ErrorView.xib */; };
 		0864474A22BCB98100531A71 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0864474922BCB98100531A71 /* ErrorView.swift */; };
@@ -16,6 +17,11 @@
 		0864475122BCE21700531A71 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0864475022BCE21700531A71 /* SplashViewController.swift */; };
 		0864475322BCE50C00531A71 /* IJReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0864475222BCE50C00531A71 /* IJReachability.swift */; };
 		0869E9CF22B79D27006C8CF2 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0869E9CE22B79D27006C8CF2 /* SignIn.storyboard */; };
+		088DD69F22C548F20060FBB7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DD69E22C548F20060FBB7 /* HomeViewController.swift */; };
+		088DD6A222C54F650060FBB7 /* CategoriesViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088DD6A122C54F650060FBB7 /* CategoriesViewHeader.xib */; };
+		088DD6A422C54F750060FBB7 /* CategoriesViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DD6A322C54F750060FBB7 /* CategoriesViewHeader.swift */; };
+		088DD6A722C550230060FBB7 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DD6A522C550230060FBB7 /* CategoryCollectionViewCell.swift */; };
+		088DD6A822C550230060FBB7 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088DD6A622C550230060FBB7 /* CategoryCollectionViewCell.xib */; };
 		08CAB83222B8EE0100C2D82C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CAB83122B8EE0100C2D82C /* LoginViewController.swift */; };
 		08CAB84822B8F5E600C2D82C /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB83522B8F5E400C2D82C /* Poppins-Thin.ttf */; };
 		08CAB84922B8F5E600C2D82C /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB83622B8F5E400C2D82C /* Poppins-Italic.ttf */; };
@@ -155,6 +161,7 @@
 		053C9D8750EC7E408E37B346 /* Pods-InforuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InforuTests/Pods-InforuTests.debug.xcconfig"; sourceTree = "<group>"; };
 		069A5BF91FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTestCases.swift; sourceTree = "<group>"; };
 		069A5BFB1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenterTests.swift; sourceTree = "<group>"; };
+		0810911922C368E800002EB5 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		08502A4422BA5C7A00E419F2 /* LoadingShimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingShimmer.swift; sourceTree = "<group>"; };
 		0864474722BCB97200531A71 /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
 		0864474922BCB98100531A71 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
@@ -163,6 +170,11 @@
 		0864475022BCE21700531A71 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		0864475222BCE50C00531A71 /* IJReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IJReachability.swift; sourceTree = "<group>"; };
 		0869E9CE22B79D27006C8CF2 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		088DD69E22C548F20060FBB7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		088DD6A122C54F650060FBB7 /* CategoriesViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CategoriesViewHeader.xib; path = "CL-Base-MVP/View/CategoriesViewHeader.xib"; sourceTree = SOURCE_ROOT; };
+		088DD6A322C54F750060FBB7 /* CategoriesViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewHeader.swift; sourceTree = "<group>"; };
+		088DD6A522C550230060FBB7 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		088DD6A622C550230060FBB7 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		08CAB83122B8EE0100C2D82C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		08CAB83522B8F5E400C2D82C /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
 		08CAB83622B8F5E400C2D82C /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
@@ -343,6 +355,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0810911622C368C100002EB5 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				088DD69E22C548F20060FBB7 /* HomeViewController.swift */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
 		0864474622BCB95800531A71 /* ErrorView */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +412,17 @@
 				08CAB83722B8F5E400C2D82C /* Poppins-ThinItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		088DD6A022C54F2E0060FBB7 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				088DD6A322C54F750060FBB7 /* CategoriesViewHeader.swift */,
+				088DD6A122C54F650060FBB7 /* CategoriesViewHeader.xib */,
+				088DD6A522C550230060FBB7 /* CategoryCollectionViewCell.swift */,
+				088DD6A622C550230060FBB7 /* CategoryCollectionViewCell.xib */,
+			);
+			path = HomeVC;
 			sourceTree = "<group>";
 		};
 		08CAB83022B8EDD900C2D82C /* LoginVC */ = {
@@ -539,6 +570,7 @@
 		F460455C1FCC30D700DC976D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0810911622C368C100002EB5 /* HomeVC */,
 				08CAB85B22B90AF300C2D82C /* SignUpVC */,
 				08CAB83022B8EDD900C2D82C /* LoginVC */,
 				0864474F22BCE1F800531A71 /* SplashVC */,
@@ -549,6 +581,7 @@
 		F460455E1FCC30DE00DC976D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				088DD6A022C54F2E0060FBB7 /* HomeVC */,
 				0864474622BCB95800531A71 /* ErrorView */,
 			);
 			path = View;
@@ -572,6 +605,7 @@
 			children = (
 				F46045611FCC315400DC976D /* LaunchScreen.storyboard */,
 				0869E9CE22B79D27006C8CF2 /* SignIn.storyboard */,
+				0810911922C368E800002EB5 /* Home.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -987,7 +1021,9 @@
 				08CAB85A22B8F5E600C2D82C /* Poppins-SemiBoldItalic.ttf in Resources */,
 				08CAB84E22B8F5E600C2D82C /* Poppins-SemiBold.ttf in Resources */,
 				F4975A6B1FCEA04800B8BB6C /* CLCountryPickerController.bundle in Resources */,
+				088DD6A822C550230060FBB7 /* CategoryCollectionViewCell.xib in Resources */,
 				F4975A6A1FCEA04400B8BB6C /* Images.xcassets in Resources */,
+				0810911A22C368E800002EB5 /* Home.storyboard in Resources */,
 				08CAB84922B8F5E600C2D82C /* Poppins-Italic.ttf in Resources */,
 				F4975A641FCEA04400B8BB6C /* CLCountryCell.xib in Resources */,
 				08CAB85222B8F5E600C2D82C /* Poppins-LightItalic.ttf in Resources */,
@@ -1006,6 +1042,7 @@
 				F460456D1FCD3E8200DC976D /* LaunchScreen.storyboard in Resources */,
 				08CAB85722B8F5E600C2D82C /* Poppins-ExtraBoldItalic.ttf in Resources */,
 				0864474822BCB97200531A71 /* ErrorView.xib in Resources */,
+				088DD6A222C54F650060FBB7 /* CategoriesViewHeader.xib in Resources */,
 				F46045341FCC2EEA00DC976D /* Assets.xcassets in Resources */,
 				08CAB85922B8F5E600C2D82C /* Poppins-Black.ttf in Resources */,
 			);
@@ -1225,6 +1262,7 @@
 				F4975A061FCE9E3500B8BB6C /* CLApp+APNS.swift in Sources */,
 				F49759E01FCE903C00B8BB6C /* LoginManager.swift in Sources */,
 				F4975A4C1FCEA01700B8BB6C /* ValidationRuleComparison.swift in Sources */,
+				088DD6A422C54F750060FBB7 /* CategoriesViewHeader.swift in Sources */,
 				F4975A481FCEA01200B8BB6C /* EmailValidationPattern.swift in Sources */,
 				F49759E51FCE908A00B8BB6C /* Me.swift in Sources */,
 				F49759CD1FCE8E0000B8BB6C /* CLView+Extension.swift in Sources */,
@@ -1239,6 +1277,7 @@
 				F4975A121FCE9E5000B8BB6C /* LogsControl.swift in Sources */,
 				F4975A671FCEA04400B8BB6C /* Constant.swift in Sources */,
 				F4975A5C1FCEA02C00B8BB6C /* BPStatusBar.swift in Sources */,
+				088DD69F22C548F20060FBB7 /* HomeViewController.swift in Sources */,
 				F4975A5D1FCEA03100B8BB6C /* MenuBarController.swift in Sources */,
 				F49759E71FCE908A00B8BB6C /* Modelable.swift in Sources */,
 				F4975A591FCEA01D00B8BB6C /* ValidationRule.swift in Sources */,
@@ -1248,6 +1287,7 @@
 				F4975A5F1FCEA03100B8BB6C /* MenuBarView.swift in Sources */,
 				F4975A651FCEA04400B8BB6C /* CLCountryPickerController.swift in Sources */,
 				F497599D1FCE859500B8BB6C /* SwiftConstants.swift in Sources */,
+				088DD6A722C550230060FBB7 /* CategoryCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

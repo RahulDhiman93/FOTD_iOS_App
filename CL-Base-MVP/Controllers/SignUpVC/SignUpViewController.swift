@@ -40,6 +40,10 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signUpTapped(_ sender: UIButton) {
         
+        self.emailTextField.resignFirstResponder()
+        self.passwordTextField.resignFirstResponder()
+        self.usernameTextField.resignFirstResponder()
+        
         guard let username = self.username else {
             ErrorView.showWith(message: "Please enter your username", isErrorMessage: true) {
             }
@@ -79,9 +83,8 @@ class SignUpViewController: UIViewController {
             }
             
             if response != nil {
-                ErrorView.showWith(message: "Sign Up Successfull", isErrorMessage: true) {
-                }
-                return
+                let vc = HomeViewController.initiate()
+                self.navigationController?.pushViewController(vc, animated: true)
             }
                 
             else {

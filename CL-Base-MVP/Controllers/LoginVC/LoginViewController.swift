@@ -79,9 +79,8 @@ class LoginViewController: UIViewController {
             }
             
             if response != nil {
-                ErrorView.showWith(message: "Login Successfull", isErrorMessage: true) {
-                }
-                return
+                let vc = HomeViewController.initiate()
+                self.navigationController?.pushViewController(vc, animated: true)
             }
             
             else {
