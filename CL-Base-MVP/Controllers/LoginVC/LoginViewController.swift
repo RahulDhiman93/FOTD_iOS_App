@@ -79,9 +79,9 @@ class LoginViewController: UIViewController {
                 return
             }
             
-            let vc = HomeViewController.initiate()
+            let sb = UIStoryboard(name: "Home", bundle: nil)
+            guard let vc = sb.instantiateViewController(withIdentifier: "AppBaseViewController") as? AppBaseViewController else { fatalError("TabBar Instance failed") }
             self.navigationController?.pushViewController(vc, animated: true)
-            
             
         })
         

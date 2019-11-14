@@ -18,10 +18,13 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var homeTableView : UITableView!
     
+    var todaysFactModel : RandomFactModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
         self.setupTableView()
+        self.getTodaysFact()
         // Do any additional setup after loading the view.
     }
     
@@ -29,6 +32,22 @@ class HomeViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         return controller
+    }
+    
+    private func getTodaysFact() {
+        
+        UserAPI.share.getTodaysFact(callback: { [weak self] response , error in
+            
+            guard let response = response, error == nil else {
+                ErrorView.showWith(message: error?.localizedDescription ?? "Server Error, Please try again!", isErrorMessage: true) {
+                }
+                return
+            }
+            
+            self?.todaysFactModel = RandomFactModel(json: response)
+            
+        })
+        
     }
     
     private func setupView() {

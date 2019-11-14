@@ -22,6 +22,9 @@
 		088DD6A422C54F750060FBB7 /* CategoriesViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DD6A322C54F750060FBB7 /* CategoriesViewHeader.swift */; };
 		088DD6A722C550230060FBB7 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DD6A522C550230060FBB7 /* CategoryCollectionViewCell.swift */; };
 		088DD6A822C550230060FBB7 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088DD6A622C550230060FBB7 /* CategoryCollectionViewCell.xib */; };
+		08A73476237D7BA8003F34F0 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A73475237D7BA8003F34F0 /* UserAPI.swift */; };
+		08A73478237D7EE7003F34F0 /* RandomFactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A73477237D7EE7003F34F0 /* RandomFactModel.swift */; };
+		08A7347A237D802D003F34F0 /* AppBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A73479237D802D003F34F0 /* AppBaseViewController.swift */; };
 		08CAB83222B8EE0100C2D82C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CAB83122B8EE0100C2D82C /* LoginViewController.swift */; };
 		08CAB84822B8F5E600C2D82C /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB83522B8F5E400C2D82C /* Poppins-Thin.ttf */; };
 		08CAB84922B8F5E600C2D82C /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB83622B8F5E400C2D82C /* Poppins-Italic.ttf */; };
@@ -175,6 +178,9 @@
 		088DD6A322C54F750060FBB7 /* CategoriesViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewHeader.swift; sourceTree = "<group>"; };
 		088DD6A522C550230060FBB7 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		088DD6A622C550230060FBB7 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		08A73475237D7BA8003F34F0 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		08A73477237D7EE7003F34F0 /* RandomFactModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomFactModel.swift; sourceTree = "<group>"; };
+		08A73479237D802D003F34F0 /* AppBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBaseViewController.swift; sourceTree = "<group>"; };
 		08CAB83122B8EE0100C2D82C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		08CAB83522B8F5E400C2D82C /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
 		08CAB83622B8F5E400C2D82C /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
@@ -425,6 +431,14 @@
 			path = HomeVC;
 			sourceTree = "<group>";
 		};
+		08A73474237D7B8F003F34F0 /* UserAPI */ = {
+			isa = PBXGroup;
+			children = (
+				08A73475237D7BA8003F34F0 /* UserAPI.swift */,
+			);
+			path = UserAPI;
+			sourceTree = "<group>";
+		};
 		08CAB83022B8EDD900C2D82C /* LoginVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -574,6 +588,7 @@
 				08CAB85B22B90AF300C2D82C /* SignUpVC */,
 				08CAB83022B8EDD900C2D82C /* LoginVC */,
 				0864474F22BCE1F800531A71 /* SplashVC */,
+				08A73479237D802D003F34F0 /* AppBaseViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -590,6 +605,7 @@
 		F460455F1FCC30E500DC976D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				08A73477237D7EE7003F34F0 /* RandomFactModel.swift */,
 				F46045681FCC32A200DC976D /* User.swift */,
 				F46045631FCC322500DC976D /* Human.swift */,
 				F46045641FCC325200DC976D /* Me.swift */,
@@ -649,6 +665,7 @@
 		F49759991FCE84DD00B8BB6C /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				08A73474237D7B8F003F34F0 /* UserAPI */,
 				F49759E11FCE906800B8BB6C /* PersistencyManager */,
 				F49759DE1FCE902900B8BB6C /* LoginManager */,
 				F49759DB1FCE8FB200B8BB6C /* Error */,
@@ -1252,11 +1269,13 @@
 				F49759D11FCE8E0000B8BB6C /* Enum+Extension.swift in Sources */,
 				F49759CC1FCE8E0000B8BB6C /* CLString+Extension.swift in Sources */,
 				F460456B1FCD3E7200DC976D /* AppDelegate.swift in Sources */,
+				08A73476237D7BA8003F34F0 /* UserAPI.swift in Sources */,
 				F4975A0B1FCE9E3C00B8BB6C /* HTTPStatusCodes.swift in Sources */,
 				F49759E91FCE90A800B8BB6C /* PersistencyManager.swift in Sources */,
 				0864475122BCE21700531A71 /* SplashViewController.swift in Sources */,
 				F49759D01FCE8E0000B8BB6C /* Designable.swift in Sources */,
 				F4975A051FCE9E3500B8BB6C /* APNSManager.swift in Sources */,
+				08A73478237D7EE7003F34F0 /* RandomFactModel.swift in Sources */,
 				F49759D51FCE8E0000B8BB6C /* Validation.swift in Sources */,
 				F49759CB1FCE8E0000B8BB6C /* CLObject+Extension.swift in Sources */,
 				F4975A061FCE9E3500B8BB6C /* CLApp+APNS.swift in Sources */,
@@ -1274,6 +1293,7 @@
 				F4975A681FCEA04400B8BB6C /* Country.swift in Sources */,
 				F4975A581FCEA01D00B8BB6C /* ValidationResult.swift in Sources */,
 				F49759CE1FCE8E0000B8BB6C /* CLViewController+Extension.swift in Sources */,
+				08A7347A237D802D003F34F0 /* AppBaseViewController.swift in Sources */,
 				F4975A121FCE9E5000B8BB6C /* LogsControl.swift in Sources */,
 				F4975A671FCEA04400B8BB6C /* Constant.swift in Sources */,
 				F4975A5C1FCEA02C00B8BB6C /* BPStatusBar.swift in Sources */,
