@@ -213,15 +213,15 @@ class CLTextField: UITextField, ValidatableInterfaceElement {
   //enable disable input change validator.
   internal func validateOnInputChange(enabled: Bool) {
     switch enabled {
-    case true: addTarget(self, action: #selector(validate), for: .editingChanged)
-    case false: removeTarget(self, action: #selector(validate), for: .editingChanged)
+    case true: addTarget(self, action: #selector(validate(_:)), for: .editingChanged)
+    case false: removeTarget(self, action: #selector(validate(_:)), for: .editingChanged)
     }
   }
   
   internal func validateOnEditingEnd(enabled: Bool) {
     switch enabled {
-    case true: addTarget(self, action: #selector(validate), for: .editingDidEnd)
-    case false: removeTarget(self, action: #selector(validate), for: .editingDidEnd)
+    case true: addTarget(self, action: #selector(validate(_:)), for: .editingDidEnd)
+    case false: removeTarget(self, action: #selector(validate(_:)), for: .editingDidEnd)
     }
   }
   

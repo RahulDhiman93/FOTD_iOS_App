@@ -47,7 +47,7 @@ class SplashViewController: UIViewController {
             
             self.progressHUD.isHidden = true
             
-            if error != nil {
+            guard response != nil, error == nil else {
                 ErrorView.showWith(message: error?.localizedDescription ?? "Server Error, Please try again!", isErrorMessage: true) {
                 }
                 let vc = LoginViewController.initiate()
@@ -55,18 +55,10 @@ class SplashViewController: UIViewController {
                 return
             }
             
-            if response != nil {
-                let vc = HomeViewController.initiate()
-                self.navigationController?.pushViewController(vc, animated: true)
-            }
-                
-            else {
-                ErrorView.showWith(message: "Server Error, Please try again!", isErrorMessage: true) {
-                }
-                let vc = LoginViewController.initiate()
-                self.navigationController?.pushViewController(vc, animated: true)
-                return
-            }
+            let vc = HomeViewController.initiate()
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+          
             
         })
     }

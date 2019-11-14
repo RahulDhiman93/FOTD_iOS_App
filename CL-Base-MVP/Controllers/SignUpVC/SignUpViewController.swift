@@ -70,27 +70,21 @@ class SignUpViewController: UIViewController {
         
         let param: [String : Any] = [
             "user_name"    : username,
-            "email"        : email,
+            "user_email"   : email,
             "password"     : password
         ]
         
         LoginManager.share.signUpFromEmail(param: param, callback: { response , error in
             
-            if error != nil {
+            guard response != nil, error == nil else {
                 ErrorView.showWith(message: error?.localizedDescription ?? "Server Error, Please try again!", isErrorMessage: true) {
                 }
                 return
             }
             
-            if response != nil {
-                let vc = HomeViewController.initiate()
-                self.navigationController?.pushViewController(vc, animated: true)
-            }
-                
-            else {
-                ErrorView.showWith(message: "Server Error, Please try again!", isErrorMessage: true) {
+            self.dismiss(animated: true) {
+                ErrorView.showWith(message: "Please login now!", isErrorMessage: true) {
                 }
-                return
             }
             
         })

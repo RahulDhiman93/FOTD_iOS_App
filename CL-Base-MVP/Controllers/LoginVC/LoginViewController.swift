@@ -66,28 +66,22 @@ class LoginViewController: UIViewController {
         }
         
         let param : [String : Any] = [
-            "email"    : email,
+            "user_email"    : email,
             "password" : password
         ]
         
         LoginManager.share.loginFromEmail(param: param, callback: { response , error in
             
-            if error != nil {
+            
+            guard response != nil, error == nil else {
                 ErrorView.showWith(message: error?.localizedDescription ?? "Server Error, Please try again!", isErrorMessage: true) {
                 }
                 return
             }
             
-            if response != nil {
-                let vc = HomeViewController.initiate()
-                self.navigationController?.pushViewController(vc, animated: true)
-            }
+            let vc = HomeViewController.initiate()
+            self.navigationController?.pushViewController(vc, animated: true)
             
-            else {
-                ErrorView.showWith(message: "Server Error, Please try again!", isErrorMessage: true) {
-                }
-                return
-            }
             
         })
         
@@ -95,7 +89,6 @@ class LoginViewController: UIViewController {
     
     @IBAction func registerTapped(_ sender: UIButton) {
         let vc = SignUpViewController.initiate()
-        vc.modalTransitionStyle = .crossDissolve
         self.present(vc, animated: true, completion: nil)
     }
     

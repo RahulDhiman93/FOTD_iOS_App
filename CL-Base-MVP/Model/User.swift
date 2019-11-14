@@ -10,25 +10,35 @@ import UIKit
 
 class User: NSObject, NSCoding {
     
+    var userId : Int
     var email: String
     var userName: String
-    
+   
     required init?(with param: [String: Any]) {
         print(param)
        
+        guard let userId = param["user_id"] as? Int else {
+            return nil
+        }
         guard let userName = param["user_name"] as? String else {
             return nil
         }
-        guard let email = param["email"] as? String else {
+        guard let email = param["user_email"] as? String else {
             return nil
         }
     
+        self.userId = userId
         self.userName = userName
         self.email = email
         super.init()
     }
     
     required init?(coder aDecoder: NSCoder) {
+        
+        guard let userId = aDecoder.decodeInteger(forKey: "user_id") as? Int else {
+            print("USERID DECODE FAIL")
+            return nil
+        }
 
         guard let userName = aDecoder.decodeObject(forKey: "user_name") as? String else {
             print("USERNAME DECODE FAIL")
@@ -39,11 +49,13 @@ class User: NSObject, NSCoding {
             return nil
         }
     
+        self.userId = userId
         self.email = email
         self.userName = userName
     }
     
     func encode(with aCoder: NSCoder) {
+        aCoder.encode(userId, forKey: "user_id")
         aCoder.encode(userName, forKey: "user_name")
         aCoder.encode(email, forKey: "email")
     }

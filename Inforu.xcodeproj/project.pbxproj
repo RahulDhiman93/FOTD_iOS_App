@@ -224,7 +224,7 @@
 		E2FFA497B435804BAFD78148 /* Pods_CL_Base_MVPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CL_Base_MVPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78BE5BF811A159CA4929A16 /* Pods-CL-Base-MVPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CL-Base-MVPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CL-Base-MVPTests/Pods-CL-Base-MVPTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC43B179FE4B3893D5A25A6D /* Pods-InforuUITests.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuUITests.test.xcconfig"; path = "Pods/Target Support Files/Pods-InforuUITests/Pods-InforuUITests.test.xcconfig"; sourceTree = "<group>"; };
-		F46045291FCC2EEA00DC976D /* Inforu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inforu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F46045291FCC2EEA00DC976D /* FOTD_D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FOTD_D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46045331FCC2EEA00DC976D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F46045381FCC2EEA00DC976D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F460453D1FCC2EEA00DC976D /* InforuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InforuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -510,7 +510,7 @@
 		F460452A1FCC2EEA00DC976D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F46045291FCC2EEA00DC976D /* Inforu.app */,
+				F46045291FCC2EEA00DC976D /* FOTD_D.app */,
 				F460453D1FCC2EEA00DC976D /* InforuTests.xctest */,
 				F46045481FCC2EEA00DC976D /* InforuUITests.xctest */,
 			);
@@ -914,7 +914,7 @@
 			);
 			name = Inforu;
 			productName = "CL-Base-MVP";
-			productReference = F46045291FCC2EEA00DC976D /* Inforu.app */;
+			productReference = F46045291FCC2EEA00DC976D /* FOTD_D.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F460453C1FCC2EEA00DC976D /* InforuTests */ = {
@@ -1485,7 +1485,7 @@
 					"\"UIKit\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inforu.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE = "70e8cf61-ec94-4d3b-b689-1bb0fa28f7eb";
 				PROVISIONING_PROFILE_SPECIFIER = "Inforu-Pro-Dev";
 				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
@@ -1664,7 +1664,7 @@
 					"\"UIKit\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inforu.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";
 				PROVISIONING_PROFILE_SPECIFIER = "Inforu-Pro-Appstore";
 				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
@@ -1842,7 +1842,7 @@
 					"\"UIKit\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inforu.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";
 				PROVISIONING_PROFILE_SPECIFIER = "Inforu-Pro-Appstore";
 				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
@@ -2096,7 +2096,7 @@
 					"\"UIKit\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inforu.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE = "70e8cf61-ec94-4d3b-b689-1bb0fa28f7eb";
 				PROVISIONING_PROFILE_SPECIFIER = "Inforu-Pro-Dev";
 				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
@@ -2189,7 +2189,7 @@
 					"\"UIKit\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inforu.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";
 				PROVISIONING_PROFILE_SPECIFIER = "Inforu-Pro-Appstore";
 				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";

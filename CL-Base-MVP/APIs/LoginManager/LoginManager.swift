@@ -172,11 +172,10 @@ final class LoginManager: LoginManagerRoules {
     //Public Apis
     func loginFromEmail(param: [String: Any], callback: @escaping (_ response: [String:Any]?, _ error: Error?) -> Void) {
         
-        let path = AppConstants.currentServer + "customer/login"
+        let path = AppConstants.currentServer + "user_login"
         
         HTTPRequest(method: .post, fullURLStr: path, parameters: param, encoding: .json, files: nil)
             .config(isIndicatorEnable: true, isAlertEnable: false)
-            .headers(headers: ["device-token" : AppConstants.deviceToken] )
             .handler(httpModel: false, delay: 0) { (response) in
                 
                 print(response as Any)
@@ -192,30 +191,25 @@ final class LoginManager: LoginManagerRoules {
                     return
                 }
                 
-                if let json = value as? [String : Any] ,
-                    let statusCode = json["status"] as? Int {
                     
-                    if statusCode == STATUS_CODES.BAD_REQUEST || statusCode == STATUS_CODES.ERROR_IN_EXECUTION || statusCode == STATUS_CODES.WSOTPVerificationPendingStatus {
-                        if let errorMessage = json["message"] as? String {
-                            let callBackError = NSError(domain:"", code: statusCode, userInfo:[ NSLocalizedDescriptionKey: errorMessage])
-                            callback(nil, callBackError)
-                        }
-                        return
-                    } else if statusCode == STATUS_CODES.UNAUTHORIZED_ACCESS {
-                             callback(nil,nil)
-                        return
-                    } else if statusCode == STATUS_CODES.SHOW_DATA {
-                        if let jsonObject = value as? [String: Any],
-                            let data = jsonObject["data"] as? [String: Any] {
-                            let me = Me(with: data)
-                            self.me = me
-                            self.afterLogin()
-                            callback(jsonObject, nil)
+                    if let json = value as? [String : Any] ,
+                        let statusCode = json["status"] as? Int {
+                        
+                        if statusCode == 1 {
+                            if let jsonObject = value as? [String: Any],
+                                let data = jsonObject["data"] as? [String: Any] {
+                                let me = Me(with: data)
+                                self.me = me
+                                self.afterLogin()
+                                callback(jsonObject, nil)
+                            } else {
+                                callback(nil, nil)
+                            }
                         } else {
-                            callback(nil, nil)
+                            callback(nil,nil)
                         }
                     }
-                }
+
 
         }//HTTP REQUEST END
         
@@ -223,11 +217,10 @@ final class LoginManager: LoginManagerRoules {
     
     func signUpFromEmail(param: [String: Any], callback: @escaping (_ response: [String:Any]?, _ error: Error?) -> Void) {
         
-        let path = AppConstants.currentServer + "customer/signup"
+        let path = AppConstants.currentServer + "user_sign_up"
         
         HTTPRequest(method: .post, fullURLStr: path, parameters: param, encoding: .json, files: nil)
             .config(isIndicatorEnable: true, isAlertEnable: false)
-            .headers(headers: ["device-token" : AppConstants.deviceToken] )
             .handler(httpModel: false, delay: 0) { (response) in
                 
                 print(response as Any)
@@ -246,16 +239,7 @@ final class LoginManager: LoginManagerRoules {
                 if let json = value as? [String : Any] ,
                     let statusCode = json["status"] as? Int {
                     
-                    if statusCode == STATUS_CODES.BAD_REQUEST || statusCode == STATUS_CODES.ERROR_IN_EXECUTION || statusCode == STATUS_CODES.WSOTPVerificationPendingStatus {
-                        if let errorMessage = json["message"] as? String {
-                            let callBackError = NSError(domain:"", code: statusCode, userInfo:[ NSLocalizedDescriptionKey: errorMessage])
-                            callback(nil, callBackError)
-                        }
-                        return
-                    } else if statusCode == STATUS_CODES.UNAUTHORIZED_ACCESS {
-                        callback(nil,nil)
-                        return
-                    } else if statusCode == STATUS_CODES.SHOW_DATA {
+                    if statusCode == 1 {
                         if let jsonObject = value as? [String: Any],
                             let data = jsonObject["data"] as? [String: Any] {
                             let me = Me(with: data)
@@ -265,6 +249,8 @@ final class LoginManager: LoginManagerRoules {
                         } else {
                             callback(nil, nil)
                         }
+                    } else {
+                        callback(nil,nil)
                     }
                 }
                 
@@ -274,8 +260,8 @@ final class LoginManager: LoginManagerRoules {
     
     func loginFromAccessToken(callback: @escaping (_ response: [String:Any]?, _ error: Error?) -> Void) {
         
-        let param : [String : Any] = [:]
-        let path = AppConstants.currentServer + "customer/access_token_login"
+        var param : [String : Any] = [:]
+        let path = AppConstants.currentServer + "user_access_token_login"
         
         guard let me = LoginManager.share.me else {
             return
@@ -287,9 +273,10 @@ final class LoginManager: LoginManagerRoules {
         print(AppConstants.deviceToken)
         print("\n")
         
-        HTTPRequest(method: .get, fullURLStr: path, parameters: param, encoding: .url, files: nil)
+        param["access_token"] = me.accessToken
+        
+        HTTPRequest(method: .post, fullURLStr: path, parameters: param, encoding: .json, files: nil)
             .config(isIndicatorEnable: false, isAlertEnable: false)
-            .headers(headers: ["access-token" : me.accessToken ,"device-token" : AppConstants.deviceToken] )
             .handler(httpModel: false, delay: 0) { (response) in
                 
                 print(response as Any)
@@ -305,22 +292,10 @@ final class LoginManager: LoginManagerRoules {
                     return
                 }
                 
-                if let json = value as? [String : Any] ,
+               if let json = value as? [String : Any] ,
                     let statusCode = json["status"] as? Int {
                     
-                    if statusCode == STATUS_CODES.BAD_REQUEST || statusCode == STATUS_CODES.ERROR_IN_EXECUTION || statusCode == STATUS_CODES.WSOTPVerificationPendingStatus {
-                        if let errorMessage = json["message"] as? String {
-                            let callBackError = NSError(domain:"", code: statusCode, userInfo:[ NSLocalizedDescriptionKey: errorMessage])
-                            callback(nil, callBackError)
-                        }
-                        return
-                    } else if statusCode == STATUS_CODES.UNAUTHORIZED_ACCESS || statusCode == STATUS_CODES.NOT_FOUND_MESSAGE {
-                        if let errorMessage = json["message"] as? String {
-                            let callBackError = NSError(domain:"", code: statusCode, userInfo:[ NSLocalizedDescriptionKey: errorMessage])
-                            callback(nil, callBackError)
-                        }
-                        return
-                    } else if statusCode == STATUS_CODES.SHOW_DATA {
+                    if statusCode == 1 {
                         if let jsonObject = value as? [String: Any],
                             let data = jsonObject["data"] as? [String: Any] {
                             let me = Me(with: data)
@@ -330,6 +305,8 @@ final class LoginManager: LoginManagerRoules {
                         } else {
                             callback(nil, nil)
                         }
+                    } else {
+                        callback(nil,nil)
                     }
                 }
                 
