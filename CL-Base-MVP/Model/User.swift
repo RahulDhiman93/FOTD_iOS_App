@@ -20,10 +20,10 @@ class User: NSObject, NSCoding {
         guard let userId = param["user_id"] as? Int else {
             return nil
         }
-        guard let userName = param["user_name"] as? String else {
+        guard let userName = param["name"] as? String else {
             return nil
         }
-        guard let email = param["user_email"] as? String else {
+        guard let email = param["email"] as? String else {
             return nil
         }
     
@@ -40,7 +40,7 @@ class User: NSObject, NSCoding {
             return nil
         }
 
-        guard let userName = aDecoder.decodeObject(forKey: "user_name") as? String else {
+        guard let userName = aDecoder.decodeObject(forKey: "name") as? String else {
             print("USERNAME DECODE FAIL")
             return nil
         }
@@ -56,7 +56,7 @@ class User: NSObject, NSCoding {
     
     func encode(with aCoder: NSCoder) {
         aCoder.encode(userId, forKey: "user_id")
-        aCoder.encode(userName, forKey: "user_name")
+        aCoder.encode(userName, forKey: "name")
         aCoder.encode(email, forKey: "email")
     }
 }

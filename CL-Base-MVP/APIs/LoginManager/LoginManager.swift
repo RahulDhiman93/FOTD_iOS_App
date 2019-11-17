@@ -172,7 +172,7 @@ final class LoginManager: LoginManagerRoules {
     //Public Apis
     func loginFromEmail(param: [String: Any], callback: @escaping (_ response: [String:Any]?, _ error: Error?) -> Void) {
         
-        let path = AppConstants.currentServer + "user_login"
+        let path = AppConstants.currentServer + "user/login"
         
         HTTPRequest(method: .post, fullURLStr: path, parameters: param, encoding: .json, files: nil)
             .config(isIndicatorEnable: true, isAlertEnable: false)
@@ -196,7 +196,7 @@ final class LoginManager: LoginManagerRoules {
                     let statusCode = json["status"] as? Int {
                     
                     if statusCode == STATUS_CODES.BAD_REQUEST || statusCode == STATUS_CODES.ERROR_IN_EXECUTION {
-                        if let errorIs = json["error"] as? [String : Any], let errorMessage = errorIs["message"] as? String {
+                        if let errorMessage = json["message"] as? String {
                             let callBackError = NSError(domain:"", code: statusCode, userInfo:[ NSLocalizedDescriptionKey: errorMessage])
                             callback(nil, callBackError)
                         } else {
@@ -216,9 +216,9 @@ final class LoginManager: LoginManagerRoules {
                         return
                     } else if statusCode == STATUS_CODES.SHOW_DATA {
                         if let jsonObject = value as? [String: Any],
-                            let data = jsonObject["data"] as? [String: Any] {
-                            
-                            let me = Me(with: data)
+                            let data = jsonObject["data"] as? [String: Any] ,
+                             let userInfo = data["userInfo"] as? [String : Any] {
+                            let me = Me(with: userInfo)
                             self.me = me
                             self.afterLogin()
                             callback(jsonObject, nil)
@@ -259,7 +259,7 @@ final class LoginManager: LoginManagerRoules {
                     let statusCode = json["status"] as? Int {
                     
                     if statusCode == STATUS_CODES.BAD_REQUEST || statusCode == STATUS_CODES.ERROR_IN_EXECUTION {
-                        if let errorIs = json["error"] as? [String : Any], let errorMessage = errorIs["message"] as? String {
+                        if let errorMessage = json["message"] as? String {
                             let callBackError = NSError(domain:"", code: statusCode, userInfo:[ NSLocalizedDescriptionKey: errorMessage])
                             callback(nil, callBackError)
                         } else {
@@ -279,9 +279,9 @@ final class LoginManager: LoginManagerRoules {
                         return
                     } else if statusCode == STATUS_CODES.SHOW_DATA {
                         if let jsonObject = value as? [String: Any],
-                            let data = jsonObject["data"] as? [String: Any] {
-
-                            let me = Me(with: data)
+                            let data = jsonObject["data"] as? [String: Any] ,
+                            let userInfo = data["userInfo"] as? [String : Any] {
+                            let me = Me(with: userInfo)
                             self.me = me
                             self.afterLogin()
                             callback(jsonObject, nil)
@@ -299,7 +299,7 @@ final class LoginManager: LoginManagerRoules {
     func loginFromAccessToken(callback: @escaping (_ response: [String:Any]?, _ error: Error?) -> Void) {
         
         var param : [String : Any] = [:]
-        let path = AppConstants.currentServer + "user_access_token_login"
+        let path = AppConstants.currentServer + "user/loginViaAccessToken"
         
         guard let me = LoginManager.share.me else {
             return
@@ -312,6 +312,9 @@ final class LoginManager: LoginManagerRoules {
         print("\n")
         
         param["access_token"] = me.accessToken
+        param["device_type"] = AppConstants.deviceType
+        param["device_token"] = AppConstants.deviceToken
+        param["device_name"] = AppConstants.deviceName
         
         HTTPRequest(method: .post, fullURLStr: path, parameters: param, encoding: .json, files: nil)
             .config(isIndicatorEnable: true, isAlertEnable: false)
@@ -334,7 +337,7 @@ final class LoginManager: LoginManagerRoules {
                    let statusCode = json["status"] as? Int {
                    
                    if statusCode == STATUS_CODES.BAD_REQUEST || statusCode == STATUS_CODES.ERROR_IN_EXECUTION {
-                       if let errorIs = json["error"] as? [String : Any], let errorMessage = errorIs["message"] as? String {
+                       if let errorMessage = json["message"] as? String {
                            let callBackError = NSError(domain:"", code: statusCode, userInfo:[ NSLocalizedDescriptionKey: errorMessage])
                            callback(nil, callBackError)
                        } else {
@@ -353,12 +356,13 @@ final class LoginManager: LoginManagerRoules {
                        callback(nil,nil)
                        return
                    } else if statusCode == STATUS_CODES.SHOW_DATA {
-                       if let jsonObject = value as? [String: Any],
-                        let data = jsonObject["data"] as? [String: Any] {
-                           let me = Me(with: data)
-                           self.me = me
-                           self.afterLogin()
-                           callback(jsonObject, nil)
+                    if let jsonObject = value as? [String: Any],
+                        let data = jsonObject["data"] as? [String: Any] ,
+                        let userInfo = data["userInfo"] as? [String : Any] {
+                        let me = Me(with: userInfo)
+                        self.me = me
+                        self.afterLogin()
+                        callback(jsonObject, nil)
                        } else {
                            callback(nil, nil)
                        }

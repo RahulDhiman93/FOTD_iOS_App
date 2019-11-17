@@ -47,8 +47,11 @@ class LoginPresenter {
         }
         
         let param : [String : Any] = [
-            "user_email"    : email,
-            "password" : password
+            "email": email,
+            "password": password,
+            "device_token": AppConstants.deviceToken,
+            "device_type": AppConstants.deviceType,
+            "device_name": AppConstants.deviceName
         ]
         
         LoginManager.share.loginFromEmail(param: param, callback: { [weak self] response , error in
