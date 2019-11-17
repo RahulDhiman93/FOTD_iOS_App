@@ -20,11 +20,11 @@ extension Notification.Name {
 }
 
 class NetworkHandler {
-    let reachability = Reachability()
+    let reachability = try! Reachability()
     let statusAlert = BPStatusBarAlert(duration: 2.0, delay: 2, position: .statusBar)
     init() {
         do {
-            try reachability?.startNotifier()
+            try reachability.startNotifier()
         } catch {
             print("could not start reachability notifier")
         }

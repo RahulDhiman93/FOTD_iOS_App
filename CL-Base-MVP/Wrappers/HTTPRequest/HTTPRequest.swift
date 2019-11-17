@@ -341,7 +341,7 @@ class HTTPRequest {
   // MARK: - Handler...
   func handler(httpModel: Bool = false, delay: TimeInterval = 0.0, completion: @escaping HTTPRequestHandler) {
     self.completionCallBack = completion
-    guard let reachable = appDelegate.handler.reachability, reachable.isReachable else {
+    guard let reachable = try? appDelegate.handler.reachability, reachable.connection != nil else {
         appDelegate.handler.showNoNetworkAlert()
         //completion(nil, NetworkError.noInternet)
         return

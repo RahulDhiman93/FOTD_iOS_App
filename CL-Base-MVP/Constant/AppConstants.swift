@@ -19,10 +19,11 @@ class GoogleMapUsage {
 
 
 struct AppConstants {
-    static let appName = "Inforu"
+    static let appName = "FOTD"
     static let DeviceOS = "iOS"
-    static let device_type = 1
-    static let app_version = 1
+    static let deviceType = 1
+    static let deviceName = UIDevice.current.name
+    static let appVersion = 1
     static let KeyboardDistanceFromTextfield: CGFloat = 40
     static var kAccessToken: String = "AccessToken"
     static let empID : Int = 11
@@ -70,11 +71,6 @@ struct USER_DEFAULT {
     static let accessTokenExist = "accessTokenExist"
 }
 
-struct AppTypeConstant {
-    static let appVersion = 130
-    static let customerAppType = 1
-    static let deviceTypeiOS = 1
-}
 
 struct UIKitContant {
     static var rootNavigationController :UINavigationController? = nil

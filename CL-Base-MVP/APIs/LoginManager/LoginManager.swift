@@ -192,23 +192,42 @@ final class LoginManager: LoginManagerRoules {
                 }
                 
                     
-                    if let json = value as? [String : Any] ,
-                        let statusCode = json["status"] as? Int {
-                        
-                        if statusCode == 1 {
-                            if let jsonObject = value as? [String: Any],
-                                let data = jsonObject["data"] as? [String: Any] {
-                                let me = Me(with: data)
-                                self.me = me
-                                self.afterLogin()
-                                callback(jsonObject, nil)
-                            } else {
-                                callback(nil, nil)
-                            }
+                if let json = value as? [String : Any] ,
+                    let statusCode = json["status"] as? Int {
+                    
+                    if statusCode == STATUS_CODES.BAD_REQUEST || statusCode == STATUS_CODES.ERROR_IN_EXECUTION {
+                        if let errorIs = json["error"] as? [String : Any], let errorMessage = errorIs["message"] as? String {
+                            let callBackError = NSError(domain:"", code: statusCode, userInfo:[ NSLocalizedDescriptionKey: errorMessage])
+                            callback(nil, callBackError)
                         } else {
                             callback(nil,nil)
                         }
+                        return
+                    } else if statusCode == STATUS_CODES.UNAUTHORIZED_ACCESS {
+                        guard let vc = LoginRouter.LoginVC() else {
+                            return
+                        }
+                        let navigationController = UINavigationController()
+                        navigationController.viewControllers = [vc]
+                        UIView.transition(with: appDelegate.window!, duration: 0.5, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
+                            appDelegate.window?.rootViewController = navigationController
+                        }, completion: nil)
+                        callback(nil,nil)
+                        return
+                    } else if statusCode == STATUS_CODES.SHOW_DATA {
+                        if let jsonObject = value as? [String: Any],
+                            let data = jsonObject["data"] as? [String: Any] {
+                            
+                            let me = Me(with: data)
+                            self.me = me
+                            self.afterLogin()
+                            callback(jsonObject, nil)
+                        } else {
+                            callback(nil, nil)
+                        }
                     }
+                }
+                
 
 
         }//HTTP REQUEST END
@@ -217,7 +236,7 @@ final class LoginManager: LoginManagerRoules {
     
     func signUpFromEmail(param: [String: Any], callback: @escaping (_ response: [String:Any]?, _ error: Error?) -> Void) {
         
-        let path = AppConstants.currentServer + "user_sign_up"
+        let path = AppConstants.currentServer + "user/register"
         
         HTTPRequest(method: .post, fullURLStr: path, parameters: param, encoding: .json, files: nil)
             .config(isIndicatorEnable: true, isAlertEnable: false)
@@ -239,9 +258,29 @@ final class LoginManager: LoginManagerRoules {
                 if let json = value as? [String : Any] ,
                     let statusCode = json["status"] as? Int {
                     
-                    if statusCode == 1 {
+                    if statusCode == STATUS_CODES.BAD_REQUEST || statusCode == STATUS_CODES.ERROR_IN_EXECUTION {
+                        if let errorIs = json["error"] as? [String : Any], let errorMessage = errorIs["message"] as? String {
+                            let callBackError = NSError(domain:"", code: statusCode, userInfo:[ NSLocalizedDescriptionKey: errorMessage])
+                            callback(nil, callBackError)
+                        } else {
+                            callback(nil,nil)
+                        }
+                        return
+                    } else if statusCode == STATUS_CODES.UNAUTHORIZED_ACCESS {
+                        guard let vc = LoginRouter.LoginVC() else {
+                            return
+                        }
+                        let navigationController = UINavigationController()
+                        navigationController.viewControllers = [vc]
+                        UIView.transition(with: appDelegate.window!, duration: 0.5, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
+                            appDelegate.window?.rootViewController = navigationController
+                        }, completion: nil)
+                        callback(nil,nil)
+                        return
+                    } else if statusCode == STATUS_CODES.SHOW_DATA {
                         if let jsonObject = value as? [String: Any],
                             let data = jsonObject["data"] as? [String: Any] {
+
                             let me = Me(with: data)
                             self.me = me
                             self.afterLogin()
@@ -249,10 +288,9 @@ final class LoginManager: LoginManagerRoules {
                         } else {
                             callback(nil, nil)
                         }
-                    } else {
-                        callback(nil,nil)
                     }
                 }
+
                 
         }//HTTP REQUEST END
         
@@ -276,7 +314,7 @@ final class LoginManager: LoginManagerRoules {
         param["access_token"] = me.accessToken
         
         HTTPRequest(method: .post, fullURLStr: path, parameters: param, encoding: .json, files: nil)
-            .config(isIndicatorEnable: false, isAlertEnable: false)
+            .config(isIndicatorEnable: true, isAlertEnable: false)
             .handler(httpModel: false, delay: 0) { (response) in
                 
                 print(response as Any)
@@ -293,22 +331,39 @@ final class LoginManager: LoginManagerRoules {
                 }
                 
                if let json = value as? [String : Any] ,
-                    let statusCode = json["status"] as? Int {
-                    
-                    if statusCode == 1 {
-                        if let jsonObject = value as? [String: Any],
-                            let data = jsonObject["data"] as? [String: Any] {
-                            let me = Me(with: data)
-                            self.me = me
-                            self.afterLogin()
-                            callback(jsonObject, nil)
-                        } else {
-                            callback(nil, nil)
-                        }
-                    } else {
-                        callback(nil,nil)
-                    }
-                }
+                   let statusCode = json["status"] as? Int {
+                   
+                   if statusCode == STATUS_CODES.BAD_REQUEST || statusCode == STATUS_CODES.ERROR_IN_EXECUTION {
+                       if let errorIs = json["error"] as? [String : Any], let errorMessage = errorIs["message"] as? String {
+                           let callBackError = NSError(domain:"", code: statusCode, userInfo:[ NSLocalizedDescriptionKey: errorMessage])
+                           callback(nil, callBackError)
+                       } else {
+                           callback(nil,nil)
+                       }
+                       return
+                   } else if statusCode == STATUS_CODES.UNAUTHORIZED_ACCESS {
+                       guard let vc = LoginRouter.LoginVC() else {
+                           return
+                       }
+                       let navigationController = UINavigationController()
+                       navigationController.viewControllers = [vc]
+                       UIView.transition(with: appDelegate.window!, duration: 0.5, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
+                           appDelegate.window?.rootViewController = navigationController
+                       }, completion: nil)
+                       callback(nil,nil)
+                       return
+                   } else if statusCode == STATUS_CODES.SHOW_DATA {
+                       if let jsonObject = value as? [String: Any],
+                        let data = jsonObject["data"] as? [String: Any] {
+                           let me = Me(with: data)
+                           self.me = me
+                           self.afterLogin()
+                           callback(jsonObject, nil)
+                       } else {
+                           callback(nil, nil)
+                       }
+                   }
+               }
                 
         }//HTTP REQUEST END
         
