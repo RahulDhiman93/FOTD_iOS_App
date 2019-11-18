@@ -32,6 +32,8 @@
 		08A73476237D7BA8003F34F0 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A73475237D7BA8003F34F0 /* UserAPI.swift */; };
 		08A73478237D7EE7003F34F0 /* RandomFactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A73477237D7EE7003F34F0 /* RandomFactModel.swift */; };
 		08A7347A237D802D003F34F0 /* AppBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A73479237D802D003F34F0 /* AppBaseViewController.swift */; };
+		08ABD889238288D100DA555C /* AlertWithOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABD887238288D100DA555C /* AlertWithOptionsViewController.swift */; };
+		08ABD88A238288D100DA555C /* AlertWithOptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08ABD888238288D100DA555C /* AlertWithOptionsViewController.xib */; };
 		08CAB83222B8EE0100C2D82C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CAB83122B8EE0100C2D82C /* LoginViewController.swift */; };
 		08CAB84822B8F5E600C2D82C /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB83522B8F5E400C2D82C /* Poppins-Thin.ttf */; };
 		08CAB84922B8F5E600C2D82C /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB83622B8F5E400C2D82C /* Poppins-Italic.ttf */; };
@@ -184,6 +186,8 @@
 		08A73475237D7BA8003F34F0 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		08A73477237D7EE7003F34F0 /* RandomFactModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomFactModel.swift; sourceTree = "<group>"; };
 		08A73479237D802D003F34F0 /* AppBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBaseViewController.swift; sourceTree = "<group>"; };
+		08ABD887238288D100DA555C /* AlertWithOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertWithOptionsViewController.swift; sourceTree = "<group>"; };
+		08ABD888238288D100DA555C /* AlertWithOptionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertWithOptionsViewController.xib; sourceTree = "<group>"; };
 		08CAB83122B8EE0100C2D82C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		08CAB83522B8F5E400C2D82C /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
 		08CAB83622B8F5E400C2D82C /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
@@ -431,6 +435,15 @@
 			path = UserAPI;
 			sourceTree = "<group>";
 		};
+		08ABD8862382881E00DA555C /* CustomAlert */ = {
+			isa = PBXGroup;
+			children = (
+				08ABD887238288D100DA555C /* AlertWithOptionsViewController.swift */,
+				08ABD888238288D100DA555C /* AlertWithOptionsViewController.xib */,
+			);
+			path = CustomAlert;
+			sourceTree = "<group>";
+		};
 		08CAB83022B8EDD900C2D82C /* LoginVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -593,6 +606,7 @@
 			children = (
 				088DD6A022C54F2E0060FBB7 /* HomeVC */,
 				0864474622BCB95800531A71 /* ErrorView */,
+				08ABD8862382881E00DA555C /* CustomAlert */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1022,6 +1036,7 @@
 				08CAB85422B8F5E600C2D82C /* Poppins-MediumItalic.ttf in Resources */,
 				08CAB84822B8F5E600C2D82C /* Poppins-Thin.ttf in Resources */,
 				08CAB85122B8F5E600C2D82C /* Poppins-BoldItalic.ttf in Resources */,
+				08ABD88A238288D100DA555C /* AlertWithOptionsViewController.xib in Resources */,
 				08CAB85622B8F5E600C2D82C /* Poppins-Medium.ttf in Resources */,
 				08CAB84C22B8F5E600C2D82C /* Poppins-Light.ttf in Resources */,
 				08CAB85822B8F5E600C2D82C /* Poppins-Regular.ttf in Resources */,
@@ -1230,6 +1245,7 @@
 				F49759C81FCE8E0000B8BB6C /* CLAPP+EnvConfig.swift in Sources */,
 				F4975A0E1FCE9E4300B8BB6C /* LocationBackgroundTaskManager.swift in Sources */,
 				F4975A5B1FCEA01D00B8BB6C /* Validator.swift in Sources */,
+				08ABD889238288D100DA555C /* AlertWithOptionsViewController.swift in Sources */,
 				F4975A0F1FCE9E4300B8BB6C /* LocationTracker.swift in Sources */,
 				F4975A621FCEA03900B8BB6C /* FBManager.swift in Sources */,
 				F4975A571FCEA01D00B8BB6C /* ValidatableInterfaceElement.swift in Sources */,
@@ -1409,7 +1425,7 @@
 					"\"${PODS_ROOT}/GooglePlaces/Frameworks\"",
 				);
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-lc++",
@@ -1588,7 +1604,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = BM93ACT257;
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-lc++",
@@ -1766,7 +1782,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = BM93ACT257;
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-lc++",
@@ -2020,7 +2036,7 @@
 					"\"${PODS_ROOT}/GooglePlaces/Frameworks\"",
 				);
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-lc++",
@@ -2113,7 +2129,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = BM93ACT257;
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-lc++",
