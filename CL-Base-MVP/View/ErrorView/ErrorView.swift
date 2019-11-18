@@ -50,11 +50,7 @@ class ErrorView: UIView {
     
     
     func setErrorMessage(message:String, isError:Bool) {
-        if isError == true {
-            self.backgroundColor = UIColor.errorColor
-        } else {
-            self.backgroundColor = UIColor.spBtnPinkColor
-        }
+        self.backgroundColor = UIColor.errorColor
         self.errorMessage1.text = message
         let size = message.heightWithConstrainedWidth(width: kScreenSize.width - 57, font: UIFont.poppinsFontRegular(size: 15)!)
         var safeLayoutHeight:CGFloat = 0.0
