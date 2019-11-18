@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
             self.showAlert()
         })
+        
         // Do any additional setup after loading the view.
     }
     
