@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.ttf">
+            <string>Poppins-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Home View Controller-->
         <scene sceneID="SQn-xN-XvB">
@@ -41,17 +46,34 @@
             </objects>
             <point key="canvasLocation" x="755" y="910"/>
         </scene>
-        <!--View Controller-->
+        <!--Todays Fact View Controller-->
         <scene sceneID="gIA-JP-Wez">
             <objects>
-                <viewController id="5mo-iS-whI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TodaysFactViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5mo-iS-whI" customClass="TodaysFactViewController" customModule="FOTD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2bc-fE-xlZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="bUB-If-JdX">
+                                <rect key="frame" x="50" y="94" width="314" height="543"/>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="50"/>
+                                <color key="textColor" name="AppTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="AppBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bUB-If-JdX" firstAttribute="leading" secondItem="mN7-1T-egY" secondAttribute="leading" constant="50" id="Ar9-18-52l"/>
+                            <constraint firstItem="bUB-If-JdX" firstAttribute="top" secondItem="mN7-1T-egY" secondAttribute="top" constant="50" id="LPG-4E-lrv"/>
+                            <constraint firstItem="mN7-1T-egY" firstAttribute="trailing" secondItem="bUB-If-JdX" secondAttribute="trailing" constant="50" id="sCT-mx-bI6"/>
+                            <constraint firstItem="mN7-1T-egY" firstAttribute="bottom" secondItem="bUB-If-JdX" secondAttribute="bottom" constant="50" id="wPH-x0-EZt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mN7-1T-egY"/>
                     </view>
                     <navigationItem key="navigationItem" id="BmE-3S-FVt"/>
+                    <connections>
+                        <outlet property="factLabel" destination="bUB-If-JdX" id="vp8-cr-omy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gQ-gT-vhx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -227,6 +249,9 @@
         <image name="homeTabBar" width="23.333333969116211" height="23.333333969116211"/>
         <namedColor name="AppBackgroundColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppTextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AppThemePrimaryColor">
             <color red="0.23529411764705882" green="0.2627450980392157" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

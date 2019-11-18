@@ -12,11 +12,15 @@ protocol SplashPresenterDelegate : class {
     func failure(message: String)
     func accessTokenVerified()
     func goToLogin()
+    func checkAppVersionSuccess()
 }
 
 class SplashPresenter {
     
+    
     weak var view  : SplashPresenterDelegate?
+    
+    var forceUpdateModel : ForceUpdateModel?
     
     init(view: SplashPresenterDelegate) {
         self.view = view
@@ -36,6 +40,22 @@ class SplashPresenter {
             self?.view?.accessTokenVerified()
           
         })
+    }
+    
+    func checkAppVersion() {
+        
+        UserAPI.share.checkAppVersion(callback: { [weak self] response , error in
+            
+            guard let response = response, error == nil else {
+                self?.view?.failure(message: error?.localizedDescription ?? "Server Error, Please try again!")
+                return
+            }
+            
+            self?.forceUpdateModel = ForceUpdateModel(json: response)
+            self?.view?.checkAppVersionSuccess()
+        })
+        
+        
     }
     
 }

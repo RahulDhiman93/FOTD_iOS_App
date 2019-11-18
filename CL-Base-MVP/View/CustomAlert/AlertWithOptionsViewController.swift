@@ -21,6 +21,7 @@ class AlertWithOptionsViewController: UIViewController {
     var alertBodyText = ""
     var leftButtonTitle = ""
     var rightButtonTitle = ""
+    var isLeftButtonHidden = false
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -53,19 +54,20 @@ class AlertWithOptionsViewController: UIViewController {
     }
     
     
-    class func loadNibView(alertTitle : String = "alert", alertBody : String = "" , leftButtonTitle : String = "cancel", rightButtonTitle : String = "okay") -> AlertWithOptionsViewController {
+    class func loadNibView(alertTitle : String = "alert", alertBody : String = "" , leftButtonTitle : String = "cancel", rightButtonTitle : String = "okay", isLeftButtonHidden : Bool = false) -> AlertWithOptionsViewController {
         let vc = AlertWithOptionsViewController(nibName: "AlertWithOptionsViewController", bundle: nil)
         vc.modalPresentationStyle = .overFullScreen
         vc.modalTransitionStyle = .crossDissolve
-        vc.configAlert(alertTitle: alertTitle, alertBody: alertBody, leftButtonTitle: leftButtonTitle, rightButtonTitle: rightButtonTitle)
+        vc.configAlert(alertTitle: alertTitle, alertBody: alertBody, leftButtonTitle: leftButtonTitle, rightButtonTitle: rightButtonTitle, isLeftButtonHidden: isLeftButtonHidden)
         return vc
     }
     
-    func configAlert(alertTitle : String = "alert", alertBody : String , leftButtonTitle : String = "cancel", rightButtonTitle : String = "okay") {
+    func configAlert(alertTitle : String = "alert", alertBody : String , leftButtonTitle : String = "cancel", rightButtonTitle : String = "okay", isLeftButtonHidden : Bool = false) {
         self.alertTitleText = alertTitle
         self.alertBodyText = alertBody
         self.leftButtonTitle = leftButtonTitle
         self.rightButtonTitle = rightButtonTitle
+        self.isLeftButtonHidden = isLeftButtonHidden
     }
     
     private func setupView() {
@@ -73,6 +75,7 @@ class AlertWithOptionsViewController: UIViewController {
         self.alertBody.text = self.alertBodyText
         self.leftButton.setTitle(self.leftButtonTitle, for: .normal)
         self.rightButton.setTitle(self.rightButtonTitle, for: .normal)
+        self.leftButton.isHidden = self.isLeftButtonHidden
         self.setAnimations(isContentHidden: false)
     }
     
@@ -81,7 +84,6 @@ class AlertWithOptionsViewController: UIViewController {
             self.alertTitle.isHidden = isContentHidden
             self.alertBody.isHidden = isContentHidden
             self.buttonsView.isHidden = isContentHidden
-            self.view.layoutIfNeeded()
         }
         self.view.layoutIfNeeded()
     }

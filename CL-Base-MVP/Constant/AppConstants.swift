@@ -23,7 +23,7 @@ struct AppConstants {
     static let DeviceOS = "iOS"
     static let deviceType = 1
     static let deviceName = UIDevice.current.name
-    static let appVersion = 1
+    static let appVersion = 35
     static let KeyboardDistanceFromTextfield: CGFloat = 40
     static var kAccessToken: String = "AccessToken"
     static let empID : Int = 11
@@ -43,8 +43,6 @@ struct AppConstants {
     static var deviceToken = "deviceToken"
     static let currentServer = Config.sharedInstance.baseURL()
     static let placeHolderUrl = "https://s3.ap-south-1.amazonaws.com/mahindra-ebike/dev/user/original_F1@oBZ5jT1545373576604.png"
-    
-    
 }
 
 struct STATUS_CODES {

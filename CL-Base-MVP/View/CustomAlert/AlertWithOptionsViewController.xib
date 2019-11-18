@@ -33,7 +33,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view alpha="0.5" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ti9-E8-w9g">
+                <view alpha="0.29999999999999999" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ti9-E8-w9g">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                     <color key="backgroundColor" name="AppTextColor"/>
                 </view>
@@ -63,6 +63,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOg-30-E0M">
                                                     <rect key="frame" x="0.0" y="0.0" width="157" height="45"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                     <state key="normal" title="First">
                                                         <color key="titleColor" name="AppThemePrimaryColor"/>
                                                     </state>
@@ -84,6 +85,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0f-wk-D9b">
                                                     <rect key="frame" x="177" y="0.0" width="157" height="45"/>
                                                     <color key="backgroundColor" name="AppThemePrimaryColor"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                     <state key="normal" title="Second">
                                                         <color key="titleColor" name="AppThemeSecondaryColor"/>
                                                     </state>
