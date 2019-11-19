@@ -9,15 +9,12 @@
 import UIKit
 
 class SplashViewController: UIViewController {
-
-    @IBOutlet weak var progressHUD: UIActivityIndicatorView!
     
     var presenter : SplashPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
-        self.progressHUD.isHidden = true
         self.presenter = SplashPresenter(view: self)
         self.internetConnectivityCheck()
         // Do any additional setup after loading the view.
@@ -88,7 +85,7 @@ extension SplashViewController : SplashPresenterDelegate {
         }
         
         if isForceUpdate {
-            let alertVc = AlertWithOptionsViewController.loadNibView(alertTitle: "time to update!", alertBody: "we have added a lot of new features for you.\nIt's necessary to update the app.", leftButtonTitle: "", rightButtonTitle: "update", isLeftButtonHidden: true)
+            let alertVc = AlertWithOptionsViewController.loadNibView(alertTitle: "time to update!", alertBody: "we have added a lot of new features for you.\nit's necessary to update the app.", leftButtonTitle: "", rightButtonTitle: "update", isLeftButtonHidden: true)
             
             alertVc.rightButtonCallback(callback: { (_) in
                 guard let appLink = forceUpdateModel.appLink else { return }
@@ -106,7 +103,7 @@ extension SplashViewController : SplashPresenterDelegate {
         }
         
         if isManualUpdate {
-            let alertVc = AlertWithOptionsViewController.loadNibView(alertTitle: "time to update!", alertBody: "we have added a lot of new features for you.\nDo you want to make them available for your use?", leftButtonTitle: "not now", rightButtonTitle: "update", isLeftButtonHidden: false)
+            let alertVc = AlertWithOptionsViewController.loadNibView(alertTitle: "time to update!", alertBody: "we have added a lot of new features for you.\ndo you want to make them available for your use?", leftButtonTitle: "not now", rightButtonTitle: "update", isLeftButtonHidden: false)
             
             alertVc.leftButtonCallback(callback: { [weak self] (_) in
                 self?.checkAccessToken()

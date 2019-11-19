@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait" appearance="dark"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -14,20 +14,19 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="MeB-Of-ji7">
-                                <rect key="frame" x="20" y="200" width="335" height="267"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="ATe-PT-alA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="AppBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="MeB-Of-ji7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Imz-Nc-9mX"/>
-                            <constraint firstItem="MeB-Of-ji7" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.4" id="MAg-wL-AW8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MeB-Of-ji7" secondAttribute="trailing" constant="20" id="PPB-ya-q5A"/>
-                            <constraint firstItem="MeB-Of-ji7" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="w3r-xw-Fic"/>
-                            <constraint firstItem="MeB-Of-ji7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zZL-TO-K4S"/>
+                            <constraint firstItem="ATe-PT-alA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LUI-JZ-ONY"/>
+                            <constraint firstAttribute="bottom" secondItem="ATe-PT-alA" secondAttribute="bottom" id="Ocf-Xz-wvu"/>
+                            <constraint firstItem="ATe-PT-alA" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="SVb-DF-Qu9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ATe-PT-alA" secondAttribute="trailing" id="lYn-Hn-Lmq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,7 +37,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="310" height="310"/>
+        <image name="BG" width="310" height="532"/>
         <namedColor name="AppBackgroundColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

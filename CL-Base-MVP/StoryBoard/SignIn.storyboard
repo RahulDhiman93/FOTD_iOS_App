@@ -31,35 +31,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="43D-hp-hdt">
-                                <rect key="frame" x="188.66666666666666" y="545.33333333333337" width="37" height="37"/>
-                                <color key="tintColor" red="0.95294117649999999" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="37" id="gEr-gn-5Lp"/>
-                                    <constraint firstAttribute="height" constant="37" id="wVV-I4-uaE"/>
-                                </constraints>
-                                <color key="color" name="AppThemePrimaryColor"/>
-                            </activityIndicatorView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="cMb-7u-o85">
-                                <rect key="frame" x="20" y="220.66666666666666" width="374" height="294.66666666666674"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="hJd-LX-IPt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="AppBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cMb-7u-o85" firstAttribute="height" secondItem="bKB-tR-ta9" secondAttribute="height" multiplier="0.4" id="2h7-T6-sSu"/>
-                            <constraint firstItem="cMb-7u-o85" firstAttribute="centerX" secondItem="bKB-tR-ta9" secondAttribute="centerX" id="aQS-dx-Y1w"/>
-                            <constraint firstItem="43D-hp-hdt" firstAttribute="top" secondItem="cMb-7u-o85" secondAttribute="bottom" constant="30" id="cyH-UU-Jll"/>
-                            <constraint firstItem="cMb-7u-o85" firstAttribute="leading" secondItem="0te-s7-SxF" secondAttribute="leading" constant="20" id="khu-X7-DU9"/>
-                            <constraint firstItem="43D-hp-hdt" firstAttribute="centerX" secondItem="bKB-tR-ta9" secondAttribute="centerX" id="lsV-gK-cdE"/>
-                            <constraint firstItem="0te-s7-SxF" firstAttribute="trailing" secondItem="cMb-7u-o85" secondAttribute="trailing" constant="20" id="nBX-7E-SSu"/>
-                            <constraint firstItem="cMb-7u-o85" firstAttribute="centerY" secondItem="bKB-tR-ta9" secondAttribute="centerY" id="z8f-AL-Xtt"/>
+                            <constraint firstAttribute="bottom" secondItem="hJd-LX-IPt" secondAttribute="bottom" id="DYN-cB-010"/>
+                            <constraint firstItem="hJd-LX-IPt" firstAttribute="top" secondItem="bKB-tR-ta9" secondAttribute="top" id="Q8n-eE-Drv"/>
+                            <constraint firstItem="hJd-LX-IPt" firstAttribute="leading" secondItem="0te-s7-SxF" secondAttribute="leading" id="aI1-PG-CEy"/>
+                            <constraint firstItem="0te-s7-SxF" firstAttribute="trailing" secondItem="hJd-LX-IPt" secondAttribute="trailing" id="jul-KK-hXn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0te-s7-SxF"/>
                     </view>
                     <navigationItem key="navigationItem" id="zB0-v2-mJK"/>
-                    <connections>
-                        <outlet property="progressHUD" destination="43D-hp-hdt" id="LcG-kx-uVr"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YN4-tA-jwt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -608,9 +593,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BG" width="310" height="532"/>
         <image name="email" width="256" height="256"/>
         <image name="lock" width="256" height="256"/>
-        <image name="logo" width="310" height="310"/>
         <image name="user" width="256" height="256"/>
         <namedColor name="AppBackgroundColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
