@@ -23,7 +23,7 @@ struct AppConstants {
     static let DeviceOS = "iOS"
     static let deviceType = 1
     static let deviceName = UIDevice.current.name
-    static let appVersion = 35
+    static let appVersion = 37
     static let KeyboardDistanceFromTextfield: CGFloat = 40
     static var kAccessToken: String = "AccessToken"
     static let empID : Int = 11

@@ -28,7 +28,8 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func forgotPasswordTapped(_ sender: UIButton) {
-        
+        guard let vc = ForgotPasswordRouter.ForgotPasswordVC() else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

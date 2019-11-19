@@ -112,3 +112,14 @@ extension String {
   }
   
 }
+
+extension String {
+    func isEmptyOrWhitespace() -> Bool {
+
+        if(self.isEmpty) {
+            return true
+        }
+
+        return (self.trimmingCharacters(in: NSCharacterSet.whitespaces) == "")
+    }
+}

@@ -38,6 +38,9 @@
 		08A7347A237D802D003F34F0 /* AppBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A73479237D802D003F34F0 /* AppBaseViewController.swift */; };
 		08ABD889238288D100DA555C /* AlertWithOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABD887238288D100DA555C /* AlertWithOptionsViewController.swift */; };
 		08ABD88A238288D100DA555C /* AlertWithOptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08ABD888238288D100DA555C /* AlertWithOptionsViewController.xib */; };
+		08AFDBCE2384149C002F519A /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AFDBCD2384149C002F519A /* ForgotPasswordViewController.swift */; };
+		08AFDBD0238414BB002F519A /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AFDBCF238414BB002F519A /* ForgotPasswordPresenter.swift */; };
+		08AFDBD2238414C2002F519A /* ForgotPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AFDBD1238414C2002F519A /* ForgotPasswordRouter.swift */; };
 		08CAB83222B8EE0100C2D82C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CAB83122B8EE0100C2D82C /* LoginViewController.swift */; };
 		08CAB84822B8F5E600C2D82C /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB83522B8F5E400C2D82C /* Poppins-Thin.ttf */; };
 		08CAB84922B8F5E600C2D82C /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB83622B8F5E400C2D82C /* Poppins-Italic.ttf */; };
@@ -196,6 +199,9 @@
 		08A73479237D802D003F34F0 /* AppBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBaseViewController.swift; sourceTree = "<group>"; };
 		08ABD887238288D100DA555C /* AlertWithOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertWithOptionsViewController.swift; sourceTree = "<group>"; };
 		08ABD888238288D100DA555C /* AlertWithOptionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertWithOptionsViewController.xib; sourceTree = "<group>"; };
+		08AFDBCD2384149C002F519A /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		08AFDBCF238414BB002F519A /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
+		08AFDBD1238414C2002F519A /* ForgotPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRouter.swift; sourceTree = "<group>"; };
 		08CAB83122B8EE0100C2D82C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		08CAB83522B8F5E400C2D82C /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
 		08CAB83622B8F5E400C2D82C /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
@@ -435,6 +441,7 @@
 		088CF1CB2382F8DC00A6E30B /* SignInFlow */ = {
 			isa = PBXGroup;
 			children = (
+				08AFDBCC2384147A002F519A /* ForgotPasswordVC */,
 				08CAB85B22B90AF300C2D82C /* SignUpVC */,
 				08CAB83022B8EDD900C2D82C /* LoginVC */,
 				0864474F22BCE1F800531A71 /* SplashVC */,
@@ -487,6 +494,16 @@
 				08ABD888238288D100DA555C /* AlertWithOptionsViewController.xib */,
 			);
 			path = CustomAlert;
+			sourceTree = "<group>";
+		};
+		08AFDBCC2384147A002F519A /* ForgotPasswordVC */ = {
+			isa = PBXGroup;
+			children = (
+				08AFDBCD2384149C002F519A /* ForgotPasswordViewController.swift */,
+				08AFDBCF238414BB002F519A /* ForgotPasswordPresenter.swift */,
+				08AFDBD1238414C2002F519A /* ForgotPasswordRouter.swift */,
+			);
+			path = ForgotPasswordVC;
 			sourceTree = "<group>";
 		};
 		08CAB83022B8EDD900C2D82C /* LoginVC */ = {
@@ -1256,6 +1273,7 @@
 				0864474A22BCB98100531A71 /* ErrorView.swift in Sources */,
 				F4975A541FCEA01700B8BB6C /* ValidationRuleRequired.swift in Sources */,
 				F49759C91FCE8E0000B8BB6C /* CLApp+Extension.swift in Sources */,
+				08AFDBD0238414BB002F519A /* ForgotPasswordPresenter.swift in Sources */,
 				F49759D31FCE8E0000B8BB6C /* UIColor+Extension.swift in Sources */,
 				F4975A0D1FCE9E3F00B8BB6C /* ImagePickerButton.swift in Sources */,
 				F4975A551FCEA01700B8BB6C /* ValidationRuleURL.swift in Sources */,
@@ -1285,6 +1303,7 @@
 				F4975A081FCE9E3900B8BB6C /* CLValidationRules.swift in Sources */,
 				F4975A5A1FCEA01D00B8BB6C /* ValidationRuleSet.swift in Sources */,
 				08D2B36722B52A120063B14C /* Config.swift in Sources */,
+				08AFDBCE2384149C002F519A /* ForgotPasswordViewController.swift in Sources */,
 				08CAB85D22B90B1400C2D82C /* SignUpViewController.swift in Sources */,
 				F49759C81FCE8E0000B8BB6C /* CLAPP+EnvConfig.swift in Sources */,
 				F4975A0E1FCE9E4300B8BB6C /* LocationBackgroundTaskManager.swift in Sources */,
@@ -1321,6 +1340,7 @@
 				088DD6A422C54F750060FBB7 /* CategoriesViewHeader.swift in Sources */,
 				088CF1D32382F94300A6E30B /* TodaysFactRouter.swift in Sources */,
 				0889FBED2381BF950092531F /* SplashPresenter.swift in Sources */,
+				08AFDBD2238414C2002F519A /* ForgotPasswordRouter.swift in Sources */,
 				F4975A481FCEA01200B8BB6C /* EmailValidationPattern.swift in Sources */,
 				F49759E51FCE908A00B8BB6C /* Me.swift in Sources */,
 				F49759CD1FCE8E0000B8BB6C /* CLView+Extension.swift in Sources */,
