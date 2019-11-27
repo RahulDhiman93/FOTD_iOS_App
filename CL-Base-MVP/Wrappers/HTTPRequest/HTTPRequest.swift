@@ -583,7 +583,7 @@ class HTTPRequest {
         self.completionCallBack?(response)
       }
     default:
-      let message = (dict?["message"] as? String) ?? "Something went wrong. Please try again in some time."
+      let message = (dict?["message"] as? String) ?? "something went wrong. please try again in some time."
       showAlertMessage(message: message)
       let error = self.errorWithDescription(description: message, code: statusCode)
       requestFailedWith(error: error)

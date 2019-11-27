@@ -32,7 +32,7 @@ extension TodaysFactViewController : TodaysFactPresenterDelegate {
     
     func todaysFactSuccess() {
         guard let factModel = self.presenter.factModel, let factData = factModel.fact, let factText =  factData.fact else {
-            self.failure(message: "Something went wrong")
+            self.failure(message: "something went wrong")
             return
         }
         

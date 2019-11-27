@@ -42,7 +42,10 @@ extension ForgotPasswordViewController : ForgotPasswordPresenterDelegate {
     }
     
     func emailSuccess() {
-        print("OTP SENT SUCCESSFULLY")
+        guard let vc = OtpVerificationRouter.OtpVerificationVC() else { fatalError() }
+        vc.presenter = OtpVerificationPresenter(view: vc)
+        vc.presenter.email = self.presenter.email
+        self.navigationController?.pushViewController(vc, animated: true)
     }
        
 }

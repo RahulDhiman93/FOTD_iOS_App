@@ -17,6 +17,9 @@
 		0864475122BCE21700531A71 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0864475022BCE21700531A71 /* SplashViewController.swift */; };
 		0864475322BCE50C00531A71 /* IJReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0864475222BCE50C00531A71 /* IJReachability.swift */; };
 		0869E9CF22B79D27006C8CF2 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0869E9CE22B79D27006C8CF2 /* SignIn.storyboard */; };
+		08777217238E7F3400B0AA2E /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08777216238E7F3400B0AA2E /* ResetPasswordViewController.swift */; };
+		08777219238E7F4800B0AA2E /* ResetPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08777218238E7F4800B0AA2E /* ResetPasswordPresenter.swift */; };
+		0877721B238E7F5900B0AA2E /* ResetPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0877721A238E7F5900B0AA2E /* ResetPasswordRouter.swift */; };
 		0889FBEB2381BF680092531F /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889FBEA2381BF680092531F /* Protocol.swift */; };
 		0889FBED2381BF950092531F /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889FBEC2381BF950092531F /* SplashPresenter.swift */; };
 		0889FBEF2381BFA10092531F /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889FBEE2381BFA10092531F /* SplashRouter.swift */; };
@@ -24,6 +27,9 @@
 		0889FBF32381C1BB0092531F /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889FBF22381C1BB0092531F /* LoginRouter.swift */; };
 		0889FBF52381C3FA0092531F /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889FBF42381C3FA0092531F /* SignUpPresenter.swift */; };
 		0889FBF72381C4050092531F /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889FBF62381C4050092531F /* SignUpRouter.swift */; };
+		088A2C8A238E6CFD001284EA /* OtpVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088A2C89238E6CFD001284EA /* OtpVerificationViewController.swift */; };
+		088A2C8C238E6D0A001284EA /* OtpVerificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088A2C8B238E6D0A001284EA /* OtpVerificationPresenter.swift */; };
+		088A2C8E238E6D13001284EA /* OtpVerificationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088A2C8D238E6D13001284EA /* OtpVerificationRouter.swift */; };
 		088CF1CF2382F92A00A6E30B /* TodaysFactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088CF1CE2382F92A00A6E30B /* TodaysFactViewController.swift */; };
 		088CF1D12382F93A00A6E30B /* TodaysFactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088CF1D02382F93A00A6E30B /* TodaysFactPresenter.swift */; };
 		088CF1D32382F94300A6E30B /* TodaysFactRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088CF1D22382F94300A6E30B /* TodaysFactRouter.swift */; };
@@ -63,6 +69,9 @@
 		08CAB85A22B8F5E600C2D82C /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CAB84722B8F5E600C2D82C /* Poppins-SemiBoldItalic.ttf */; };
 		08CAB85D22B90B1400C2D82C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CAB85C22B90B1400C2D82C /* SignUpViewController.swift */; };
 		08D2B36722B52A120063B14C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D2B36622B52A120063B14C /* Config.swift */; };
+		08FF77C9238E8C90001EAF2E /* AlertPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF77C8238E8C90001EAF2E /* AlertPop.swift */; };
+		08FF77CB238E8D79001EAF2E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF77CA238E8D79001EAF2E /* HomePresenter.swift */; };
+		08FF77CD238E8D80001EAF2E /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF77CC238E8D80001EAF2E /* HomeRouter.swift */; };
 		54A5EB57BE31354671834275 /* Pods_InforuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CCC027734C3DCB28345FEA /* Pods_InforuTests.framework */; };
 		81CD391192B27A172D33A94C /* Pods_Inforu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E4F1F0F8703738F4DC3D3B3 /* Pods_Inforu.framework */; };
 		D3B443CB520C6A2BA8549240 /* Pods_InforuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F656B6A4A992448FF7A5B7F /* Pods_InforuUITests.framework */; };
@@ -178,6 +187,9 @@
 		0864475022BCE21700531A71 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		0864475222BCE50C00531A71 /* IJReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IJReachability.swift; sourceTree = "<group>"; };
 		0869E9CE22B79D27006C8CF2 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		08777216238E7F3400B0AA2E /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		08777218238E7F4800B0AA2E /* ResetPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordPresenter.swift; sourceTree = "<group>"; };
+		0877721A238E7F5900B0AA2E /* ResetPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordRouter.swift; sourceTree = "<group>"; };
 		0889FBEA2381BF680092531F /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		0889FBEC2381BF950092531F /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		0889FBEE2381BFA10092531F /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
@@ -185,6 +197,9 @@
 		0889FBF22381C1BB0092531F /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		0889FBF42381C3FA0092531F /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		0889FBF62381C4050092531F /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		088A2C89238E6CFD001284EA /* OtpVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpVerificationViewController.swift; sourceTree = "<group>"; };
+		088A2C8B238E6D0A001284EA /* OtpVerificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpVerificationPresenter.swift; sourceTree = "<group>"; };
+		088A2C8D238E6D13001284EA /* OtpVerificationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpVerificationRouter.swift; sourceTree = "<group>"; };
 		088CF1CE2382F92A00A6E30B /* TodaysFactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysFactViewController.swift; sourceTree = "<group>"; };
 		088CF1D02382F93A00A6E30B /* TodaysFactPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysFactPresenter.swift; sourceTree = "<group>"; };
 		088CF1D22382F94300A6E30B /* TodaysFactRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysFactRouter.swift; sourceTree = "<group>"; };
@@ -227,6 +242,9 @@
 		08D2B36422B527F90063B14C /* Inforu-Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Inforu-Test.xcconfig"; sourceTree = "<group>"; };
 		08D2B36522B528050063B14C /* Inforu-Live.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Inforu-Live.xcconfig"; sourceTree = "<group>"; };
 		08D2B36622B52A120063B14C /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		08FF77C8238E8C90001EAF2E /* AlertPop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPop.swift; sourceTree = "<group>"; };
+		08FF77CA238E8D79001EAF2E /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		08FF77CC238E8D80001EAF2E /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		186991D1695881F9A7A28226 /* Pods-InforuTests.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuTests.dev.xcconfig"; path = "Pods/Target Support Files/Pods-InforuTests/Pods-InforuTests.dev.xcconfig"; sourceTree = "<group>"; };
 		1F656B6A4A992448FF7A5B7F /* Pods_InforuUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InforuUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF3A8B14BDC27B07A5430F8 /* Pods-CL-Base-MVPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CL-Base-MVPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CL-Base-MVPTests/Pods-CL-Base-MVPTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -373,6 +391,8 @@
 			isa = PBXGroup;
 			children = (
 				088DD69E22C548F20060FBB7 /* HomeViewController.swift */,
+				08FF77CA238E8D79001EAF2E /* HomePresenter.swift */,
+				08FF77CC238E8D80001EAF2E /* HomeRouter.swift */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -430,6 +450,26 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		08777215238E7F1200B0AA2E /* ResetPasswordVC */ = {
+			isa = PBXGroup;
+			children = (
+				08777216238E7F3400B0AA2E /* ResetPasswordViewController.swift */,
+				08777218238E7F4800B0AA2E /* ResetPasswordPresenter.swift */,
+				0877721A238E7F5900B0AA2E /* ResetPasswordRouter.swift */,
+			);
+			path = ResetPasswordVC;
+			sourceTree = "<group>";
+		};
+		088A2C88238E6CE1001284EA /* OtpVerificationVC */ = {
+			isa = PBXGroup;
+			children = (
+				088A2C89238E6CFD001284EA /* OtpVerificationViewController.swift */,
+				088A2C8B238E6D0A001284EA /* OtpVerificationPresenter.swift */,
+				088A2C8D238E6D13001284EA /* OtpVerificationRouter.swift */,
+			);
+			path = OtpVerificationVC;
+			sourceTree = "<group>";
+		};
 		088CF1CA2382F8BB00A6E30B /* FotdTabFlow */ = {
 			isa = PBXGroup;
 			children = (
@@ -441,6 +481,8 @@
 		088CF1CB2382F8DC00A6E30B /* SignInFlow */ = {
 			isa = PBXGroup;
 			children = (
+				08777215238E7F1200B0AA2E /* ResetPasswordVC */,
+				088A2C88238E6CE1001284EA /* OtpVerificationVC */,
 				08AFDBCC2384147A002F519A /* ForgotPasswordVC */,
 				08CAB85B22B90AF300C2D82C /* SignUpVC */,
 				08CAB83022B8EDD900C2D82C /* LoginVC */,
@@ -771,6 +813,7 @@
 				0869E9D222B7A1C7006C8CF2 /* Fonts */,
 				F49759D91FCE8F3800B8BB6C /* CLAppConstants.swift */,
 				0864475222BCE50C00531A71 /* IJReachability.swift */,
+				08FF77C8238E8C90001EAF2E /* AlertPop.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1237,6 +1280,7 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/PinCodeTextField/PinCodeTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/UIGradient/UIGradient.framework",
 			);
@@ -1251,6 +1295,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinCodeTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIGradient.framework",
 			);
@@ -1281,6 +1326,7 @@
 				F49759CF1FCE8E0000B8BB6C /* CLViewController+Tracking.swift in Sources */,
 				F49759E41FCE908600B8BB6C /* Human.swift in Sources */,
 				F49759D41FCE8E0000B8BB6C /* UIFont+Extention.swift in Sources */,
+				088A2C8C238E6D0A001284EA /* OtpVerificationPresenter.swift in Sources */,
 				0864475322BCE50C00531A71 /* IJReachability.swift in Sources */,
 				F4975A6E1FCEA22500B8BB6C /* PresistentStoreLocation.xcdatamodeld in Sources */,
 				F4975A4E1FCEA01700B8BB6C /* ValidationRuleContains.swift in Sources */,
@@ -1288,6 +1334,7 @@
 				F4975A511FCEA01700B8BB6C /* ValidationRuleOptional.swift in Sources */,
 				F4975A041FCE9E3500B8BB6C /* APNSInfo.swift in Sources */,
 				F4975A531FCEA01700B8BB6C /* ValidationRulePaymentCard.swift in Sources */,
+				08777219238E7F4800B0AA2E /* ResetPasswordPresenter.swift in Sources */,
 				F49759C71FCE8E0000B8BB6C /* CLAlertController+Extension.swift in Sources */,
 				F4975A101FCE9E4300B8BB6C /* PersistentStoreLocation.swift in Sources */,
 				F49759CA1FCE8E0000B8BB6C /* CLCollection+Extension.swift in Sources */,
@@ -1307,6 +1354,8 @@
 				08CAB85D22B90B1400C2D82C /* SignUpViewController.swift in Sources */,
 				F49759C81FCE8E0000B8BB6C /* CLAPP+EnvConfig.swift in Sources */,
 				F4975A0E1FCE9E4300B8BB6C /* LocationBackgroundTaskManager.swift in Sources */,
+				08FF77CD238E8D80001EAF2E /* HomeRouter.swift in Sources */,
+				08FF77CB238E8D79001EAF2E /* HomePresenter.swift in Sources */,
 				F4975A5B1FCEA01D00B8BB6C /* Validator.swift in Sources */,
 				08ABD889238288D100DA555C /* AlertWithOptionsViewController.swift in Sources */,
 				F4975A0F1FCE9E4300B8BB6C /* LocationTracker.swift in Sources */,
@@ -1322,11 +1371,13 @@
 				F49759DA1FCE8F4C00B8BB6C /* CLAppConstants.swift in Sources */,
 				F49759D11FCE8E0000B8BB6C /* Enum+Extension.swift in Sources */,
 				F49759CC1FCE8E0000B8BB6C /* CLString+Extension.swift in Sources */,
+				088A2C8E238E6D13001284EA /* OtpVerificationRouter.swift in Sources */,
 				F460456B1FCD3E7200DC976D /* AppDelegate.swift in Sources */,
 				08A73476237D7BA8003F34F0 /* UserAPI.swift in Sources */,
 				F4975A0B1FCE9E3C00B8BB6C /* HTTPStatusCodes.swift in Sources */,
 				F49759E91FCE90A800B8BB6C /* PersistencyManager.swift in Sources */,
 				0889FBF72381C4050092531F /* SignUpRouter.swift in Sources */,
+				08FF77C9238E8C90001EAF2E /* AlertPop.swift in Sources */,
 				0864475122BCE21700531A71 /* SplashViewController.swift in Sources */,
 				F49759D01FCE8E0000B8BB6C /* Designable.swift in Sources */,
 				F4975A051FCE9E3500B8BB6C /* APNSManager.swift in Sources */,
@@ -1334,6 +1385,7 @@
 				F49759CB1FCE8E0000B8BB6C /* CLObject+Extension.swift in Sources */,
 				088CF1D7238307D000A6E30B /* ForceUpdateModel.swift in Sources */,
 				F4975A061FCE9E3500B8BB6C /* CLApp+APNS.swift in Sources */,
+				0877721B238E7F5900B0AA2E /* ResetPasswordRouter.swift in Sources */,
 				0889FBF52381C3FA0092531F /* SignUpPresenter.swift in Sources */,
 				F49759E01FCE903C00B8BB6C /* LoginManager.swift in Sources */,
 				F4975A4C1FCEA01700B8BB6C /* ValidationRuleComparison.swift in Sources */,
@@ -1357,7 +1409,9 @@
 				F4975A5C1FCEA02C00B8BB6C /* BPStatusBar.swift in Sources */,
 				088DD69F22C548F20060FBB7 /* HomeViewController.swift in Sources */,
 				F4975A5D1FCEA03100B8BB6C /* MenuBarController.swift in Sources */,
+				08777217238E7F3400B0AA2E /* ResetPasswordViewController.swift in Sources */,
 				F49759E71FCE908A00B8BB6C /* Modelable.swift in Sources */,
+				088A2C8A238E6CFD001284EA /* OtpVerificationViewController.swift in Sources */,
 				F4975A591FCEA01D00B8BB6C /* ValidationRule.swift in Sources */,
 				F4975A5E1FCEA03100B8BB6C /* MenuBarProtocol.swift in Sources */,
 				F4975A0A1FCE9E3C00B8BB6C /* HTTPRequest.swift in Sources */,

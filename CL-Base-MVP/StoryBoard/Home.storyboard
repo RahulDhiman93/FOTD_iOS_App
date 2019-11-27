@@ -12,19 +12,79 @@
         <array key="Poppins-Bold.ttf">
             <string>Poppins-Bold</string>
         </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
-        <!--Home View Controller-->
+        <!--home-->
         <scene sceneID="SQn-xN-XvB">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Moc-WY-5bs" customClass="HomeViewController" customModule="FOTD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ih4-Lc-6uz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="blog" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMx-BM-Ott">
+                                <rect key="frame" x="30" y="106" width="364" height="20"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins SemiBold" pointSize="17"/>
+                                <color key="textColor" name="AppTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C5t-kj-Kjz">
+                                <rect key="frame" x="0.0" y="131" width="414" height="236.33333333333337"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xz9-XI-O7V">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="popular" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrZ-nq-gq1">
+                                <rect key="frame" x="30" y="377.33333333333331" width="284" height="20"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins SemiBold" pointSize="17"/>
+                                <color key="textColor" name="AppTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6G-wq-cZO">
+                                <rect key="frame" x="324" y="372.33333333333331" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="y8D-76-sAi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins SemiBold" pointSize="15"/>
+                                <state key="normal" title="more ...">
+                                    <color key="titleColor" name="AppThemePrimaryColor"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FKq-iF-p2k">
+                                <rect key="frame" x="20" y="407.33333333333326" width="374" height="279.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" name="AppBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZrZ-nq-gq1" firstAttribute="leading" secondItem="Ven-1B-MJq" secondAttribute="leading" constant="30" id="1Ys-ol-XnF"/>
+                            <constraint firstItem="C5t-kj-Kjz" firstAttribute="height" secondItem="Ven-1B-MJq" secondAttribute="height" multiplier="0.4" id="2rM-EX-COk"/>
+                            <constraint firstItem="Ven-1B-MJq" firstAttribute="trailing" secondItem="W6G-wq-cZO" secondAttribute="trailing" constant="20" id="3eJ-L7-CEL"/>
+                            <constraint firstItem="ZrZ-nq-gq1" firstAttribute="top" secondItem="C5t-kj-Kjz" secondAttribute="bottom" constant="10" id="GPP-e0-2XU"/>
+                            <constraint firstItem="iMx-BM-Ott" firstAttribute="leading" secondItem="Ven-1B-MJq" secondAttribute="leading" constant="30" id="YD3-5h-3Nu"/>
+                            <constraint firstItem="W6G-wq-cZO" firstAttribute="centerY" secondItem="ZrZ-nq-gq1" secondAttribute="centerY" id="a9x-Bc-pkb"/>
+                            <constraint firstItem="Ven-1B-MJq" firstAttribute="trailing" secondItem="C5t-kj-Kjz" secondAttribute="trailing" id="aNP-7D-Lwp"/>
+                            <constraint firstItem="C5t-kj-Kjz" firstAttribute="top" secondItem="iMx-BM-Ott" secondAttribute="bottom" constant="5" id="ar2-wr-ggJ"/>
+                            <constraint firstItem="Ven-1B-MJq" firstAttribute="bottom" secondItem="FKq-iF-p2k" secondAttribute="bottom" id="fJD-da-XBB"/>
+                            <constraint firstItem="Ven-1B-MJq" firstAttribute="trailing" secondItem="iMx-BM-Ott" secondAttribute="trailing" constant="20" id="h7r-k9-WB4"/>
+                            <constraint firstItem="C5t-kj-Kjz" firstAttribute="leading" secondItem="Ven-1B-MJq" secondAttribute="leading" id="jHC-2l-dsB"/>
+                            <constraint firstItem="FKq-iF-p2k" firstAttribute="leading" secondItem="Ven-1B-MJq" secondAttribute="leading" constant="20" id="qXV-kw-BWK"/>
+                            <constraint firstItem="iMx-BM-Ott" firstAttribute="top" secondItem="Ven-1B-MJq" secondAttribute="top" constant="10" id="rBg-Ax-Myh"/>
+                            <constraint firstItem="W6G-wq-cZO" firstAttribute="leading" secondItem="ZrZ-nq-gq1" secondAttribute="trailing" constant="10" id="uVt-Rl-J7x"/>
+                            <constraint firstItem="Ven-1B-MJq" firstAttribute="trailing" secondItem="FKq-iF-p2k" secondAttribute="trailing" constant="20" id="yIR-Au-jw5"/>
+                            <constraint firstItem="FKq-iF-p2k" firstAttribute="top" secondItem="ZrZ-nq-gq1" secondAttribute="bottom" constant="10" id="zHn-zv-70Q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ven-1B-MJq"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3QN-5G-mht"/>
+                    <navigationItem key="navigationItem" title="home" id="3QN-5G-mht"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6F-0H-jHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,7 +106,7 @@
             </objects>
             <point key="canvasLocation" x="755" y="910"/>
         </scene>
-        <!--Todays Fact View Controller-->
+        <!--fact of the day-->
         <scene sceneID="gIA-JP-Wez">
             <objects>
                 <viewController storyboardIdentifier="TodaysFactViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5mo-iS-whI" customClass="TodaysFactViewController" customModule="FOTD" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,7 +115,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="bUB-If-JdX">
-                                <rect key="frame" x="50" y="94" width="314" height="543"/>
+                                <rect key="frame" x="50" y="146" width="314" height="491"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="50"/>
                                 <color key="textColor" name="AppTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -70,7 +130,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mN7-1T-egY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="BmE-3S-FVt"/>
+                    <navigationItem key="navigationItem" title="fact of the day" id="BmE-3S-FVt"/>
                     <connections>
                         <outlet property="factLabel" destination="bUB-If-JdX" id="vp8-cr-omy"/>
                     </connections>
@@ -117,12 +177,19 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fmi-vi-oRK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="homeTabBar" id="Ehq-C5-87W"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gw6-sL-ynN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Gw6-sL-ynN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="AppBackgroundColor"/>
                         <color key="tintColor" name="AppBackgroundColor"/>
                         <color key="barTintColor" name="AppBackgroundColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <offsetWrapper key="textShadowOffset" horizontal="1" vertical="1"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="1" vertical="1"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -183,12 +250,19 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vcA-27-12S" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="fotdTabBar" id="Cgd-UA-hYm"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mBH-6T-nx8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="mBH-6T-nx8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="AppBackgroundColor"/>
                         <color key="tintColor" name="AppBackgroundColor"/>
                         <color key="barTintColor" name="AppBackgroundColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <offsetWrapper key="textShadowOffset" horizontal="1" vertical="1"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="1" vertical="1"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -22,6 +22,7 @@ target 'Inforu' do
     pod 'FBSDKCoreKit', '~> 4.44.0'
     pod 'FBSDKLoginKit', '~> 4.44.0'
     pod 'FBSDKShareKit', '~> 4.44.0'
+    pod 'PinCodeTextField'
 
   target 'InforuTests' do
     inherit! :search_paths

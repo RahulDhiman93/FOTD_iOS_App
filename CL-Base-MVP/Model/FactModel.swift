@@ -110,7 +110,7 @@ struct Fact {
         
         
         self.factId = factId
-        self.fact = fact
+        self.fact = fact.lowercased()
         self.factStamp = factStamp
         self.factStatus = factStatus
         self.factTag = factTag
