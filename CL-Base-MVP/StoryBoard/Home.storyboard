@@ -57,6 +57,9 @@
                                 <state key="normal" title="more ...">
                                     <color key="titleColor" name="AppThemePrimaryColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="moreButtonTapped:" destination="Moc-WY-5bs" eventType="touchUpInside" id="SNn-UR-1D9"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FKq-iF-p2k">
                                 <rect key="frame" x="20" y="407.33333333333326" width="374" height="279.66666666666674"/>
@@ -85,6 +88,11 @@
                         <viewLayoutGuide key="safeArea" id="Ven-1B-MJq"/>
                     </view>
                     <navigationItem key="navigationItem" title="home" id="3QN-5G-mht"/>
+                    <connections>
+                        <outlet property="blogCollectionFlowLayout" destination="Xz9-XI-O7V" id="dNb-OE-52I"/>
+                        <outlet property="blogCollectionView" destination="C5t-kj-Kjz" id="6RK-gp-ToW"/>
+                        <outlet property="popularTableView" destination="FKq-iF-p2k" id="2br-D6-C7s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6F-0H-jHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

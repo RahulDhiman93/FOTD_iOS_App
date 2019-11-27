@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PopularTableViewCell" rowHeight="51" id="KGk-i7-Jjw" customClass="PopularTableViewCell" customModule="FOTD" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMW-ac-Jaf">
+                        <rect key="frame" x="5" y="5" width="310" height="41"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rrt-vP-kAP">
+                                <rect key="frame" x="0.0" y="0.0" width="310" height="41"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjC-Xi-7uO">
+                                        <rect key="frame" x="10" y="10" width="290" height="21"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                        <color key="textColor" name="AppTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="AppBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="kjC-Xi-7uO" secondAttribute="bottom" constant="10" id="7eb-lk-wLm"/>
+                                    <constraint firstAttribute="trailing" secondItem="kjC-Xi-7uO" secondAttribute="trailing" constant="10" id="LHG-Kz-xVD"/>
+                                    <constraint firstItem="kjC-Xi-7uO" firstAttribute="leading" secondItem="Rrt-vP-kAP" secondAttribute="leading" constant="10" id="ouO-f4-Aui"/>
+                                    <constraint firstItem="kjC-Xi-7uO" firstAttribute="top" secondItem="Rrt-vP-kAP" secondAttribute="top" constant="10" id="pYg-tL-DdM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rrt-vP-kAP" firstAttribute="leading" secondItem="dMW-ac-Jaf" secondAttribute="leading" id="2Qt-8T-5kD"/>
+                            <constraint firstItem="Rrt-vP-kAP" firstAttribute="top" secondItem="dMW-ac-Jaf" secondAttribute="top" id="H89-RW-v6A"/>
+                            <constraint firstAttribute="bottom" secondItem="Rrt-vP-kAP" secondAttribute="bottom" id="NdP-UF-8r7"/>
+                            <constraint firstAttribute="trailing" secondItem="Rrt-vP-kAP" secondAttribute="trailing" id="zlE-UF-6v8"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" name="AppTextColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.29999999999999999"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="dMW-ac-Jaf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="2g7-wy-k4K"/>
+                    <constraint firstItem="dMW-ac-Jaf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="M0m-19-j1R"/>
+                    <constraint firstAttribute="trailing" secondItem="dMW-ac-Jaf" secondAttribute="trailing" constant="5" id="YyY-hu-hEV"/>
+                    <constraint firstAttribute="bottom" secondItem="dMW-ac-Jaf" secondAttribute="bottom" constant="5" id="ZNT-r6-KSi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="factText" destination="kjC-Xi-7uO" id="uAK-6A-ltY"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="90.736607142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AppBackgroundColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppTextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
