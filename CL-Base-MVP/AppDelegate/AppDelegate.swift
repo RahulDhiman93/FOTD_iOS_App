@@ -23,7 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         APNSManager.share.registerAppRemoteNotifications()
         print(Config.sharedInstance.baseURL())
+        self.setupTabBar()
         return true
+    }
+    
+    private func setupTabBar() {
+        let selectedColor   = AppColor.themePrimaryColor
+        let unselectedColor = AppColor.themeSecondaryColor
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: unselectedColor], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: selectedColor], for: .selected)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

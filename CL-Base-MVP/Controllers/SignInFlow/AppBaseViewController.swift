@@ -12,6 +12,7 @@ class AppBaseViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBar.unselectedItemTintColor = AppColor.themeSecondaryColor
         self.selectedIndex = 2
         // Do any additional setup after loading the view.
     }

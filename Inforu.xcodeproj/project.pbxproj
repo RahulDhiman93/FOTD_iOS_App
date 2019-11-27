@@ -17,6 +17,9 @@
 		0864475122BCE21700531A71 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0864475022BCE21700531A71 /* SplashViewController.swift */; };
 		0864475322BCE50C00531A71 /* IJReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0864475222BCE50C00531A71 /* IJReachability.swift */; };
 		0869E9CF22B79D27006C8CF2 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0869E9CE22B79D27006C8CF2 /* SignIn.storyboard */; };
+		0876D913238EB9BD0068F639 /* AddFactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876D912238EB9BD0068F639 /* AddFactViewController.swift */; };
+		0876D915238EB9CD0068F639 /* AddFactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876D914238EB9CD0068F639 /* AddFactPresenter.swift */; };
+		0876D917238EB9D40068F639 /* AddFactRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876D916238EB9D40068F639 /* AddFactRouter.swift */; };
 		08777217238E7F3400B0AA2E /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08777216238E7F3400B0AA2E /* ResetPasswordViewController.swift */; };
 		08777219238E7F4800B0AA2E /* ResetPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08777218238E7F4800B0AA2E /* ResetPasswordPresenter.swift */; };
 		0877721B238E7F5900B0AA2E /* ResetPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0877721A238E7F5900B0AA2E /* ResetPasswordRouter.swift */; };
@@ -185,6 +188,9 @@
 		0864475022BCE21700531A71 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		0864475222BCE50C00531A71 /* IJReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IJReachability.swift; sourceTree = "<group>"; };
 		0869E9CE22B79D27006C8CF2 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		0876D912238EB9BD0068F639 /* AddFactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFactViewController.swift; sourceTree = "<group>"; };
+		0876D914238EB9CD0068F639 /* AddFactPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFactPresenter.swift; sourceTree = "<group>"; };
+		0876D916238EB9D40068F639 /* AddFactRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFactRouter.swift; sourceTree = "<group>"; };
 		08777216238E7F3400B0AA2E /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		08777218238E7F4800B0AA2E /* ResetPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordPresenter.swift; sourceTree = "<group>"; };
 		0877721A238E7F5900B0AA2E /* ResetPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordRouter.swift; sourceTree = "<group>"; };
@@ -446,6 +452,24 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		0876D910238EB99E0068F639 /* AddFactFlow */ = {
+			isa = PBXGroup;
+			children = (
+				0876D911238EB9A60068F639 /* AddFactVC */,
+			);
+			path = AddFactFlow;
+			sourceTree = "<group>";
+		};
+		0876D911238EB9A60068F639 /* AddFactVC */ = {
+			isa = PBXGroup;
+			children = (
+				0876D912238EB9BD0068F639 /* AddFactViewController.swift */,
+				0876D914238EB9CD0068F639 /* AddFactPresenter.swift */,
+				0876D916238EB9D40068F639 /* AddFactRouter.swift */,
+			);
+			path = AddFactVC;
+			sourceTree = "<group>";
+		};
 		08777215238E7F1200B0AA2E /* ResetPasswordVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -689,6 +713,7 @@
 		F460455C1FCC30D700DC976D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0876D910238EB99E0068F639 /* AddFactFlow */,
 				088CF1CA2382F8BB00A6E30B /* FotdTabFlow */,
 				088CF1CC2382F8ED00A6E30B /* HomeTabFlow */,
 				088CF1CB2382F8DC00A6E30B /* SignInFlow */,
@@ -1318,6 +1343,7 @@
 				F49759E31FCE908300B8BB6C /* User.swift in Sources */,
 				F49759CF1FCE8E0000B8BB6C /* CLViewController+Tracking.swift in Sources */,
 				F49759E41FCE908600B8BB6C /* Human.swift in Sources */,
+				0876D917238EB9D40068F639 /* AddFactRouter.swift in Sources */,
 				F49759D41FCE8E0000B8BB6C /* UIFont+Extention.swift in Sources */,
 				088A2C8C238E6D0A001284EA /* OtpVerificationPresenter.swift in Sources */,
 				0864475322BCE50C00531A71 /* IJReachability.swift in Sources */,
@@ -1368,6 +1394,7 @@
 				F460456B1FCD3E7200DC976D /* AppDelegate.swift in Sources */,
 				08A73476237D7BA8003F34F0 /* UserAPI.swift in Sources */,
 				F4975A0B1FCE9E3C00B8BB6C /* HTTPStatusCodes.swift in Sources */,
+				0876D915238EB9CD0068F639 /* AddFactPresenter.swift in Sources */,
 				F49759E91FCE90A800B8BB6C /* PersistencyManager.swift in Sources */,
 				0889FBF72381C4050092531F /* SignUpRouter.swift in Sources */,
 				08FF77C9238E8C90001EAF2E /* AlertPop.swift in Sources */,
@@ -1394,6 +1421,7 @@
 				F49759D21FCE8E0000B8BB6C /* String+Extention.swift in Sources */,
 				0864474D22BCCF2100531A71 /* AppConstants.swift in Sources */,
 				F4975A581FCEA01D00B8BB6C /* ValidationResult.swift in Sources */,
+				0876D913238EB9BD0068F639 /* AddFactViewController.swift in Sources */,
 				F49759CE1FCE8E0000B8BB6C /* CLViewController+Extension.swift in Sources */,
 				08A7347A237D802D003F34F0 /* AppBaseViewController.swift in Sources */,
 				F4975A121FCE9E5000B8BB6C /* LogsControl.swift in Sources */,
