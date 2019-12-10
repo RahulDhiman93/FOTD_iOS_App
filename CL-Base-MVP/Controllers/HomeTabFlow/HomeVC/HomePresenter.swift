@@ -43,12 +43,14 @@ class HomePresenter {
                 return
             }
             
+            self?.featuredFact.removeAll()
             for featureFact in featured {
                 if let fact = BlogModel(json: featureFact) {
                     self?.featuredFact.append(fact)
                 }
             }
             
+            self?.popularFact.removeAll()
             for popularFact in popular {
                 if let fact = BlogModel(json: popularFact) {
                     self?.popularFact.append(fact)

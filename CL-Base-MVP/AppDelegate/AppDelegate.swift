@@ -27,9 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(Config.sharedInstance.baseURL())
         self.setupTabBar()
         
-        if #available(iOS 13.0, *) {
-            window?.overrideUserInterfaceStyle = .light
-        }
+//        if #available(iOS 13.0, *) {
+//            window?.overrideUserInterfaceStyle = .light
+//        }
         
         return true
     }

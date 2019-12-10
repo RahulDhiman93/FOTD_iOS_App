@@ -21,6 +21,13 @@ class BlogCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01, execute: {
+            UIView.animate(withDuration: 0.01, animations: {
+                self.imageContView.layer.cornerRadius = self.imageContView.layer.frame.height/2
+                self.layoutIfNeeded()
+            })
+        })
+        
         // Initialization code
        
     }
@@ -30,8 +37,8 @@ class BlogCollectionViewCell: UICollectionViewCell {
         guard let publisherImage = model.userImage else { return }
         guard let fact = model.fact else { return }
         
-        self.blogPublisherName.text = publisherName
-        self.blogPublisherImage.kf.setImage(with: URL(string: publisherImage), placeholder: UIImage(named: ""))
-        self.factText.text = fact
+        self.blogPublisherName.text = publisherName.lowercased()
+        self.blogPublisherImage.kf.setImage(with: URL(string: publisherImage), placeholder: UIImage(named: "placeholder"))
+        self.factText.text = fact.lowercased()
     }
 }

@@ -25,7 +25,7 @@ class PopularTableViewCell: UITableViewCell {
     }
     
     func configCell(factText : String) {
-        self.factText.text = factText
+        self.factText.text = factText.lowercased()
     }
     
 }

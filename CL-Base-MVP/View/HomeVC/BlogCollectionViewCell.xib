@@ -20,26 +20,26 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BlogCollectionViewCell" id="gTV-IL-0wX" customClass="BlogCollectionViewCell" customModule="FOTD" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="226" height="252"/>
+            <rect key="frame" x="0.0" y="0.0" width="138" height="190"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="226" height="252"/>
+                <rect key="frame" x="0.0" y="0.0" width="138" height="190"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRK-EQ-REr">
-                        <rect key="frame" x="5" y="5" width="216" height="242"/>
+                        <rect key="frame" x="5" y="5" width="128" height="180"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXG-z9-nfa">
-                                <rect key="frame" x="0.0" y="0.0" width="216" height="242"/>
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="180"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="367-R6-hxz">
-                                        <rect key="frame" x="0.0" y="0.0" width="216" height="242"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="180"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAF-ed-MFW">
-                                                <rect key="frame" x="0.0" y="0.0" width="216" height="169.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="126"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fact" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="caY-nM-WnQ">
-                                                        <rect key="frame" x="10" y="73" width="196" height="23.5"/>
+                                                        <rect key="frame" x="10" y="51.5" width="108" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins SemiBold" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -56,16 +56,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icC-kv-xa8">
-                                                <rect key="frame" x="0.0" y="169.5" width="216" height="72.5"/>
+                                                <rect key="frame" x="0.0" y="126" width="128" height="54"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QjJ-Cu-DLp">
-                                                        <rect key="frame" x="10" y="12.5" width="47" height="47.5"/>
+                                                        <rect key="frame" x="10" y="11" width="32.5" height="32"/>
                                                         <subviews>
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5c-f8-cCh">
-                                                                <rect key="frame" x="0.0" y="0.0" width="47" height="47.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="32"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N3u-fo-5du">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="47" height="47.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="32.5" height="32"/>
                                                                     </imageView>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -87,7 +87,7 @@
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                                <color key="value" name="AppTextColor"/>
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                                 <real key="value" value="0.29999999999999999"/>
@@ -101,7 +101,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="WEO-vn-GB3">
-                                                        <rect key="frame" x="67" y="28.5" width="56" height="15.5"/>
+                                                        <rect key="frame" x="52.5" y="19.5" width="56" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                         <color key="textColor" name="AppThemeSecondaryColor"/>
                                                         <nil key="highlightedColor"/>
@@ -113,7 +113,7 @@
                                                     <constraint firstItem="WEO-vn-GB3" firstAttribute="centerY" secondItem="icC-kv-xa8" secondAttribute="centerY" id="GU5-Q6-rvS"/>
                                                     <constraint firstItem="WEO-vn-GB3" firstAttribute="leading" secondItem="QjJ-Cu-DLp" secondAttribute="trailing" constant="10" id="N4O-u1-nOY"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WEO-vn-GB3" secondAttribute="trailing" constant="10" id="P8P-3B-gvS"/>
-                                                    <constraint firstItem="QjJ-Cu-DLp" firstAttribute="height" secondItem="icC-kv-xa8" secondAttribute="height" multiplier="0.65" id="YE2-yB-pqX"/>
+                                                    <constraint firstItem="QjJ-Cu-DLp" firstAttribute="height" secondItem="icC-kv-xa8" secondAttribute="height" multiplier="0.6" id="YE2-yB-pqX"/>
                                                     <constraint firstItem="QjJ-Cu-DLp" firstAttribute="centerY" secondItem="icC-kv-xa8" secondAttribute="centerY" id="jV8-q1-ZIm"/>
                                                 </constraints>
                                             </view>
@@ -161,7 +161,7 @@
                                 <size key="value" width="0.0" height="0.0"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                <real key="value" value="3"/>
+                                <real key="value" value="2"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>

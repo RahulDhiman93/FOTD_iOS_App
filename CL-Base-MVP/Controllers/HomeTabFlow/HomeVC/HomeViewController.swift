@@ -19,8 +19,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = HomePresenter(view : self)
-        self.setupTableView()
         self.setupCollectionView()
+        self.setupTableView()
         self.presenter.getFeaturedFact()
         // Do any additional setup after loading the view.
     }
@@ -40,8 +40,8 @@ class HomeViewController: UIViewController {
         self.blogCollectionView.bounces = true
         self.blogCollectionView.isPagingEnabled = false
         self.blogCollectionView.showsHorizontalScrollIndicator = false
-        self.blogCollectionFlowLayout.minimumLineSpacing = 1
-        self.blogCollectionFlowLayout.minimumInteritemSpacing = 1
+//        self.blogCollectionFlowLayout.minimumLineSpacing = 1
+//        self.blogCollectionFlowLayout.minimumInteritemSpacing = 1
         self.blogCollectionView.register( UINib(nibName: "BlogCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "BlogCollectionViewCell")
     }
     
@@ -57,8 +57,8 @@ extension HomeViewController : HomePresenterDelegate {
     }
     
     func featuredSuccess() {
-        self.blogCollectionView.reloadData()
         self.popularTableView.reloadData()
+        self.blogCollectionView.reloadData()
     }
 }
 
@@ -90,14 +90,15 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
             fatalError()
         }
         cell.model = self.presenter.featuredFact[indexPath.item]
-       // cell.setupCell()
-        cell.imageContView.layer.cornerRadius = cell.imageContView.frame.width/2
+        cell.setupCell()
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.blogCollectionView.frame.width/3, height: self.blogCollectionView.frame.height - 10)
+        let size : CGSize = CGSize(width: self.blogCollectionView.frame.width/3, height: self.blogCollectionView.frame.height)
+        return size
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
