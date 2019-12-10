@@ -8,17 +8,20 @@
 
 import UIKit
 
-
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var blogCollectionView: UICollectionView!
     @IBOutlet weak var blogCollectionFlowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var popularTableView: UITableView!
     
+    var presenter : HomePresenter!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.presenter = HomePresenter(view : self)
         self.setupTableView()
         self.setupCollectionView()
+        self.presenter.getFeaturedFact()
         // Do any additional setup after loading the view.
     }
     
@@ -35,10 +38,11 @@ class HomeViewController: UIViewController {
         self.blogCollectionView.delegate = self
         self.blogCollectionView.dataSource = self
         self.blogCollectionView.bounces = true
-        self.blogCollectionView.isPagingEnabled = true
+        self.blogCollectionView.isPagingEnabled = false
+        self.blogCollectionView.showsHorizontalScrollIndicator = false
         self.blogCollectionFlowLayout.minimumLineSpacing = 1
         self.blogCollectionFlowLayout.minimumInteritemSpacing = 1
-      //  self.blogCollectionView.register( UINib(nibName: CollectionViewCell.DateSlotCollectionViewCell, bundle: Bundle.main), forCellWithReuseIdentifier: CollectionViewCell.DateSlotCollectionViewCell)
+        self.blogCollectionView.register( UINib(nibName: "BlogCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "BlogCollectionViewCell")
     }
     
     @IBAction func moreButtonTapped(_ sender: UIButton) {
@@ -46,16 +50,30 @@ class HomeViewController: UIViewController {
     }
 }
 
+extension HomeViewController : HomePresenterDelegate {
+    
+    func failure(message: String) {
+        ErrorView.showWith(message: message, isErrorMessage: true) {}
+    }
+    
+    func featuredSuccess() {
+        self.blogCollectionView.reloadData()
+        self.popularTableView.reloadData()
+    }
+}
+
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.presenter.popularFact.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier:  "PopularTableViewCell", for: indexPath) as? PopularTableViewCell else{
             fatalError()
         }
+        guard let fact = self.presenter.popularFact[indexPath.row].fact else { return UITableViewCell() }
+        cell.configCell(factText: fact)
         return cell
     }
     
@@ -64,11 +82,24 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
 extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return self.presenter.featuredFact.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BlogCollectionViewCell" , for: indexPath) as? BlogCollectionViewCell else {
+            fatalError()
+        }
+        cell.model = self.presenter.featuredFact[indexPath.item]
+       // cell.setupCell()
+        cell.imageContView.layer.cornerRadius = cell.imageContView.frame.width/2
+        return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.blogCollectionView.frame.width/3, height: self.blogCollectionView.frame.height - 10)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+    }
 }

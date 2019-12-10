@@ -13,7 +13,7 @@ class AddFactViewController: UIViewController {
     @IBOutlet weak var addFactTextView: UITextView!
     
     var presenter : AddFactPresenter!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = AddFactPresenter(view: self)

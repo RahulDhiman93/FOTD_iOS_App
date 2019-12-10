@@ -23,6 +23,8 @@ target 'Inforu' do
     pod 'FBSDKLoginKit', '~> 4.44.0'
     pod 'FBSDKShareKit', '~> 4.44.0'
     pod 'PinCodeTextField'
+    pod 'Firebase/Analytics'
+    pod 'Kingfisher'
 
   target 'InforuTests' do
     inherit! :search_paths

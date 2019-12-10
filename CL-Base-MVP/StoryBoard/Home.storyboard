@@ -37,10 +37,13 @@
                                 <color key="textColor" name="AppTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C5t-kj-Kjz">
-                                <rect key="frame" x="0.0" y="139" width="414" height="207"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C5t-kj-Kjz">
+                                <rect key="frame" x="0.0" y="139" width="414" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xz9-XI-O7V">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="5J5-Er-Bt2"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xz9-XI-O7V">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -49,13 +52,13 @@
                                 <cells/>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="popular" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrZ-nq-gq1">
-                                <rect key="frame" x="30" y="356" width="284" height="28"/>
+                                <rect key="frame" x="30" y="349" width="284" height="28"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins SemiBold" pointSize="20"/>
                                 <color key="textColor" name="AppTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6G-wq-cZO">
-                                <rect key="frame" x="324" y="353.33333333333331" width="70" height="33"/>
+                                <rect key="frame" x="324" y="346.66666666666669" width="70" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="y8D-76-sAi"/>
                                 </constraints>
@@ -68,14 +71,13 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FKq-iF-p2k">
-                                <rect key="frame" x="20" y="394" width="374" height="293"/>
+                                <rect key="frame" x="20" y="387" width="374" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" name="AppBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ZrZ-nq-gq1" firstAttribute="leading" secondItem="Ven-1B-MJq" secondAttribute="leading" constant="30" id="1Ys-ol-XnF"/>
-                            <constraint firstItem="C5t-kj-Kjz" firstAttribute="height" secondItem="Ven-1B-MJq" secondAttribute="height" multiplier="0.35" id="2rM-EX-COk"/>
                             <constraint firstItem="Ven-1B-MJq" firstAttribute="trailing" secondItem="W6G-wq-cZO" secondAttribute="trailing" constant="20" id="3eJ-L7-CEL"/>
                             <constraint firstItem="ZrZ-nq-gq1" firstAttribute="top" secondItem="C5t-kj-Kjz" secondAttribute="bottom" constant="10" id="GPP-e0-2XU"/>
                             <constraint firstItem="iMx-BM-Ott" firstAttribute="leading" secondItem="Ven-1B-MJq" secondAttribute="leading" constant="30" id="YD3-5h-3Nu"/>

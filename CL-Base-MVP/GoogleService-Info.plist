@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>651083519303-eradd5qhbumsdgo01e7jr54cio73g5ut.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.651083519303-eradd5qhbumsdgo01e7jr54cio73g5ut</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD0al5raRPD2tSFNdN-s-Nj-7zm2m4-F9E</string>
+	<key>GCM_SENDER_ID</key>
+	<string>651083519303</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.fact.of.the.day.InDemand.FOTD</string>
+	<key>PROJECT_ID</key>
+	<string>fact-of-the-day-4ebff</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fact-of-the-day-4ebff.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:651083519303:ios:55fa54fdf6b77aa4c8e862</string>
+	<key>DATABASE_URL</key>
+	<string>https://fact-of-the-day-4ebff.firebaseio.com</string>
+</dict>
+</plist>

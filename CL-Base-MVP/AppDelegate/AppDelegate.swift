@@ -11,6 +11,7 @@ import CoreData
 import IQKeyboardManagerSwift
 import FBSDKLoginKit
 import FBSDKShareKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,8 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         IQKeyboardManager.shared.enable = true
         APNSManager.share.registerAppRemoteNotifications()
+        FirebaseApp.configure()
         print(Config.sharedInstance.baseURL())
         self.setupTabBar()
+        
+        if #available(iOS 13.0, *) {
+            window?.overrideUserInterfaceStyle = .light
+        }
+        
         return true
     }
     
