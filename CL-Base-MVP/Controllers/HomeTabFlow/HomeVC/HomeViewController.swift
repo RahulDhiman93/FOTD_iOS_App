@@ -77,6 +77,13 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let vc = FactDetailRouter.FactDetailVC() else { return }
+        vc.presenter = FactDetailPresenter(view: vc)
+        vc.presenter.factId = self.presenter.popularFact[indexPath.row].factId!
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
@@ -94,8 +101,15 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let vc = FactDetailRouter.FactDetailVC() else { return }
+        vc.presenter = FactDetailPresenter(view: vc)
+        vc.presenter.factId = self.presenter.featuredFact[indexPath.item].factId!
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size : CGSize = CGSize(width: self.blogCollectionView.frame.width/3, height: self.blogCollectionView.frame.height)
+        let size : CGSize = CGSize(width: self.blogCollectionView.frame.width/2.5, height: self.blogCollectionView.frame.height)
         return size
     }
     

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		069A5BFA1FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A5BF91FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift */; };
 		069A5BFC1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A5BFB1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift */; };
+		0809C48223A138420035781A /* FactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809C48023A138420035781A /* FactDetailViewController.swift */; };
+		0809C48523A13ABC0035781A /* FactDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809C48423A13ABC0035781A /* FactDetailPresenter.swift */; };
+		0809C48723A13ACA0035781A /* FactDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809C48623A13ACA0035781A /* FactDetailRouter.swift */; };
+		0809C48923A13E570035781A /* FactDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809C48823A13E570035781A /* FactDetailModel.swift */; };
 		0810911A22C368E800002EB5 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0810911922C368E800002EB5 /* Home.storyboard */; };
 		08196413239F744800595EC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08196412239F744800595EC4 /* GoogleService-Info.plist */; };
 		08196416239F81DC00595EC4 /* BlogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08196415239F81DC00595EC4 /* BlogModel.swift */; };
@@ -183,6 +187,10 @@
 		053C9D8750EC7E408E37B346 /* Pods-InforuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InforuTests/Pods-InforuTests.debug.xcconfig"; sourceTree = "<group>"; };
 		069A5BF91FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTestCases.swift; sourceTree = "<group>"; };
 		069A5BFB1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenterTests.swift; sourceTree = "<group>"; };
+		0809C48023A138420035781A /* FactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDetailViewController.swift; sourceTree = "<group>"; };
+		0809C48423A13ABC0035781A /* FactDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDetailPresenter.swift; sourceTree = "<group>"; };
+		0809C48623A13ACA0035781A /* FactDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDetailRouter.swift; sourceTree = "<group>"; };
+		0809C48823A13E570035781A /* FactDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDetailModel.swift; sourceTree = "<group>"; };
 		0810911922C368E800002EB5 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		08196412239F744800595EC4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		08196415239F81DC00595EC4 /* BlogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogModel.swift; sourceTree = "<group>"; };
@@ -397,6 +405,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0809C47F23A138210035781A /* FactDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				0809C48023A138420035781A /* FactDetailViewController.swift */,
+				0809C48423A13ABC0035781A /* FactDetailPresenter.swift */,
+				0809C48623A13ACA0035781A /* FactDetailRouter.swift */,
+			);
+			path = FactDetailVC;
+			sourceTree = "<group>";
+		};
 		0810911622C368C100002EB5 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -523,6 +541,7 @@
 		088CF1CC2382F8ED00A6E30B /* HomeTabFlow */ = {
 			isa = PBXGroup;
 			children = (
+				0809C47F23A138210035781A /* FactDetailVC */,
 				0810911622C368C100002EB5 /* HomeVC */,
 			);
 			path = HomeTabFlow;
@@ -747,6 +766,7 @@
 			isa = PBXGroup;
 			children = (
 				088CF1D42383005E00A6E30B /* FactModel.swift */,
+				0809C48823A13E570035781A /* FactDetailModel.swift */,
 				08196415239F81DC00595EC4 /* BlogModel.swift */,
 				088CF1D6238307D000A6E30B /* ForceUpdateModel.swift */,
 				F46045681FCC32A200DC976D /* User.swift */,
@@ -1381,6 +1401,7 @@
 				F4975A0D1FCE9E3F00B8BB6C /* ImagePickerButton.swift in Sources */,
 				F4975A551FCEA01700B8BB6C /* ValidationRuleURL.swift in Sources */,
 				F49759E31FCE908300B8BB6C /* User.swift in Sources */,
+				0809C48223A138420035781A /* FactDetailViewController.swift in Sources */,
 				F49759CF1FCE8E0000B8BB6C /* CLViewController+Tracking.swift in Sources */,
 				F49759E41FCE908600B8BB6C /* Human.swift in Sources */,
 				0876D917238EB9D40068F639 /* AddFactRouter.swift in Sources */,
@@ -1401,6 +1422,7 @@
 				0889FBEF2381BFA10092531F /* SplashRouter.swift in Sources */,
 				08502A4522BA5C7A00E419F2 /* LoadingShimmer.swift in Sources */,
 				F4975A131FCE9E5300B8BB6C /* Network.swift in Sources */,
+				0809C48923A13E570035781A /* FactDetailModel.swift in Sources */,
 				F4975A071FCE9E3900B8BB6C /* CLTextField.swift in Sources */,
 				F4975A141FCE9E5500B8BB6C /* VersionManager.swift in Sources */,
 				F4975A4B1FCEA01700B8BB6C /* ValidationRuleBlank.swift in Sources */,
@@ -1419,6 +1441,7 @@
 				08ABD889238288D100DA555C /* AlertWithOptionsViewController.swift in Sources */,
 				F4975A0F1FCE9E4300B8BB6C /* LocationTracker.swift in Sources */,
 				F4975A621FCEA03900B8BB6C /* FBManager.swift in Sources */,
+				0809C48523A13ABC0035781A /* FactDetailPresenter.swift in Sources */,
 				F4975A571FCEA01D00B8BB6C /* ValidatableInterfaceElement.swift in Sources */,
 				F4975A501FCEA01700B8BB6C /* ValidationRuleLength.swift in Sources */,
 				F4975A4D1FCEA01700B8BB6C /* ValidationRuleCondition.swift in Sources */,
@@ -1479,6 +1502,7 @@
 				F4975A0A1FCE9E3C00B8BB6C /* HTTPRequest.swift in Sources */,
 				0889FBEB2381BF680092531F /* Protocol.swift in Sources */,
 				0889FBF12381C1B00092531F /* LoginPresenter.swift in Sources */,
+				0809C48723A13ACA0035781A /* FactDetailRouter.swift in Sources */,
 				088CF1D52383005E00A6E30B /* FactModel.swift in Sources */,
 				F4975A471FCEA01200B8BB6C /* ContainsNumberValidationPattern.swift in Sources */,
 				F4975A5F1FCEA03100B8BB6C /* MenuBarView.swift in Sources */,
