@@ -174,9 +174,12 @@ final class LoginManager: LoginManagerRoules {
         
         let path = AppConstants.currentServer + "user/login"
         
+        CLProgressHUD.present(animated: true)
         HTTPRequest(method: .post, fullURLStr: path, parameters: param, encoding: .json, files: nil)
-            .config(isIndicatorEnable: true, isAlertEnable: false)
+            .config(isIndicatorEnable: false, isAlertEnable: false)
             .handler(httpModel: false, delay: 0) { (response) in
+                
+                CLProgressHUD.dismiss(animated: true)
                 
                 print(response as Any)
                 //  print(error as Any)
@@ -238,10 +241,12 @@ final class LoginManager: LoginManagerRoules {
         
         let path = AppConstants.currentServer + "user/register"
         
+        CLProgressHUD.present(animated: true)
         HTTPRequest(method: .post, fullURLStr: path, parameters: param, encoding: .json, files: nil)
-            .config(isIndicatorEnable: true, isAlertEnable: false)
+            .config(isIndicatorEnable: false, isAlertEnable: false)
             .handler(httpModel: false, delay: 0) { (response) in
                 
+                CLProgressHUD.dismiss(animated: true)
                 print(response as Any)
                 //  print(error as Any)
                 
@@ -385,10 +390,11 @@ final class LoginManager: LoginManagerRoules {
         param["access_token"] = me.accessToken
         param["device_token"] = AppConstants.deviceToken
         
+        CLProgressHUD.present(animated: true)
         HTTPRequest(method: .post, fullURLStr: path, parameters: param, encoding: .json, files: nil)
-            .config(isIndicatorEnable: true, isAlertEnable: false)
+            .config(isIndicatorEnable: false, isAlertEnable: false)
             .handler(httpModel: false, delay: 0) { (response) in
-                
+                CLProgressHUD.dismiss(animated: true)
                 print(response as Any)
                 //  print(error as Any)
                 

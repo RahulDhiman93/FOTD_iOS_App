@@ -24,9 +24,9 @@ class SearchFactViewController: UIViewController {
         self.alertLabel.isHidden = true
         self.setupTableView()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-            self.searchFactTextField.becomeFirstResponder()
-        })
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+//            self.searchFactTextField.becomeFirstResponder()
+//        })
         // Do any additional setup after loading the view.
     }
     

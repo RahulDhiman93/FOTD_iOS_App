@@ -22,6 +22,7 @@ class HomeViewController: UIViewController {
         self.setupCollectionView()
         self.setupTableView()
         self.presenter.getFeaturedFact()
+        LoadingShimmer.startCovering(self.view, with: nil)
         // Do any additional setup after loading the view.
     }
     
@@ -55,6 +56,7 @@ extension HomeViewController : HomePresenterDelegate {
     }
     
     func featuredSuccess() {
+        LoadingShimmer.stopCovering(self.view)
         self.popularTableView.reloadData()
         self.blogCollectionView.reloadData()
     }

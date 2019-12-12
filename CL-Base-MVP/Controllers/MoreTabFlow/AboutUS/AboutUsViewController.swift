@@ -25,9 +25,16 @@ class AboutUsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "about us"
+        LinearProgressHUD.sharedView.present(animated: true)
         self.aboutUsWebView.customUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/601.6.17 (KHTML, like Gecko) Version/9.1.1 Safari/601.6.17"
         self.loadAboutUsPage()
+        self.aboutUsWebView.navigationDelegate = self
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        LinearProgressHUD.sharedView.dismiss(animated: true)
     }
     
     private func loadAboutUsPage() {
@@ -36,4 +43,10 @@ class AboutUsViewController: UIViewController {
         self.aboutUsWebView.load(urlRequest)
     }
 
+}
+
+extension AboutUsViewController : WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+      LinearProgressHUD.sharedView.dismiss(animated: true)
+    }
 }

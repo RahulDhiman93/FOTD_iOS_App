@@ -18,6 +18,13 @@
 		08196416239F81DC00595EC4 /* BlogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08196415239F81DC00595EC4 /* BlogModel.swift */; };
 		08196419239F92AB00595EC4 /* BlogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08196417239F92AB00595EC4 /* BlogCollectionViewCell.swift */; };
 		0819641A239F92AB00595EC4 /* BlogCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08196418239F92AB00595EC4 /* BlogCollectionViewCell.xib */; };
+		0829BB1923A2A61300AB7EEB /* FavFactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0829BB1823A2A61300AB7EEB /* FavFactsViewController.swift */; };
+		0829BB1B23A2A61D00AB7EEB /* FavFactsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0829BB1A23A2A61D00AB7EEB /* FavFactsPresenter.swift */; };
+		0829BB1D23A2A62800AB7EEB /* FavFactsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0829BB1C23A2A62800AB7EEB /* FavFactsRouter.swift */; };
+		0829BB2223A2C81000AB7EEB /* FloatRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0829BB2123A2C81000AB7EEB /* FloatRatingView.swift */; };
+		0829BB2523A2C92C00AB7EEB /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0829BB2423A2C92C00AB7EEB /* FeedbackViewController.swift */; };
+		0829BB2723A2C94300AB7EEB /* FeedbackPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0829BB2623A2C94300AB7EEB /* FeedbackPresenter.swift */; };
+		0829BB2923A2C94B00AB7EEB /* FeedbackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0829BB2823A2C94B00AB7EEB /* FeedbackRouter.swift */; };
 		08502A4522BA5C7A00E419F2 /* LoadingShimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08502A4422BA5C7A00E419F2 /* LoadingShimmer.swift */; };
 		0864474822BCB97200531A71 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0864474722BCB97200531A71 /* ErrorView.xib */; };
 		0864474A22BCB98100531A71 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0864474922BCB98100531A71 /* ErrorView.swift */; };
@@ -212,6 +219,13 @@
 		08196415239F81DC00595EC4 /* BlogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogModel.swift; sourceTree = "<group>"; };
 		08196417239F92AB00595EC4 /* BlogCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogCollectionViewCell.swift; sourceTree = "<group>"; };
 		08196418239F92AB00595EC4 /* BlogCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlogCollectionViewCell.xib; sourceTree = "<group>"; };
+		0829BB1823A2A61300AB7EEB /* FavFactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavFactsViewController.swift; sourceTree = "<group>"; };
+		0829BB1A23A2A61D00AB7EEB /* FavFactsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavFactsPresenter.swift; sourceTree = "<group>"; };
+		0829BB1C23A2A62800AB7EEB /* FavFactsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavFactsRouter.swift; sourceTree = "<group>"; };
+		0829BB2123A2C81000AB7EEB /* FloatRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatRatingView.swift; sourceTree = "<group>"; };
+		0829BB2423A2C92C00AB7EEB /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		0829BB2623A2C94300AB7EEB /* FeedbackPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackPresenter.swift; sourceTree = "<group>"; };
+		0829BB2823A2C94B00AB7EEB /* FeedbackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackRouter.swift; sourceTree = "<group>"; };
 		08502A4422BA5C7A00E419F2 /* LoadingShimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingShimmer.swift; sourceTree = "<group>"; };
 		0864474722BCB97200531A71 /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
 		0864474922BCB98100531A71 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
@@ -457,6 +471,34 @@
 			path = HomeVC;
 			sourceTree = "<group>";
 		};
+		0829BB1723A2A5F600AB7EEB /* FavFactsVC */ = {
+			isa = PBXGroup;
+			children = (
+				0829BB1823A2A61300AB7EEB /* FavFactsViewController.swift */,
+				0829BB1A23A2A61D00AB7EEB /* FavFactsPresenter.swift */,
+				0829BB1C23A2A62800AB7EEB /* FavFactsRouter.swift */,
+			);
+			path = FavFactsVC;
+			sourceTree = "<group>";
+		};
+		0829BB2023A2C81000AB7EEB /* FloatRatingView */ = {
+			isa = PBXGroup;
+			children = (
+				0829BB2123A2C81000AB7EEB /* FloatRatingView.swift */,
+			);
+			path = FloatRatingView;
+			sourceTree = "<group>";
+		};
+		0829BB2323A2C91100AB7EEB /* FeedbackVC */ = {
+			isa = PBXGroup;
+			children = (
+				0829BB2423A2C92C00AB7EEB /* FeedbackViewController.swift */,
+				0829BB2623A2C94300AB7EEB /* FeedbackPresenter.swift */,
+				0829BB2823A2C94B00AB7EEB /* FeedbackRouter.swift */,
+			);
+			path = FeedbackVC;
+			sourceTree = "<group>";
+		};
 		0864474622BCB95800531A71 /* ErrorView */ = {
 			isa = PBXGroup;
 			children = (
@@ -559,6 +601,8 @@
 		087E76F323A24A0100B14E4A /* MoreTabFlow */ = {
 			isa = PBXGroup;
 			children = (
+				0829BB2323A2C91100AB7EEB /* FeedbackVC */,
+				0829BB1723A2A5F600AB7EEB /* FavFactsVC */,
 				087E770723A28CB700B14E4A /* ProfileVC */,
 				087E76F823A24A2E00B14E4A /* MoreVC */,
 				087E770223A285D600B14E4A /* AboutUS */,
@@ -921,6 +965,7 @@
 				F4975A1A1FCE9F2500B8BB6C /* MenuBarController */,
 				F4975A1B1FCE9F2500B8BB6C /* No internet Alert */,
 				F4975A161FCE9F2500B8BB6C /* SWRevealViewController */,
+				0829BB2023A2C81000AB7EEB /* FloatRatingView */,
 				F4975A171FCE9F2500B8BB6C /* Validator */,
 			);
 			path = ThiredPartyLibrary;
@@ -1533,9 +1578,12 @@
 				F4975A101FCE9E4300B8BB6C /* PersistentStoreLocation.swift in Sources */,
 				F49759CA1FCE8E0000B8BB6C /* CLCollection+Extension.swift in Sources */,
 				F4975A111FCE9E5000B8BB6C /* LogsConstant.swift in Sources */,
+				0829BB2223A2C81000AB7EEB /* FloatRatingView.swift in Sources */,
 				0889FBEF2381BFA10092531F /* SplashRouter.swift in Sources */,
+				0829BB1D23A2A62800AB7EEB /* FavFactsRouter.swift in Sources */,
 				087E76EC23A21EA900B14E4A /* SearchFactViewController.swift in Sources */,
 				08502A4522BA5C7A00E419F2 /* LoadingShimmer.swift in Sources */,
+				0829BB1B23A2A61D00AB7EEB /* FavFactsPresenter.swift in Sources */,
 				F4975A131FCE9E5300B8BB6C /* Network.swift in Sources */,
 				087E770523A285F400B14E4A /* AboutUsViewController.swift in Sources */,
 				0809C48923A13E570035781A /* FactDetailModel.swift in Sources */,
@@ -1548,6 +1596,7 @@
 				F4975A5A1FCEA01D00B8BB6C /* ValidationRuleSet.swift in Sources */,
 				08D2B36722B52A120063B14C /* Config.swift in Sources */,
 				08AFDBCE2384149C002F519A /* ForgotPasswordViewController.swift in Sources */,
+				0829BB2523A2C92C00AB7EEB /* FeedbackViewController.swift in Sources */,
 				08CAB85D22B90B1400C2D82C /* SignUpViewController.swift in Sources */,
 				F49759C81FCE8E0000B8BB6C /* CLAPP+EnvConfig.swift in Sources */,
 				F4975A0E1FCE9E4300B8BB6C /* LocationBackgroundTaskManager.swift in Sources */,
@@ -1556,6 +1605,7 @@
 				F4975A5B1FCEA01D00B8BB6C /* Validator.swift in Sources */,
 				08ABD889238288D100DA555C /* AlertWithOptionsViewController.swift in Sources */,
 				F4975A0F1FCE9E4300B8BB6C /* LocationTracker.swift in Sources */,
+				0829BB1923A2A61300AB7EEB /* FavFactsViewController.swift in Sources */,
 				F4975A621FCEA03900B8BB6C /* FBManager.swift in Sources */,
 				0809C48523A13ABC0035781A /* FactDetailPresenter.swift in Sources */,
 				F4975A571FCEA01D00B8BB6C /* ValidatableInterfaceElement.swift in Sources */,
@@ -1612,6 +1662,7 @@
 				F4975A121FCE9E5000B8BB6C /* LogsControl.swift in Sources */,
 				0889FBF32381C1BB0092531F /* LoginRouter.swift in Sources */,
 				F4975A5C1FCEA02C00B8BB6C /* BPStatusBar.swift in Sources */,
+				0829BB2923A2C94B00AB7EEB /* FeedbackRouter.swift in Sources */,
 				088DD69F22C548F20060FBB7 /* HomeViewController.swift in Sources */,
 				F4975A5D1FCEA03100B8BB6C /* MenuBarController.swift in Sources */,
 				08777217238E7F3400B0AA2E /* ResetPasswordViewController.swift in Sources */,
@@ -1629,6 +1680,7 @@
 				F4975A471FCEA01200B8BB6C /* ContainsNumberValidationPattern.swift in Sources */,
 				F4975A5F1FCEA03100B8BB6C /* MenuBarView.swift in Sources */,
 				F497599D1FCE859500B8BB6C /* SwiftConstants.swift in Sources */,
+				0829BB2723A2C94300AB7EEB /* FeedbackPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

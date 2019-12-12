@@ -75,6 +75,16 @@ class MoreViewController: UIViewController {
         guard let vc = ProfileRouter.ProfileVC() else { fatalError() }
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    private func goToFavFacts() {
+        guard let vc = FavFactsRouter.FavFactsVC() else { fatalError() }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func goToFeedback() {
+        guard let vc = FeedbackRouter.FeedbackVC() else { fatalError() }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension MoreViewController : MorePresenterDelegate {
@@ -131,11 +141,11 @@ extension MoreViewController : UITableViewDelegate, UITableViewDataSource {
         case .profile:
             self.goToProfile()
         case .favourites:
-            break
+            self.goToFavFacts()
         case .instagram:
             self.goToInsta()
         case .feedback:
-            break
+            self.goToFeedback()
         case .aboutUs:
             self.aboutUs()
         case .logout:
