@@ -37,8 +37,8 @@ class BlogCollectionViewCell: UICollectionViewCell {
         guard let publisherImage = model.userImage else { return }
         guard let fact = model.fact else { return }
         
-        self.blogPublisherName.text = publisherName.lowercased()
+        self.blogPublisherName.text = publisherName
         self.blogPublisherImage.kf.setImage(with: URL(string: publisherImage), placeholder: UIImage(named: "placeholder"))
-        self.factText.text = fact.lowercased()
+        self.factText.text = fact
     }
 }

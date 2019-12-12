@@ -31,6 +31,7 @@
 		08777217238E7F3400B0AA2E /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08777216238E7F3400B0AA2E /* ResetPasswordViewController.swift */; };
 		08777219238E7F4800B0AA2E /* ResetPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08777218238E7F4800B0AA2E /* ResetPasswordPresenter.swift */; };
 		0877721B238E7F5900B0AA2E /* ResetPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0877721A238E7F5900B0AA2E /* ResetPasswordRouter.swift */; };
+		087E76E823A2040900B14E4A /* AppUsables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E76E723A2040900B14E4A /* AppUsables.swift */; };
 		0889FBEB2381BF680092531F /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889FBEA2381BF680092531F /* Protocol.swift */; };
 		0889FBED2381BF950092531F /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889FBEC2381BF950092531F /* SplashPresenter.swift */; };
 		0889FBEF2381BFA10092531F /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889FBEE2381BFA10092531F /* SplashRouter.swift */; };
@@ -210,6 +211,7 @@
 		08777216238E7F3400B0AA2E /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		08777218238E7F4800B0AA2E /* ResetPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordPresenter.swift; sourceTree = "<group>"; };
 		0877721A238E7F5900B0AA2E /* ResetPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordRouter.swift; sourceTree = "<group>"; };
+		087E76E723A2040900B14E4A /* AppUsables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUsables.swift; sourceTree = "<group>"; };
 		0889FBEA2381BF680092531F /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		0889FBEC2381BF950092531F /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		0889FBEE2381BFA10092531F /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
@@ -865,6 +867,7 @@
 				F49759D91FCE8F3800B8BB6C /* CLAppConstants.swift */,
 				0864475222BCE50C00531A71 /* IJReachability.swift */,
 				08FF77C8238E8C90001EAF2E /* AlertPop.swift */,
+				087E76E723A2040900B14E4A /* AppUsables.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1455,6 +1458,7 @@
 				F49759CC1FCE8E0000B8BB6C /* CLString+Extension.swift in Sources */,
 				088A2C8E238E6D13001284EA /* OtpVerificationRouter.swift in Sources */,
 				F460456B1FCD3E7200DC976D /* AppDelegate.swift in Sources */,
+				087E76E823A2040900B14E4A /* AppUsables.swift in Sources */,
 				08A73476237D7BA8003F34F0 /* UserAPI.swift in Sources */,
 				F4975A0B1FCE9E3C00B8BB6C /* HTTPStatusCodes.swift in Sources */,
 				0876D915238EB9CD0068F639 /* AddFactPresenter.swift in Sources */,

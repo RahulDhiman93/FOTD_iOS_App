@@ -29,25 +29,40 @@ class FactDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "fact details"
-        self.bottomViewHeight.constant = 0
-        self.userImage.isHidden = true
+        self.setupView()
         self.presenter.getFactDetails()
         // Do any additional setup after loading the view.
     }
     
+    private func setupView() {
+        self.title = "fact details"
+        self.bottomViewHeight.constant = 0
+        self.userImage.isHidden = true
+        
+        let likeButtonImage = UIImage(named: "likeWhite")?.withRenderingMode(.alwaysTemplate)
+        let dislikeButtonImage = UIImage(named: "dislikeWhite")?.withRenderingMode(.alwaysTemplate)
+        
+        self.likeButton.setImage(likeButtonImage, for: .normal)
+        self.dislikeButton.setImage(dislikeButtonImage, for: .normal)
+    }
+    
+    
     @IBAction func likeButtonTapped(_ sender: UIButton) {
+        
     }
     
     @IBAction func dislikeButtonTapped(_ sender: UIButton) {
+        
     }
     
     @IBAction func shareButtonTapped(_ sender: UIButton) {
+        guard let factModel = self.presenter.factDetailModel, let fact = factModel.fact else { return }
+        AppUsables.shareFact(fact: fact)
     }
     
     @IBAction func favButtonTapped(_ sender: UIButton) {
+        
     }
-    
     
 }
 
@@ -72,15 +87,15 @@ extension FactDetailViewController : FactDetailPresenterDelegate {
         
         
         UIView.transition(with: factLabel, duration: 1.0, options: .transitionCrossDissolve, animations: {
-            self.factLabel.text = factModel.fact!.lowercased()
+            self.factLabel.text = factModel.fact!
         })
         
         UIView.transition(with: userName, duration: 1.0, options: .transitionCrossDissolve, animations: {
-            self.userName.text = factModel.addedBy!.lowercased()
+            self.userName.text = factModel.addedBy!
         })
         
         UIView.transition(with: timeAgoForFact, duration: 1.0, options: .transitionCrossDissolve, animations: {
-            self.timeAgoForFact.text = "posted on: " + self.presenter.beautifyPostedDate(date: factModel.addedOn!)
+            self.timeAgoForFact.text = "posted on " + self.presenter.beautifyPostedDate(date: factModel.addedOn!)
         })
         
         UIView.transition(with: userImage, duration: 1.0, options: .transitionCrossDissolve, animations: {
@@ -95,6 +110,34 @@ extension FactDetailViewController : FactDetailPresenterDelegate {
         
         UIView.transition(with: dislikeCount, duration: 0.5, options: .transitionCrossDissolve, animations: {
             self.dislikeCount.text = "\(factModel.dislikeCount!)"
+        })
+        
+        UIView.transition(with: likeButton, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            if factModel.userLikeStatus! == 1 {
+                self.likeButton.tintColor = AppColor.themeSecondaryColor
+                self.likeCount.textColor = AppColor.themeSecondaryColor
+            } else {
+                self.likeButton.tintColor = .white
+                self.likeCount.textColor = .white
+            }
+        })
+        
+        UIView.transition(with: dislikeButton, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            if factModel.userLikeStatus! == 0 {
+                self.dislikeButton.tintColor = AppColor.themeSecondaryColor
+                self.dislikeCount.textColor = AppColor.themeSecondaryColor
+            } else {
+                self.dislikeButton.tintColor = .white
+                self.dislikeCount.textColor = .white
+            }
+        })
+        
+        UIView.transition(with: favButton, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            if factModel.userFavStatus! == 1 {
+                self.favButton.setImage(UIImage(named: "heartFilled"), for: .normal)
+            } else {
+                self.favButton.setImage(UIImage(named: "heartWhite"), for: .normal)
+            }
         })
         
     }
