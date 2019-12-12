@@ -48,6 +48,44 @@ class FactDetailPresenter {
         
     }
     
+    func likeFact(status : Int) {
+        
+        guard let factId = self.factId else {
+            self.view?.failure(message: "Server Error, Please try again!")
+            return
+        }
+        
+        UserAPI.share.likeFact(factId: factId, status: status, callback: { [weak self] response , error in
+            
+            guard response != nil, error == nil else {
+                self?.view?.failure(message:  error?.localizedDescription ?? "Server Error, Please try again!")
+                return
+            }
+            
+            self?.getFactDetails()
+        })
+        
+    }
+    
+    func addFactFav(status : Int) {
+        
+        guard let factId = self.factId else {
+            self.view?.failure(message: "Server Error, Please try again!")
+            return
+        }
+        
+        UserAPI.share.addFactFav(factId: factId, status: status, callback: { [weak self] response , error in
+           
+            guard response != nil, error == nil else {
+                self?.view?.failure(message:  error?.localizedDescription ?? "Server Error, Please try again!")
+                return
+            }
+            
+            self?.getFactDetails()
+        })
+        
+    }
+    
     func beautifyPostedDate(date : String) -> String {
         
         let dateFormatter = DateFormatter()

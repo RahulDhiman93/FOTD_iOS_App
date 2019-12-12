@@ -472,10 +472,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="197" height="50"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="a1c-Uo-GWW">
-                                                <rect key="frame" x="0.0" y="0.0" width="153.66666666666666" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="119.66666666666667" height="50"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="wki-bX-yXh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="74.333333333333329" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="57.333333333333336" height="50"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kla-Yl-BUi">
                                                                 <rect key="frame" x="0.0" y="0.0" width="45" height="50"/>
@@ -483,9 +483,12 @@
                                                                     <constraint firstAttribute="width" constant="45" id="u4s-Cj-8IN"/>
                                                                 </constraints>
                                                                 <state key="normal" image="like"/>
+                                                                <connections>
+                                                                    <action selector="likeButtonTapped:" destination="5mo-iS-whI" eventType="touchUpInside" id="hI4-Et-bZh"/>
+                                                                </connections>
                                                             </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="122" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hr7-Gr-W8C">
-                                                                <rect key="frame" x="47" y="0.0" width="27.333333333333329" height="50"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hr7-Gr-W8C">
+                                                                <rect key="frame" x="47" y="0.0" width="10.333333333333336" height="50"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -493,7 +496,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EB6-3U-02V">
-                                                        <rect key="frame" x="79.333333333333343" y="0.0" width="74.333333333333343" height="50"/>
+                                                        <rect key="frame" x="62.333333333333329" y="0.0" width="57.333333333333329" height="50"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtW-yD-8Tb">
                                                                 <rect key="frame" x="0.0" y="0.0" width="45" height="50"/>
@@ -501,9 +504,12 @@
                                                                     <constraint firstAttribute="width" constant="45" id="9Dd-7I-goU"/>
                                                                 </constraints>
                                                                 <state key="normal" image="dislike"/>
+                                                                <connections>
+                                                                    <action selector="dislikeButtonTapped:" destination="5mo-iS-whI" eventType="touchUpInside" id="CBC-HH-Vr1"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfH-0i-Orh">
-                                                                <rect key="frame" x="45.000000000000014" y="0.0" width="29.333333333333329" height="50"/>
+                                                                <rect key="frame" x="45" y="0.0" width="12.333333333333336" height="50"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                                                 <color key="textColor" name="AppTextColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -536,6 +542,9 @@
                                                                     <constraint firstAttribute="width" constant="50" id="aGW-3B-Nea"/>
                                                                 </constraints>
                                                                 <state key="normal" image="share"/>
+                                                                <connections>
+                                                                    <action selector="shareButtonTapped:" destination="5mo-iS-whI" eventType="touchUpInside" id="5Cf-gD-Gr6"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -548,6 +557,9 @@
                                                                     <constraint firstAttribute="width" constant="50" id="wfS-Ch-fgD"/>
                                                                 </constraints>
                                                                 <state key="normal" image="heart"/>
+                                                                <connections>
+                                                                    <action selector="favButtonTapped:" destination="5mo-iS-whI" eventType="touchUpInside" id="zOb-uB-kpY"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -582,7 +594,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="fact of the day" largeTitleDisplayMode="always" id="BmE-3S-FVt"/>
                     <connections>
+                        <outlet property="dislikeButton" destination="gtW-yD-8Tb" id="mrG-fA-e8O"/>
+                        <outlet property="dislikeCount" destination="sfH-0i-Orh" id="NGK-X6-jLH"/>
                         <outlet property="factLabel" destination="bUB-If-JdX" id="vp8-cr-omy"/>
+                        <outlet property="favButton" destination="JqS-e1-oI5" id="gyr-zc-M67"/>
+                        <outlet property="likeButton" destination="Kla-Yl-BUi" id="gu8-Tg-7Dw"/>
+                        <outlet property="likeCount" destination="Hr7-Gr-W8C" id="EBy-9L-Pl4"/>
+                        <outlet property="shareButton" destination="phm-dC-D7m" id="lDj-cW-Z7H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gQ-gT-vhx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

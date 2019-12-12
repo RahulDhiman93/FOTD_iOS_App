@@ -13,7 +13,7 @@ struct AppColor {
   static let AppBackgroundColor = UIColor(red: 255, green: 255, blue: 255)
   static let AppTextColor = UIColor(red: 0, green: 0, blue: 0)
   static let themePrimaryColor = UIColor(red: 60.0/255.0, green: 67.0/255.0, blue: 153.0/255.0, alpha: 1.0)
-  static let themeSecondaryColor = UIColor(red: 245.0/255.0, green: 204.0/255.0, blue: 198.0/255.0, alpha: 1.0)
+  static let themeSecondaryColor = UIColor(red: 225.0/255.0, green: 184.0/255.0, blue: 178.0/255.0, alpha: 1.0)
 }
 
 let nameCharacterLimit = 64

@@ -48,11 +48,19 @@ class FactDetailViewController: UIViewController {
     
     
     @IBAction func likeButtonTapped(_ sender: UIButton) {
-        
+        guard let factModel = self.presenter.factDetailModel, factModel.userLikeStatus == 2 || factModel.userLikeStatus == 0 else {
+            self.presenter.likeFact(status: 2)
+            return
+        }
+        self.presenter.likeFact(status: 1)
     }
     
     @IBAction func dislikeButtonTapped(_ sender: UIButton) {
-        
+        guard let factModel = self.presenter.factDetailModel, factModel.userLikeStatus == 2 || factModel.userLikeStatus == 1 else {
+            self.presenter.likeFact(status: 2)
+            return
+        }
+        self.presenter.likeFact(status: 0)
     }
     
     @IBAction func shareButtonTapped(_ sender: UIButton) {
@@ -61,7 +69,11 @@ class FactDetailViewController: UIViewController {
     }
     
     @IBAction func favButtonTapped(_ sender: UIButton) {
-        
+        guard let factModel = self.presenter.factDetailModel, factModel.userFavStatus == 0 else {
+            self.presenter.addFactFav(status: 0)
+            return
+        }
+        self.presenter.addFactFav(status: 1)
     }
     
 }
@@ -104,15 +116,15 @@ extension FactDetailViewController : FactDetailPresenterDelegate {
         })
         
         
-        UIView.transition(with: likeCount, duration: 0.5, options: .transitionCrossDissolve, animations: {
+        UIView.transition(with: likeCount, duration: 0.2, options: .transitionCrossDissolve, animations: {
             self.likeCount.text = "\(factModel.likeCount!)"
         })
         
-        UIView.transition(with: dislikeCount, duration: 0.5, options: .transitionCrossDissolve, animations: {
+        UIView.transition(with: dislikeCount, duration: 0.2, options: .transitionCrossDissolve, animations: {
             self.dislikeCount.text = "\(factModel.dislikeCount!)"
         })
         
-        UIView.transition(with: likeButton, duration: 0.5, options: .transitionCrossDissolve, animations: {
+        UIView.transition(with: likeButton, duration: 0.2, options: .transitionCrossDissolve, animations: {
             if factModel.userLikeStatus! == 1 {
                 self.likeButton.tintColor = AppColor.themeSecondaryColor
                 self.likeCount.textColor = AppColor.themeSecondaryColor
@@ -122,7 +134,7 @@ extension FactDetailViewController : FactDetailPresenterDelegate {
             }
         })
         
-        UIView.transition(with: dislikeButton, duration: 0.5, options: .transitionCrossDissolve, animations: {
+        UIView.transition(with: dislikeButton, duration: 0.2, options: .transitionCrossDissolve, animations: {
             if factModel.userLikeStatus! == 0 {
                 self.dislikeButton.tintColor = AppColor.themeSecondaryColor
                 self.dislikeCount.textColor = AppColor.themeSecondaryColor
@@ -132,7 +144,7 @@ extension FactDetailViewController : FactDetailPresenterDelegate {
             }
         })
         
-        UIView.transition(with: favButton, duration: 0.5, options: .transitionCrossDissolve, animations: {
+        UIView.transition(with: favButton, duration: 0.2, options: .transitionCrossDissolve, animations: {
             if factModel.userFavStatus! == 1 {
                 self.favButton.setImage(UIImage(named: "heartFilled"), for: .normal)
             } else {

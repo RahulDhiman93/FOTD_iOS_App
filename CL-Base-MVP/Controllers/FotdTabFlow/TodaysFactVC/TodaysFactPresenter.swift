@@ -36,4 +36,41 @@ class TodaysFactPresenter {
         })
     }
     
+    func likeFact(status : Int) {
+           
+        guard let factId = self.factModel?.fact?.factId else {
+               self.view?.failure(message: "Server Error, Please try again!")
+               return
+           }
+           
+           UserAPI.share.likeFact(factId: factId, status: status, callback: { [weak self] response , error in
+               
+               guard response != nil, error == nil else {
+                   self?.view?.failure(message:  error?.localizedDescription ?? "Server Error, Please try again!")
+                   return
+               }
+               
+               self?.getTodaysFact()
+           })
+           
+       }
+       
+       func addFactFav(status : Int) {
+           
+           guard let factId = self.factModel?.fact?.factId  else {
+               self.view?.failure(message: "Server Error, Please try again!")
+               return
+           }
+           
+           UserAPI.share.addFactFav(factId: factId, status: status, callback: { [weak self] response , error in
+              
+               guard response != nil, error == nil else {
+                   self?.view?.failure(message:  error?.localizedDescription ?? "Server Error, Please try again!")
+                   return
+               }
+               
+               self?.getTodaysFact()
+           })
+           
+       }
 }
