@@ -373,4 +373,69 @@ final class LoginManager: LoginManagerRoules {
         
     }// API FUNC END
     
+    func logout(callback: @escaping (_ response: [String:Any]?, _ error: Error?) -> Void) {
+        
+        var param : [String : Any] = [:]
+        let path = AppConstants.currentServer + "user/logout"
+        
+        guard let me = LoginManager.share.me else {
+            return
+        }
+        
+        param["access_token"] = me.accessToken
+        param["device_token"] = AppConstants.deviceToken
+        
+        HTTPRequest(method: .post, fullURLStr: path, parameters: param, encoding: .json, files: nil)
+            .config(isIndicatorEnable: true, isAlertEnable: false)
+            .handler(httpModel: false, delay: 0) { (response) in
+                
+                print(response as Any)
+                //  print(error as Any)
+                
+                if response.error != nil {
+                    callback(nil, response.error)
+                    return
+                }
+                
+                guard let value = response.value else {
+                    callback(nil, nil)
+                    return
+                }
+                
+               if let json = value as? [String : Any] ,
+                   let statusCode = json["status"] as? Int {
+                   
+                   if statusCode == STATUS_CODES.BAD_REQUEST || statusCode == STATUS_CODES.ERROR_IN_EXECUTION {
+                       if let errorMessage = json["message"] as? String {
+                           let callBackError = NSError(domain:"", code: statusCode, userInfo:[ NSLocalizedDescriptionKey: errorMessage])
+                           callback(nil, callBackError)
+                       } else {
+                           callback(nil,nil)
+                       }
+                       return
+                   } else if statusCode == STATUS_CODES.UNAUTHORIZED_ACCESS {
+                       guard let vc = LoginRouter.LoginVC() else {
+                           return
+                       }
+                       let navigationController = UINavigationController()
+                       navigationController.viewControllers = [vc]
+                       UIView.transition(with: appDelegate.window!, duration: 0.5, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
+                           appDelegate.window?.rootViewController = navigationController
+                       }, completion: nil)
+                       callback(nil,nil)
+                       return
+                   } else if statusCode == STATUS_CODES.SHOW_DATA {
+                    if let jsonObject = value as? [String: Any]{
+                        self.removeUserProfile()
+                        callback(jsonObject, nil)
+                       } else {
+                           callback(nil, nil)
+                       }
+                   }
+               }
+                
+        }//HTTP REQUEST END
+        
+    }// API FUNC END
+    
 }

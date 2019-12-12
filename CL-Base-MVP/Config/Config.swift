@@ -23,5 +23,12 @@ extension Config {
         return baseURLString // "http://34.205.54.225:3004"
     }
     
+    func appVersion() -> String {
+        guard let appVersionString = Bundle.main.infoDictionary?["kAppVersion"] as? String,
+            appVersionString.isBlank == false else {
+                fatalError("App version not fetched")
+        }
+        return appVersionString
+    }
 }
 

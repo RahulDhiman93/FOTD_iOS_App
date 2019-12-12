@@ -43,6 +43,14 @@ class ForceUpdateModel: NSObject {
             return nil
         }
         
+        if let aboutUs = json["about_us_page"] as? String  {
+            AppConstants.aboutUs = aboutUs
+        }
+        
+        if let instagramPage = json["insta_handle"] as? String  {
+            AppConstants.instgramLink = instagramPage
+        }
+        
         self.isForceUpdate = isForceUpdate
         self.isManualUpdate = isManualUpdate
         self.appLink = appLink

@@ -32,6 +32,21 @@
 		08777219238E7F4800B0AA2E /* ResetPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08777218238E7F4800B0AA2E /* ResetPasswordPresenter.swift */; };
 		0877721B238E7F5900B0AA2E /* ResetPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0877721A238E7F5900B0AA2E /* ResetPasswordRouter.swift */; };
 		087E76E823A2040900B14E4A /* AppUsables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E76E723A2040900B14E4A /* AppUsables.swift */; };
+		087E76EC23A21EA900B14E4A /* SearchFactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E76EB23A21EA900B14E4A /* SearchFactViewController.swift */; };
+		087E76EE23A21EBC00B14E4A /* SearchFactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E76ED23A21EBC00B14E4A /* SearchFactPresenter.swift */; };
+		087E76F023A21EC600B14E4A /* SearchFactRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E76EF23A21EC600B14E4A /* SearchFactRouter.swift */; };
+		087E76F223A23B3E00B14E4A /* SearchFactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E76F123A23B3E00B14E4A /* SearchFactModel.swift */; };
+		087E76F523A24A1F00B14E4A /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E76F423A24A1F00B14E4A /* MoreViewController.swift */; };
+		087E76F723A24A2900B14E4A /* MorePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E76F623A24A2900B14E4A /* MorePresenter.swift */; };
+		087E76FA23A24A4100B14E4A /* MoreRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E76F923A24A4100B14E4A /* MoreRouter.swift */; };
+		087E76FC23A26C8400B14E4A /* LinearProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E76FB23A26C8400B14E4A /* LinearProgressHUD.swift */; };
+		087E770023A279A500B14E4A /* MoreRowsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E76FE23A279A500B14E4A /* MoreRowsTableViewCell.swift */; };
+		087E770123A279A500B14E4A /* MoreRowsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 087E76FF23A279A500B14E4A /* MoreRowsTableViewCell.xib */; };
+		087E770523A285F400B14E4A /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E770323A285F400B14E4A /* AboutUsViewController.swift */; };
+		087E770623A285F400B14E4A /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 087E770423A285F400B14E4A /* AboutUsViewController.xib */; };
+		087E770923A28CD300B14E4A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E770823A28CD300B14E4A /* ProfileViewController.swift */; };
+		087E770B23A28CDD00B14E4A /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E770A23A28CDD00B14E4A /* ProfilePresenter.swift */; };
+		087E770D23A28CE800B14E4A /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E770C23A28CE800B14E4A /* ProfileRouter.swift */; };
 		0889FBEB2381BF680092531F /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889FBEA2381BF680092531F /* Protocol.swift */; };
 		0889FBED2381BF950092531F /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889FBEC2381BF950092531F /* SplashPresenter.swift */; };
 		0889FBEF2381BFA10092531F /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889FBEE2381BFA10092531F /* SplashRouter.swift */; };
@@ -212,6 +227,21 @@
 		08777218238E7F4800B0AA2E /* ResetPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordPresenter.swift; sourceTree = "<group>"; };
 		0877721A238E7F5900B0AA2E /* ResetPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordRouter.swift; sourceTree = "<group>"; };
 		087E76E723A2040900B14E4A /* AppUsables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUsables.swift; sourceTree = "<group>"; };
+		087E76EB23A21EA900B14E4A /* SearchFactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFactViewController.swift; sourceTree = "<group>"; };
+		087E76ED23A21EBC00B14E4A /* SearchFactPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFactPresenter.swift; sourceTree = "<group>"; };
+		087E76EF23A21EC600B14E4A /* SearchFactRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFactRouter.swift; sourceTree = "<group>"; };
+		087E76F123A23B3E00B14E4A /* SearchFactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFactModel.swift; sourceTree = "<group>"; };
+		087E76F423A24A1F00B14E4A /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		087E76F623A24A2900B14E4A /* MorePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorePresenter.swift; sourceTree = "<group>"; };
+		087E76F923A24A4100B14E4A /* MoreRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreRouter.swift; sourceTree = "<group>"; };
+		087E76FB23A26C8400B14E4A /* LinearProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearProgressHUD.swift; sourceTree = "<group>"; };
+		087E76FE23A279A500B14E4A /* MoreRowsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreRowsTableViewCell.swift; sourceTree = "<group>"; };
+		087E76FF23A279A500B14E4A /* MoreRowsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreRowsTableViewCell.xib; sourceTree = "<group>"; };
+		087E770323A285F400B14E4A /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		087E770423A285F400B14E4A /* AboutUsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
+		087E770823A28CD300B14E4A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		087E770A23A28CDD00B14E4A /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		087E770C23A28CE800B14E4A /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		0889FBEA2381BF680092531F /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		0889FBEC2381BF950092531F /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		0889FBEE2381BFA10092531F /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
@@ -508,6 +538,72 @@
 			path = ResetPasswordVC;
 			sourceTree = "<group>";
 		};
+		087E76E923A21E8800B14E4A /* SearchTabFlow */ = {
+			isa = PBXGroup;
+			children = (
+				087E76EA23A21E9200B14E4A /* SearchFactVC */,
+			);
+			path = SearchTabFlow;
+			sourceTree = "<group>";
+		};
+		087E76EA23A21E9200B14E4A /* SearchFactVC */ = {
+			isa = PBXGroup;
+			children = (
+				087E76EB23A21EA900B14E4A /* SearchFactViewController.swift */,
+				087E76ED23A21EBC00B14E4A /* SearchFactPresenter.swift */,
+				087E76EF23A21EC600B14E4A /* SearchFactRouter.swift */,
+			);
+			path = SearchFactVC;
+			sourceTree = "<group>";
+		};
+		087E76F323A24A0100B14E4A /* MoreTabFlow */ = {
+			isa = PBXGroup;
+			children = (
+				087E770723A28CB700B14E4A /* ProfileVC */,
+				087E76F823A24A2E00B14E4A /* MoreVC */,
+				087E770223A285D600B14E4A /* AboutUS */,
+			);
+			path = MoreTabFlow;
+			sourceTree = "<group>";
+		};
+		087E76F823A24A2E00B14E4A /* MoreVC */ = {
+			isa = PBXGroup;
+			children = (
+				087E76F423A24A1F00B14E4A /* MoreViewController.swift */,
+				087E76F623A24A2900B14E4A /* MorePresenter.swift */,
+				087E76F923A24A4100B14E4A /* MoreRouter.swift */,
+			);
+			path = MoreVC;
+			sourceTree = "<group>";
+		};
+		087E76FD23A2795B00B14E4A /* MoreVC */ = {
+			isa = PBXGroup;
+			children = (
+				087E76FE23A279A500B14E4A /* MoreRowsTableViewCell.swift */,
+				087E76FF23A279A500B14E4A /* MoreRowsTableViewCell.xib */,
+			);
+			path = MoreVC;
+			sourceTree = "<group>";
+		};
+		087E770223A285D600B14E4A /* AboutUS */ = {
+			isa = PBXGroup;
+			children = (
+				087E770323A285F400B14E4A /* AboutUsViewController.swift */,
+				087E770423A285F400B14E4A /* AboutUsViewController.xib */,
+			);
+			path = AboutUS;
+			sourceTree = "<group>";
+		};
+		087E770723A28CB700B14E4A /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				087E770823A28CD300B14E4A /* ProfileViewController.swift */,
+				087E770A23A28CDD00B14E4A /* ProfilePresenter.swift */,
+				087E770C23A28CE800B14E4A /* ProfileRouter.swift */,
+			);
+			path = ProfileVC;
+			sourceTree = "<group>";
+		};
 		088A2C88238E6CE1001284EA /* OtpVerificationVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -748,6 +844,8 @@
 				088CF1CC2382F8ED00A6E30B /* HomeTabFlow */,
 				0876D910238EB99E0068F639 /* AddFactFlow */,
 				088CF1CA2382F8BB00A6E30B /* FotdTabFlow */,
+				087E76E923A21E8800B14E4A /* SearchTabFlow */,
+				087E76F323A24A0100B14E4A /* MoreTabFlow */,
 				088CF1CB2382F8DC00A6E30B /* SignInFlow */,
 				0889FBEA2381BF680092531F /* Protocol.swift */,
 			);
@@ -757,6 +855,7 @@
 		F460455E1FCC30DE00DC976D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				087E76FD23A2795B00B14E4A /* MoreVC */,
 				088DD6A022C54F2E0060FBB7 /* HomeVC */,
 				0864474622BCB95800531A71 /* ErrorView */,
 				08ABD8862382881E00DA555C /* CustomAlert */,
@@ -769,6 +868,7 @@
 			children = (
 				088CF1D42383005E00A6E30B /* FactModel.swift */,
 				0809C48823A13E570035781A /* FactDetailModel.swift */,
+				087E76F123A23B3E00B14E4A /* SearchFactModel.swift */,
 				08196415239F81DC00595EC4 /* BlogModel.swift */,
 				088CF1D6238307D000A6E30B /* ForceUpdateModel.swift */,
 				F46045681FCC32A200DC976D /* User.swift */,
@@ -1007,6 +1107,7 @@
 			children = (
 				F4975A2D1FCE9F9D00B8BB6C /* CLProgressHUD.swift */,
 				08502A4422BA5C7A00E419F2 /* LoadingShimmer.swift */,
+				087E76FB23A26C8400B14E4A /* LinearProgressHUD.swift */,
 			);
 			path = HUDView;
 			sourceTree = "<group>";
@@ -1183,6 +1284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				087E770623A285F400B14E4A /* AboutUsViewController.xib in Resources */,
 				0869E9CF22B79D27006C8CF2 /* SignIn.storyboard in Resources */,
 				08CAB84F22B8F5E600C2D82C /* Poppins-ExtraBold.ttf in Resources */,
 				08CAB85322B8F5E600C2D82C /* Poppins-ExtraLightItalic.ttf in Resources */,
@@ -1201,6 +1303,7 @@
 				08CAB84C22B8F5E600C2D82C /* Poppins-Light.ttf in Resources */,
 				08CAB85822B8F5E600C2D82C /* Poppins-Regular.ttf in Resources */,
 				08CAB84D22B8F5E600C2D82C /* OFL.txt in Resources */,
+				087E770123A279A500B14E4A /* MoreRowsTableViewCell.xib in Resources */,
 				0819641A239F92AB00595EC4 /* BlogCollectionViewCell.xib in Resources */,
 				08CAB84B22B8F5E600C2D82C /* Poppins-ExtraLight.ttf in Resources */,
 				08CAB85522B8F5E600C2D82C /* Poppins-Bold.ttf in Resources */,
@@ -1244,7 +1347,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#open -a Terminal \"`pwd`\"\n#echo '********* Terminal open *************'\n\nif [ \"$CONFIGURATION\" == \"Release\" ]; then\necho '********* Started *************'\nxcodebuild test -workspace CL-Base-MVP.xcworkspace -scheme CL-Base-MVP -destination 'platform=iOS Simulator,name=iPhone 5s' -skip-testing:CL-Base-MVPUITests\nif [ $? -eq 0 ]; then\necho '********* TEST SUCCEEDED *************'\nelse\necho '**********TEST CASES FAILED *****'\nexit 1\nfi\nelse\necho '******** Build only ********'\nfi\nexit";
+			shellScript = "#open -a Terminal \"`pwd`\"\n#echo '********* Terminal open *************'\n\nif [ \"$CONFIGURATION\" == \"Release\" ]; then\necho '********* Started *************'\nxcodebuild test -workspace CL-Base-MVP.xcworkspace -scheme CL-Base-MVP -destination 'platform=iOS Simulator,name=iPhone 5s' -skip-testing:CL-Base-MVPUITests\nif [ $? -eq 0 ]; then\necho '********* TEST SUCCEEDED *************'\nelse\necho '**********TEST CASES FAILED *****'\nexit 1\nfi\nelse\necho '******** Build only ********'\nfi\nexit\n";
 		};
 		08196414239F773E00595EC4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1355,6 +1458,7 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/LinearProgressBarMaterial/LinearProgressBarMaterial.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/PinCodeTextField/PinCodeTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
@@ -1373,6 +1477,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LinearProgressBarMaterial.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinCodeTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
@@ -1394,13 +1499,17 @@
 				F4975A461FCEA01200B8BB6C /* CaseValidationPattern.swift in Sources */,
 				08196416239F81DC00595EC4 /* BlogModel.swift in Sources */,
 				F4975A0C1FCE9E3C00B8BB6C /* HTTPStatusCodes+Extensions.swift in Sources */,
+				087E76FC23A26C8400B14E4A /* LinearProgressHUD.swift in Sources */,
 				F4975A521FCEA01700B8BB6C /* ValidationRulePattern.swift in Sources */,
 				F49759DD1FCE8FC700B8BB6C /* CustomError.swift in Sources */,
+				087E76F523A24A1F00B14E4A /* MoreViewController.swift in Sources */,
 				0864474A22BCB98100531A71 /* ErrorView.swift in Sources */,
 				F4975A541FCEA01700B8BB6C /* ValidationRuleRequired.swift in Sources */,
+				087E76F023A21EC600B14E4A /* SearchFactRouter.swift in Sources */,
 				F49759C91FCE8E0000B8BB6C /* CLApp+Extension.swift in Sources */,
 				08AFDBD0238414BB002F519A /* ForgotPasswordPresenter.swift in Sources */,
 				F49759D31FCE8E0000B8BB6C /* UIColor+Extension.swift in Sources */,
+				087E770923A28CD300B14E4A /* ProfileViewController.swift in Sources */,
 				F4975A0D1FCE9E3F00B8BB6C /* ImagePickerButton.swift in Sources */,
 				F4975A551FCEA01700B8BB6C /* ValidationRuleURL.swift in Sources */,
 				F49759E31FCE908300B8BB6C /* User.swift in Sources */,
@@ -1411,6 +1520,8 @@
 				F49759D41FCE8E0000B8BB6C /* UIFont+Extention.swift in Sources */,
 				088A2C8C238E6D0A001284EA /* OtpVerificationPresenter.swift in Sources */,
 				0864475322BCE50C00531A71 /* IJReachability.swift in Sources */,
+				087E76EE23A21EBC00B14E4A /* SearchFactPresenter.swift in Sources */,
+				087E76F723A24A2900B14E4A /* MorePresenter.swift in Sources */,
 				F4975A6E1FCEA22500B8BB6C /* PresistentStoreLocation.xcdatamodeld in Sources */,
 				F4975A4E1FCEA01700B8BB6C /* ValidationRuleContains.swift in Sources */,
 				F4975A491FCEA01200B8BB6C /* EmptyValidation.swift in Sources */,
@@ -1423,8 +1534,10 @@
 				F49759CA1FCE8E0000B8BB6C /* CLCollection+Extension.swift in Sources */,
 				F4975A111FCE9E5000B8BB6C /* LogsConstant.swift in Sources */,
 				0889FBEF2381BFA10092531F /* SplashRouter.swift in Sources */,
+				087E76EC23A21EA900B14E4A /* SearchFactViewController.swift in Sources */,
 				08502A4522BA5C7A00E419F2 /* LoadingShimmer.swift in Sources */,
 				F4975A131FCE9E5300B8BB6C /* Network.swift in Sources */,
+				087E770523A285F400B14E4A /* AboutUsViewController.swift in Sources */,
 				0809C48923A13E570035781A /* FactDetailModel.swift in Sources */,
 				F4975A071FCE9E3900B8BB6C /* CLTextField.swift in Sources */,
 				F4975A141FCE9E5500B8BB6C /* VersionManager.swift in Sources */,
@@ -1447,6 +1560,7 @@
 				0809C48523A13ABC0035781A /* FactDetailPresenter.swift in Sources */,
 				F4975A571FCEA01D00B8BB6C /* ValidatableInterfaceElement.swift in Sources */,
 				F4975A501FCEA01700B8BB6C /* ValidationRuleLength.swift in Sources */,
+				087E76FA23A24A4100B14E4A /* MoreRouter.swift in Sources */,
 				F4975A4D1FCEA01700B8BB6C /* ValidationRuleCondition.swift in Sources */,
 				088CF1D12382F93A00A6E30B /* TodaysFactPresenter.swift in Sources */,
 				F4975A4F1FCEA01700B8BB6C /* ValidationRuleEquality.swift in Sources */,
@@ -1458,6 +1572,7 @@
 				F49759CC1FCE8E0000B8BB6C /* CLString+Extension.swift in Sources */,
 				088A2C8E238E6D13001284EA /* OtpVerificationRouter.swift in Sources */,
 				F460456B1FCD3E7200DC976D /* AppDelegate.swift in Sources */,
+				087E770D23A28CE800B14E4A /* ProfileRouter.swift in Sources */,
 				087E76E823A2040900B14E4A /* AppUsables.swift in Sources */,
 				08A73476237D7BA8003F34F0 /* UserAPI.swift in Sources */,
 				F4975A0B1FCE9E3C00B8BB6C /* HTTPStatusCodes.swift in Sources */,
@@ -1465,6 +1580,7 @@
 				F49759E91FCE90A800B8BB6C /* PersistencyManager.swift in Sources */,
 				0889FBF72381C4050092531F /* SignUpRouter.swift in Sources */,
 				08FF77C9238E8C90001EAF2E /* AlertPop.swift in Sources */,
+				087E76F223A23B3E00B14E4A /* SearchFactModel.swift in Sources */,
 				0864475122BCE21700531A71 /* SplashViewController.swift in Sources */,
 				F49759D01FCE8E0000B8BB6C /* Designable.swift in Sources */,
 				F4975A051FCE9E3500B8BB6C /* APNSManager.swift in Sources */,
@@ -1475,6 +1591,7 @@
 				0877721B238E7F5900B0AA2E /* ResetPasswordRouter.swift in Sources */,
 				0889FBF52381C3FA0092531F /* SignUpPresenter.swift in Sources */,
 				F49759E01FCE903C00B8BB6C /* LoginManager.swift in Sources */,
+				087E770023A279A500B14E4A /* MoreRowsTableViewCell.swift in Sources */,
 				F4975A4C1FCEA01700B8BB6C /* ValidationRuleComparison.swift in Sources */,
 				088CF1D32382F94300A6E30B /* TodaysFactRouter.swift in Sources */,
 				0889FBED2381BF950092531F /* SplashPresenter.swift in Sources */,
@@ -1490,6 +1607,7 @@
 				F4975A581FCEA01D00B8BB6C /* ValidationResult.swift in Sources */,
 				0876D913238EB9BD0068F639 /* AddFactViewController.swift in Sources */,
 				F49759CE1FCE8E0000B8BB6C /* CLViewController+Extension.swift in Sources */,
+				087E770B23A28CDD00B14E4A /* ProfilePresenter.swift in Sources */,
 				08A7347A237D802D003F34F0 /* AppBaseViewController.swift in Sources */,
 				F4975A121FCE9E5000B8BB6C /* LogsControl.swift in Sources */,
 				0889FBF32381C1BB0092531F /* LoginRouter.swift in Sources */,
@@ -1638,6 +1756,7 @@
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 4.2;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"$(inherited)",
@@ -1710,7 +1829,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fact.of.the.day.InDemand.FOTD;
 				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE = "70e8cf61-ec94-4d3b-b689-1bb0fa28f7eb";
-				PROVISIONING_PROFILE_SPECIFIER = "Inforu-Pro-Dev";
+				PROVISIONING_PROFILE_SPECIFIER = FOTDDEV;
 				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1817,6 +1936,7 @@
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 4.2;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"$(inherited)",
@@ -1889,7 +2009,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fact.of.the.day.InDemand.FOTD;
 				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";
-				PROVISIONING_PROFILE_SPECIFIER = "Inforu-Pro-Appstore";
+				PROVISIONING_PROFILE_SPECIFIER = FOTDAPPSTORE;
 				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1995,6 +2115,7 @@
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 4.2;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"$(inherited)",
@@ -2067,7 +2188,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fact.of.the.day.InDemand.FOTD;
 				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";
-				PROVISIONING_PROFILE_SPECIFIER = "Inforu-Pro-Appstore";
+				PROVISIONING_PROFILE_SPECIFIER = FOTDAPPSTORE;
 				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2249,6 +2370,7 @@
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 4.2;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"$(inherited)",
@@ -2321,7 +2443,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fact.of.the.day.InDemand.FOTD;
 				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE = "70e8cf61-ec94-4d3b-b689-1bb0fa28f7eb";
-				PROVISIONING_PROFILE_SPECIFIER = "Inforu-Pro-Dev";
+				PROVISIONING_PROFILE_SPECIFIER = FOTDDEV;
 				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -2342,6 +2464,7 @@
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 4.2;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"$(inherited)",
@@ -2414,7 +2537,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fact.of.the.day.InDemand.FOTD;
 				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";
-				PROVISIONING_PROFILE_SPECIFIER = "Inforu-Pro-Appstore";
+				PROVISIONING_PROFILE_SPECIFIER = FOTDAPPSTORE;
 				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

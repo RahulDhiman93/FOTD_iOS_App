@@ -20,11 +20,12 @@ class TodaysFactViewController: UIViewController {
     @IBOutlet weak var favButton: UIButton!
     
     var presenter : TodaysFactPresenter!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = TodaysFactPresenter(view: self)
         self.setupView()
+        
         // Do any additional setup after loading the view.
     }
     

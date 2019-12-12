@@ -25,6 +25,7 @@ target 'Inforu' do
     pod 'PinCodeTextField'
     pod 'Firebase/Analytics'
     pod 'Kingfisher'
+    pod 'LinearProgressBarMaterial'
 
   target 'InforuTests' do
     inherit! :search_paths

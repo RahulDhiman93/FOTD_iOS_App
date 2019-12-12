@@ -88,6 +88,7 @@ PODS:
   - Kingfisher (5.11.0):
     - Kingfisher/Core (= 5.11.0)
   - Kingfisher/Core (5.11.0)
+  - LinearProgressBarMaterial (1.3)
   - MBProgressHUD (1.1.0)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
@@ -113,6 +114,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - KeychainAccess
   - Kingfisher
+  - LinearProgressBarMaterial
   - MBProgressHUD
   - PinCodeTextField
   - ReachabilitySwift
@@ -144,6 +146,7 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - KeychainAccess
     - Kingfisher
+    - LinearProgressBarMaterial
     - MBProgressHUD
     - nanopb
     - PinCodeTextField
@@ -175,6 +178,7 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
   KeychainAccess: 445e28864fe6d3458b41fa211bcdc39890e8bd5a
   Kingfisher: 4569606189149e19c7d9439f47e885d0679b7a90
+  LinearProgressBarMaterial: 84df3135c27a0fc5e0219da10ee98304de159b06
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PinCodeTextField: a3c39be58bde3ed1d6888d0fb1d88b0a4a2277cc
@@ -182,6 +186,6 @@ SPEC CHECKSUMS:
   SwiftLint: c078a14d7d7ade75e5507795d185e3da41d844d2
   UIGradient: 9c7041327bf202b09aab2db7c33fb41f768b19ea
 
-PODFILE CHECKSUM: b04140bb03d1975a73f96456ccb7635eb857cc12
+PODFILE CHECKSUM: 73e78634c95e74c99b084c4ad612468f484562cb
 
 COCOAPODS: 1.8.4

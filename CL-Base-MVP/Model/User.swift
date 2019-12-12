@@ -13,6 +13,12 @@ class User: NSObject, NSCoding {
     var userId : Int
     var email: String
     var userName: String
+    var profileImage : String = ""
+    var notificationEnabled : Int = 1
+    var approvedCount : Int = 0
+    var pendingCount : Int = 0
+    var rejectedCount : Int = 0
+    var totalCount : Int = 0
    
     required init?(with param: [String: Any]) {
         print(param)
@@ -25,6 +31,33 @@ class User: NSObject, NSCoding {
         }
         guard let email = param["email"] as? String else {
             return nil
+        }
+        
+        if let profileImage = param["profile_image"] as? String {
+            self.profileImage = profileImage
+        }
+        
+        if let isNotificationEnabled = param["notification_enabled"] as? Int {
+            self.notificationEnabled = isNotificationEnabled
+        }
+        
+        if let userFactCountJson = param["userFactCount"] as? [String : Any] {
+            
+            if let approved = userFactCountJson["approved_count"] as? Int {
+                self.approvedCount = approved
+            }
+            
+            if let pending = userFactCountJson["pending_count"] as? Int {
+                self.pendingCount = pending
+            }
+            
+            if let rejected = userFactCountJson["rejected_count"] as? Int {
+                self.rejectedCount = rejected
+            }
+            
+            if let total = userFactCountJson["total_count"] as? Int {
+                self.totalCount = total
+            }
         }
     
         self.userId = userId

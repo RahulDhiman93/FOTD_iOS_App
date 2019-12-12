@@ -42,6 +42,8 @@ struct AppConstants {
     static let alphabetConstant = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ"
     static var deviceToken = "deviceToken"
     static let currentServer = Config.sharedInstance.baseURL()
+    static var aboutUs = ""
+    static var instgramLink = ""
     static let placeHolderUrl = "https://s3.ap-south-1.amazonaws.com/mahindra-ebike/dev/user/original_F1@oBZ5jT1545373576604.png"
 }
 

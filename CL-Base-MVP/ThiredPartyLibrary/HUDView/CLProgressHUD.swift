@@ -16,7 +16,8 @@ import MBProgressHUD
 class CLProgressHUD: MBProgressHUD {
   
   private static var sharedView: CLProgressHUD!
-  
+
+
   @discardableResult
   func mode(mode: MBProgressHUDMode) -> CLProgressHUD {
     self.mode = mode

@@ -40,8 +40,6 @@ class HomeViewController: UIViewController {
         self.blogCollectionView.bounces = true
         self.blogCollectionView.isPagingEnabled = false
         self.blogCollectionView.showsHorizontalScrollIndicator = false
-//        self.blogCollectionFlowLayout.minimumLineSpacing = 1
-//        self.blogCollectionFlowLayout.minimumInteritemSpacing = 1
         self.blogCollectionView.register( UINib(nibName: "BlogCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "BlogCollectionViewCell")
     }
     
