@@ -30,14 +30,12 @@ class ResetPasswordViewController: UIViewController {
     }
 
     @IBAction func backButtonTapped(_ sender: UIButton) {
-        
-        guard let navigationController = self.navigationController else { fatalError() }
-        
-        for viewController in navigationController.viewControllers {
-            if viewController is LoginViewController {
-                self.navigationController?.popToViewController(viewController, animated: true)
-            }
-        }
+        guard let vc = LoginRouter.LoginVC() else { return }
+        let navigationController = UINavigationController()
+        navigationController.viewControllers = [vc]
+        UIView.transition(with: appDelegate.window!, duration: 0.5, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
+            appDelegate.window?.rootViewController = navigationController
+        }, completion: nil)
         
     }
 }
@@ -53,13 +51,12 @@ extension ResetPasswordViewController : ResetPasswordPresenterDelegate {
         let message = "password upated successfully, please login with your new credentials"
         ErrorView.showWith(message: message, isErrorMessage: true) {}
         
-        guard let navigationController = self.navigationController else { fatalError() }
-        
-        for viewController in navigationController.viewControllers {
-            if viewController is LoginViewController {
-                self.navigationController?.popToViewController(viewController, animated: true)
-            }
-        }
+        guard let vc = LoginRouter.LoginVC() else { return }
+        let navigationController = UINavigationController()
+        navigationController.viewControllers = [vc]
+        UIView.transition(with: appDelegate.window!, duration: 0.5, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
+            appDelegate.window?.rootViewController = navigationController
+        }, completion: nil)
         
     }
 }

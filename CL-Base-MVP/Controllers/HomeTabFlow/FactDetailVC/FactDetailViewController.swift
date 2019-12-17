@@ -49,17 +49,35 @@ class FactDetailViewController: UIViewController {
     
     @IBAction func likeButtonTapped(_ sender: UIButton) {
         guard let factModel = self.presenter.factDetailModel, factModel.userLikeStatus == 2 || factModel.userLikeStatus == 0 else {
+            self.presenter.factDetailModel!.likeCount! -= 1
+            self.presenter.factDetailModel!.userLikeStatus! = 2
+            self.fetchDetailSuccess()
             self.presenter.likeFact(status: 2)
             return
         }
+        self.presenter.factDetailModel!.likeCount! += 1
+        if self.presenter.factDetailModel!.userLikeStatus! == 0 {
+            self.presenter.factDetailModel!.dislikeCount! -= 1
+        }
+        self.presenter.factDetailModel!.userLikeStatus! = 1
+        self.fetchDetailSuccess()
         self.presenter.likeFact(status: 1)
     }
     
     @IBAction func dislikeButtonTapped(_ sender: UIButton) {
         guard let factModel = self.presenter.factDetailModel, factModel.userLikeStatus == 2 || factModel.userLikeStatus == 1 else {
+            self.presenter.factDetailModel!.dislikeCount! -= 1
+            self.presenter.factDetailModel!.userLikeStatus! = 2
+            self.fetchDetailSuccess()
             self.presenter.likeFact(status: 2)
             return
         }
+        self.presenter.factDetailModel!.dislikeCount! += 1
+        if self.presenter.factDetailModel!.userLikeStatus! == 1 {
+            self.presenter.factDetailModel!.likeCount! -= 1
+        }
+        self.presenter.factDetailModel!.userLikeStatus! = 0
+        self.fetchDetailSuccess()
         self.presenter.likeFact(status: 0)
     }
     
@@ -70,9 +88,13 @@ class FactDetailViewController: UIViewController {
     
     @IBAction func favButtonTapped(_ sender: UIButton) {
         guard let factModel = self.presenter.factDetailModel, factModel.userFavStatus == 0 else {
+            self.presenter.factDetailModel!.userFavStatus! = 0
+            self.fetchDetailSuccess()
             self.presenter.addFactFav(status: 0)
             return
         }
+        self.presenter.factDetailModel!.userFavStatus! = 1
+        self.fetchDetailSuccess()
         self.presenter.addFactFav(status: 1)
     }
     

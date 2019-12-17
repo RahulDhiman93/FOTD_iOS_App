@@ -67,17 +67,35 @@ class TodaysFactViewController: UIViewController {
     
     @IBAction func likeButtonTapped(_ sender: UIButton) {
         guard let factModel = self.presenter.factModel, factModel.userLikeStatus == 2 || factModel.userLikeStatus == 0 else {
+            self.presenter.factModel!.likeCount! -= 1
+            self.presenter.factModel!.userLikeStatus! = 2
+            self.todaysFactSuccess()
             self.presenter.likeFact(status: 2)
             return
         }
+        self.presenter.factModel!.likeCount! += 1
+        if self.presenter.factModel!.userLikeStatus! == 0 {
+            self.presenter.factModel!.dislikeCount! -= 1
+        }
+        self.presenter.factModel!.userLikeStatus! = 1
+        self.todaysFactSuccess()
         self.presenter.likeFact(status: 1)
     }
     
     @IBAction func dislikeButtonTapped(_ sender: UIButton) {
         guard let factModel = self.presenter.factModel, factModel.userLikeStatus == 2 || factModel.userLikeStatus == 1 else {
+            self.presenter.factModel!.dislikeCount! -= 1
+            self.presenter.factModel!.userLikeStatus! = 2
+            self.todaysFactSuccess()
             self.presenter.likeFact(status: 2)
             return
         }
+        self.presenter.factModel!.dislikeCount! += 1
+        if self.presenter.factModel!.userLikeStatus! == 1 {
+            self.presenter.factModel!.likeCount! -= 1
+        }
+        self.presenter.factModel!.userLikeStatus! = 0
+        self.todaysFactSuccess()
         self.presenter.likeFact(status: 0)
     }
     
@@ -88,9 +106,13 @@ class TodaysFactViewController: UIViewController {
     
     @IBAction func favButtonTapped(_ sender: UIButton) {
         guard let factModel = self.presenter.factModel, factModel.userFavStatus == 0 else {
+            self.presenter.factModel!.userFavStatus! = 0
+            self.todaysFactSuccess()
             self.presenter.addFactFav(status: 0)
             return
         }
+        self.presenter.factModel!.userFavStatus! = 1
+        self.todaysFactSuccess()
         self.presenter.addFactFav(status: 1)
     }
 }

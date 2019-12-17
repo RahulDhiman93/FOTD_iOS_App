@@ -58,7 +58,7 @@ class FactDetailPresenter {
         UserAPI.share.likeFact(factId: factId, status: status, callback: { [weak self] response , error in
             
             guard response != nil, error == nil else {
-                self?.view?.failure(message:  error?.localizedDescription ?? "Server Error, Please try again!")
+//                self?.view?.failure(message:  error?.localizedDescription ?? "Server Error, Please try again!")
                 return
             }
             
@@ -77,7 +77,7 @@ class FactDetailPresenter {
         UserAPI.share.addFactFav(factId: factId, status: status, callback: { [weak self] response , error in
            
             guard response != nil, error == nil else {
-                self?.view?.failure(message:  error?.localizedDescription ?? "Server Error, Please try again!")
+//                self?.view?.failure(message:  error?.localizedDescription ?? "Server Error, Please try again!")
                 return
             }
             

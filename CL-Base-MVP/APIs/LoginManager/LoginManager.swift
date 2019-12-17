@@ -198,7 +198,7 @@ final class LoginManager: LoginManagerRoules {
                 if let json = value as? [String : Any] ,
                     let statusCode = json["status"] as? Int {
                     
-                    if statusCode == STATUS_CODES.BAD_REQUEST || statusCode == STATUS_CODES.ERROR_IN_EXECUTION {
+                    if statusCode == STATUS_CODES.BAD_REQUEST || statusCode == STATUS_CODES.ERROR_IN_EXECUTION || statusCode == STATUS_CODES.SHOW_MESSAGE{
                         if let errorMessage = json["message"] as? String {
                             let callBackError = NSError(domain:"", code: statusCode, userInfo:[ NSLocalizedDescriptionKey: errorMessage])
                             callback(nil, callBackError)
@@ -263,7 +263,7 @@ final class LoginManager: LoginManagerRoules {
                 if let json = value as? [String : Any] ,
                     let statusCode = json["status"] as? Int {
                     
-                    if statusCode == STATUS_CODES.BAD_REQUEST || statusCode == STATUS_CODES.ERROR_IN_EXECUTION {
+                    if statusCode == STATUS_CODES.BAD_REQUEST || statusCode == STATUS_CODES.ERROR_IN_EXECUTION || statusCode == STATUS_CODES.SHOW_MESSAGE{
                         if let errorMessage = json["message"] as? String {
                             let callBackError = NSError(domain:"", code: statusCode, userInfo:[ NSLocalizedDescriptionKey: errorMessage])
                             callback(nil, callBackError)
@@ -341,7 +341,7 @@ final class LoginManager: LoginManagerRoules {
                if let json = value as? [String : Any] ,
                    let statusCode = json["status"] as? Int {
                    
-                   if statusCode == STATUS_CODES.BAD_REQUEST || statusCode == STATUS_CODES.ERROR_IN_EXECUTION {
+                   if statusCode == STATUS_CODES.BAD_REQUEST || statusCode == STATUS_CODES.ERROR_IN_EXECUTION || statusCode == STATUS_CODES.SHOW_MESSAGE{
                        if let errorMessage = json["message"] as? String {
                            let callBackError = NSError(domain:"", code: statusCode, userInfo:[ NSLocalizedDescriptionKey: errorMessage])
                            callback(nil, callBackError)
@@ -373,6 +373,78 @@ final class LoginManager: LoginManagerRoules {
                        }
                    }
                }
+                
+        }//HTTP REQUEST END
+        
+    }// API FUNC END
+    
+    func updateProfilePic(profileImage : UIImage, callback: @escaping (_ response: [String:Any]?, _ error: Error?) -> Void) {
+        
+        guard let me = LoginManager.share.me else { return }
+        let accessToken = me.accessToken
+        
+        guard let dataImage = profileImage.jpegData(compressionQuality: UIImage.JPEGQuality.low.rawValue) else {
+            callback(nil,nil)
+            return
+        }
+        let file = CLFile(data: dataImage, name: "file", fileName: "image.jpg", mimeType: "image/jpeg")
+        
+        let timeZoneInfo = AppConstants.timeZoneInfo
+        let offset = AppConstants.timeZoneOffset
+        let minutes = Int(offset/60)
+        let path = AppConstants.currentServer + "user/editProfile"
+        let param : [String : Any] = ["access_token" : accessToken, "timezone" : minutes, "timezone_info" : timeZoneInfo]
+        
+        print(param)
+        CLProgressHUD.present(animated: true)
+        HTTPRequest(method: .post, fullURLStr: path, parameters: param, encoding: .json, files: [file])
+            .config(isIndicatorEnable: false, isAlertEnable: false)
+            .multipartHandler(httpModel: false, delay: 0) { (response) in
+                 CLProgressHUD.dismiss(animated: true)
+                
+                print(response as Any)
+                //  print(error as Any)
+                
+                if response.error != nil {
+                    callback(nil, response.error)
+                    return
+                }
+                
+                guard let value = response.value else {
+                    callback(nil, nil)
+                    return
+                }
+                
+                if let json = value as? [String : Any] ,
+                    let statusCode = json["status"] as? Int {
+                    
+                    if statusCode == STATUS_CODES.BAD_REQUEST || statusCode == STATUS_CODES.ERROR_IN_EXECUTION || statusCode == STATUS_CODES.SHOW_MESSAGE {
+                        if let errorMessage = json["message"] as? String {
+                            let callBackError = NSError(domain:"", code: statusCode, userInfo:[ NSLocalizedDescriptionKey: errorMessage])
+                            callback(nil, callBackError)
+                        } else {
+                            callback(nil,nil)
+                        }
+                        return
+                    } else if statusCode == STATUS_CODES.UNAUTHORIZED_ACCESS {
+                        guard let vc = LoginRouter.LoginVC() else {
+                            return
+                        }
+                        let navigationController = UINavigationController()
+                        navigationController.viewControllers = [vc]
+                        UIView.transition(with: appDelegate.window!, duration: 0.5, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
+                            appDelegate.window?.rootViewController = navigationController
+                        }, completion: nil)
+                        callback(nil,nil)
+                        return
+                    } else if statusCode == STATUS_CODES.SHOW_DATA {
+                       if let jsonObject = value as? [String: Any] {
+                             callback(jsonObject, nil)
+                            } else {
+                                callback(nil, nil)
+                            }
+                    }
+                }
                 
         }//HTTP REQUEST END
         
@@ -411,7 +483,7 @@ final class LoginManager: LoginManagerRoules {
                if let json = value as? [String : Any] ,
                    let statusCode = json["status"] as? Int {
                    
-                   if statusCode == STATUS_CODES.BAD_REQUEST || statusCode == STATUS_CODES.ERROR_IN_EXECUTION {
+                   if statusCode == STATUS_CODES.BAD_REQUEST || statusCode == STATUS_CODES.ERROR_IN_EXECUTION || statusCode == STATUS_CODES.SHOW_MESSAGE{
                        if let errorMessage = json["message"] as? String {
                            let callBackError = NSError(domain:"", code: statusCode, userInfo:[ NSLocalizedDescriptionKey: errorMessage])
                            callback(nil, callBackError)

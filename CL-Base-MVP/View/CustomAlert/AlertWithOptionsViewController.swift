@@ -34,12 +34,17 @@ class AlertWithOptionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.asyncAfter(deadline: .now()
-            + 0.05, execute: {
-            self.setupView()
-        })
-        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+         self.setupView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+       
     }
     
     private var leftButtonCallback: ((_ success: Bool) -> Void)?
@@ -84,6 +89,7 @@ class AlertWithOptionsViewController: UIViewController {
             self.alertTitle.isHidden = isContentHidden
             self.alertBody.isHidden = isContentHidden
             self.buttonsView.isHidden = isContentHidden
+             self.view.layoutIfNeeded()
         }
         self.view.layoutIfNeeded()
     }

@@ -46,6 +46,21 @@ class ProfileViewController: UIViewController {
         self.discardedFacts.text = "\(me.rejectedCount)"
     }
     
+    @IBAction func changeProfilePicTapped(_ sender: UIButton) {
+        self.changeProfilePic()
+    }
+    
+    @IBAction func changePasswordTapped(_ sender: UIButton) {
+        self.openPopupForOTP()
+    }
+    
+    private func openPopupForOTP() {
+        let title = "OTP verification required"
+        let body = "please check for OTP in your registered email inbox"
+        AlertPop.showAlert(alertTitle: title, alertBody: body, leftButtonTitle: "cancel", rightButtonTitle: "okay", isLeftButtonHidden: false, leftButtonCallback: {}, rightButtonCallback: {
+            self.presenter.sendForgotPasswordEmail()
+        })
+    }
 }
 
 extension ProfileViewController : ProfilePresenterDelegate {
@@ -85,4 +100,71 @@ extension ProfileViewController : ProfilePresenterDelegate {
         })
         
     }
+    
+    func emailSuccess() {
+        guard let me = LoginManager.share.me else { return }
+        guard let vc = OtpVerificationRouter.OtpVerificationVC() else { fatalError() }
+        vc.presenter = OtpVerificationPresenter(view: vc)
+        vc.presenter.email = me.email
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension ProfileViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func changeProfilePic() {
+        
+        let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: nil , message: "Please Select Source", preferredStyle: .actionSheet)
+        
+        let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            print("Cancel")
+        }
+        actionSheetControllerIOS8.addAction(cancelActionButton)
+        
+        let cameraActionButton = UIAlertAction(title: "Camera", style: .default)
+        { _ in
+            if UIImagePickerController.isSourceTypeAvailable(.camera){
+                self.pickIT(.camera)
+            }
+            else{
+                self.failure(message: "Camera not available")
+            }
+        }
+        actionSheetControllerIOS8.addAction(cameraActionButton)
+        
+        let galleryActionButton = UIAlertAction(title: "Photo Gallery", style: .default)
+        { _ in
+            self.pickIT(.photoLibrary)
+        }
+        actionSheetControllerIOS8.addAction(galleryActionButton)
+        
+        self.present(actionSheetControllerIOS8, animated: true, completion: nil)
+    }
+    
+    func pickIT(_ source: UIImagePickerController.SourceType){
+        
+        let pickController = UIImagePickerController()
+        pickController.delegate = self
+        pickController.sourceType = source
+        if source == .camera{
+            pickController.cameraCaptureMode = .photo
+            pickController.modalPresentationStyle = .fullScreen }
+        self.present(pickController, animated: true,completion: nil)
+    }
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[.originalImage] as? UIImage {
+            self.presenter.addProfileImage(profileImage: image)
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

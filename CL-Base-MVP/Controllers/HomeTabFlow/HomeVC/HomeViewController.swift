@@ -21,9 +21,13 @@ class HomeViewController: UIViewController {
         self.presenter = HomePresenter(view : self)
         self.setupCollectionView()
         self.setupTableView()
-        self.presenter.getFeaturedFact()
         LoadingShimmer.startCovering(self.view, with: nil)
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.presenter.getFeaturedFact()
     }
     
     private func setupTableView() {
@@ -45,7 +49,8 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func moreButtonTapped(_ sender: UIButton) {
-        
+        guard let vc = PopularRouter.PopularVC() else { fatalError() }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

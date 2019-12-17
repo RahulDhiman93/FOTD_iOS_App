@@ -25,6 +25,9 @@
 		0829BB2523A2C92C00AB7EEB /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0829BB2423A2C92C00AB7EEB /* FeedbackViewController.swift */; };
 		0829BB2723A2C94300AB7EEB /* FeedbackPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0829BB2623A2C94300AB7EEB /* FeedbackPresenter.swift */; };
 		0829BB2923A2C94B00AB7EEB /* FeedbackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0829BB2823A2C94B00AB7EEB /* FeedbackRouter.swift */; };
+		083A0CC423A75AFA00119B7A /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A0CC323A75AFA00119B7A /* PopularViewController.swift */; };
+		083A0CC623A75B0F00119B7A /* PopularPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A0CC523A75B0F00119B7A /* PopularPresenter.swift */; };
+		083A0CC823A75B1900119B7A /* PopularRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A0CC723A75B1900119B7A /* PopularRouter.swift */; };
 		08502A4522BA5C7A00E419F2 /* LoadingShimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08502A4422BA5C7A00E419F2 /* LoadingShimmer.swift */; };
 		0864474822BCB97200531A71 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0864474722BCB97200531A71 /* ErrorView.xib */; };
 		0864474A22BCB98100531A71 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0864474922BCB98100531A71 /* ErrorView.swift */; };
@@ -226,6 +229,9 @@
 		0829BB2423A2C92C00AB7EEB /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		0829BB2623A2C94300AB7EEB /* FeedbackPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackPresenter.swift; sourceTree = "<group>"; };
 		0829BB2823A2C94B00AB7EEB /* FeedbackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackRouter.swift; sourceTree = "<group>"; };
+		083A0CC323A75AFA00119B7A /* PopularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularViewController.swift; sourceTree = "<group>"; };
+		083A0CC523A75B0F00119B7A /* PopularPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPresenter.swift; sourceTree = "<group>"; };
+		083A0CC723A75B1900119B7A /* PopularRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularRouter.swift; sourceTree = "<group>"; };
 		08502A4422BA5C7A00E419F2 /* LoadingShimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingShimmer.swift; sourceTree = "<group>"; };
 		0864474722BCB97200531A71 /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
 		0864474922BCB98100531A71 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
@@ -499,6 +505,16 @@
 			path = FeedbackVC;
 			sourceTree = "<group>";
 		};
+		083A0CC223A75ADF00119B7A /* PopularVC */ = {
+			isa = PBXGroup;
+			children = (
+				083A0CC323A75AFA00119B7A /* PopularViewController.swift */,
+				083A0CC523A75B0F00119B7A /* PopularPresenter.swift */,
+				083A0CC723A75B1900119B7A /* PopularRouter.swift */,
+			);
+			path = PopularVC;
+			sourceTree = "<group>";
+		};
 		0864474622BCB95800531A71 /* ErrorView */ = {
 			isa = PBXGroup;
 			children = (
@@ -684,6 +700,7 @@
 			isa = PBXGroup;
 			children = (
 				0809C47F23A138210035781A /* FactDetailVC */,
+				083A0CC223A75ADF00119B7A /* PopularVC */,
 				0810911622C368C100002EB5 /* HomeVC */,
 			);
 			path = HomeTabFlow;
@@ -1559,6 +1576,7 @@
 				F4975A551FCEA01700B8BB6C /* ValidationRuleURL.swift in Sources */,
 				F49759E31FCE908300B8BB6C /* User.swift in Sources */,
 				0809C48223A138420035781A /* FactDetailViewController.swift in Sources */,
+				083A0CC423A75AFA00119B7A /* PopularViewController.swift in Sources */,
 				F49759CF1FCE8E0000B8BB6C /* CLViewController+Tracking.swift in Sources */,
 				F49759E41FCE908600B8BB6C /* Human.swift in Sources */,
 				0876D917238EB9D40068F639 /* AddFactRouter.swift in Sources */,
@@ -1576,6 +1594,7 @@
 				08777219238E7F4800B0AA2E /* ResetPasswordPresenter.swift in Sources */,
 				F49759C71FCE8E0000B8BB6C /* CLAlertController+Extension.swift in Sources */,
 				F4975A101FCE9E4300B8BB6C /* PersistentStoreLocation.swift in Sources */,
+				083A0CC823A75B1900119B7A /* PopularRouter.swift in Sources */,
 				F49759CA1FCE8E0000B8BB6C /* CLCollection+Extension.swift in Sources */,
 				F4975A111FCE9E5000B8BB6C /* LogsConstant.swift in Sources */,
 				0829BB2223A2C81000AB7EEB /* FloatRatingView.swift in Sources */,
@@ -1680,6 +1699,7 @@
 				F4975A471FCEA01200B8BB6C /* ContainsNumberValidationPattern.swift in Sources */,
 				F4975A5F1FCEA03100B8BB6C /* MenuBarView.swift in Sources */,
 				F497599D1FCE859500B8BB6C /* SwiftConstants.swift in Sources */,
+				083A0CC623A75B0F00119B7A /* PopularPresenter.swift in Sources */,
 				0829BB2723A2C94300AB7EEB /* FeedbackPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,6 +24,8 @@ struct AppConstants {
     static let deviceType = 1
     static let deviceName = UIDevice.current.name
     static let appVersion = 37
+    static let timeZoneInfo = TimeZone.current.description
+    static let timeZoneOffset = TimeZone.current.secondsFromGMT()
     static let KeyboardDistanceFromTextfield: CGFloat = 40
     static var kAccessToken: String = "AccessToken"
     static let empID : Int = 11

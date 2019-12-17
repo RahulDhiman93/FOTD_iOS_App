@@ -17,6 +17,7 @@ class OtpVerificationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         self.pinCodeFieldView.delegate = self
         self.pinCodeFieldView.keyboardType = .decimalPad
         // Do any additional setup after loading the view.
@@ -32,13 +33,12 @@ class OtpVerificationViewController: UIViewController {
     }
     
     @IBAction func backToLoginTapped(_ sender: UIButton) {
-        guard let navigationController = self.navigationController else { fatalError() }
-        
-        for viewController in navigationController.viewControllers {
-            if viewController is LoginViewController {
-                self.navigationController?.popToViewController(viewController, animated: true)
-            }
-        }
+        guard let vc = LoginRouter.LoginVC() else { return }
+        let navigationController = UINavigationController()
+        navigationController.viewControllers = [vc]
+        UIView.transition(with: appDelegate.window!, duration: 0.5, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
+            appDelegate.window?.rootViewController = navigationController
+        }, completion: nil)
     }
     
 }

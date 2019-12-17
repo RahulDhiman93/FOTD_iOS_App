@@ -10,6 +10,7 @@ import Foundation
 
 protocol FeedbackPresenterDelegate : class {
     func failure(message: String)
+    func feedbackSubmitSuccess()
 }
 
 class FeedbackPresenter {
@@ -20,5 +21,19 @@ class FeedbackPresenter {
         self.view = view
     }
     
+    func submitFeedback(feedback : String) {
+        
+        UserAPI.share.submitFeedback(feedback: feedback, callback: { [weak self] response, error in
+            
+            guard response != nil, error == nil else {
+                self?.view?.failure(message:  error?.localizedDescription ?? "Server Error, Please try again!")
+                return
+            }
+            
+            self?.view?.feedbackSubmitSuccess()
+            
+        })
+        
+    }
     
 }

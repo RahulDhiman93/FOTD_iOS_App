@@ -90,6 +90,7 @@ extension FavFactsViewController : UITableViewDelegate, UITableViewDataSource {
             self.favFactsTableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
+    
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         let  height = scrollView.frame.size.height
         let contentYoffset = scrollView.contentOffset.y
