@@ -9,12 +9,36 @@
 import UIKit
 
 class AppBaseViewController: UITabBarController {
-
+    
+    var arrayOfImageNameForSelectedState : [String] = ["home_default","add_default","today_default","search_default","more_default"]
+    var arrayOfImageNameForUnselectedState : [String] = ["home_pressed","add_pressed","today_pressed","search_pressed","more_pressed"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBar.unselectedItemTintColor = AppColor.themeSecondaryColor
+//        self.tabBar.unselectedItemTintColor = AppColor.themeSecondaryColor
         self.selectedIndex = 2
+        self.setupTab()
         // Do any additional setup after loading the view.
+    }
+    
+    private func setupTab() {
+        
+        if let count = self.tabBar.items?.count {
+            for i in 0...(count-1) {
+                let imageNameForSelectedState   = arrayOfImageNameForSelectedState[i]
+                let imageNameForUnselectedState = arrayOfImageNameForUnselectedState[i]
+
+                self.tabBar.items?[i].selectedImage = UIImage(named: imageNameForSelectedState)?.withRenderingMode(.alwaysOriginal)
+                self.tabBar.items?[i].image = UIImage(named: imageNameForUnselectedState)?.withRenderingMode(.alwaysOriginal)
+            }
+        }
+
+        let selectedColor   = AppColor.themePrimaryColor
+        let unselectedColor = AppColor.themeSecondaryColor
+
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: unselectedColor], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: selectedColor], for: .selected)
+        
     }
     
 

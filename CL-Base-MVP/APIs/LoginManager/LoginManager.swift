@@ -240,9 +240,16 @@ final class LoginManager: LoginManagerRoules {
     func signUpFromEmail(param: [String: Any], callback: @escaping (_ response: [String:Any]?, _ error: Error?) -> Void) {
         
         let path = AppConstants.currentServer + "user/register"
+        var params = param
+        
+        let timeZoneInfo = AppConstants.timeZoneInfo
+        let offset = AppConstants.timeZoneOffset
+        let minutes = Int(offset/60)
+        params["timezone"] = minutes
+        params["timezone_info"] = timeZoneInfo
         
         CLProgressHUD.present(animated: true)
-        HTTPRequest(method: .post, fullURLStr: path, parameters: param, encoding: .json, files: nil)
+        HTTPRequest(method: .post, fullURLStr: path, parameters: params, encoding: .json, files: nil)
             .config(isIndicatorEnable: false, isAlertEnable: false)
             .handler(httpModel: false, delay: 0) { (response) in
                 

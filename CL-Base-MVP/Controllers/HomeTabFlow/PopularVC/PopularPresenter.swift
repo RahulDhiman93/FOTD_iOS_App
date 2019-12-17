@@ -16,7 +16,7 @@ protocol PopularPresenterDelegate : class {
 class PopularPresenter {
     
     var skip = 0
-    var limit = 10
+    var limit = 30
     var popularFact  = [SearchFactModel]()
     
     weak var view  : PopularPresenterDelegate?

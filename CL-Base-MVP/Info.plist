@@ -22,6 +22,24 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCalendarsUsageDescription</key>
+	<string>FOTD requires access to your calendar.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>FOTD requires access to the camera.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>FOTD would like to use your current location</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>FOTD would like to use your current location.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>FOTD would like to use your current location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>FOTD would like to use your current location</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>FOTD does not require access to the microphone.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>FOTD requires access to the photo library.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>FOTD requires access to the photo library.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
@@ -45,9 +63,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>kBaseURL</key>
-	<string>$(BASE_URL)</string>
 	<key>kAppVersion</key>
 	<string>$(MARKETING_VERSION)</string>
+	<key>kBaseURL</key>
+	<string>$(BASE_URL)</string>
 </dict>
 </plist>
