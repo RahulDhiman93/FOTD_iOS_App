@@ -23,6 +23,13 @@ class AppUsables: NSObject {
             }
         }
         guard let topVC = appDelegate.topViewController() else { return }
+        
+        if let popoverController = shareActivityViewController.popoverPresentationController {
+            popoverController.sourceRect = CGRect(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2, width: 0, height: 0)
+            popoverController.sourceView = topVC.view
+            popoverController.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
+        }
+        
         topVC.present(shareActivityViewController, animated: true, completion: nil)
     }
     

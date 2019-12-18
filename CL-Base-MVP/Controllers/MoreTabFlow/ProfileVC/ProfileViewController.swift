@@ -138,6 +138,12 @@ extension ProfileViewController : UIImagePickerControllerDelegate, UINavigationC
         }
         actionSheetControllerIOS8.addAction(galleryActionButton)
         
+        if let popoverController = actionSheetControllerIOS8.popoverPresentationController {
+            popoverController.sourceRect = CGRect(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2, width: 0, height: 0)
+            popoverController.sourceView = self.view
+            popoverController.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
+        }
+        
         self.present(actionSheetControllerIOS8, animated: true, completion: nil)
     }
     
