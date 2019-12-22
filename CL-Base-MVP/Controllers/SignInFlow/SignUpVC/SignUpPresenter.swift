@@ -67,6 +67,8 @@ class SignUpPresenter {
                 self?.view?.failure(message: error?.localizedDescription ?? "Server Error, Please try again!")
                 return
             }
+            
+            FirebaseEvents.signupEvent()
             self?.view?.SignUpSuccess()
             
         })

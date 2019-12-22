@@ -27,7 +27,7 @@ class ForgotPasswordPresenter {
     func sendForgotPasswordEmail() {
         
         guard let email = self.email else {
-            self.view?.failure(message: "Please type in yout email address")
+            self.view?.failure(message: "Please type in your email address")
             return
         }
         

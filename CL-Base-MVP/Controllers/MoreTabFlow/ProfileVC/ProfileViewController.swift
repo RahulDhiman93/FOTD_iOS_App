@@ -106,6 +106,7 @@ extension ProfileViewController : ProfilePresenterDelegate {
         guard let vc = OtpVerificationRouter.OtpVerificationVC() else { fatalError() }
         vc.presenter = OtpVerificationPresenter(view: vc)
         vc.presenter.email = me.email
+        vc.presenter.isComingFromMoreTab = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

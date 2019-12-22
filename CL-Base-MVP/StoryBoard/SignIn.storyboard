@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hDN-Af-0zy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hDN-Af-0zy">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -75,8 +75,8 @@
                                     <constraint firstAttribute="height" constant="4" id="ybd-Ip-A87"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="please log in to your account to continue to inforu" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWP-Mz-ctI">
-                                <rect key="frame" x="23" y="118.66666666666667" width="371" height="17.666666666666671"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="please log in to your account to continue to  FOTD" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWP-Mz-ctI">
+                                <rect key="frame" x="23" y="118.66666666666667" width="351" height="17.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                 <color key="textColor" name="AppTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -281,7 +281,7 @@
                             <constraint firstItem="xWP-Mz-ctI" firstAttribute="leading" secondItem="h90-0y-wJc" secondAttribute="leading" constant="23" id="ikW-vJ-nkz"/>
                             <constraint firstItem="N0J-Kg-hRX" firstAttribute="height" secondItem="iM4-Ul-i4M" secondAttribute="height" multiplier="0.15" id="nra-bN-0iT"/>
                             <constraint firstItem="s0G-ZG-eLS" firstAttribute="centerX" secondItem="iM4-Ul-i4M" secondAttribute="centerX" id="nwc-Wy-Fej"/>
-                            <constraint firstItem="h90-0y-wJc" firstAttribute="trailing" secondItem="xWP-Mz-ctI" secondAttribute="trailing" constant="20" id="opW-Ya-6Sj"/>
+                            <constraint firstItem="h90-0y-wJc" firstAttribute="trailing" secondItem="xWP-Mz-ctI" secondAttribute="trailing" constant="40" id="opW-Ya-6Sj"/>
                             <constraint firstItem="9on-Qz-X8g" firstAttribute="leading" secondItem="h90-0y-wJc" secondAttribute="leading" constant="20" id="osP-DZ-2JC"/>
                             <constraint firstItem="h90-0y-wJc" firstAttribute="trailing" secondItem="BMg-T4-FnB" secondAttribute="trailing" constant="20" id="ptx-ix-6k4"/>
                             <constraint firstItem="dNu-Gb-QTI" firstAttribute="leading" secondItem="h90-0y-wJc" secondAttribute="leading" constant="23" id="rWd-Qz-pjc"/>
@@ -324,7 +324,7 @@
                                     <constraint firstAttribute="width" constant="60" id="txH-J3-WbC"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="please register to your account to continue with inforu" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNv-xN-n79">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="please register to your account to continue with FOTD" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNv-xN-n79">
                                 <rect key="frame" x="23" y="118.66666666666667" width="371" height="17.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                 <color key="textColor" name="AppTextColor"/>
@@ -1006,6 +1006,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="wIa-yK-zzR"/>
                     <connections>
+                        <outlet property="backButton" destination="M8m-tq-5lK" id="hZQ-jH-LTh"/>
                         <outlet property="pinCodeFieldView" destination="fjO-wo-reo" id="Vfm-3r-wof"/>
                     </connections>
                 </viewController>
@@ -1216,16 +1217,16 @@
         <image name="lock" width="256" height="256"/>
         <image name="user" width="256" height="256"/>
         <namedColor name="AppBackgroundColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AppTextColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AppThemePrimaryColor">
             <color red="0.23529411764705882" green="0.2627450980392157" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AppThemeSecondaryColor">
-            <color red="0.96078431372549022" green="0.80000000000000004" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.88235294117647056" green="0.72156862745098038" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

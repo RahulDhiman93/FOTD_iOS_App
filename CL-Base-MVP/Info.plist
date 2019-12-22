@@ -19,13 +19,13 @@
 	<key>CFBundleShortVersionString</key>
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCalendarsUsageDescription</key>
 	<string>FOTD requires access to your calendar.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>FOTD requires access to the camera.</string>
+	<string>FOTD requires access to the camera for profile picture.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>FOTD would like to use your current location</string>
 	<key>NSLocationAlwaysUsageDescription</key>
@@ -37,9 +37,9 @@
 	<key>NSMicrophoneUsageDescription</key>
 	<string>FOTD does not require access to the microphone.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>FOTD requires access to the photo library.</string>
+	<string>FOTD requires access to the photo library for profile picture.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>FOTD requires access to the photo library.</string>
+	<string>FOTD requires access to the photo library for profile picture.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

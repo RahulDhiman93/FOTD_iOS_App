@@ -61,6 +61,8 @@ class LoginPresenter {
                 self?.view?.failure(message:  error?.localizedDescription ?? "Server Error, Please try again!")
                 return
             }
+            
+            FirebaseEvents.loginEvent()
             self?.view?.loginSuccess()
             
             

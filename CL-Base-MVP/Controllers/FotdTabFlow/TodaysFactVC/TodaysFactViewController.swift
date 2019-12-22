@@ -144,8 +144,8 @@ extension TodaysFactViewController : TodaysFactPresenterDelegate {
         
         UIView.transition(with: likeButton, duration: 0.2, options: .transitionCrossDissolve, animations: {
             if factModel.userLikeStatus! == 1 {
-                self.likeButton.tintColor = AppColor.themeSecondaryColor
-                self.likeCount.textColor = AppColor.themeSecondaryColor
+                self.likeButton.tintColor = AppColor.themePrimaryColor
+                self.likeCount.textColor = AppColor.themePrimaryColor
             } else {
                 
                 if #available(iOS 12.0, *) {
@@ -170,8 +170,8 @@ extension TodaysFactViewController : TodaysFactPresenterDelegate {
         
         UIView.transition(with: dislikeButton, duration: 0.2, options: .transitionCrossDissolve, animations: {
             if factModel.userLikeStatus! == 0 {
-                self.dislikeButton.tintColor = AppColor.themeSecondaryColor
-                self.dislikeCount.textColor = AppColor.themeSecondaryColor
+                self.dislikeButton.tintColor = AppColor.themePrimaryColor
+                self.dislikeCount.textColor = AppColor.themePrimaryColor
             } else {
                 if #available(iOS 12.0, *) {
                     if self.traitCollection.userInterfaceStyle == .dark {

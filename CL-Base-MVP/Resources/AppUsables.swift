@@ -19,6 +19,7 @@ class AppUsables: NSObject {
         shareActivityViewController.completionWithItemsHandler = { activity, completed, items, error in
             
             if completed {
+                FirebaseEvents.shareEvent(sharedOn: activity.debugDescription, sharedFact: fact)
                 shareActivityViewController.dismiss(animated: true, completion: nil)
             }
         }

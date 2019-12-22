@@ -28,8 +28,13 @@ class AppBaseViewController: UITabBarController {
                 let imageNameForSelectedState   = arrayOfImageNameForSelectedState[i]
                 let imageNameForUnselectedState = arrayOfImageNameForUnselectedState[i]
 
-                self.tabBar.items?[i].selectedImage = UIImage(named: imageNameForSelectedState)?.withRenderingMode(.alwaysOriginal)
-                self.tabBar.items?[i].image = UIImage(named: imageNameForUnselectedState)?.withRenderingMode(.alwaysOriginal)
+                let selectedImage = UIImage(named: imageNameForSelectedState)?.withRenderingMode(.alwaysOriginal)
+                let notSelectedImage = UIImage(named: imageNameForUnselectedState)?.withRenderingMode(.alwaysOriginal)
+                
+
+                
+                self.tabBar.items?[i].selectedImage = selectedImage
+                self.tabBar.items?[i].image = notSelectedImage
             }
         }
 

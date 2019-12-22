@@ -49,6 +49,7 @@ class SearchFactPresenter {
                 }
             }
             
+            FirebaseEvents.searchEvent(searchTerm: searchText)
             self?.view?.searchSuccess()
         })
         

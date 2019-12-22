@@ -20,6 +20,7 @@ class OtpVerificationPresenter {
     var otp : String?
     var email : String?
     var accessToken : String?
+    var isComingFromMoreTab = false
     
     init(view: OtpVerificationPresenterDelegate) {
         self.view = view

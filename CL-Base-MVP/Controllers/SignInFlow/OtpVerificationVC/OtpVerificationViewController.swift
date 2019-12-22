@@ -13,6 +13,9 @@ class OtpVerificationViewController: UIViewController {
 
     @IBOutlet weak var pinCodeFieldView: PinCodeTextField!
     
+    @IBOutlet weak var backButton: UIButton!
+    
+    
     var presenter : OtpVerificationPresenter!
     
     override func viewDidLoad() {
@@ -20,6 +23,11 @@ class OtpVerificationViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
         self.pinCodeFieldView.delegate = self
         self.pinCodeFieldView.keyboardType = .decimalPad
+        
+        if self.presenter.isComingFromMoreTab {
+            self.backButton.isHidden = true
+        }
+        
         // Do any additional setup after loading the view.
     }
     

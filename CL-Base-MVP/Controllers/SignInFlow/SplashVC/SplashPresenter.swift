@@ -37,6 +37,7 @@ class SplashPresenter {
                 return
             }
             
+            FirebaseEvents.loginEvent()
             self?.view?.accessTokenVerified()
           
         })
