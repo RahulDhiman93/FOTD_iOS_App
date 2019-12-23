@@ -20,15 +20,27 @@ class OtpVerificationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
         self.pinCodeFieldView.delegate = self
         self.pinCodeFieldView.keyboardType = .decimalPad
         
         if self.presenter.isComingFromMoreTab {
-            self.backButton.isHidden = true
+            self.backButton.setTitle("Back to profile", for: .normal)
         }
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if self.presenter.isComingFromMoreTab {
+            self.navigationController?.isNavigationBarHidden = false
+        }
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -41,6 +53,12 @@ class OtpVerificationViewController: UIViewController {
     }
     
     @IBAction func backToLoginTapped(_ sender: UIButton) {
+        
+        if self.presenter.isComingFromMoreTab {
+            self.navigationController?.popViewController(animated: true)
+            return
+        }
+        
         guard let vc = LoginRouter.LoginVC() else { return }
         let navigationController = UINavigationController()
         navigationController.viewControllers = [vc]

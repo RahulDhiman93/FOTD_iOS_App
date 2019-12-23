@@ -75,6 +75,8 @@ extension PopularViewController : UITableViewDelegate, UITableViewDataSource {
         guard let vc = FactDetailRouter.FactDetailVC() else { return }
         vc.presenter = FactDetailPresenter(view: vc)
         vc.presenter.factId = self.presenter.popularFact[indexPath.row].factId!
+        vc.presenter.currentFactIndex = indexPath.row
+        vc.presenter.totalFactForSwipe = self.presenter.popularFact
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

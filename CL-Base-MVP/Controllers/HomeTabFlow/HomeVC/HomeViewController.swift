@@ -86,6 +86,8 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
         guard let vc = FactDetailRouter.FactDetailVC() else { return }
         vc.presenter = FactDetailPresenter(view: vc)
         vc.presenter.factId = self.presenter.popularFact[indexPath.row].factId!
+        vc.presenter.currentFactIndex = indexPath.row
+        vc.presenter.totalFactForSwipe = self.presenter.popularFactWithSearchModel
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -110,6 +112,8 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
         guard let vc = FactDetailRouter.FactDetailVC() else { return }
         vc.presenter = FactDetailPresenter(view: vc)
         vc.presenter.factId = self.presenter.featuredFact[indexPath.item].factId!
+        vc.presenter.currentFactIndex = indexPath.item
+        vc.presenter.totalFactForSwipe = self.presenter.featureFactWithSearchModel
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

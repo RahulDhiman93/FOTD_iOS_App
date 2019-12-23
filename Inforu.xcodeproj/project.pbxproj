@@ -36,6 +36,8 @@
 		0864475122BCE21700531A71 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0864475022BCE21700531A71 /* SplashViewController.swift */; };
 		0864475322BCE50C00531A71 /* IJReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0864475222BCE50C00531A71 /* IJReachability.swift */; };
 		0869E9CF22B79D27006C8CF2 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0869E9CE22B79D27006C8CF2 /* SignIn.storyboard */; };
+		086DFD0D23B0BA7200F7D01B /* TutorialForSwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DFD0B23B0BA7200F7D01B /* TutorialForSwipeViewController.swift */; };
+		086DFD0E23B0BA7200F7D01B /* TutorialForSwipeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 086DFD0C23B0BA7200F7D01B /* TutorialForSwipeViewController.xib */; };
 		0876D913238EB9BD0068F639 /* AddFactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876D912238EB9BD0068F639 /* AddFactViewController.swift */; };
 		0876D915238EB9CD0068F639 /* AddFactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876D914238EB9CD0068F639 /* AddFactPresenter.swift */; };
 		0876D917238EB9D40068F639 /* AddFactRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876D916238EB9D40068F639 /* AddFactRouter.swift */; };
@@ -242,6 +244,8 @@
 		0864475022BCE21700531A71 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		0864475222BCE50C00531A71 /* IJReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IJReachability.swift; sourceTree = "<group>"; };
 		0869E9CE22B79D27006C8CF2 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		086DFD0B23B0BA7200F7D01B /* TutorialForSwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialForSwipeViewController.swift; sourceTree = "<group>"; };
+		086DFD0C23B0BA7200F7D01B /* TutorialForSwipeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutorialForSwipeViewController.xib; sourceTree = "<group>"; };
 		0876D912238EB9BD0068F639 /* AddFactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFactViewController.swift; sourceTree = "<group>"; };
 		0876D914238EB9CD0068F639 /* AddFactPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFactPresenter.swift; sourceTree = "<group>"; };
 		0876D916238EB9D40068F639 /* AddFactRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFactRouter.swift; sourceTree = "<group>"; };
@@ -725,6 +729,8 @@
 				08FF77CF238E9112001EAF2E /* PopularTableViewCell.xib */,
 				08196417239F92AB00595EC4 /* BlogCollectionViewCell.swift */,
 				08196418239F92AB00595EC4 /* BlogCollectionViewCell.xib */,
+				086DFD0B23B0BA7200F7D01B /* TutorialForSwipeViewController.swift */,
+				086DFD0C23B0BA7200F7D01B /* TutorialForSwipeViewController.xib */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -1351,6 +1357,7 @@
 			files = (
 				087E770623A285F400B14E4A /* AboutUsViewController.xib in Resources */,
 				0869E9CF22B79D27006C8CF2 /* SignIn.storyboard in Resources */,
+				086DFD0E23B0BA7200F7D01B /* TutorialForSwipeViewController.xib in Resources */,
 				08CAB84F22B8F5E600C2D82C /* Poppins-ExtraBold.ttf in Resources */,
 				08CAB85322B8F5E600C2D82C /* Poppins-ExtraLightItalic.ttf in Resources */,
 				08CAB85A22B8F5E600C2D82C /* Poppins-SemiBoldItalic.ttf in Resources */,
@@ -1655,6 +1662,7 @@
 				087E76F223A23B3E00B14E4A /* SearchFactModel.swift in Sources */,
 				0864475122BCE21700531A71 /* SplashViewController.swift in Sources */,
 				F49759D01FCE8E0000B8BB6C /* Designable.swift in Sources */,
+				086DFD0D23B0BA7200F7D01B /* TutorialForSwipeViewController.swift in Sources */,
 				F4975A051FCE9E3500B8BB6C /* APNSManager.swift in Sources */,
 				F49759D51FCE8E0000B8BB6C /* Validation.swift in Sources */,
 				F49759CB1FCE8E0000B8BB6C /* CLObject+Extension.swift in Sources */,

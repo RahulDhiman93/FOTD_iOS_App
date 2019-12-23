@@ -30,9 +30,11 @@ class FactDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
+        self.addSwipeGestures()
         self.presenter.getFactDetails()
         // Do any additional setup after loading the view.
     }
+    
     
     private func setupView() {
         self.title = "fact details"
@@ -45,6 +47,36 @@ class FactDetailViewController: UIViewController {
         self.likeButton.setImage(likeButtonImage, for: .normal)
         self.dislikeButton.setImage(dislikeButtonImage, for: .normal)
     }
+    
+    private func addSwipeGestures() {
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.rightSwipe))
+        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.leftSwipe))
+        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
+        
+        self.view.addGestureRecognizer(swipeRight)
+        self.view.addGestureRecognizer(swipeLeft)
+    }
+    
+    @objc private func rightSwipe() {
+        print("swipeRight")
+        if self.presenter.currentFactIndex > 0 {
+            self.presenter.currentFactIndex -= 1
+            self.presenter.factId = self.presenter.totalFactForSwipe[self.presenter.currentFactIndex].factId!
+            self.presenter.getFactDetails()
+        }
+    }
+    
+    @objc private func leftSwipe() {
+        print("swipeLeft")
+        if self.presenter.currentFactIndex < self.presenter.totalFactForSwipe.count - 1{
+            self.presenter.currentFactIndex += 1
+            self.presenter.factId = self.presenter.totalFactForSwipe[self.presenter.currentFactIndex].factId!
+            self.presenter.getFactDetails()
+        }
+    }
+    
     
     
     @IBAction func likeButtonTapped(_ sender: UIButton) {
@@ -174,6 +206,18 @@ extension FactDetailViewController : FactDetailPresenterDelegate {
             }
         })
         
+        if !UserDefaults.standard.bool(forKey: "showTut") {
+            self.showTut()
+            UserDefaults.standard.set(true, forKey: "showTut")
+        }
+       
+    }
+    
+    private func showTut() {
+        let vc = TutorialForSwipeViewController(nibName: "TutorialForSwipeViewController", bundle: nil)
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        self.present(vc, animated: true, completion: nil)
     }
     
 }

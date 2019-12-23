@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoreKit
 
 class TodaysFactViewController: UIViewController {
     
@@ -25,7 +26,6 @@ class TodaysFactViewController: UIViewController {
         super.viewDidLoad()
         self.presenter = TodaysFactPresenter(view: self)
         self.setupView()
-        
         // Do any additional setup after loading the view.
     }
     
@@ -198,6 +198,33 @@ extension TodaysFactViewController : TodaysFactPresenterDelegate {
                 self.favButton.setImage(UIImage(named: "heart"), for: .normal)
             }
         })
+        
+        if self.presenter.askForReview {
+            self.reviewLogic()
+            self.presenter.askForReview = false
+        }
+         
     }
     
+}
+
+extension TodaysFactViewController {
+    func reviewLogic() {
+        var value = UserDefaults.standard.integer(forKey: "reviewCounting")
+        
+        if value % 5 == 0 {
+            self.askForReview()
+        }
+        
+        value += 1
+        UserDefaults.standard.set(value, forKey: "reviewCounting")
+    }
+    
+    func askForReview() {
+        if #available(iOS 10.3, *) {
+            SKStoreReviewController.requestReview()
+        } else {
+            // Fallback on earlier versions
+        }
+    }
 }

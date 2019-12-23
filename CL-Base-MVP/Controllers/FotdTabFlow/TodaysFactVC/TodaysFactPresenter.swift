@@ -16,6 +16,7 @@ protocol TodaysFactPresenterDelegate : class {
 class TodaysFactPresenter {
     
     var factModel : FactModel?
+    var askForReview = true
     
     weak var view  : TodaysFactPresenterDelegate?
     init(view: TodaysFactPresenterDelegate) {

@@ -51,7 +51,7 @@ class ErrorView: UIView {
     
     func setErrorMessage(message:String, isError:Bool) {
         self.backgroundColor = UIColor.errorColor
-        self.errorMessage1.text = message
+        self.errorMessage1.text = message.lowercased()
         let size = message.heightWithConstrainedWidth(width: kScreenSize.width - 57, font: UIFont.poppinsFontRegular(size: 15)!)
         var safeLayoutHeight:CGFloat = 0.0
         if #available(iOS 11.0, *) {
@@ -155,9 +155,9 @@ class KeyBoard {
     }
     
     private func setHeightWidthFrom(notification: Notification) {
-        let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect
-        KeyBoard.height = keyboardFrame?.height ?? 0
-        KeyBoard.width = keyboardFrame?.width ?? 0
+        _ = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect
+        KeyBoard.height =  0
+        KeyBoard.width =  0
         heightChanged?(KeyBoard.height)
     }
     

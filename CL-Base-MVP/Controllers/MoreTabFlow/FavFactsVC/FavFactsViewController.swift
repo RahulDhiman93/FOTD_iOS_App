@@ -78,6 +78,8 @@ extension FavFactsViewController : UITableViewDelegate, UITableViewDataSource {
         guard let vc = FactDetailRouter.FactDetailVC() else { return }
         vc.presenter = FactDetailPresenter(view: vc)
         vc.presenter.factId = self.presenter.favFacts[indexPath.row].factId
+        vc.presenter.currentFactIndex = indexPath.row
+        vc.presenter.totalFactForSwipe = self.presenter.favFacts
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

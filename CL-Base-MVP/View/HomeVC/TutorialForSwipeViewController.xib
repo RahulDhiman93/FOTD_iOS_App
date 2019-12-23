@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.ttf">
+            <string>Poppins-Bold</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TutorialForSwipeViewController" customModule="FOTD" customModuleProvider="target">
+            <connections>
+                <outlet property="centerImageYConst" destination="TgF-1G-rqr" id="Hvc-gL-lCD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gd9-hQ-E3N">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swipe" translatesAutoresizingMaskIntoConstraints="NO" id="snZ-7r-ZFM">
+                    <rect key="frame" x="103.5" y="344.5" width="207" height="207"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="snZ-7r-ZFM" secondAttribute="height" multiplier="1:1" id="Z7a-m8-usv"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swipe for more facts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="PE6-tE-OxR">
+                    <rect key="frame" x="10" y="581.5" width="394" height="42"/>
+                    <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNH-La-iym">
+                    <rect key="frame" x="175" y="765" width="64" height="47"/>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="25"/>
+                    <state key="normal" title="got it">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="closeButtonTapped:" destination="-1" eventType="touchUpInside" id="43g-gC-cq5"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="GNH-La-iym" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="32B-Ii-J1K"/>
+                <constraint firstItem="PE6-tE-OxR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="BaZ-B5-Y7l"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GNH-La-iym" secondAttribute="bottom" constant="50" id="FrZ-cu-Ddj"/>
+                <constraint firstItem="snZ-7r-ZFM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TgF-1G-rqr"/>
+                <constraint firstAttribute="bottom" secondItem="gd9-hQ-E3N" secondAttribute="bottom" id="Vka-ec-Jb0"/>
+                <constraint firstItem="snZ-7r-ZFM" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="VpJ-jg-58W"/>
+                <constraint firstItem="PE6-tE-OxR" firstAttribute="top" secondItem="snZ-7r-ZFM" secondAttribute="bottom" constant="30" id="XXS-Qp-MJb"/>
+                <constraint firstItem="snZ-7r-ZFM" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="h3p-MM-oZZ"/>
+                <constraint firstItem="gd9-hQ-E3N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mhS-b2-tfs"/>
+                <constraint firstItem="PE6-tE-OxR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ndx-bB-BXd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gd9-hQ-E3N" secondAttribute="trailing" id="s0C-Ta-bAQ"/>
+                <constraint firstItem="gd9-hQ-E3N" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uGp-vT-XIE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PE6-tE-OxR" secondAttribute="trailing" constant="10" id="zHM-hA-11w"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="103"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="swipe" width="256" height="256"/>
+    </resources>
+</document>

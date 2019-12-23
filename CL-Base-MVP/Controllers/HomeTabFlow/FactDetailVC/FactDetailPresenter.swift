@@ -18,6 +18,8 @@ class FactDetailPresenter {
     
     var factId : Int?
     var factDetailModel : FactDetailModel?
+    var totalFactForSwipe = [SearchFactModel]()
+    var currentFactIndex = Int()
     
     weak var view  : FactDetailPresenterDelegate?
     

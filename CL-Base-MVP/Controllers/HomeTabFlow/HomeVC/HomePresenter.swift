@@ -17,6 +17,8 @@ class HomePresenter {
     
     var featuredFact = [BlogModel]()
     var popularFact  = [BlogModel]()
+    var featureFactWithSearchModel = [SearchFactModel]()
+    var popularFactWithSearchModel = [SearchFactModel]()
     
     weak var view  : HomePresenterDelegate?
     
@@ -44,16 +46,20 @@ class HomePresenter {
             }
             
             self?.featuredFact.removeAll()
+            self?.featureFactWithSearchModel.removeAll()
             for featureFact in featured {
-                if let fact = BlogModel(json: featureFact) {
+                if let fact = BlogModel(json: featureFact), let factForSearchModel = SearchFactModel(json: featureFact) {
                     self?.featuredFact.append(fact)
+                    self?.featureFactWithSearchModel.append(factForSearchModel)
                 }
             }
             
             self?.popularFact.removeAll()
+            self?.popularFactWithSearchModel.removeAll()
             for popularFact in popular {
-                if let fact = BlogModel(json: popularFact) {
+                if let fact = BlogModel(json: popularFact), let factForSearchModel = SearchFactModel(json: popularFact) {
                     self?.popularFact.append(fact)
+                    self?.popularFactWithSearchModel.append(factForSearchModel)
                 }
             }
             
