@@ -110,8 +110,9 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let vc = FactDetailRouter.FactDetailVC() else { return }
+        guard let factId = self.presenter.featuredFact[indexPath.item].factId else { return }
         vc.presenter = FactDetailPresenter(view: vc)
-        vc.presenter.factId = self.presenter.featuredFact[indexPath.item].factId!
+        vc.presenter.factId = factId
         vc.presenter.currentFactIndex = indexPath.item
         vc.presenter.totalFactForSwipe = self.presenter.featureFactWithSearchModel
         self.navigationController?.pushViewController(vc, animated: true)

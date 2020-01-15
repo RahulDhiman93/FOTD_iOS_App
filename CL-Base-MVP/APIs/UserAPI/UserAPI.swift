@@ -314,7 +314,7 @@ extension UserAPI {
         let param : [String : Any] = ["access_token" : accessToken, "fact" : fact]
         
         HTTPRequest(method: .post, fullURLStr: path, parameters: param, encoding: .json, files: nil)
-            .config(isIndicatorEnable: true, isAlertEnable: false)
+            .config(isIndicatorEnable: false, isAlertEnable: false)
             .handler(httpModel: false, delay: 0) { (response) in
                 
                 print(response as Any)

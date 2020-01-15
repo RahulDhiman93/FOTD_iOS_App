@@ -1816,7 +1816,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Inforu.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BM93ACT257;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1841,7 +1841,7 @@
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 4.0;
+				MARKETING_VERSION = 4.3;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"$(inherited)",
@@ -2017,12 +2017,12 @@
 				CODE_SIGN_ENTITLEMENTS = Inforu.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BM93ACT257;
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 4.0;
+				MARKETING_VERSION = 4.3;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"$(inherited)",
@@ -2197,12 +2197,12 @@
 				CODE_SIGN_ENTITLEMENTS = Inforu.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BM93ACT257;
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 4.0;
+				MARKETING_VERSION = 4.3;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"$(inherited)",
@@ -2433,7 +2433,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Inforu.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BM93ACT257;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2458,7 +2458,7 @@
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 4.0;
+				MARKETING_VERSION = 4.3;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"$(inherited)",
@@ -2548,12 +2548,12 @@
 				CODE_SIGN_ENTITLEMENTS = Inforu.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BM93ACT257;
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 4.0;
+				MARKETING_VERSION = 4.3;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"$(inherited)",

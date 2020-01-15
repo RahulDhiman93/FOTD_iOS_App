@@ -30,7 +30,9 @@ class AddFactPresenter {
             return
         }
         
+        CLProgressHUD.present(animated: true)
         UserAPI.share.addFact(fact: fact, callback: { [weak self] response , error in
+            CLProgressHUD.dismiss(animated: true)
             
             guard response != nil , error == nil else {
                 self?.view?.failure(message:  error?.localizedDescription ?? "Server Error, Please try again!")

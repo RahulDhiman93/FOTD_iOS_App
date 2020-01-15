@@ -8,8 +8,9 @@
 
 import UIKit
 import StoreKit
+import GoogleMobileAds
 
-class TodaysFactViewController: UIViewController {
+class TodaysFactViewController: UIViewController , GADInterstitialDelegate{
     
     @IBOutlet weak var factLabel: UILabel!
     
@@ -21,11 +22,18 @@ class TodaysFactViewController: UIViewController {
     @IBOutlet weak var favButton: UIButton!
     
     var presenter : TodaysFactPresenter!
+    var inter:GADInterstitial!
+    var tryAdLoadAgain = true
+    var multiplier = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = TodaysFactPresenter(view: self)
         self.setupView()
+        self.setupInter()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: { [weak self] in
+            self?.loadInt()
+        })
         // Do any additional setup after loading the view.
     }
     
@@ -209,7 +217,46 @@ extension TodaysFactViewController : TodaysFactPresenterDelegate {
 }
 
 extension TodaysFactViewController {
-    func reviewLogic() {
+    
+    private func setupInter() {
+        inter = GADInterstitial(adUnitID: "ca-app-pub-8330967321849957/2163363210")
+        let request = GADRequest()
+        inter.load(request)
+        inter = createAndLoadInterstitial()
+        inter.delegate = self
+    }
+    
+    private func createAndLoadInterstitial() -> GADInterstitial {
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-8330967321849957/2163363210")
+        interstitial.delegate = self
+        interstitial.load(GADRequest())
+        return interstitial
+    }
+    
+    private func loadInt(){
+        if let inter = inter {
+            if inter.isReady {
+                inter.present(fromRootViewController: self)
+            }
+            else{
+                let time = Double(2.0) * Double(self.multiplier)
+                print(time)
+                DispatchQueue.main.asyncAfter(deadline: .now() + time, execute: { [weak self] in
+                guard let self = self else { return }
+                    if self.tryAdLoadAgain {
+                        print("TRIED AGAIN")
+                        self.multiplier += 1
+                        self.loadInt()
+                        if self.multiplier == 3 {
+                            self.tryAdLoadAgain = false
+                        }
+                    }
+                })
+            }
+        }
+    }
+    
+    private func reviewLogic() {
         var value = UserDefaults.standard.integer(forKey: "reviewCounting")
         
         if value % 5 == 0 {
@@ -220,7 +267,7 @@ extension TodaysFactViewController {
         UserDefaults.standard.set(value, forKey: "reviewCounting")
     }
     
-    func askForReview() {
+    private func askForReview() {
         if #available(iOS 10.3, *) {
             SKStoreReviewController.requestReview()
         } else {

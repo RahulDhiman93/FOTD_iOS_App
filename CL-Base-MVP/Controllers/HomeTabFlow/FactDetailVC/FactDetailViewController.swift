@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class FactDetailViewController: UIViewController {
+class FactDetailViewController: UIViewController , GADInterstitialDelegate{
     
     @IBOutlet weak var factLabel: UILabel!
     @IBOutlet weak var userImage: UIImageView!
@@ -23,15 +24,20 @@ class FactDetailViewController: UIViewController {
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var favButton: UIButton!
     
-    
-    
     var presenter : FactDetailPresenter!
+    var inter:GADInterstitial!
+    var tryAdLoadAgain = true
+    var multiplier = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
         self.addSwipeGestures()
         self.presenter.getFactDetails()
+        self.setupInter()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: { [weak self] in
+            self?.loadInt()
+        })
         // Do any additional setup after loading the view.
     }
     
@@ -219,5 +225,47 @@ extension FactDetailViewController : FactDetailPresenterDelegate {
         vc.modalTransitionStyle = .crossDissolve
         self.present(vc, animated: true, completion: nil)
     }
+    
+}
+
+extension FactDetailViewController {
+    
+    private func setupInter() {
+           inter = GADInterstitial(adUnitID: "ca-app-pub-8330967321849957/2163363210")
+           let request = GADRequest()
+           inter.load(request)
+           inter = createAndLoadInterstitial()
+           inter.delegate = self
+       }
+       
+       private func createAndLoadInterstitial() -> GADInterstitial {
+           let interstitial = GADInterstitial(adUnitID: "ca-app-pub-8330967321849957/2163363210")
+           interstitial.delegate = self
+           interstitial.load(GADRequest())
+           return interstitial
+       }
+       
+       private func loadInt(){
+           if let inter = inter {
+               if inter.isReady {
+                   inter.present(fromRootViewController: self)
+               }
+               else{
+                   let time = Double(2.0) * Double(self.multiplier)
+                   print(time)
+                   DispatchQueue.main.asyncAfter(deadline: .now() + time, execute: { [weak self] in
+                    guard let self = self else { return }
+                       if self.tryAdLoadAgain {
+                           print("TRIED AGAIN")
+                           self.multiplier += 1
+                           self.loadInt()
+                           if self.multiplier == 3 {
+                               self.tryAdLoadAgain = false
+                           }
+                       }
+                   })
+               }
+           }
+       }
     
 }

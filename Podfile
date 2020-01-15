@@ -26,6 +26,7 @@ target 'Inforu' do
     pod 'Firebase/Analytics'
     pod 'Kingfisher'
     pod 'LinearProgressBarMaterial'
+    pod 'Google-Mobile-Ads-SDK'
 
   target 'InforuTests' do
     inherit! :search_paths
