@@ -156,15 +156,26 @@ extension ProfileViewController : UIImagePickerControllerDelegate, UINavigationC
         if source == .camera{
             pickController.cameraCaptureMode = .photo
             pickController.modalPresentationStyle = .fullScreen }
+        pickController.allowsEditing = true
         self.present(pickController, animated: true,completion: nil)
     }
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        if let image = info[.originalImage] as? UIImage {
+        if let imageUrl = info[.imageURL] as? NSURL, let pathExt = imageUrl.pathExtension, pathExt == "gif"  {
+            dismiss(animated: true){
+                self.failure(message: "Not an image")
+            }
+            return
+        }
+        
+        if let image = info[.editedImage] as? UIImage {
+            self.presenter.addProfileImage(profileImage: image)
+        } else if let image = info[.originalImage] as? UIImage {
             self.presenter.addProfileImage(profileImage: image)
         }
+        
         
         dismiss(animated: true, completion: nil)
     }

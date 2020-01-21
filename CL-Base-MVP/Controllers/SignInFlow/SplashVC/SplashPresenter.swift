@@ -10,6 +10,7 @@ import Foundation
 
 protocol SplashPresenterDelegate : class {
     func failure(message: String)
+    func accessTokenApiError(message : String)
     func accessTokenVerified()
     func goToLogin()
     func checkAppVersionSuccess()
@@ -32,8 +33,7 @@ class SplashPresenter {
         LoginManager.share.loginFromAccessToken(callback: { [weak self] response , error in
             
             guard response != nil, error == nil else {
-                self?.view?.failure(message: error?.localizedDescription ?? "Server Error, Please try again!")
-                self?.view?.goToLogin()
+                self?.view?.accessTokenApiError(message: error?.localizedDescription ?? "Server Error, Please try again!")
                 return
             }
             

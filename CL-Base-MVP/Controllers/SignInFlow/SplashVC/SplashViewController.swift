@@ -55,8 +55,24 @@ class SplashViewController: UIViewController {
 
 extension SplashViewController : SplashPresenterDelegate {
     
+    
+    
     func failure(message: String) {
         ErrorView.showWith(message: message, isErrorMessage: true) {}
+    }
+    
+    func accessTokenApiError(message: String) {
+        let alertVc = AlertWithOptionsViewController.loadNibView(alertTitle: "Oops!", alertBody: message, leftButtonTitle: "Log in", rightButtonTitle: "Try again!", isLeftButtonHidden: false)
+        
+        alertVc.leftButtonCallback(callback: { (_) in
+            self.goToLogin()
+        })
+        
+        alertVc.rightButtonCallback(callback: { (_) in
+            self.checkAccessToken()
+        })
+        self.present(alertVc, animated: true, completion: nil)
+        return
     }
     
     func accessTokenVerified() {
