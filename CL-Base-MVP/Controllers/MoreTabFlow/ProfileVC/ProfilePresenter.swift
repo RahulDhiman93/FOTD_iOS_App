@@ -72,4 +72,20 @@ class ProfilePresenter {
         })
     }
     
+    func toggleNotificationSettings(isNotificationEnabled : Int) {
+        
+        CLProgressHUD.present(animated: true)
+        UserAPI.share.toggleNotificationSettings(notificationEnabled: isNotificationEnabled, callback: { [weak self] response, error in
+            CLProgressHUD.dismiss(animated: true)
+            
+            guard response != nil, error == nil else {
+                self?.view?.failure(message:  error?.localizedDescription ?? "Server Error, Please try again!")
+                return
+            }
+            
+            self?.view?.failure(message: "Settings saved")
+        })
+        
+    }
+    
 }

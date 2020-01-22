@@ -18,6 +18,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var approvedFacts: UILabel!
     @IBOutlet weak var pendingFacts: UILabel!
     @IBOutlet weak var discardedFacts: UILabel!
+    @IBOutlet weak var notificationSwitch: UISwitch!
     
     var presenter : ProfilePresenter!
     
@@ -44,6 +45,8 @@ class ProfileViewController: UIViewController {
         self.approvedFacts.text = "\(me.approvedCount)"
         self.pendingFacts.text = "\(me.pendingCount)"
         self.discardedFacts.text = "\(me.rejectedCount)"
+        self.notificationSwitch.isOn = me.notificationEnabled == 1 ? true : false
+        
     }
     
     @IBAction func changeProfilePicTapped(_ sender: UIButton) {
@@ -61,6 +64,39 @@ class ProfileViewController: UIViewController {
             self.presenter.sendForgotPasswordEmail()
         })
     }
+    
+    @IBAction func openUserAddedVC(_ sender: UIButton) {
+        
+        var type : UserAddedFactsType = .approved
+        switch sender.tag {
+        case 0:
+            type = .approved
+            break
+        case 1:
+            type = .pending
+            break
+        case 2:
+            type = .discarded
+            break
+        default:
+            break
+        }
+        
+        guard let vc = UserAddedFactsRouter.UserAddedFactsVC() else { fatalError() }
+        vc.presenter = UserAddedFactsPresenter(view: vc, type: type)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func notificationSwitchToggle(_ sender: UISwitch) {
+        
+        if sender.isOn {
+            presenter.toggleNotificationSettings(isNotificationEnabled: 1)
+        } else {
+            presenter.toggleNotificationSettings(isNotificationEnabled: 0)
+        }
+        
+    }
+    
 }
 
 extension ProfileViewController : ProfilePresenterDelegate {

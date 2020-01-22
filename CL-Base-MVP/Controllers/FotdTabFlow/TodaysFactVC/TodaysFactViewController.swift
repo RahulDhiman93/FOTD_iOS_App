@@ -32,7 +32,7 @@ class TodaysFactViewController: UIViewController , GADInterstitialDelegate{
         self.setupView()
         self.setupInter()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: { [weak self] in
-            self?.loadInt()
+           // self?.loadInt()
         })
         // Do any additional setup after loading the view.
     }

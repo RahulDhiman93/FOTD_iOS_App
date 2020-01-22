@@ -39,6 +39,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let unselectedColor = AppColor.themeSecondaryColor
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: unselectedColor], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: selectedColor], for: .selected)
+        let fontForSelected: [AnyHashable : Any] = [NSAttributedString.Key.font : UIFont.poppinsFontMedium(size: 15)!, NSAttributedString.Key.foregroundColor : UIColor.white]
+        let fontForNotSelected: [AnyHashable : Any] = [NSAttributedString.Key.font : UIFont.poppinsFontMedium(size: 15)!, NSAttributedString.Key.foregroundColor : UIColor.white]
+        UISegmentedControl.appearance().setTitleTextAttributes(fontForSelected as? [NSAttributedString.Key : Any] , for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes(fontForNotSelected as? [NSAttributedString.Key : Any] , for: .normal)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
