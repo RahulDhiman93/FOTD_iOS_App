@@ -1172,9 +1172,9 @@
                                     <constraint firstAttribute="height" constant="50" id="KcK-TG-6vf"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Approved"/>
-                                    <segment title="Pending"/>
-                                    <segment title="Discarded"/>
+                                    <segment title="approved"/>
+                                    <segment title="pending"/>
+                                    <segment title="discarded"/>
                                 </segments>
                                 <color key="tintColor" name="AppTextColor"/>
                                 <color key="selectedSegmentTintColor" name="AppThemeSecondaryColor"/>
