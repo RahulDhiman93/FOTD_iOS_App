@@ -924,7 +924,7 @@ extension UserAPI {
         param["timezone_info"] = timeZoneInfo
         
         HTTPRequest(method: .post, fullURLStr: path, parameters: param, encoding: .json, files: nil)
-            .config(isIndicatorEnable: false, isAlertEnable: false)
+            .config(isIndicatorEnable: true, isAlertEnable: false)
             .handler(httpModel: false, delay: 0) { (response) in
                 
                 print(response as Any)
