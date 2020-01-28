@@ -40,11 +40,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setupChatConfig() {
         HippoConfig.shared.setCredential(withAppSecretKey: "cc794688d258ebacd791481efb25be10")
-        if Config.sharedInstance.baseURL() == "http://167.99.107.72:8080/" {
-            HippoConfig.shared.switchEnvironment(.live)
-        } else {
-            HippoConfig.shared.switchEnvironment(.live)
-        }
+        self.setHippoTheme()
+    }
+    
+    private func setHippoTheme() {
+        let hippoTheme = HippoTheme.defaultTheme()
+        hippoTheme.headerText = "Conversations"
+        hippoTheme.headerTextFont = UIFont.poppinsFontMedium(size: 14.0)
+        hippoTheme.headerBackgroundColor = AppColor.themePrimaryColor
+        hippoTheme.headerTextColor = AppColor.themeSecondaryColor
+        HippoConfig.shared.setCustomisedHippoTheme(theme: hippoTheme)
     }
     
     private func setupTabBar() {

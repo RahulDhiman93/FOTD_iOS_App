@@ -291,7 +291,9 @@ extension TodaysFactViewController {
             fullName: me.userName,
             email: me.email,
             phoneNumber: "N/A",
-            userUniqueKey: "\(me.userId)")
+            userUniqueKey: "\(me.userId)",
+            userImage: me.profileImage
+         )
             //Call updateUserDetails so that
             //the user information is synced with Hippo servers
             HippoConfig.shared.updateUserDetail(userDetail: hippoUserDetail)

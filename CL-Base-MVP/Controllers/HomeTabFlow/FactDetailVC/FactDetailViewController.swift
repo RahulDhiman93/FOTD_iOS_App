@@ -144,7 +144,7 @@ class FactDetailViewController: UIViewController , GADInterstitialDelegate{
     @IBAction func chatButtonTapped(_ sender: UIButton) {
         guard let me = LoginManager.share.me else { return }
         guard let factModel = presenter.factDetailModel, let peerUserId = factModel.addedByUserId, let factId = factModel.factId else { return }
-        guard let peerChatInfo = PeerToPeerChat(uniqueChatId: "\(me.userId + peerUserId)", myUniqueId: "\(me.userId)", idsOfPeers: ["\(peerUserId)"], channelName: "Fact:" + "\(factId)") else { return }
+        guard let peerChatInfo = PeerToPeerChat(uniqueChatId: "\(me.userId + peerUserId)", myUniqueId: "\(me.userId)", idsOfPeers: ["\(peerUserId)"], channelName: "Fact ID:" + "\(factId)") else { return }
         HippoConfig.shared.showPeerChatWith(data: peerChatInfo, completion: { (success, error) in
         //handle success or error
         })
