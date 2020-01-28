@@ -8,6 +8,7 @@
 //
 import Foundation
 import UIKit
+import Hippo
 
 extension AppDelegate {
   
@@ -17,12 +18,20 @@ extension AppDelegate {
   
   func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
     APNSManager.share.successfullyRegisteredForNotifications(data: deviceToken)
+    HippoConfig.shared.registerDeviceToken(deviceToken: deviceToken)
   }
   
-  func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-    APNSManager.share.application(application, didReceiveRemoteNotification: userInfo, fetchCompletionHandler: completionHandler)
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        let pushInfo = (userInfo as? [String : Any]) ?? [:]
+        if HippoConfig.shared.isHippoNotification(withUserInfo: pushInfo) {
+            HippoConfig.shared.handleRemoteNotification(userInfo: pushInfo)
+            return
+        } else {
+            APNSManager.share.application(application, didReceiveRemoteNotification: userInfo, fetchCompletionHandler: completionHandler)
+        }
   }
-  
+
   func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
   }
   

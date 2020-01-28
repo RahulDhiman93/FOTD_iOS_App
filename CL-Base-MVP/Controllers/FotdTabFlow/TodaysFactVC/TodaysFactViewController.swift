@@ -9,6 +9,7 @@
 import UIKit
 import StoreKit
 import GoogleMobileAds
+import Hippo
 
 class TodaysFactViewController: UIViewController , GADInterstitialDelegate{
     
@@ -31,8 +32,11 @@ class TodaysFactViewController: UIViewController , GADInterstitialDelegate{
         self.presenter = TodaysFactPresenter(view: self)
         self.setupView()
         self.setupInter()
+        self.configHippo()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: { [weak self] in
-           // self?.loadInt()
+           if SHOW_ADV {
+               self?.loadInt()
+           }
         })
         // Do any additional setup after loading the view.
     }
@@ -246,7 +250,9 @@ extension TodaysFactViewController {
                     if self.tryAdLoadAgain {
                         print("TRIED AGAIN")
                         self.multiplier += 1
-                        self.loadInt()
+                        if SHOW_ADV {
+                            self.loadInt()
+                        }
                         if self.multiplier == 3 {
                             self.tryAdLoadAgain = false
                         }
@@ -274,4 +280,21 @@ extension TodaysFactViewController {
             // Fallback on earlier versions
         }
     }
+}
+
+extension TodaysFactViewController {
+    
+    func configHippo() {
+        guard let me = LoginManager.share.me else { return }
+        //Get the user object for the current installation
+        let hippoUserDetail = HippoUserDetail(
+            fullName: me.userName,
+            email: me.email,
+            phoneNumber: "N/A",
+            userUniqueKey: "\(me.userId)")
+            //Call updateUserDetails so that
+            //the user information is synced with Hippo servers
+            HippoConfig.shared.updateUserDetail(userDetail: hippoUserDetail)
+    }
+    
 }

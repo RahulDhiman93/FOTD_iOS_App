@@ -12,6 +12,7 @@ import IQKeyboardManagerSwift
 import FBSDKLoginKit
 import FBSDKShareKit
 import Firebase
+import Hippo
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,14 +25,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         APNSManager.share.registerAppRemoteNotifications()
         FirebaseApp.configure()
+        self.setupChatConfig()
         print(Config.sharedInstance.baseURL())
         self.setupTabBar()
+        
+        
         
 //        if #available(iOS 13.0, *) {
 //            window?.overrideUserInterfaceStyle = .light
 //        }
         
         return true
+    }
+    
+    private func setupChatConfig() {
+        HippoConfig.shared.setCredential(withAppSecretKey: "cc794688d258ebacd791481efb25be10")
+        if Config.sharedInstance.baseURL() == "http://167.99.107.72:8080/" {
+            HippoConfig.shared.switchEnvironment(.live)
+        } else {
+            HippoConfig.shared.switchEnvironment(.live)
+        }
     }
     
     private func setupTabBar() {

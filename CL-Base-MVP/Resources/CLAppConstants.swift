@@ -28,3 +28,4 @@ let phoneValidCharacters = CharacterSet(charactersIn: "0123456789")
 let userNameValidCharacters = CharacterSet(charactersIn: "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ-'")
 let deviceType: String = "IOS"
 let screen = UIScreen.main.bounds
+var SHOW_ADV = false

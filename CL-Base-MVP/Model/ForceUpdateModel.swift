@@ -51,6 +51,10 @@ class ForceUpdateModel: NSObject {
             AppConstants.instgramLink = instagramPage
         }
         
+        if let showAd = json["ad_mob_enabled"] as? Int {
+            SHOW_ADV = showAd == 1
+        }
+        
         self.isForceUpdate = isForceUpdate
         self.isManualUpdate = isManualUpdate
         self.appLink = appLink

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hippo
 
 class MoreViewController: UIViewController {
     
@@ -85,6 +86,10 @@ class MoreViewController: UIViewController {
         guard let vc = FeedbackRouter.FeedbackVC() else { fatalError() }
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    private func openAllChats() {
+        HippoConfig.shared.presentChatsViewController()
+    }
 }
 
 extension MoreViewController : MorePresenterDelegate {
@@ -94,6 +99,7 @@ extension MoreViewController : MorePresenterDelegate {
     }
     
     func logoutSuccess() {
+        HippoConfig.shared.clearHippoUserData()
         guard let vc = LoginRouter.LoginVC() else {
             return
         }
@@ -103,6 +109,8 @@ extension MoreViewController : MorePresenterDelegate {
             appDelegate.window?.rootViewController = navigationController
         }, completion: nil)
     }
+    
+    
 
 }
 
@@ -127,6 +135,8 @@ extension MoreViewController : UITableViewDelegate, UITableViewDataSource {
             cell.configCell(image: "instagram", name: "follow us on Instagram")
         case .feedback:
             cell.configCell(image: "feedback", name: "feedback")
+        case .conversations:
+            cell.configCell(image: "feedback", name: "Conversations")
         case .aboutUs:
             cell.configCell(image: "aboutUs", name: "about us")
         case .logout:
@@ -146,6 +156,8 @@ extension MoreViewController : UITableViewDelegate, UITableViewDataSource {
             self.goToInsta()
         case .feedback:
             self.goToFeedback()
+        case .conversations:
+            self.openAllChats()
         case .aboutUs:
             self.aboutUs()
         case .logout:

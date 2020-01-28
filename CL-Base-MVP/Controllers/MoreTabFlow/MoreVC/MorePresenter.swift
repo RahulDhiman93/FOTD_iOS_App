@@ -13,6 +13,7 @@ enum numberOfMoreVcRows : Int {
     case favourites
     case instagram
     case feedback
+    case conversations
     case aboutUs
     case logout
     static let count = logout.rawValue + 1

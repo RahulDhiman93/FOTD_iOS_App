@@ -193,11 +193,11 @@
                                                     <constraint firstItem="aBo-1V-2Va" firstAttribute="width" secondItem="Ywr-ZJ-bAk" secondAttribute="width" multiplier="0.2" id="R9Y-lM-BxU"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gdq-r5-4r8">
-                                                <rect key="frame" x="20" y="120" width="76.666666666666671" height="61"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gdq-r5-4r8">
+                                                <rect key="frame" x="20" y="120" width="64.333333333333329" height="61"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJy-EQ-ea2">
-                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="61"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJy-EQ-ea2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="47.666666666666664" height="61"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
                                                         <state key="normal" image="likeWhite"/>
@@ -205,18 +205,18 @@
                                                             <action selector="likeButtonTapped:" destination="JOa-QD-Zcp" eventType="touchUpInside" id="Lby-fw-Afo"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHk-ho-a2J">
-                                                        <rect key="frame" x="68" y="0.0" width="8.6666666666666714" height="61"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHk-ho-a2J">
+                                                        <rect key="frame" x="55.666666666666671" y="0.0" width="8.6666666666666714" height="61"/>
                                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0EZ-fC-g0o">
-                                                <rect key="frame" x="116.66666666666666" y="120" width="76.666666666666657" height="61"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0EZ-fC-g0o">
+                                                <rect key="frame" x="86.666666666666657" y="120" width="76.666666666666686" height="61"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTB-yN-ck0">
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTB-yN-ck0">
                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="61"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
@@ -225,19 +225,28 @@
                                                             <action selector="dislikeButtonTapped:" destination="JOa-QD-Zcp" eventType="touchUpInside" id="IjS-yE-GEB"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzx-aX-Zg0">
-                                                        <rect key="frame" x="67.999999999999986" y="0.0" width="8.6666666666666714" height="61"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzx-aX-Zg0">
+                                                        <rect key="frame" x="68.000000000000014" y="0.0" width="8.6666666666666714" height="61"/>
                                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KPT-Pm-ven">
-                                                <rect key="frame" x="254" y="120" width="140" height="61"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KPT-Pm-ven">
+                                                <rect key="frame" x="261" y="120" width="193" height="61"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0b-YD-stG">
-                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="61"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33U-PE-Ji4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="33" height="61"/>
+                                                        <state key="normal" title="Chat">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="chatButtonTapped:" destination="JOa-QD-Zcp" eventType="touchUpInside" id="ai2-8x-bEg"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0b-YD-stG">
+                                                        <rect key="frame" x="53" y="0.0" width="60" height="61"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
                                                         <state key="normal" image="shareWhite"/>
@@ -245,8 +254,8 @@
                                                             <action selector="shareButtonTapped:" destination="JOa-QD-Zcp" eventType="touchUpInside" id="ArK-Hr-9D9"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4I-TZ-Coi">
-                                                        <rect key="frame" x="80" y="0.0" width="60" height="61"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4I-TZ-Coi">
+                                                        <rect key="frame" x="133" y="0.0" width="60" height="61"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
                                                         <state key="normal" image="heartWhite"/>
@@ -323,6 +332,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomViewHeight" destination="DVt-LP-NV6" id="aBR-Jr-ynG"/>
+                        <outlet property="chatButton" destination="33U-PE-Ji4" id="OCf-qC-cQt"/>
                         <outlet property="dislikeButton" destination="WTB-yN-ck0" id="Nx6-5A-b5z"/>
                         <outlet property="dislikeCount" destination="yzx-aX-Zg0" id="a3J-5K-ubO"/>
                         <outlet property="factLabel" destination="1Af-DL-hl0" id="fLi-nM-6cP"/>

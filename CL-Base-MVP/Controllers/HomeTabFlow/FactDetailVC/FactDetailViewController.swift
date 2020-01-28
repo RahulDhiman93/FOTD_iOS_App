@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMobileAds
+import Hippo
 
 class FactDetailViewController: UIViewController , GADInterstitialDelegate{
     
@@ -23,6 +24,7 @@ class FactDetailViewController: UIViewController , GADInterstitialDelegate{
     @IBOutlet weak var dislikeCount: UILabel!
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var favButton: UIButton!
+    @IBOutlet weak var chatButton: UIButton!
     
     var presenter : FactDetailPresenter!
     var inter:GADInterstitial!
@@ -36,7 +38,9 @@ class FactDetailViewController: UIViewController , GADInterstitialDelegate{
         self.presenter.getFactDetails()
         self.setupInter()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: { [weak self] in
-            self?.loadInt()
+            if SHOW_ADV {
+                self?.loadInt()
+            }
         })
         // Do any additional setup after loading the view.
     }
@@ -134,6 +138,16 @@ class FactDetailViewController: UIViewController , GADInterstitialDelegate{
         self.presenter.factDetailModel!.userFavStatus! = 1
         self.fetchDetailSuccess()
         self.presenter.addFactFav(status: 1)
+    }
+    
+    
+    @IBAction func chatButtonTapped(_ sender: UIButton) {
+        guard let me = LoginManager.share.me else { return }
+        guard let factModel = presenter.factDetailModel, let peerUserId = factModel.addedByUserId, let factId = factModel.factId else { return }
+        guard let peerChatInfo = PeerToPeerChat(uniqueChatId: "\(me.userId + peerUserId)", myUniqueId: "\(me.userId)", idsOfPeers: ["\(peerUserId)"], channelName: "Fact:" + "\(factId)") else { return }
+        HippoConfig.shared.showPeerChatWith(data: peerChatInfo, completion: { (success, error) in
+        //handle success or error
+        })
     }
     
 }
@@ -258,7 +272,9 @@ extension FactDetailViewController {
                        if self.tryAdLoadAgain {
                            print("TRIED AGAIN")
                            self.multiplier += 1
-                           self.loadInt()
+                           if SHOW_ADV {
+                               self.loadInt()
+                           }
                            if self.multiplier == 3 {
                                self.tryAdLoadAgain = false
                            }

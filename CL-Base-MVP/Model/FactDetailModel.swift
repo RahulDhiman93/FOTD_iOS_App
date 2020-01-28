@@ -10,6 +10,7 @@ import UIKit
 
 class FactDetailModel: NSObject {
 
+    var addedByUserId : Int?
     var addedBy   : String?
     var addedOn   : String?
     var fact      : String?
@@ -56,6 +57,10 @@ class FactDetailModel: NSObject {
         
         guard let dislikeCount = json["dislike_count"] as? Int else {
             return nil
+        }
+        
+        if let addedByUserId = json["user_id"] as? Int {
+            self.addedByUserId = addedByUserId
         }
         
         
