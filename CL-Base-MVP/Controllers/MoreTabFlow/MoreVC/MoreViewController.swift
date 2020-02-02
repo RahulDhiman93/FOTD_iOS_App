@@ -136,7 +136,9 @@ extension MoreViewController : UITableViewDelegate, UITableViewDataSource {
         case .feedback:
             cell.configCell(image: "feedback", name: "feedback")
         case .conversations:
-            cell.configCell(image: "feedback", name: "Conversations")
+            cell.configCell(image: "feedback", name: "chat with us")
+        case .share:
+            cell.configCell(image: "shareApp", name: "share our app")
         case .aboutUs:
             cell.configCell(image: "aboutUs", name: "about us")
         case .logout:
@@ -158,6 +160,8 @@ extension MoreViewController : UITableViewDelegate, UITableViewDataSource {
             self.goToFeedback()
         case .conversations:
             self.openAllChats()
+        case .share:
+            AppUsables.shareFact(fact: "")
         case .aboutUs:
             self.aboutUs()
         case .logout:

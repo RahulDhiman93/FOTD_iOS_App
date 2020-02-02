@@ -296,7 +296,7 @@ extension TodaysFactViewController {
          )
             //Call updateUserDetails so that
             //the user information is synced with Hippo servers
-            HippoConfig.shared.updateUserDetail(userDetail: hippoUserDetail)
+        HippoConfig.shared.updateUserDetail(userDetail: hippoUserDetail)
     }
     
 }

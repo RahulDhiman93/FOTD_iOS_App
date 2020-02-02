@@ -40,12 +40,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setupChatConfig() {
         HippoConfig.shared.setCredential(withAppSecretKey: "cc794688d258ebacd791481efb25be10")
+        HippoConfig.shared.switchEnvironment(.live)
         self.setHippoTheme()
     }
     
     private func setHippoTheme() {
         let hippoTheme = HippoTheme.defaultTheme()
-        hippoTheme.headerText = "Conversations"
+        hippoTheme.headerText = "chat with us"
         hippoTheme.headerTextFont = UIFont.poppinsFontMedium(size: 14.0)
         hippoTheme.headerBackgroundColor = AppColor.themePrimaryColor
         hippoTheme.headerTextColor = AppColor.themeSecondaryColor

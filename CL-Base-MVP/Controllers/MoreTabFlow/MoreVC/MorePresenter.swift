@@ -11,9 +11,10 @@ import Foundation
 enum numberOfMoreVcRows : Int {
     case profile
     case favourites
+    case conversations
     case instagram
     case feedback
-    case conversations
+    case share
     case aboutUs
     case logout
     static let count = logout.rawValue + 1

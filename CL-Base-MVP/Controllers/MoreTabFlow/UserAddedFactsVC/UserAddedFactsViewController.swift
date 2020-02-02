@@ -24,7 +24,7 @@ class UserAddedFactsViewController: UIViewController {
     }
     
     private func setupView() {
-        self.title = "uploaded facts"
+        self.title = "my facts"
         factTypeSegmentBar.selectedSegmentIndex = presenter.screenType.rawValue
     }
     

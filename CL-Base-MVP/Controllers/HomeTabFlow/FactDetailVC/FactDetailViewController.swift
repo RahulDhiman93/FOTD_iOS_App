@@ -56,6 +56,8 @@ class FactDetailViewController: UIViewController , GADInterstitialDelegate{
         
         self.likeButton.setImage(likeButtonImage, for: .normal)
         self.dislikeButton.setImage(dislikeButtonImage, for: .normal)
+        
+        self.chatButton.isHidden = true
     }
     
     private func addSwipeGestures() {

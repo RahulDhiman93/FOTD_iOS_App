@@ -1040,7 +1040,7 @@
                                                             <constraint firstItem="rHh-Nq-r0O" firstAttribute="top" secondItem="cqP-RS-Cxw" secondAttribute="top" constant="7" id="bRO-qi-PaM"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uZ-jV-ZrC">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="change password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uZ-jV-ZrC">
                                                         <rect key="frame" x="50" y="0.0" width="324" height="40"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                         <color key="textColor" name="AppThemePrimaryColor"/>
