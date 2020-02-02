@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Hippo
+import NotificationBannerSwift
 
 class AppBaseViewController: UITabBarController {
     
@@ -18,6 +20,7 @@ class AppBaseViewController: UITabBarController {
 //        self.tabBar.unselectedItemTintColor = AppColor.themeSecondaryColor
         self.selectedIndex = 2
         self.setupTab()
+        self.registerPushNotification()
         // Do any additional setup after loading the view.
     }
     
@@ -46,5 +49,63 @@ class AppBaseViewController: UITabBarController {
         
     }
     
+}
+
+extension AppBaseViewController {
+    
+    func registerPushNotification() {
+        APNSManager.share.registerCallBack(for: self) { [weak self] (apnsResult) in
+            switch apnsResult {
+            case .forground(let userInfo):
+                self?.showNotificationBanner(userInfo: userInfo)
+                break
+            case .background(let userInfo):
+                let pushInfo = (userInfo.userJson) ?? [:]
+                if HippoConfig.shared.isHippoNotification(withUserInfo: pushInfo) {
+                    HippoConfig.shared.handleRemoteNotification(userInfo: pushInfo)
+                    return
+                }
+                break
+            }
+        }
+    }
+    
+    
+    
+    func showNotificationBanner(userInfo : APNSInfo) {
+        guard let alert = userInfo.alert else {
+            AlertPop.showAlert(alertBody: "notification error", leftButtonCallback: {
+                
+            }, rightButtonCallback: {
+                
+            })
+            return
+        }
+        let banner = FloatingNotificationBanner(title: alert.title, subtitle: alert.body, titleColor: AppColor.themeSecondaryColor, subtitleColor: AppColor.themeSecondaryColor ,style: .info, colors: CustomBannerColors())
+        banner.show()
+        banner.haptic = .medium
+        banner.onTap = {
+            let pushInfo = (userInfo.userJson) ?? [:]
+            if HippoConfig.shared.isHippoNotification(withUserInfo: pushInfo) {
+                HippoConfig.shared.handleRemoteNotification(userInfo: pushInfo)
+                return
+            }
+        }
+    }
+
+    
+}
+
+class CustomBannerColors: BannerColorsProtocol {
+
+    internal func color(for style: BannerStyle) -> UIColor {
+        switch style {
+            case .danger:    return AppColor.themePrimaryColor
+            case .info:        return AppColor.themePrimaryColor
+            case .customView:    return AppColor.themePrimaryColor
+            case .success:   return AppColor.themePrimaryColor
+            case .warning:    return AppColor.themePrimaryColor
+        }
+    }
 
 }

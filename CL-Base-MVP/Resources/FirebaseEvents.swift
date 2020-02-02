@@ -36,4 +36,7 @@ class FirebaseEvents: NSObject {
         ])
     }
     
+    class func debugAPNS(userInfo : [String : Any]) {
+        Analytics.logEvent("apns_info_userinfo", parameters: userInfo)
+    }
 }

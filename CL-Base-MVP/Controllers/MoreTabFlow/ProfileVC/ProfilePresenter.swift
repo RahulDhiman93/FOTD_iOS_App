@@ -12,6 +12,7 @@ import UIKit
 protocol ProfilePresenterDelegate : class {
     func failure(message: String)
     func fetchProfileSuccess()
+    func updateHippo()
     func emailSuccess()
 }
 
@@ -68,6 +69,7 @@ class ProfilePresenter {
                 return
             }
             
+            self?.view?.updateHippo()
             self?.getProfileData()
         })
     }

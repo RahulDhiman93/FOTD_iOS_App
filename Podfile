@@ -24,11 +24,13 @@ target 'Inforu' do
     pod 'FBSDKShareKit', '~> 4.44.0'
     pod 'PinCodeTextField'
     pod 'Firebase/Analytics'
+    pod 'Firebase/Database'
     pod 'Kingfisher'
     pod 'LinearProgressBarMaterial'
     pod 'Google-Mobile-Ads-SDK'
     pod 'Hippo'
     pod 'SkeletonView'
+    pod 'NotificationBannerSwift'
 
   target 'InforuTests' do
     inherit! :search_paths

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hippo
 
 class ProfileViewController: UIViewController {
 
@@ -145,6 +146,10 @@ extension ProfileViewController : ProfilePresenterDelegate {
         vc.presenter.isComingFromMoreTab = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func updateHippo() {
+        configHippo()
+    }
 }
 
 extension ProfileViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -219,6 +224,25 @@ extension ProfileViewController : UIImagePickerControllerDelegate, UINavigationC
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+    }
+    
+}
+
+extension ProfileViewController {
+    
+    func configHippo() {
+        guard let me = LoginManager.share.me else { return }
+        //Get the user object for the current installation
+        let hippoUserDetail = HippoUserDetail(
+            fullName: me.userName,
+            email: me.email,
+            phoneNumber: "N/A",
+            userUniqueKey: "\(me.userId)",
+            userImage: me.profileImage
+         )
+            //Call updateUserDetails so that
+            //the user information is synced with Hippo servers
+        HippoConfig.shared.updateUserDetail(userDetail: hippoUserDetail)
     }
     
 }

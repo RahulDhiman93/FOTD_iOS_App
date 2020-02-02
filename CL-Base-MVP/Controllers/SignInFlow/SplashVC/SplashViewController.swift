@@ -7,16 +7,23 @@
 //
 
 import UIKit
+import Hippo
+import NotificationBannerSwift
+import FirebaseDatabase
 
 class SplashViewController: UIViewController {
     
     var presenter : SplashPresenter!
+    var ref: DatabaseReference!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         self.presenter = SplashPresenter(view: self)
         self.internetConnectivityCheck()
+        ref = Database.database().reference()
+        ref.child("splashLog").setValue(["Log2" : "Log2"])
         // Do any additional setup after loading the view.
     }
     
@@ -49,7 +56,8 @@ class SplashViewController: UIViewController {
     func accessTokenApiHit() {
         self.presenter.accessTokenApiHit()
     }
-
+    
+    
 
 }
 
@@ -77,10 +85,10 @@ extension SplashViewController : SplashPresenterDelegate {
     
     func accessTokenVerified() {
         let sb = UIStoryboard(name: "Home", bundle: nil)
-         guard let vc = sb.instantiateViewController(withIdentifier: "AppBaseViewController") as? AppBaseViewController else { fatalError("TabBar Instance failed") }
+        guard let vc = sb.instantiateViewController(withIdentifier: "AppBaseViewController") as? AppBaseViewController else { fatalError("TabBar Instance failed") }
         UIView.transition(with: appDelegate.window!, duration: 0.5, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
-             appDelegate.window?.rootViewController = vc
-         }, completion: nil)
+            appDelegate.window?.rootViewController = vc
+        }, completion: nil)
     }
     
     func goToLogin() {
@@ -139,3 +147,5 @@ extension SplashViewController : SplashPresenterDelegate {
     }
     
 }
+
+

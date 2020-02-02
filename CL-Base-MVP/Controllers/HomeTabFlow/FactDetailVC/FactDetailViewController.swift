@@ -57,7 +57,7 @@ class FactDetailViewController: UIViewController , GADInterstitialDelegate{
         self.likeButton.setImage(likeButtonImage, for: .normal)
         self.dislikeButton.setImage(dislikeButtonImage, for: .normal)
         
-        self.chatButton.isHidden = true
+       // self.chatButton.isHidden = true
     }
     
     private func addSwipeGestures() {
@@ -151,6 +151,10 @@ class FactDetailViewController: UIViewController , GADInterstitialDelegate{
         //handle success or error
         })
     }
+    
+//    private func createChannelForComment() {
+//        let channel = GeneralChat(uniqueChatId: <#T##String#>, myUniqueId: <#T##String#>, groupingTags: <#T##[String]?#>, channelName: <#T##String#>, tags: <#T##[String]?#>)
+//    }
     
 }
 
