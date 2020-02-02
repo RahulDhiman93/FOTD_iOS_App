@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class PopularTableViewCell: UITableViewCell {
 
@@ -15,15 +16,11 @@ class PopularTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
+        self.isSkeletonable = true
+        self.factText.isSkeletonable = true
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
     func configCell(factText : String) {
         self.factText.text = factText
     }

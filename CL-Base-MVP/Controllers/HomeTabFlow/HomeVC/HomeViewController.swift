@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class HomeViewController: UIViewController {
     
@@ -21,25 +22,40 @@ class HomeViewController: UIViewController {
         self.presenter = HomePresenter(view : self)
         self.setupCollectionView()
         self.setupTableView()
-        LoadingShimmer.startCovering(self.view, with: nil)
+        view.isSkeletonable = true
+        view.showGradientSkeleton()
+        view.startSkeletonAnimation()
+        print("SKELETON DESC     -->> ")
+        print(view.skeletonDescription)
+//        LoadingShimmer.startCovering(self.view, with: nil)
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.presenter.getFeaturedFact()
+       
     }
     
     private func setupTableView() {
+        self.popularTableView.isSkeletonable = true
         self.popularTableView.delegate = self
         self.popularTableView.dataSource = self
         self.popularTableView.bounces = false
         self.popularTableView.separatorStyle = .none
         self.popularTableView.showsVerticalScrollIndicator = false
+        self.popularTableView.estimatedRowHeight = 50.0
         self.popularTableView.register(UINib(nibName: "PopularTableViewCell", bundle: nil), forCellReuseIdentifier: "PopularTableViewCell")
     }
     
     private func setupCollectionView() {
+        self.blogCollectionView.isSkeletonable = true
         self.blogCollectionView.delegate = self
         self.blogCollectionView.dataSource = self
         self.blogCollectionView.bounces = true
@@ -61,17 +77,26 @@ extension HomeViewController : HomePresenterDelegate {
     }
     
     func featuredSuccess() {
-        LoadingShimmer.stopCovering(self.view)
+        view.hideSkeleton(transition: .crossDissolve(1.0))
         self.popularTableView.reloadData()
         self.blogCollectionView.reloadData()
     }
 }
 
-extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
+extension HomeViewController : SkeletonTableViewDelegate, SkeletonTableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.presenter.popularFact.count
+        return presenter.popularFact.count
     }
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+       return "PopularTableViewCell"
+    }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier:  "PopularTableViewCell", for: indexPath) as? PopularTableViewCell else{
@@ -93,7 +118,12 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     
 }
 
-extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
+extension HomeViewController : SkeletonCollectionViewDelegate, SkeletonCollectionViewDataSource , UICollectionViewDelegateFlowLayout {
+    
+    func collectionSkeletonView(_ skeletonView: UICollectionView, cellIdentifierForItemAt indexPath: IndexPath) -> ReusableCellIdentifier {
+       "BlogCollectionViewCell"
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.presenter.featuredFact.count
