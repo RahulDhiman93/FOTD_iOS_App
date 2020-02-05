@@ -57,7 +57,11 @@ class FactDetailViewController: UIViewController , GADInterstitialDelegate{
         self.likeButton.setImage(likeButtonImage, for: .normal)
         self.dislikeButton.setImage(dislikeButtonImage, for: .normal)
         
-       // self.chatButton.isHidden = true
+        if CHAT_ENABLED {
+            self.chatButton.isHidden = false
+        } else {
+            self.chatButton.isHidden = true
+        }
     }
     
     private func addSwipeGestures() {
@@ -145,10 +149,16 @@ class FactDetailViewController: UIViewController , GADInterstitialDelegate{
     
     @IBAction func chatButtonTapped(_ sender: UIButton) {
         guard let me = LoginManager.share.me else { return }
-        guard let factModel = presenter.factDetailModel, let peerUserId = factModel.addedByUserId, let factId = factModel.factId else { return }
+        guard let factModel = presenter.factDetailModel, let peerUserId = factModel.addedByUserId, let factId = factModel.factId else {
+            self.failure(message: "User not registered for chat yet!")
+            return
+        }
         guard let peerChatInfo = PeerToPeerChat(uniqueChatId: "\(factId)", myUniqueId: "\(me.userId)", idsOfPeers: ["\(peerUserId)"], channelName: "Fact ID:" + "\(factId)") else { return }
         HippoConfig.shared.showPeerChatWith(data: peerChatInfo, completion: { (success, error) in
-        //handle success or error
+            if error != nil {
+                self.failure(message: "User not registered for chat yet!")
+                return
+            }
         })
     }
     

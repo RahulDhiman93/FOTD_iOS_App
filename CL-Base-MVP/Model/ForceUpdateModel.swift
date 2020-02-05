@@ -55,6 +55,10 @@ class ForceUpdateModel: NSObject {
             SHOW_ADV = showAd == 1
         }
         
+        if let showChat = json["hippo_chat_enabled"] as? Int {
+            CHAT_ENABLED = showChat == 1
+        }
+        
         self.isForceUpdate = isForceUpdate
         self.isManualUpdate = isManualUpdate
         self.appLink = appLink

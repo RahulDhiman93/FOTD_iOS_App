@@ -50,7 +50,7 @@ class HomeViewController: UIViewController {
         self.popularTableView.bounces = false
         self.popularTableView.separatorStyle = .none
         self.popularTableView.showsVerticalScrollIndicator = false
-        self.popularTableView.estimatedRowHeight = 50.0
+        self.popularTableView.estimatedRowHeight = 100.0
         self.popularTableView.register(UINib(nibName: "PopularTableViewCell", bundle: nil), forCellReuseIdentifier: "PopularTableViewCell")
     }
     
@@ -78,6 +78,7 @@ extension HomeViewController : HomePresenterDelegate {
     
     func featuredSuccess() {
         view.hideSkeleton(transition: .crossDissolve(1.0))
+        self.popularTableView.estimatedRowHeight = UITableView.automaticDimension
         self.popularTableView.reloadData()
         self.blogCollectionView.reloadData()
     }
@@ -114,6 +115,10 @@ extension HomeViewController : SkeletonTableViewDelegate, SkeletonTableViewDataS
         vc.presenter.currentFactIndex = indexPath.row
         vc.presenter.totalFactForSwipe = self.presenter.popularFactWithSearchModel
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
     
 }

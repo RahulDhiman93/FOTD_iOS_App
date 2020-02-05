@@ -136,6 +136,7 @@ extension MoreViewController : UITableViewDelegate, UITableViewDataSource {
         case .feedback:
             cell.configCell(image: "feedback", name: "feedback")
         case .conversations:
+            guard CHAT_ENABLED else { return UITableViewCell() }
             cell.configCell(image: "feedback", name: "chat with us")
         case .share:
             cell.configCell(image: "shareApp", name: "share our app")
@@ -170,7 +171,13 @@ extension MoreViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50.0
+        switch numberOfMoreVcRows(rawValue : indexPath.row)! {
+        case .conversations:
+            guard CHAT_ENABLED else { return 0.001 }
+            return 50.0
+        default:
+            return 50.0
+        }
     }
     
 }

@@ -29,3 +29,4 @@ let userNameValidCharacters = CharacterSet(charactersIn: "0123456789abcdefghijkl
 let deviceType: String = "IOS"
 let screen = UIScreen.main.bounds
 var SHOW_ADV = false
+var CHAT_ENABLED = true

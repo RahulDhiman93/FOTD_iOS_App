@@ -266,7 +266,10 @@ extension TodaysFactViewController {
         var value = UserDefaults.standard.integer(forKey: "reviewCounting")
         
         if value % 5 == 0 {
-            self.askForReview()
+            if UserDefaults.standard.bool(forKey: "firstOpenForReview") {
+                self.askForReview()
+            }
+            UserDefaults.standard.set(true, forKey: "firstOpenForReview")
         }
         
         value += 1
