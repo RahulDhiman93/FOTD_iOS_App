@@ -57,7 +57,10 @@ extension AppBaseViewController {
         APNSManager.share.registerCallBack(for: self) { [weak self] (apnsResult) in
             switch apnsResult {
             case .forground(let userInfo):
-                self?.showNotificationBanner(userInfo: userInfo)
+                let pushInfo = (userInfo.userJson) ?? [:]
+                if HippoConfig.shared.isHippoNotification(withUserInfo: pushInfo) {
+                    self?.showNotificationBanner(userInfo: userInfo)
+                }
                 break
             case .background(let userInfo):
                 let pushInfo = (userInfo.userJson) ?? [:]
@@ -73,14 +76,11 @@ extension AppBaseViewController {
     
     
     func showNotificationBanner(userInfo : APNSInfo) {
-        guard let alert = userInfo.alert else {
-            AlertPop.showAlert(alertBody: "notification error", leftButtonCallback: {
-                
-            }, rightButtonCallback: {
-                
-            })
-            return
-        }
+//print("TOP VC --->")
+        guard let topVc = appDelegate.topViewController() else { return }
+        if topVc.description.contains("Hippo") { return }
+        guard let alert = userInfo.alert else { return }
+        
         let banner = FloatingNotificationBanner(title: alert.title, subtitle: alert.body, titleColor: AppColor.themeSecondaryColor, subtitleColor: AppColor.themeSecondaryColor ,style: .info, colors: CustomBannerColors())
         banner.show()
         banner.haptic = .medium
