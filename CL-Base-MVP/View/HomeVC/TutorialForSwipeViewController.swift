@@ -25,7 +25,7 @@ class TutorialForSwipeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
             self.playAnimation()
         })
         
@@ -34,11 +34,11 @@ class TutorialForSwipeViewController: UIViewController {
 
     private func playAnimation() {
         
-        UIView.animate(withDuration: 1.0, animations: {
+        UIView.animate(withDuration: 0.5, animations: {
             self.centerImageYConst.constant = 40
             self.view.layoutIfNeeded()
         }, completion: { _ in
-            UIView.animate(withDuration: 1.0, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 self.centerImageYConst.constant = -50
                 self.view.layoutIfNeeded()
             }, completion: { _ in

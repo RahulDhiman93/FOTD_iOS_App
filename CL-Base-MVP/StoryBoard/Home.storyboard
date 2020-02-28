@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -1460,7 +1460,7 @@
                                 <rect key="frame" x="82.666666666666671" y="20" width="248.66666666666663" height="0.0"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" id="d0k-Ny-cHV"/>
+                                    <constraint firstAttribute="height" constant="30" id="d0k-Ny-cHV"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="rateStarBlackEmpty"/>
@@ -1478,10 +1478,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XCO-DO-CqB">
-                                <rect key="frame" x="20" y="30" width="374" height="20"/>
+                                <rect key="frame" x="20" y="70" width="374" height="20"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" priority="999" constant="20" id="JG9-il-i96"/>
+                                    <constraint firstAttribute="height" constant="20" id="JG9-il-i96"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IOw-bA-nxY">
                                     <size key="itemSize" width="50" height="50"/>
@@ -1492,7 +1492,7 @@
                                 <cells/>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WOs-hj-qW0">
-                                <rect key="frame" x="20" y="70" width="374" height="150"/>
+                                <rect key="frame" x="20" y="110" width="374" height="150"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="enter your feedback" translatesAutoresizingMaskIntoConstraints="NO" id="3En-5j-aH3">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
@@ -1532,7 +1532,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mrw-hw-fsb">
-                                <rect key="frame" x="132" y="250" width="150" height="50"/>
+                                <rect key="frame" x="132" y="290" width="150" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5Q-DK-j1z">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
@@ -1585,7 +1585,7 @@
                             <constraint firstItem="Mrw-hw-fsb" firstAttribute="top" secondItem="WOs-hj-qW0" secondAttribute="bottom" constant="30" id="N88-5j-niH"/>
                             <constraint firstItem="WOs-hj-qW0" firstAttribute="leading" secondItem="oyh-PV-L8V" secondAttribute="leading" constant="20" id="RUA-gv-2wN"/>
                             <constraint firstItem="Mrw-hw-fsb" firstAttribute="centerX" secondItem="Xxn-B4-9np" secondAttribute="centerX" id="T5n-ks-0lr"/>
-                            <constraint firstItem="XCO-DO-CqB" firstAttribute="top" secondItem="m9P-dB-MqX" secondAttribute="bottom" constant="10" id="bE3-Dy-6je"/>
+                            <constraint firstItem="XCO-DO-CqB" firstAttribute="top" secondItem="m9P-dB-MqX" secondAttribute="bottom" constant="20" id="bE3-Dy-6je"/>
                             <constraint firstItem="oyh-PV-L8V" firstAttribute="trailing" secondItem="WOs-hj-qW0" secondAttribute="trailing" constant="20" id="cpH-2w-7mQ"/>
                             <constraint firstItem="m9P-dB-MqX" firstAttribute="top" secondItem="oyh-PV-L8V" secondAttribute="top" constant="20" id="ea6-ic-udv"/>
                             <constraint firstItem="WOs-hj-qW0" firstAttribute="top" secondItem="XCO-DO-CqB" secondAttribute="bottom" constant="20" id="vwO-Fk-73c"/>

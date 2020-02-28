@@ -257,7 +257,7 @@ extension FactDetailViewController : FactDetailPresenterDelegate {
 extension FactDetailViewController {
     
     private func setupInter() {
-           inter = GADInterstitial(adUnitID: "ca-app-pub-8330967321849957/2163363210")
+           inter = GADInterstitial(adUnitID: "ca-app-pub-8330967321849957/4669393971")
            let request = GADRequest()
            inter.load(request)
            inter = createAndLoadInterstitial()
@@ -265,7 +265,7 @@ extension FactDetailViewController {
        }
        
        private func createAndLoadInterstitial() -> GADInterstitial {
-           let interstitial = GADInterstitial(adUnitID: "ca-app-pub-8330967321849957/2163363210")
+           let interstitial = GADInterstitial(adUnitID: "ca-app-pub-8330967321849957/4669393971")
            interstitial.delegate = self
            interstitial.load(GADRequest())
            return interstitial
