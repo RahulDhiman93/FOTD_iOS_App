@@ -7,21 +7,20 @@ target 'Inforu' do
 
   # Pods for Inforu
 
-    pod 'SwiftLint'                     #Required
-    pod 'IQKeyboardManagerSwift' #Required http://fabfile.org
-    pod 'Fabric'            #Required
-    pod 'Crashlytics'             #Required
-    pod 'Alamofire'              #Required
-    pod 'MBProgressHUD'           #Required
-    pod 'AFDateHelper'         #Required
-    pod 'KeychainAccess'       #Required
+    pod 'IQKeyboardManagerSwift'   #Required http://fabfile.org
+    pod 'Fabric'                   #Required
+    pod 'Crashlytics'              #Required
+    pod 'Alamofire', '~> 4.9.0'    #Required
+    pod 'MBProgressHUD'            #Required
+    pod 'AFDateHelper'             #Required
+    pod 'KeychainAccess'           #Required
     pod 'ReachabilitySwift'
     pod 'UIGradient'
     pod 'GoogleMaps'
     pod 'GooglePlaces'
-    pod 'FBSDKCoreKit', '~> 4.44.0'
-    pod 'FBSDKLoginKit', '~> 4.44.0'
-    pod 'FBSDKShareKit', '~> 4.44.0'
+    pod 'FBSDKCoreKit'
+    pod 'FBSDKLoginKit'
+    pod 'FBSDKShareKit'
     pod 'PinCodeTextField'
     pod 'Firebase/Analytics'
     pod 'Firebase/Database'
@@ -31,7 +30,9 @@ target 'Inforu' do
     pod 'Hippo'
     pod 'SkeletonView'
     pod 'NotificationBannerSwift'
-
+    pod 'FBAudienceNetwork' , '5.8'
+    pod 'Bolts'
+    
   target 'InforuTests' do
     inherit! :search_paths
     # Pods for testing

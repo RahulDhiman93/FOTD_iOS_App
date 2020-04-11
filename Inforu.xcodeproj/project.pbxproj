@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		069A5BFA1FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A5BF91FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift */; };
 		069A5BFC1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A5BFB1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift */; };
+		0804B94B244204D900BAF805 /* Pods_Inforu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E4F1F0F8703738F4DC3D3B3 /* Pods_Inforu.framework */; };
+		0804B94E244204DA00BAF805 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49759B61FCE863B00B8BB6C /* AVKit.framework */; };
 		0809C48223A138420035781A /* FactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809C48023A138420035781A /* FactDetailViewController.swift */; };
 		0809C48523A13ABC0035781A /* FactDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809C48423A13ABC0035781A /* FactDetailPresenter.swift */; };
 		0809C48723A13ACA0035781A /* FactDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809C48623A13ACA0035781A /* FactDetailRouter.swift */; };
@@ -114,7 +116,6 @@
 		08FF77D0238E9112001EAF2E /* PopularTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF77CE238E9112001EAF2E /* PopularTableViewCell.swift */; };
 		08FF77D1238E9112001EAF2E /* PopularTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08FF77CF238E9112001EAF2E /* PopularTableViewCell.xib */; };
 		54A5EB57BE31354671834275 /* Pods_InforuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CCC027734C3DCB28345FEA /* Pods_InforuTests.framework */; };
-		81CD391192B27A172D33A94C /* Pods_Inforu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E4F1F0F8703738F4DC3D3B3 /* Pods_Inforu.framework */; };
 		D3B443CB520C6A2BA8549240 /* Pods_InforuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F656B6A4A992448FF7A5B7F /* Pods_InforuUITests.framework */; };
 		F46045341FCC2EEA00DC976D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F46045331FCC2EEA00DC976D /* Assets.xcassets */; };
 		F46045421FCC2EEA00DC976D /* CL_Base_MVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46045411FCC2EEA00DC976D /* CL_Base_MVPTests.swift */; };
@@ -124,7 +125,6 @@
 		F460456F1FCD3E9600DC976D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F46045431FCC2EEA00DC976D /* Info.plist */; };
 		F46045701FCD3EA100DC976D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F460454E1FCC2EEA00DC976D /* Info.plist */; };
 		F497599D1FCE859500B8BB6C /* SwiftConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F497599C1FCE858F00B8BB6C /* SwiftConstants.swift */; };
-		F49759B71FCE863C00B8BB6C /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49759B61FCE863B00B8BB6C /* AVKit.framework */; };
 		F49759C71FCE8E0000B8BB6C /* CLAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49759B81FCE8DF700B8BB6C /* CLAlertController+Extension.swift */; };
 		F49759C81FCE8E0000B8BB6C /* CLAPP+EnvConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49759C51FCE8DF900B8BB6C /* CLAPP+EnvConfig.swift */; };
 		F49759C91FCE8E0000B8BB6C /* CLApp+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49759B91FCE8DF700B8BB6C /* CLApp+Extension.swift */; };
@@ -445,8 +445,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F49759B71FCE863C00B8BB6C /* AVKit.framework in Frameworks */,
-				81CD391192B27A172D33A94C /* Pods_Inforu.framework in Frameworks */,
+				0804B94E244204DA00BAF805 /* AVKit.framework in Frameworks */,
+				0804B94B244204D900BAF805 /* Pods_Inforu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1554,6 +1554,7 @@
 				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/PinCodeTextField/PinCodeTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -1581,6 +1582,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotificationBannerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinCodeTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -1877,7 +1879,7 @@
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 4.6;
+				MARKETING_VERSION = 4.7;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"$(inherited)",
@@ -2051,6 +2053,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Inforu.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2058,7 +2061,7 @@
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 4.6;
+				MARKETING_VERSION = 4.7;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"$(inherited)",
@@ -2131,7 +2134,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fact.of.the.day.InDemand.FOTD;
 				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";
-				PROVISIONING_PROFILE_SPECIFIER = FOTDADHOC;
+				PROVISIONING_PROFILE_SPECIFIER = FOTDAPPSTORE;
 				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2231,6 +2234,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Inforu.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2238,7 +2242,7 @@
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 4.6;
+				MARKETING_VERSION = 4.7;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"$(inherited)",
@@ -2311,7 +2315,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fact.of.the.day.InDemand.FOTD;
 				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";
-				PROVISIONING_PROFILE_SPECIFIER = FOTDADHOC;
+				PROVISIONING_PROFILE_SPECIFIER = FOTDAPPSTORE;
 				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2494,7 +2498,7 @@
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 4.6;
+				MARKETING_VERSION = 4.7;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"$(inherited)",
@@ -2582,6 +2586,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Inforu.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2589,7 +2594,7 @@
 				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 4.6;
+				MARKETING_VERSION = 4.7;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"$(inherited)",
@@ -2662,7 +2667,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fact.of.the.day.InDemand.FOTD;
 				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";
-				PROVISIONING_PROFILE_SPECIFIER = FOTDADHOC;
+				PROVISIONING_PROFILE_SPECIFIER = FOTDAPPSTORE;
 				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

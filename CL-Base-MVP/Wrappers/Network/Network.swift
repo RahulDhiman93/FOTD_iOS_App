@@ -36,7 +36,7 @@ class NetworkHandler {
             return
         }
         
-        if reachability.isReachable {
+        if reachability.connection != .unavailable {
             postReachableNotification()
         } else {
             postUnreachableNotification()

@@ -13,10 +13,11 @@ import FBSDKLoginKit
 
 typealias FacebookManagerCallBack = ((_ error: Error?, _ response: Any?) -> Void)
 typealias FacebookPermissionCallBack = ((_ access: Bool) -> Void)
-class FacebookManager: NSObject, FBSDKSharingDelegate {
+class FacebookManager: NSObject {
   
   static let share = FacebookManager()
   private var readPermissions: [String]
+  let login = FBSDKLoginKit.LoginManager()
   
   override init() {
     self.readPermissions = ["public_profile", "email", "user_birthday"]
@@ -32,7 +33,7 @@ class FacebookManager: NSObject, FBSDKSharingDelegate {
   
   func getUserProfile(from controller: UIViewController, handler: @escaping FacebookManagerCallBack) {
     controller.view.endEditing(true)
-    let accessToken = FBSDKAccessToken.current()
+    let accessToken = AccessToken.current
     if accessToken != nil {
       self.fetchUserProfile(handler: { (error, response) in
         print("Response \(String(describing: response))")
@@ -43,9 +44,11 @@ class FacebookManager: NSObject, FBSDKSharingDelegate {
       loginWithReadPermission(from: controller, handler: { (isPermissionGranter) in
         
         if isPermissionGranter {
-          let accessToken = FBSDKAccessToken.current()
+        let accessToken = AccessToken.current
           if accessToken != nil {
+            CLProgressHUD.present(animated: true)
             self.fetchUserProfile(handler: { (error, response) in
+                CLProgressHUD.dismiss(animated: true)
               print("Response \(String(describing: response))")
               handler(error, response)
             })
@@ -78,10 +81,9 @@ class FacebookManager: NSObject, FBSDKSharingDelegate {
   ///   - handler: Callback with read permissin as result or Error
   func loginWithReadPermission(from controller: UIViewController, handler: @escaping FacebookPermissionCallBack ) {
     
-    let login = FBSDKLoginManager()
     login.logOut()
     
-    login.logIn(withReadPermissions: self.readPermissions, from: controller) { (result, error) -> Void in
+    login.logIn(permissions: self.readPermissions, from: controller) { (result, error) -> Void in
       
       if error != nil {
         NSLog("error \(String(describing: error?.localizedDescription))")
@@ -111,10 +113,10 @@ class FacebookManager: NSObject, FBSDKSharingDelegate {
     
     if CLReachability.isReachable {
       
-      if FBSDKAccessToken.current() != nil {
+        if AccessToken.current != nil {
         //showActivityIndicator(view)
         let param =  ["fields": "email,name,first_name,last_name,picture.width(720).height(720)"]
-        FBSDKGraphRequest(graphPath: "me", parameters: param).start { connection, result, error in
+            GraphRequest(graphPath: "me", parameters: param).start { connection, result, error in
           if !(error != nil) {
             handler(nil, result)
           } else {
@@ -134,7 +136,11 @@ class FacebookManager: NSObject, FBSDKSharingDelegate {
   ///
   /// - Parameter handler: Callback with Revoke permission Info as result or Error
   func revokePermissions(handler: @escaping FacebookManagerCallBack) {
-    FBSDKGraphRequest(graphPath: "me/permissions", parameters: nil, httpMethod: "DELETE").start { (connection, result, error) in
+    GraphRequest(graphPath: "me/permissions", parameters: ["accessToken" : AccessToken.current?.tokenString ?? ""], httpMethod: HTTPMethod(rawValue: "DELETE")).start { (connection, result, error) in
+        print("GRAPH REVOKE REQUEST ---->>")
+        print(connection)
+        print(result)
+        print(error)
       handler(error, result)
     }
     
@@ -142,12 +148,13 @@ class FacebookManager: NSObject, FBSDKSharingDelegate {
   
   /// Logout user from facebook App and revoke read public profile info.
   func logout(revokePermissions: Bool) {
+    
     if revokePermissions == true {
       self.revokePermissions { (error, result) in
-        FBSDKLoginManager().logOut()
+        self.login.logOut()
       }
     } else {
-      FBSDKLoginManager().logOut()
+        self.login.logOut()
     }
   }
   
@@ -160,48 +167,7 @@ class FacebookManager: NSObject, FBSDKSharingDelegate {
   ///   - title: Title of sharing post
   ///   - description: Description of sharing post
   ///   - controller: Calling controller
-  func share(imageURL urlStr: String, title: String, description: String, from controller: UIViewController) {
-    
-    let content = FBSDKShareLinkContent()
-    content.contentURL = URL(string: urlStr)
-//    content.imageURL = URL(string: "")
-//    content.contentTitle = "\("")"
-    let dialog = FBSDKShareDialog()
-    dialog.delegate = self
-    dialog.fromViewController = controller
-    dialog.shareContent = content
-    dialog.mode = .native
-    // if you don't set this before canShow call, canShow would always return YES
-    if !dialog.canShow {
-      // fallback presentation when there is no FB app
-      dialog.mode = .browser
-    }
-    dialog.show()
-  }
   
-  // MARK: - Facebook Share Delegate
-  func sharer(_ sharer: FBSDKSharing, didFailWithError error: Error?) {
-    UIAlertController.presentAlert(title: "Facebook", message: "Your Facebook post has been failed.", style: UIAlertController.Style.alert).action(title: "Ok".localized, style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) in
-    })
-  }
-  
-  func sharerDidCancel(_ sharer: FBSDKSharing) {
-    print("sharer: \(sharer)")
-    UIAlertController.presentAlert(title: "Facebook", message: "Your Facebook post has been cancelled.", style: UIAlertController.Style.alert).action(title: "Ok".localized, style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) in
-      
-    })
-    
-  }
-  
-  func sharer(_ sharer: FBSDKSharing, didCompleteWithResults results: [AnyHashable: Any]) {
-    print("results :\(results)")
-    if results.keys.contains("postId") {
-      
-        UIAlertController.presentAlert(title: "Facebook", message: "Success! You've shared your refer a friend code on Facebook.", style: UIAlertController.Style.alert).action(title: "Ok".localized, style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) in
-        
-      })
-    }
-  }
   
 }
 

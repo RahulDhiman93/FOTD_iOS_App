@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMobileAds
 import Hippo
+import FBAudienceNetwork
 
 class FactDetailViewController: UIViewController , GADInterstitialDelegate{
     
@@ -30,6 +31,7 @@ class FactDetailViewController: UIViewController , GADInterstitialDelegate{
     var inter:GADInterstitial!
     var tryAdLoadAgain = true
     var multiplier = 1
+    var fbInter : FBInterstitialAd!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +39,10 @@ class FactDetailViewController: UIViewController , GADInterstitialDelegate{
         self.addSwipeGestures()
         self.presenter.getFactDetails()
         self.setupInter()
+        self.setupFBInter()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: { [weak self] in
             if SHOW_ADV {
-                self?.loadInt()
+                self?.loadFBInter()
             }
         })
         // Do any additional setup after loading the view.
@@ -297,3 +300,33 @@ extension FactDetailViewController {
        }
     
 }
+
+//MARK: Facebook interstitial Ad
+extension FactDetailViewController : FBInterstitialAdDelegate {
+    
+    private func setupFBInter() {
+        FBAdSettings.addTestDevice("4598014e3a637cc7a98dc8d6ea64cddaf3fbb9c1")
+        self.fbInter = FBInterstitialAd(placementID: "539268040329220_539270643662293")
+        self.fbInter.delegate = self
+    }
+    
+    private func loadFBInter() {
+        self.fbInter.load()
+    }
+    
+    func interstitialAdDidLoad(_ interstitialAd: FBInterstitialAd) {
+        if interstitialAd.isAdValid {
+            interstitialAd.show(fromRootViewController: self)
+        } else {
+            self.loadInt()
+            print("\nFB not loaded with error ------> NOT A VALID AD")
+        }
+    }
+    
+    func interstitialAd(_ interstitialAd: FBInterstitialAd, didFailWithError error: Error) {
+        print("\nFB not loaded with error ------> \(error.localizedDescription)")
+        print(error)
+        self.loadInt()
+    }
+}
+

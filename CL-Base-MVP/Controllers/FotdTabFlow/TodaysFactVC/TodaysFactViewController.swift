@@ -10,6 +10,7 @@ import UIKit
 import StoreKit
 import GoogleMobileAds
 import Hippo
+import FBAudienceNetwork
 
 class TodaysFactViewController: UIViewController , GADInterstitialDelegate{
     
@@ -26,6 +27,7 @@ class TodaysFactViewController: UIViewController , GADInterstitialDelegate{
     var inter:GADInterstitial!
     var tryAdLoadAgain = true
     var multiplier = 1
+    var fbInter : FBInterstitialAd!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +35,14 @@ class TodaysFactViewController: UIViewController , GADInterstitialDelegate{
         self.setupView()
         self.setupInter()
         self.configHippo()
+        self.setupFBInter()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: { [weak self] in
+            guard let self = self else { return }
            if SHOW_ADV {
-               self?.loadInt()
+               self.loadFBInter()
            }
         })
+        
         // Do any additional setup after loading the view.
     }
     
@@ -285,6 +290,7 @@ extension TodaysFactViewController {
     }
 }
 
+//MARK: Config Hippo
 extension TodaysFactViewController {
     
     func configHippo() {
@@ -302,6 +308,35 @@ extension TodaysFactViewController {
         HippoConfig.shared.updateUserDetail(userDetail: hippoUserDetail)
     }
     
+}
+
+//MARK: Facebook interstitial Ad
+extension TodaysFactViewController : FBInterstitialAdDelegate {
+    
+    private func setupFBInter() {
+        FBAdSettings.addTestDevice("4598014e3a637cc7a98dc8d6ea64cddaf3fbb9c1")
+        self.fbInter = FBInterstitialAd(placementID: "539268040329220_539270643662293")
+        self.fbInter.delegate = self
+    }
+    
+    private func loadFBInter() {
+        self.fbInter.load()
+    }
+    
+    func interstitialAdDidLoad(_ interstitialAd: FBInterstitialAd) {
+        if interstitialAd.isAdValid {
+            interstitialAd.show(fromRootViewController: self)
+        } else {
+            self.loadInt()
+            print("\nFB not loaded with error ------> NOT A VALID AD")
+        }
+    }
+    
+    func interstitialAd(_ interstitialAd: FBInterstitialAd, didFailWithError error: Error) {
+        print("\nFB not loaded with error ------> \(error.localizedDescription)")
+        print(error)
+        self.loadInt()
+    }
 }
 
 

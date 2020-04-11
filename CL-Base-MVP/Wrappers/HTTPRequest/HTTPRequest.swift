@@ -341,7 +341,7 @@ class HTTPRequest {
   // MARK: - Handler...
   func handler(httpModel: Bool = false, delay: TimeInterval = 0.0, completion: @escaping HTTPRequestHandler) {
     self.completionCallBack = completion
-    guard let reachable = try? appDelegate.handler.reachability, reachable.connection != nil else {
+    guard appDelegate.handler.reachability.connection != .unavailable else {
         appDelegate.handler.showNoNetworkAlert()
         //completion(nil, NetworkError.noInternet)
         return
@@ -398,11 +398,11 @@ class HTTPRequest {
   private func showIndicator() {
     if self.isIndicatorEnable == false {
       return }
-    LinearProgressHUD.sharedView.present(animated: true)
+    CLProgressHUD.present(animated: true)
   }
   
   private func hideIndicator() {
-    LinearProgressHUD.sharedView.dismiss(animated: true)
+    CLProgressHUD.dismiss(animated: true)
   }
   
   private func upload(httpModelOn: Bool) {
@@ -583,7 +583,7 @@ class HTTPRequest {
         self.completionCallBack?(response)
       }
     default:
-      let message = (dict?["message"] as? String) ?? "something went wrong. please try again in some time."
+      let message = (dict?["message"] as? String) ?? "Something went wrong. Please try again in some time."
       showAlertMessage(message: message)
       let error = self.errorWithDescription(description: message, code: statusCode)
       requestFailedWith(error: error)

@@ -23,7 +23,7 @@ struct AppConstants {
     static let DeviceOS = "iOS"
     static let deviceType = 1
     static let deviceName = UIDevice.current.name
-    static let appVersion = 43
+    static let appVersion = 44
     static let timeZoneInfo = TimeZone.current.description
     static let timeZoneOffset = TimeZone.current.secondsFromGMT()
     static let KeyboardDistanceFromTextfield: CGFloat = 40

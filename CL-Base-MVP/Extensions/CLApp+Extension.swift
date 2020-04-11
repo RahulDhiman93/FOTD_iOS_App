@@ -56,7 +56,7 @@ class CLReachability {
   }
   
   class var isReachableOnWWAN: Bool {
-    return CLReachability.reachabilty.networkReachabilityManager.isReachableOnWWAN
+    return CLReachability.reachabilty.networkReachabilityManager.isReachableOnEthernetOrWiFi
   }
   
   class var isReachableOnEthernetOrWiFi: Bool {
