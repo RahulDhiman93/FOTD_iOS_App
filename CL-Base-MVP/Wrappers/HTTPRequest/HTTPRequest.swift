@@ -398,11 +398,11 @@ class HTTPRequest {
   private func showIndicator() {
     if self.isIndicatorEnable == false {
       return }
-    CLProgressHUD.present(animated: true)
+    LinearProgressHUD.sharedView.present(animated: true)
   }
   
   private func hideIndicator() {
-    CLProgressHUD.dismiss(animated: true)
+    LinearProgressHUD.sharedView.dismiss(animated: true)
   }
   
   private func upload(httpModelOn: Bool) {

@@ -314,7 +314,6 @@ extension TodaysFactViewController {
 extension TodaysFactViewController : FBInterstitialAdDelegate {
     
     private func setupFBInter() {
-        FBAdSettings.addTestDevice("4598014e3a637cc7a98dc8d6ea64cddaf3fbb9c1")
         self.fbInter = FBInterstitialAd(placementID: "539268040329220_539270643662293")
         self.fbInter.delegate = self
     }
