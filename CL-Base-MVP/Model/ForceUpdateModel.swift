@@ -31,9 +31,9 @@ class ForceUpdateModel: NSObject {
             return nil
         }
         
-        guard let packageName = json["package_name"] as? String else {
-            return nil
-        }
+//        guard let packageName = json["package_name"] as? String else {
+//            return nil
+//        }
         
         guard let hardVersion = json["hard_version"] as? Int else {
             return nil
@@ -62,7 +62,7 @@ class ForceUpdateModel: NSObject {
         self.isForceUpdate = isForceUpdate
         self.isManualUpdate = isManualUpdate
         self.appLink = appLink
-        self.packageName = packageName
+       // self.packageName = packageName
         self.hardVersion = hardVersion
         self.softVersion = softVersion
         

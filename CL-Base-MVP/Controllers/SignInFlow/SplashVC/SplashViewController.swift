@@ -20,18 +20,15 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
-        self.presenter = SplashPresenter(view: self)
-        self.internetConnectivityCheck()
+        presenter = SplashPresenter(view: self)
+        internetConnectivityCheck()
         ref = Database.database().reference()
         ref.child("splashLog").setValue(["Log2" : "Log2"])
-        // Do any additional setup after loading the view.
     }
     
-    func internetConnectivityCheck() {
-        
+    private func internetConnectivityCheck() {
         if IJReachability.isConnectedToNetwork() == true {
             print("Internet connection OK")
-            // self.versionCheck()
             self.checkAppVersion()
         } else {
             print("Internet connection FAILED")

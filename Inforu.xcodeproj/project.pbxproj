@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		069A5BFA1FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A5BF91FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift */; };
-		069A5BFC1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069A5BFB1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift */; };
 		0804B94B244204D900BAF805 /* Pods_Inforu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E4F1F0F8703738F4DC3D3B3 /* Pods_Inforu.framework */; };
 		0804B94E244204DA00BAF805 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49759B61FCE863B00B8BB6C /* AVKit.framework */; };
 		0809C48223A138420035781A /* FactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809C48023A138420035781A /* FactDetailViewController.swift */; };
@@ -118,8 +116,6 @@
 		54A5EB57BE31354671834275 /* Pods_InforuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CCC027734C3DCB28345FEA /* Pods_InforuTests.framework */; };
 		D3B443CB520C6A2BA8549240 /* Pods_InforuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F656B6A4A992448FF7A5B7F /* Pods_InforuUITests.framework */; };
 		F46045341FCC2EEA00DC976D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F46045331FCC2EEA00DC976D /* Assets.xcassets */; };
-		F46045421FCC2EEA00DC976D /* CL_Base_MVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46045411FCC2EEA00DC976D /* CL_Base_MVPTests.swift */; };
-		F460454D1FCC2EEA00DC976D /* CL_Base_MVPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460454C1FCC2EEA00DC976D /* CL_Base_MVPUITests.swift */; };
 		F460456B1FCD3E7200DC976D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460455B1FCC30D000DC976D /* AppDelegate.swift */; };
 		F460456D1FCD3E8200DC976D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F46045611FCC315400DC976D /* LaunchScreen.storyboard */; };
 		F497599D1FCE859500B8BB6C /* SwiftConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F497599C1FCE858F00B8BB6C /* SwiftConstants.swift */; };
@@ -215,8 +211,6 @@
 
 /* Begin PBXFileReference section */
 		053C9D8750EC7E408E37B346 /* Pods-InforuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InforuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InforuTests/Pods-InforuTests.debug.xcconfig"; sourceTree = "<group>"; };
-		069A5BF91FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTestCases.swift; sourceTree = "<group>"; };
-		069A5BFB1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenterTests.swift; sourceTree = "<group>"; };
 		0809C48023A138420035781A /* FactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDetailViewController.swift; sourceTree = "<group>"; };
 		0809C48423A13ABC0035781A /* FactDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDetailPresenter.swift; sourceTree = "<group>"; };
 		0809C48623A13ACA0035781A /* FactDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDetailRouter.swift; sourceTree = "<group>"; };
@@ -351,11 +345,7 @@
 		F46045331FCC2EEA00DC976D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F46045381FCC2EEA00DC976D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F460453D1FCC2EEA00DC976D /* InforuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InforuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F46045411FCC2EEA00DC976D /* CL_Base_MVPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CL_Base_MVPTests.swift; sourceTree = "<group>"; };
-		F46045431FCC2EEA00DC976D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F46045481FCC2EEA00DC976D /* InforuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InforuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F460454C1FCC2EEA00DC976D /* CL_Base_MVPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CL_Base_MVPUITests.swift; sourceTree = "<group>"; };
-		F460454E1FCC2EEA00DC976D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F460455B1FCC30D000DC976D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F46045611FCC315400DC976D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F46045631FCC322500DC976D /* Human.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Human.swift; sourceTree = "<group>"; };
@@ -853,8 +843,6 @@
 			children = (
 				0864474E22BCD12F00531A71 /* Inforu.entitlements */,
 				F460452B1FCC2EEA00DC976D /* CL-Base-MVP */,
-				F46045401FCC2EEA00DC976D /* CL-Base-MVPTests */,
-				F460454B1FCC2EEA00DC976D /* CL-Base-MVPUITests */,
 				F460452A1FCC2EEA00DC976D /* Products */,
 				5ECEF204FAF98B995A80E045 /* Pods */,
 				47DE0A722C79D9453130798E /* Frameworks */,
@@ -892,26 +880,6 @@
 				F46045381FCC2EEA00DC976D /* Info.plist */,
 			);
 			path = "CL-Base-MVP";
-			sourceTree = "<group>";
-		};
-		F46045401FCC2EEA00DC976D /* CL-Base-MVPTests */ = {
-			isa = PBXGroup;
-			children = (
-				069A5BFB1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift */,
-				069A5BF91FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift */,
-				F46045411FCC2EEA00DC976D /* CL_Base_MVPTests.swift */,
-				F46045431FCC2EEA00DC976D /* Info.plist */,
-			);
-			path = "CL-Base-MVPTests";
-			sourceTree = "<group>";
-		};
-		F460454B1FCC2EEA00DC976D /* CL-Base-MVPUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F460454C1FCC2EEA00DC976D /* CL_Base_MVPUITests.swift */,
-				F460454E1FCC2EEA00DC976D /* Info.plist */,
-			);
-			path = "CL-Base-MVPUITests";
 			sourceTree = "<group>";
 		};
 		F460455A1FCC30D000DC976D /* AppDelegate */ = {
@@ -1756,9 +1724,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				069A5BFA1FFB5ABA00B79BC0 /* SignUpPresenterTestCases.swift in Sources */,
-				069A5BFC1FFB79AA00B79BC0 /* LoginViewPresenterTests.swift in Sources */,
-				F46045421FCC2EEA00DC976D /* CL_Base_MVPTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1766,7 +1731,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F460454D1FCC2EEA00DC976D /* CL_Base_MVPUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

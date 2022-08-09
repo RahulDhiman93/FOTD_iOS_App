@@ -25,8 +25,6 @@ class HomeViewController: UIViewController {
         view.isSkeletonable = true
         view.showGradientSkeleton()
         view.startSkeletonAnimation()
-        print("SKELETON DESC     -->> ")
-        print(view.skeletonDescription)
 //        LoadingShimmer.startCovering(self.view, with: nil)
         // Do any additional setup after loading the view.
     }

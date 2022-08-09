@@ -47,32 +47,29 @@ class TodaysFactViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.presenter.getTodaysFact()
+        setColors()
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        setColors()
     }
     
     private func setupView() {
         let likeButtonImage = UIImage(named: "like")?.withRenderingMode(.alwaysTemplate)
         let dislikeButtonImage = UIImage(named: "dislike")?.withRenderingMode(.alwaysTemplate)
-        
-        
         self.likeButton.setImage(likeButtonImage, for: .normal)
         self.dislikeButton.setImage(dislikeButtonImage, for: .normal)
-        
-        if #available(iOS 12.0, *) {
-            if self.traitCollection.userInterfaceStyle == .dark {
-                // User Interface is Dark
-                self.likeButton.tintColor = .white
-                self.likeCount.textColor = .white
-                self.dislikeButton.tintColor = .white
-                self.dislikeCount.textColor = .white
-            } else {
-                self.likeButton.tintColor = .black
-                self.likeCount.textColor = .black
-                self.dislikeButton.tintColor = .black
-                self.dislikeCount.textColor = .black
-                // User Interface is Light
-            }
+        setColors()
+    }
+    
+    private func setColors() {
+        if #available(iOS 12.0, *), self.traitCollection.userInterfaceStyle == .dark {
+            self.likeButton.tintColor = .white
+            self.likeCount.textColor = .white
+            self.dislikeButton.tintColor = .white
+            self.dislikeCount.textColor = .white
         } else {
-            // Fallback on earlier versions
             self.likeButton.tintColor = .black
             self.likeCount.textColor = .black
             self.dislikeButton.tintColor = .black
@@ -162,24 +159,13 @@ extension TodaysFactViewController : TodaysFactPresenterDelegate {
                 self.likeButton.tintColor = AppColor.themePrimaryColor
                 self.likeCount.textColor = AppColor.themePrimaryColor
             } else {
-                
-                if #available(iOS 12.0, *) {
-                    if self.traitCollection.userInterfaceStyle == .dark {
-                        // User Interface is Dark
-                        self.likeButton.tintColor = .white
-                        self.likeCount.textColor = .white
-                    } else {
-                        self.likeButton.tintColor = .black
-                        self.likeCount.textColor = .black
-                        // User Interface is Light
-                    }
+                if #available(iOS 12.0, *), self.traitCollection.userInterfaceStyle == .dark {
+                    self.likeButton.tintColor = .white
+                    self.likeCount.textColor = .white
                 } else {
-                    // Fallback on earlier versions
                     self.likeButton.tintColor = .black
                     self.likeCount.textColor = .black
                 }
-                
-                
             }
         })
         
@@ -188,18 +174,10 @@ extension TodaysFactViewController : TodaysFactPresenterDelegate {
                 self.dislikeButton.tintColor = AppColor.themePrimaryColor
                 self.dislikeCount.textColor = AppColor.themePrimaryColor
             } else {
-                if #available(iOS 12.0, *) {
-                    if self.traitCollection.userInterfaceStyle == .dark {
-                        // User Interface is Dark
-                        self.dislikeButton.tintColor = .white
-                        self.dislikeCount.textColor = .white
-                    } else {
-                        self.dislikeButton.tintColor = .black
-                        self.dislikeCount.textColor = .black
-                        // User Interface is Light
-                    }
+                if #available(iOS 12.0, *), self.traitCollection.userInterfaceStyle == .dark {
+                    self.dislikeButton.tintColor = .white
+                    self.dislikeCount.textColor = .white
                 } else {
-                    // Fallback on earlier versions
                     self.dislikeButton.tintColor = .black
                     self.dislikeCount.textColor = .black
                 }
