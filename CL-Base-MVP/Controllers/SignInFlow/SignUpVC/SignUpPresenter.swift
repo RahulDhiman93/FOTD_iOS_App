@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SignUpPresenterDelegate : class {
+protocol SignUpPresenterDelegate : AnyObject {
     func failure(message: String)
     func SignUpSuccess()
 }

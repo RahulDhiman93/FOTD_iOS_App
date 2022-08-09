@@ -238,11 +238,11 @@ extension ProfileViewController {
             email: me.email,
             phoneNumber: "N/A",
             userUniqueKey: "\(me.userId)",
-            userImage: me.profileImage
+            userImage: me.profileImage, userIdenficationSecret: ""
          )
             //Call updateUserDetails so that
             //the user information is synced with Hippo servers
-        HippoConfig.shared.updateUserDetail(userDetail: hippoUserDetail)
+        HippoConfig.shared.updateUserDetail(userDetail: hippoUserDetail, completion: {_ in})
     }
     
 }

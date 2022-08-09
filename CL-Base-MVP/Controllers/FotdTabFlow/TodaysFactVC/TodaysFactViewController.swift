@@ -8,11 +8,10 @@
 
 import UIKit
 import StoreKit
-import GoogleMobileAds
 import Hippo
 import FBAudienceNetwork
 
-class TodaysFactViewController: UIViewController , GADInterstitialDelegate{
+class TodaysFactViewController: UIViewController {
     
     @IBOutlet weak var factLabel: UILabel!
     
@@ -24,7 +23,6 @@ class TodaysFactViewController: UIViewController , GADInterstitialDelegate{
     @IBOutlet weak var favButton: UIButton!
     
     var presenter : TodaysFactPresenter!
-    var inter:GADInterstitial!
     var tryAdLoadAgain = true
     var multiplier = 1
     var fbInter : FBInterstitialAd!
@@ -33,7 +31,7 @@ class TodaysFactViewController: UIViewController , GADInterstitialDelegate{
         super.viewDidLoad()
         self.presenter = TodaysFactPresenter(view: self)
         self.setupView()
-        self.setupInter()
+       // self.setupInter()
         self.configHippo()
         self.setupFBInter()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: { [weak self] in
@@ -227,45 +225,45 @@ extension TodaysFactViewController : TodaysFactPresenterDelegate {
 
 extension TodaysFactViewController {
     
-    private func setupInter() {
-        inter = GADInterstitial(adUnitID: "ca-app-pub-8330967321849957/9585860498")
-        let request = GADRequest()
-        inter.load(request)
-        inter = createAndLoadInterstitial()
-        inter.delegate = self
-    }
+//    private func setupInter() {
+//        inter = GADInterstitial(adUnitID: "ca-app-pub-8330967321849957/9585860498")
+//        let request = GADRequest()
+//        inter.load(request)
+//        inter = createAndLoadInterstitial()
+//        inter.delegate = self
+//    }
+//
+//    private func createAndLoadInterstitial() -> GADInterstitial {
+//        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-8330967321849957/9585860498")
+//        interstitial.delegate = self
+//        interstitial.load(GADRequest())
+//        return interstitial
+//    }
     
-    private func createAndLoadInterstitial() -> GADInterstitial {
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-8330967321849957/9585860498")
-        interstitial.delegate = self
-        interstitial.load(GADRequest())
-        return interstitial
-    }
-    
-    private func loadInt(){
-        if let inter = inter {
-            if inter.isReady {
-                inter.present(fromRootViewController: self)
-            }
-            else{
-                let time = Double(2.0) * Double(self.multiplier)
-                print(time)
-                DispatchQueue.main.asyncAfter(deadline: .now() + time, execute: { [weak self] in
-                guard let self = self else { return }
-                    if self.tryAdLoadAgain {
-                        print("TRIED AGAIN")
-                        self.multiplier += 1
-                        if SHOW_ADV {
-                            self.loadInt()
-                        }
-                        if self.multiplier == 3 {
-                            self.tryAdLoadAgain = false
-                        }
-                    }
-                })
-            }
-        }
-    }
+//    private func loadInt(){
+//        if let inter = inter {
+//            if inter.isReady {
+//                inter.present(fromRootViewController: self)
+//            }
+//            else{
+//                let time = Double(2.0) * Double(self.multiplier)
+//                print(time)
+//                DispatchQueue.main.asyncAfter(deadline: .now() + time, execute: { [weak self] in
+//                guard let self = self else { return }
+//                    if self.tryAdLoadAgain {
+//                        print("TRIED AGAIN")
+//                        self.multiplier += 1
+//                        if SHOW_ADV {
+//                            self.loadInt()
+//                        }
+//                        if self.multiplier == 3 {
+//                            self.tryAdLoadAgain = false
+//                        }
+//                    }
+//                })
+//            }
+//        }
+//    }
     
     private func reviewLogic() {
         var value = UserDefaults.standard.integer(forKey: "reviewCounting")
@@ -301,11 +299,12 @@ extension TodaysFactViewController {
             email: me.email,
             phoneNumber: "N/A",
             userUniqueKey: "\(me.userId)",
-            userImage: me.profileImage
+            userImage: me.profileImage, userIdenficationSecret: ""
          )
-            //Call updateUserDetails so that
+        //Call updateUserDetails s, userIdenficationSecret: o that
             //the user information is synced with Hippo servers
-        HippoConfig.shared.updateUserDetail(userDetail: hippoUserDetail)
+        HippoConfig.shared.updateUserDetail(userDetail: hippoUserDetail, completion: {
+        _ in})
     }
     
 }
@@ -326,7 +325,7 @@ extension TodaysFactViewController : FBInterstitialAdDelegate {
         if interstitialAd.isAdValid {
             interstitialAd.show(fromRootViewController: self)
         } else {
-            self.loadInt()
+           // self.loadInt()
             print("\nFB not loaded with error ------> NOT A VALID AD")
         }
     }
@@ -334,7 +333,7 @@ extension TodaysFactViewController : FBInterstitialAdDelegate {
     func interstitialAd(_ interstitialAd: FBInterstitialAd, didFailWithError error: Error) {
         print("\nFB not loaded with error ------> \(error.localizedDescription)")
         print(error)
-        self.loadInt()
+       // self.loadInt()
     }
 }
 
