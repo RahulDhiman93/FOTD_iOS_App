@@ -445,11 +445,11 @@ final class LoginManager: LoginManagerRoules {
                         callback(nil,nil)
                         return
                     } else if statusCode == STATUS_CODES.SHOW_DATA {
-                       if let jsonObject = value as? [String: Any] {
-                             callback(jsonObject, nil)
-                            } else {
-                                callback(nil, nil)
-                            }
+                        if let jsonObject = value as? [String: Any] {
+                            callback(jsonObject, nil)
+                        } else {
+                            callback(nil, nil)
+                        }
                     }
                 }
                 

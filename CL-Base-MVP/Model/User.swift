@@ -15,6 +15,7 @@ class User: NSObject, NSCoding {
     var userName: String
     var profileImage : String = ""
     var notificationEnabled : Int = 1
+    var isGuestLogin : Bool = false
     var approvedCount : Int = 0
     var pendingCount : Int = 0
     var rejectedCount : Int = 0
@@ -31,6 +32,10 @@ class User: NSObject, NSCoding {
         }
         guard let email = param["email"] as? String else {
             return nil
+        }
+        
+        if let isGuestLogin = param["is_guest"] as? Int {
+            self.isGuestLogin = isGuestLogin == 1
         }
         
         if let profileImage = param["profile_image"] as? String {

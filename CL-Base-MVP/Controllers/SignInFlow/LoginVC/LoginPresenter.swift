@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol LoginPresenterDelegate : class {
+protocol LoginPresenterDelegate : AnyObject {
     func failure(message: String)
     func loginSuccess()
 }
@@ -65,6 +65,53 @@ class LoginPresenter {
             FirebaseEvents.loginEvent()
             self?.view?.loginSuccess()
             
+            
+        })
+    }
+    
+    func guestLogin(distinctId: String) {
+        let param: [String : Any] = [
+            "email": "guest_\(distinctId)@factoftheday.in",
+            "name": "Guest User \(distinctId)",
+            "password": "\(distinctId)",
+            "device_token": AppConstants.deviceToken,
+            "device_type": AppConstants.deviceType,
+            "device_name": AppConstants.deviceName
+        ]
+        
+        print(param)
+        LoginManager.share.signUpFromEmail(param: param, callback: { [weak self] response , error in
+            
+            guard response != nil, error == nil else {
+                self?.callGuestLoginIfMailExist(distinctId: distinctId)
+                return
+            }
+            
+            FirebaseEvents.signupEvent()
+            self?.view?.loginSuccess()
+            
+        })
+    }
+    
+    private func callGuestLoginIfMailExist(distinctId: String) {
+        let param : [String : Any] = [
+            "email": "guest_\(distinctId)@factoftheday.in",
+            "password": "\(distinctId)",
+            "device_token": AppConstants.deviceToken,
+            "device_type": AppConstants.deviceType,
+            "device_name": AppConstants.deviceName
+        ]
+        
+        LoginManager.share.loginFromEmail(param: param, callback: { [weak self] response , error in
+            
+            
+            guard response != nil, error == nil else {
+                self?.view?.failure(message:  error?.localizedDescription ?? "Server Error, Please try again!")
+                return
+            }
+            
+            FirebaseEvents.loginEvent()
+            self?.view?.loginSuccess()
             
         })
     }

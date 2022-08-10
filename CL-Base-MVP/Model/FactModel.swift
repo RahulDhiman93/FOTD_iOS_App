@@ -59,10 +59,10 @@ struct Fact {
     var fact : String?
     var factStamp : String?
     var factStatus : Int?
-    var factTag : String?
+    //var factTag : String?
     var factType : Int?
-    var minimumDislikeCount : Int?
-    var minimumLikeCount : Int?
+  //  var minimumDislikeCount : Int?
+   // var minimumLikeCount : Int?
     var updateDateTime : String?
     var creationDateTime : String?
     
@@ -84,21 +84,21 @@ struct Fact {
             return nil
         }
         
-        guard let factTag = json["fact_tag"] as? String else {
-            return nil
-        }
+//        guard let factTag = json["fact_tag"] as? String else {
+//            return nil
+//        }
         
         guard let factType = json["fact_type"] as? Int else {
             return nil
         }
         
-        guard let minimumDislikeCount = json["minimum_dislike_count"] as? Int else {
-            return nil
-        }
+//        guard let minimumDislikeCount = json["minimum_dislike_count"] as? Int else {
+//            return nil
+//        }
         
-        guard let minimumLikeCount = json["minimum_like_count"] as? Int else {
-            return nil
-        }
+//        guard let minimumLikeCount = json["minimum_like_count"] as? Int else {
+//            return nil
+//        }
         
         guard let updateDateTime = json["update_datetime"] as? String else {
             return nil
@@ -113,10 +113,10 @@ struct Fact {
         self.fact = fact
         self.factStamp = factStamp
         self.factStatus = factStatus
-        self.factTag = factTag
+       // self.factTag = factTag
         self.factType = factType
-        self.minimumDislikeCount = minimumDislikeCount
-        self.minimumLikeCount = minimumLikeCount
+       // self.minimumDislikeCount = minimumDislikeCount
+       // self.minimumLikeCount = minimumLikeCount
         self.updateDateTime = updateDateTime
         self.creationDateTime = creationDateTime
         

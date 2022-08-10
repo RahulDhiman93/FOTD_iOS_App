@@ -11,6 +11,7 @@ import UIKit
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var logInButtonView: UIView!
+    @IBOutlet weak var guestButtonView: UIView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -21,6 +22,7 @@ class LoginViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
         self.presenter = LoginPresenter(view: self)
         self.logInButtonView.clipsToBounds = false
+        self.guestButtonView.clipsToBounds = false
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
         // Do any additional setup after loading the view.
@@ -39,6 +41,12 @@ class LoginViewController: UIViewController {
     @IBAction func logInTapped(_ sender: UIButton) {
         self.view.endEditing(true)
         self.presenter.loginFromEmail()
+    }
+    
+    @IBAction func guestLoginTapped(_ sender: UIButton) {
+        self.view.endEditing(true)
+        let distinctId = UIDevice.current.identifierForVendor?.uuidString ?? "n/a"
+        self.presenter.guestLogin(distinctId: distinctId)
     }
     
     @IBAction func registerTapped(_ sender: UIButton) {

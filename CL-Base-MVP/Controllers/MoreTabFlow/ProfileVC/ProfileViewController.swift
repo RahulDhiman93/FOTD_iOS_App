@@ -41,8 +41,8 @@ class ProfileViewController: UIViewController {
             return
         }
         self.profileImageView.kf.setImage(with: URL(string: me.profileImage), placeholder: UIImage(named: "placeholder"))
-        self.userName.text = me.userName
-        self.userEmail.text = me.email
+        self.userName.text = me.isGuestLogin ? "Guest" : me.userName
+        self.userEmail.text = me.isGuestLogin ? "guest@factoftheday.in" : me.email
         self.approvedFacts.text = "\(me.approvedCount)"
         self.pendingFacts.text = "\(me.pendingCount)"
         self.discardedFacts.text = "\(me.rejectedCount)"
@@ -51,6 +51,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func changeProfilePicTapped(_ sender: UIButton) {
+        guard !(LoginManager.share.me?.isGuestLogin ?? false) else { return }
         self.changeProfilePic()
     }
     
@@ -114,14 +115,14 @@ extension ProfileViewController : ProfilePresenterDelegate {
             return
         }
         
-        self.profileImageView.kf.setImage(with: URL(string: me.profileImage), placeholder: UIImage(named: "placeholder"))
+        self.profileImageView.kf.setImage(with: URL(string: me.profileImage), placeholder: UIImage(named: "placeholder"), options: [.transition(.fade(0.5))])
         
         UIView.transition(with: userName, duration: 1.0, options: .transitionCrossDissolve, animations: {
-            self.userName.text = me.userName
+            self.userName.text = me.isGuestLogin ? "Guest" : me.userName
         })
         
         UIView.transition(with: userEmail, duration: 1.0, options: .transitionCrossDissolve, animations: {
-            self.userEmail.text = me.email
+            self.userEmail.text = me.isGuestLogin ? "guest@factoftheday.in" : me.email
         })
         
         UIView.transition(with: approvedFacts, duration: 1.0, options: .transitionCrossDissolve, animations: {
