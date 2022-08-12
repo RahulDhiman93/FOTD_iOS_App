@@ -22,6 +22,7 @@ struct AppConstants {
     static let appName = "FOTD"
     static let DeviceOS = "iOS"
     static let deviceType = 1
+    static let hippoAppType = "1" //1 for iOS -- 2 for Android
     static let deviceName = UIDevice.current.name
     static let appVersion = 45
     static let timeZoneInfo = TimeZone.current.description

@@ -17,7 +17,7 @@ class AddFactViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = AddFactPresenter(view: self)
-        self.addFactTextView.text = "enter fact here!"
+        self.addFactTextView.text = "Enter fact here!"
         self.addFactTextView.delegate = self
         // Do any additional setup after loading the view.
     }

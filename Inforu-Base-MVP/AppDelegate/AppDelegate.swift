@@ -21,35 +21,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let handler = NetworkHandler()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         IQKeyboardManager.shared.enable = true
         APNSManager.share.registerAppRemoteNotifications()
         FirebaseApp.configure()
         self.setupChatConfig()
         print(Config.sharedInstance.baseURL())
         self.setupTabBar()
-        
-        
-        
-//        if #available(iOS 13.0, *) {
-//            window?.overrideUserInterfaceStyle = .light
-//        }
-        
         return true
     }
     
     private func setupChatConfig() {
-        HippoConfig.shared.setCredential(withAppSecretKey: "cc794688d258ebacd791481efb25be10")
+        HippoConfig.shared.setCredential(withAppSecretKey: "e02c07042092b19c0b3877464e6f5cd4", appType: AppConstants.hippoAppType)
         HippoConfig.shared.switchEnvironment(.live)
-        self.setHippoTheme()
+        setHippoTheme()
     }
     
     private func setHippoTheme() {
         let hippoTheme = HippoTheme.defaultTheme()
         hippoTheme.headerText = "chat with us"
         hippoTheme.headerTextFont = UIFont.poppinsFontMedium(size: 14.0)
-        hippoTheme.headerBackgroundColor = AppColor.themePrimaryColor
-        hippoTheme.headerTextColor = AppColor.themeSecondaryColor
+        hippoTheme.headerBackgroundColor = AppColor.themeSecondaryColor
+        hippoTheme.headerTextColor = AppColor.themePrimaryColor
+        hippoTheme.themeColor = AppColor.themeSecondaryColor
+        hippoTheme.themeTextcolor = AppColor.themePrimaryColor
         HippoConfig.shared.setCustomisedHippoTheme(theme: hippoTheme)
     }
     

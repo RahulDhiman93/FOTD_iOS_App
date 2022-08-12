@@ -58,20 +58,16 @@ class FactDetailViewController: UIViewController {
     
     private func setupView() {
         self.title = "fact details"
-        self.bottomViewHeight.constant = 0
-        self.userImage.isHidden = true
+        bottomViewHeight.constant = 0
+        userImage.isHidden = true
         
         let likeButtonImage = UIImage(named: "likeWhite")?.withRenderingMode(.alwaysTemplate)
         let dislikeButtonImage = UIImage(named: "dislikeWhite")?.withRenderingMode(.alwaysTemplate)
         
-        self.likeButton.setImage(likeButtonImage, for: .normal)
-        self.dislikeButton.setImage(dislikeButtonImage, for: .normal)
+        likeButton.setImage(likeButtonImage, for: .normal)
+        dislikeButton.setImage(dislikeButtonImage, for: .normal)
         
-        if CHAT_ENABLED {
-            self.chatButton.isHidden = false
-        } else {
-            self.chatButton.isHidden = true
-        }
+        chatButton.isHidden = !CHAT_ENABLED
     }
     
     private func addSwipeGestures() {
@@ -87,19 +83,19 @@ class FactDetailViewController: UIViewController {
     
     @objc private func rightSwipe() {
         print("swipeRight")
-        if self.presenter.currentFactIndex > 0 {
-            self.presenter.currentFactIndex -= 1
-            self.presenter.factId = self.presenter.totalFactForSwipe[self.presenter.currentFactIndex].factId!
-            self.presenter.getFactDetails()
+        if presenter.currentFactIndex > 0 {
+            presenter.currentFactIndex -= 1
+            presenter.factId = presenter.totalFactForSwipe[self.presenter.currentFactIndex].factId!
+            presenter.getFactDetails()
         }
     }
     
     @objc private func leftSwipe() {
         print("swipeLeft")
-        if self.presenter.currentFactIndex < self.presenter.totalFactForSwipe.count - 1{
-            self.presenter.currentFactIndex += 1
-            self.presenter.factId = self.presenter.totalFactForSwipe[self.presenter.currentFactIndex].factId!
-            self.presenter.getFactDetails()
+        if presenter.currentFactIndex < self.presenter.totalFactForSwipe.count - 1{
+            presenter.currentFactIndex += 1
+            presenter.factId = presenter.totalFactForSwipe[self.presenter.currentFactIndex].factId!
+            presenter.getFactDetails()
         }
     }
     

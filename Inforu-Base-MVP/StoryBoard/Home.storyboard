@@ -24,7 +24,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--home-->
+        <!--Home-->
         <scene sceneID="SQn-xN-XvB">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Moc-WY-5bs" customClass="HomeViewController" customModule="FOTD" customModuleProvider="target" sceneMemberID="viewController">
@@ -97,7 +97,7 @@
                             <constraint firstItem="FKq-iF-p2k" firstAttribute="top" secondItem="ZrZ-nq-gq1" secondAttribute="bottom" constant="10" id="zHn-zv-70Q"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="home" largeTitleDisplayMode="always" id="3QN-5G-mht"/>
+                    <navigationItem key="navigationItem" title="Home" largeTitleDisplayMode="always" id="3QN-5G-mht"/>
                     <connections>
                         <outlet property="blogCollectionFlowLayout" destination="Xz9-XI-O7V" id="dNb-OE-52I"/>
                         <outlet property="blogCollectionView" destination="C5t-kj-Kjz" id="6RK-gp-ToW"/>
@@ -353,7 +353,7 @@
             </objects>
             <point key="canvasLocation" x="2499" y="12"/>
         </scene>
-        <!--add fact-->
+        <!--Add fact-->
         <scene sceneID="ukq-mx-8B9">
             <objects>
                 <viewController storyboardIdentifier="AddFactViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="su9-dQ-XNZ" customClass="AddFactViewController" customModule="FOTD" customModuleProvider="target" sceneMemberID="viewController">
@@ -456,7 +456,7 @@
                             <constraint firstItem="NAV-eF-KSy" firstAttribute="top" secondItem="a9Q-ax-dOv" secondAttribute="bottom" constant="50" id="vwW-1i-SyD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="add fact" largeTitleDisplayMode="always" id="JIl-Y3-tmf"/>
+                    <navigationItem key="navigationItem" title="Add fact" largeTitleDisplayMode="always" id="JIl-Y3-tmf"/>
                     <connections>
                         <outlet property="addFactTextView" destination="hMA-cb-uVG" id="Lg0-R2-6hf"/>
                     </connections>
@@ -465,7 +465,7 @@
             </objects>
             <point key="canvasLocation" x="755" y="910"/>
         </scene>
-        <!--fact of the day-->
+        <!--Fact of the day-->
         <scene sceneID="gIA-JP-Wez">
             <objects>
                 <viewController storyboardIdentifier="TodaysFactViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5mo-iS-whI" customClass="TodaysFactViewController" customModule="FOTD" customModuleProvider="target" sceneMemberID="viewController">
@@ -606,7 +606,7 @@
                             <constraint firstItem="mN7-1T-egY" firstAttribute="trailing" secondItem="bUB-If-JdX" secondAttribute="trailing" constant="50" id="sCT-mx-bI6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="fact of the day" largeTitleDisplayMode="always" id="BmE-3S-FVt"/>
+                    <navigationItem key="navigationItem" title="Fact of the day" largeTitleDisplayMode="always" id="BmE-3S-FVt"/>
                     <connections>
                         <outlet property="dislikeButton" destination="gtW-yD-8Tb" id="mrG-fA-e8O"/>
                         <outlet property="dislikeCount" destination="sfH-0i-Orh" id="NGK-X6-jLH"/>
@@ -621,7 +621,7 @@
             </objects>
             <point key="canvasLocation" x="753.62318840579712" y="1872.554347826087"/>
         </scene>
-        <!--search-->
+        <!--Search-->
         <scene sceneID="bki-9s-1I1">
             <objects>
                 <viewController storyboardIdentifier="SearchFactViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NWV-pu-Pmq" customClass="SearchFactViewController" customModule="FOTD" customModuleProvider="target" sceneMemberID="viewController">
@@ -707,7 +707,7 @@
                             <constraint firstItem="Nlz-g8-Kki" firstAttribute="top" secondItem="C52-5q-0ij" secondAttribute="top" constant="20" id="zAF-40-dP6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="search" id="fXX-hP-MDR"/>
+                    <navigationItem key="navigationItem" title="Search" id="fXX-hP-MDR"/>
                     <connections>
                         <outlet property="alertLabel" destination="CUE-Ko-bo2" id="WDK-kz-6It"/>
                         <outlet property="searchFactTableView" destination="0RP-Z2-ZpO" id="50H-X0-bB1"/>
@@ -718,7 +718,7 @@
             </objects>
             <point key="canvasLocation" x="755" y="2922"/>
         </scene>
-        <!--more-->
+        <!--More-->
         <scene sceneID="ALV-dE-VFM">
             <objects>
                 <viewController storyboardIdentifier="MoreViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9rW-Dd-JdK" customClass="MoreViewController" customModule="FOTD" customModuleProvider="target" sceneMemberID="viewController">
@@ -749,7 +749,7 @@
                             <constraint firstItem="STf-7j-clU" firstAttribute="top" secondItem="Awx-Ws-AC2" secondAttribute="bottom" constant="10" id="eyg-YU-39u"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="more" id="KaW-1e-gwC"/>
+                    <navigationItem key="navigationItem" title="More" id="KaW-1e-gwC"/>
                     <connections>
                         <outlet property="moreTableView" destination="Awx-Ws-AC2" id="s2g-kY-4ep"/>
                         <outlet property="versionLabel" destination="STf-7j-clU" id="WNZ-Mq-ejX"/>
