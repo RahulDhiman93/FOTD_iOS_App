@@ -842,7 +842,7 @@
 			isa = PBXGroup;
 			children = (
 				0864474E22BCD12F00531A71 /* Inforu.entitlements */,
-				F460452B1FCC2EEA00DC976D /* CL-Base-MVP */,
+				F460452B1FCC2EEA00DC976D /* Inforu-Base-MVP */,
 				F460452A1FCC2EEA00DC976D /* Products */,
 				5ECEF204FAF98B995A80E045 /* Pods */,
 				47DE0A722C79D9453130798E /* Frameworks */,
@@ -859,7 +859,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F460452B1FCC2EEA00DC976D /* CL-Base-MVP */ = {
+		F460452B1FCC2EEA00DC976D /* Inforu-Base-MVP */ = {
 			isa = PBXGroup;
 			children = (
 				08D2B36222B527DA0063B14C /* Config */,
@@ -879,7 +879,7 @@
 				08196412239F744800595EC4 /* GoogleService-Info.plist */,
 				F46045381FCC2EEA00DC976D /* Info.plist */,
 			);
-			path = "CL-Base-MVP";
+			path = "Inforu-Base-MVP";
 			sourceTree = "<group>";
 		};
 		F460455A1FCC30D000DC976D /* AppDelegate */ = {
