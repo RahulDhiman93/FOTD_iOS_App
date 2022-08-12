@@ -351,7 +351,7 @@
 		F46045631FCC322500DC976D /* Human.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Human.swift; sourceTree = "<group>"; };
 		F46045641FCC325200DC976D /* Me.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Me.swift; sourceTree = "<group>"; };
 		F46045651FCC328100DC976D /* Personable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personable.swift; sourceTree = "<group>"; };
-		F46045661FCC328A00DC976D /* CL-Base-MVP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CL-Base-MVP-Bridging-Header.h"; sourceTree = "<group>"; };
+		F46045661FCC328A00DC976D /* Inforu-Base-MVP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Inforu-Base-MVP-Bridging-Header.h"; sourceTree = "<group>"; };
 		F46045671FCC328B00DC976D /* Modelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modelable.swift; sourceTree = "<group>"; };
 		F46045681FCC32A200DC976D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F497599C1FCE858F00B8BB6C /* SwiftConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConstants.swift; sourceTree = "<group>"; };
@@ -928,7 +928,7 @@
 				F46045641FCC325200DC976D /* Me.swift */,
 				F46045651FCC328100DC976D /* Personable.swift */,
 				F46045671FCC328B00DC976D /* Modelable.swift */,
-				F46045661FCC328A00DC976D /* CL-Base-MVP-Bridging-Header.h */,
+				F46045661FCC328A00DC976D /* Inforu-Base-MVP-Bridging-Header.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1841,7 +1841,7 @@
 					"\"${PODS_ROOT}/GoogleMaps/Maps/Frameworks\"",
 					"\"${PODS_ROOT}/GooglePlaces/Frameworks\"",
 				);
-				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Inforu-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 4.8;
@@ -1919,7 +1919,7 @@
 				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE = "70e8cf61-ec94-4d3b-b689-1bb0fa28f7eb";
 				PROVISIONING_PROFILE_SPECIFIER = FOTDDEV;
-				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Inforu-Base-MVP/Model/Inforu-Base-MVP-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2028,7 +2028,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BM93ACT257;
-				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Inforu-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 4.8;
@@ -2106,7 +2106,7 @@
 				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";
 				PROVISIONING_PROFILE_SPECIFIER = FOTDAPPSTORE;
-				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Inforu-Base-MVP/Model/Inforu-Base-MVP-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_WORKSPACE = YES;
@@ -2214,7 +2214,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BM93ACT257;
-				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Inforu-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 4.8;
@@ -2292,7 +2292,7 @@
 				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";
 				PROVISIONING_PROFILE_SPECIFIER = FOTDAPPSTORE;
-				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Inforu-Base-MVP/Model/Inforu-Base-MVP-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_WORKSPACE = YES;
@@ -2478,7 +2478,7 @@
 					"\"${PODS_ROOT}/GoogleMaps/Maps/Frameworks\"",
 					"\"${PODS_ROOT}/GooglePlaces/Frameworks\"",
 				);
-				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Inforu-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 4.8;
@@ -2556,7 +2556,7 @@
 				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE = "70e8cf61-ec94-4d3b-b689-1bb0fa28f7eb";
 				PROVISIONING_PROFILE_SPECIFIER = FOTDDEV;
-				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Inforu-Base-MVP/Model/Inforu-Base-MVP-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2576,7 +2576,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BM93ACT257;
-				INFOPLIST_FILE = "CL-Base-MVP/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Inforu-Base-MVP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 4.8;
@@ -2654,7 +2654,7 @@
 				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE = "c9f46191-0201-4194-9bbd-24c9e703c21b";
 				PROVISIONING_PROFILE_SPECIFIER = FOTDAPPSTORE;
-				SWIFT_OBJC_BRIDGING_HEADER = "CL-Base-MVP/Model/CL-Base-MVP-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Inforu-Base-MVP/Model/Inforu-Base-MVP-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_WORKSPACE = YES;

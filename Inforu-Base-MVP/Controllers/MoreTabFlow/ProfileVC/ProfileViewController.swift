@@ -16,9 +16,12 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userEmail: UILabel!
     
+    
+    @IBOutlet weak var addedFactsHeight: NSLayoutConstraint!
     @IBOutlet weak var approvedFacts: UILabel!
     @IBOutlet weak var pendingFacts: UILabel!
     @IBOutlet weak var discardedFacts: UILabel!
+    @IBOutlet weak var changePasswordView: UIView!
     @IBOutlet weak var notificationSwitch: UISwitch!
     
     var presenter : ProfilePresenter!
@@ -40,14 +43,15 @@ class ProfileViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
             return
         }
-        self.profileImageView.kf.setImage(with: URL(string: me.profileImage), placeholder: UIImage(named: "placeholder"))
-        self.userName.text = me.isGuestLogin ? "Guest" : me.userName
-        self.userEmail.text = me.isGuestLogin ? "guest@factoftheday.in" : me.email
-        self.approvedFacts.text = "\(me.approvedCount)"
-        self.pendingFacts.text = "\(me.pendingCount)"
-        self.discardedFacts.text = "\(me.rejectedCount)"
-        self.notificationSwitch.isOn = me.notificationEnabled == 1 ? true : false
-        
+        profileImageView.kf.setImage(with: URL(string: me.profileImage), placeholder: UIImage(named: "placeholder"))
+        userName.text = me.isGuestLogin ? "Guest" : me.userName
+        userEmail.text = me.isGuestLogin ? "guest@factoftheday.in" : me.email
+        addedFactsHeight.constant = me.isGuestLogin ? 0.0 : 80.0
+        approvedFacts.text = "\(me.approvedCount)"
+        pendingFacts.text = "\(me.pendingCount)"
+        discardedFacts.text = "\(me.rejectedCount)"
+        changePasswordView.isHidden = me.isGuestLogin
+        notificationSwitch.isOn = me.notificationEnabled == 1 ? true : false
     }
     
     @IBAction func changeProfilePicTapped(_ sender: UIButton) {

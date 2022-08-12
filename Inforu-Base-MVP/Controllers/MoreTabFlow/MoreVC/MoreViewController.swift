@@ -18,23 +18,22 @@ class MoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter = MorePresenter(view : self)
-        self.setupView()
-        self.setupTableView()
-        // Do any additional setup after loading the view.
+        presenter = MorePresenter(view : self)
+        setupView()
+        setupTableView()
     }
 
     private func setupView() {
-        self.versionLabel.text = "v" + Config.sharedInstance.appVersion()
+        versionLabel.text = "v" + Config.sharedInstance.appVersion()
     }
     
     private func setupTableView() {
-        self.moreTableView.delegate = self
-        self.moreTableView.dataSource = self
-        self.moreTableView.bounces = false
-        self.moreTableView.separatorStyle = .none
-        self.moreTableView.showsVerticalScrollIndicator = false
-        self.moreTableView.register(UINib(nibName: "MoreRowsTableViewCell", bundle: nil), forCellReuseIdentifier: "MoreRowsTableViewCell")
+        moreTableView.delegate = self
+        moreTableView.dataSource = self
+        moreTableView.bounces = false
+        moreTableView.separatorStyle = .none
+        moreTableView.showsVerticalScrollIndicator = false
+        moreTableView.register(UINib(nibName: "MoreRowsTableViewCell", bundle: nil), forCellReuseIdentifier: "MoreRowsTableViewCell")
     }
     
     private func logout() {
@@ -130,13 +129,22 @@ extension MoreViewController : UITableViewDelegate, UITableViewDataSource {
         case .profile:
             cell.configCell(image: "userPurple", name: "profile")
         case .favourites:
+            guard let me = LoginManager.share.me, !me.isGuestLogin else {
+                return UITableViewCell()
+            }
             cell.configCell(image: "favourites", name: "favourites")
         case .instagram:
             cell.configCell(image: "instagram", name: "follow us on Instagram")
         case .feedback:
+            guard let me = LoginManager.share.me, !me.isGuestLogin else {
+                return UITableViewCell()
+            }
             cell.configCell(image: "feedback", name: "feedback")
         case .conversations:
             guard CHAT_ENABLED else { return UITableViewCell() }
+            guard let me = LoginManager.share.me, !me.isGuestLogin else {
+                return UITableViewCell()
+            }
             cell.configCell(image: "feedback", name: "chat with us")
         case .share:
             cell.configCell(image: "shareApp", name: "share our app")
@@ -152,28 +160,41 @@ extension MoreViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch numberOfMoreVcRows(rawValue : indexPath.row)! {
         case .profile:
-            self.goToProfile()
+            goToProfile()
         case .favourites:
-            self.goToFavFacts()
+            goToFavFacts()
         case .instagram:
-            self.goToInsta()
+            goToInsta()
         case .feedback:
-            self.goToFeedback()
+            goToFeedback()
         case .conversations:
-            self.openAllChats()
+            openAllChats()
         case .share:
             AppUsables.shareFact(fact: "")
         case .aboutUs:
-            self.aboutUs()
+            aboutUs()
         case .logout:
-            self.logout()
+            logout()
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch numberOfMoreVcRows(rawValue : indexPath.row)! {
+        case .favourites:
+            guard let me = LoginManager.share.me, !me.isGuestLogin else {
+                return 0.001
+            }
+            return 50.0
+        case .feedback:
+            guard let me = LoginManager.share.me, !me.isGuestLogin else {
+                return 0.001
+            }
+            return 50.0
         case .conversations:
             guard CHAT_ENABLED else { return 0.001 }
+            guard let me = LoginManager.share.me, !me.isGuestLogin else {
+                return 0.001
+            }
             return 50.0
         default:
             return 50.0

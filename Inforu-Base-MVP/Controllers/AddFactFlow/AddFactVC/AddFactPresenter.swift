@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AddFactPresenterDelegate : class {
+protocol AddFactPresenterDelegate : AnyObject {
     func failure(message: String)
     func addSuccess()
 }
@@ -24,6 +24,11 @@ class AddFactPresenter {
     
     
     func addFact() {
+        
+        guard let me = LoginManager.share.me, !me.isGuestLogin else {
+            self.view?.failure(message: "please register on our platform to add facts :)")
+            return
+        }
         
         guard let fact = self.factText, !fact.isEmptyOrWhitespace(), fact != "enter fact here!" else {
             self.view?.failure(message: "please write a fact first")

@@ -20,7 +20,7 @@ enum numberOfMoreVcRows : Int {
     static let count = logout.rawValue + 1
 }
 
-protocol MorePresenterDelegate : class {
+protocol MorePresenterDelegate : AnyObject {
     func failure(message: String)
     func logoutSuccess()
 }

@@ -238,10 +238,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KPT-Pm-ven">
-                                                <rect key="frame" x="250" y="120" width="120" height="31"/>
+                                                <rect key="frame" x="240" y="120" width="130" height="31"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33U-PE-Ji4">
-                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="31"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="31"/>
                                                         <state key="normal" image="chat">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -250,7 +250,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0b-YD-stG">
-                                                        <rect key="frame" x="40" y="0.0" width="30" height="31"/>
+                                                        <rect key="frame" x="50" y="0.0" width="30" height="31"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
                                                         <state key="normal" image="shareWhite"/>
@@ -259,7 +259,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4I-TZ-Coi">
-                                                        <rect key="frame" x="90" y="0.0" width="30" height="31"/>
+                                                        <rect key="frame" x="100" y="0.0" width="30" height="31"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
                                                         <state key="normal" image="heartWhite"/>
@@ -362,10 +362,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9Q-ax-dOv">
-                                <rect key="frame" x="20" y="160.00000000000003" width="350" height="310.66666666666674"/>
+                                <rect key="frame" x="20" y="108.00000000000003" width="350" height="336.66666666666674"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="sdvnksv" translatesAutoresizingMaskIntoConstraints="NO" id="hMA-cb-uVG">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="310.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="336.66666666666669"/>
                                         <color key="backgroundColor" name="AppBackgroundColor"/>
                                         <color key="tintColor" name="AppThemeSecondaryColor"/>
                                         <color key="textColor" name="AppTextColor"/>
@@ -401,7 +401,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NAV-eF-KSy">
-                                <rect key="frame" x="120" y="520.66666666666663" width="150" height="50"/>
+                                <rect key="frame" x="120" y="494.66666666666674" width="150" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dw4-5C-zlr">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
@@ -1158,7 +1158,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addedFactsHeight" destination="MXa-do-06P" id="3hD-FY-Gmq"/>
                         <outlet property="approvedFacts" destination="uUv-j1-Uis" id="jXk-Ny-MCQ"/>
+                        <outlet property="changePasswordView" destination="PsU-WC-nyO" id="dQa-3y-nif"/>
                         <outlet property="discardedFacts" destination="T1e-Wu-cy8" id="ucJ-f8-WdW"/>
                         <outlet property="notificationSwitch" destination="LFL-vf-81P" id="cW8-1m-f2g"/>
                         <outlet property="pendingFacts" destination="GnQ-Zc-fAy" id="aDt-Mc-7Ch"/>
@@ -1647,7 +1649,7 @@
     <resources>
         <image name="add_default" width="30" height="30"/>
         <image name="alarm" width="256" height="256"/>
-        <image name="chat" width="20" height="21"/>
+        <image name="chat" width="30" height="30"/>
         <image name="dislike" width="30" height="30"/>
         <image name="dislikeWhite" width="30" height="30"/>
         <image name="heart" width="30" height="30"/>
