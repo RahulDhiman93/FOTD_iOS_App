@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol TodaysFactPresenterDelegate : class {
+protocol TodaysFactPresenterDelegate : AnyObject {
     func failure(message: String)
     func todaysFactSuccess()
 }

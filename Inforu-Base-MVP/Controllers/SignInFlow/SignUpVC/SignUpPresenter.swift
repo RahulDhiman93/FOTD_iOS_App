@@ -57,7 +57,8 @@ class SignUpPresenter {
             "password": password,
             "device_token": AppConstants.deviceToken,
             "device_type": AppConstants.deviceType,
-            "device_name": AppConstants.deviceName
+            "device_name": AppConstants.deviceName,
+            "is_guest" : 0
         ]
         
         print(param)

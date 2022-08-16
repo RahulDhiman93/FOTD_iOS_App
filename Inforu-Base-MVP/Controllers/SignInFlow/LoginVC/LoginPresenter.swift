@@ -76,7 +76,8 @@ class LoginPresenter {
             "password": "\(distinctId)",
             "device_token": AppConstants.deviceToken,
             "device_type": AppConstants.deviceType,
-            "device_name": AppConstants.deviceName
+            "device_name": AppConstants.deviceName,
+            "is_guest": 1
         ]
         
         print(param)

@@ -9,7 +9,7 @@
 import Foundation
 import AFDateHelper
 
-protocol FactDetailPresenterDelegate : class {
+protocol FactDetailPresenterDelegate : AnyObject {
     func failure(message: String)
     func fetchDetailSuccess()
 }

@@ -38,7 +38,7 @@ class BlogModel: NSObject {
             return nil
         }
         
-        self.addedBy   = addedBy
+        self.addedBy   = addedBy.contains("Guest User") ? "Guest User" : addedBy
         self.addedOn   = addedOn
         self.fact      = fact
         self.factId    = factId
