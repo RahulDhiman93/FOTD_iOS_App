@@ -3,7 +3,7 @@
 //  Inforu
 //
 //  Created by Rahul Dhiman on 19/11/19.
-//  Copyright © 2019 Deepak. All rights reserved.
+//  Copyright © 2022 Rahul. All rights reserved.
 //
 
 import UIKit
