@@ -30,7 +30,7 @@ class AddFactPresenter {
             return
         }
         
-        guard let fact = self.factText, !fact.isEmptyOrWhitespace(), fact != "enter fact here!" else {
+        guard let fact = self.factText, !fact.isEmptyOrWhitespace(), fact != "Enter fact here!" else {
             self.view?.failure(message: "please write a fact first")
             return
         }
