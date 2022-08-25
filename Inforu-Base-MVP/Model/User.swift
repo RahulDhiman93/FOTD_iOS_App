@@ -20,6 +20,8 @@ class User: NSObject, NSCoding {
     var pendingCount : Int = 0
     var rejectedCount : Int = 0
     var totalCount : Int = 0
+    var rewardPoints : Int = 0
+    var popularity : Int = 0
    
     required init?(with param: [String: Any]) {
         print(param)
@@ -65,6 +67,14 @@ class User: NSObject, NSCoding {
             }
         }
     
+        if let rewardPoints = param["reward_points"] as? Int {
+            self.rewardPoints = rewardPoints
+        }
+        
+        if let popularity = param["popularity"] as? Int {
+            self.popularity = popularity
+        }
+        
         self.userId = userId
         self.userName = userName
         self.email = email

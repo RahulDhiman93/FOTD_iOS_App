@@ -40,7 +40,7 @@ extension AddFactViewController : AddFactPresenterDelegate {
     }
     
     func addSuccess() {
-        self.addFactTextView.text = "enter fact here!"
+        self.addFactTextView.text = "Enter fact here!"
         self.presenter.factText = nil
         self.openPopupForSuccess()
     }
@@ -55,14 +55,14 @@ extension AddFactViewController : AddFactPresenterDelegate {
 extension AddFactViewController : UITextViewDelegate {
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if self.addFactTextView.text == "enter fact here!" {
+        if self.addFactTextView.text == "Enter fact here!" {
             self.addFactTextView.text = ""
         }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text!.isEmpty {
-           self.addFactTextView.text = "enter fact here!"
+           self.addFactTextView.text = "Enter fact here!"
         } else {
             self.presenter.factText = textView.text
         }
