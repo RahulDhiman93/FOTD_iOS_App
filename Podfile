@@ -8,8 +8,6 @@ target 'Inforu' do
   # Pods for Inforu
 
     pod 'IQKeyboardManagerSwift'   #Required http://fabfile.org
-    pod 'Fabric'                   #Required
-    pod 'Crashlytics'              #Required
     pod 'Alamofire', '~> 4.9.0'    #Required
     pod 'MBProgressHUD'            #Required
     pod 'AFDateHelper'             #Required
@@ -41,6 +39,22 @@ target 'Inforu' do
   target 'InforuUITests' do
     inherit! :search_paths
     # Pods for testing
+  end
+  
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      if target.respond_to?(:product_type) and target.product_type == "com.apple.product-type.bundle"
+        target.build_configurations.each do |config|
+          config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+        end
+      end
+      if ['Starscream'].include? target.name
+        target.build_configurations.each do |config|
+          config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+        end
+      end
+    end
+    
   end
 
 end

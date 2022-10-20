@@ -1821,6 +1821,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BM93ACT257;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/**",
@@ -1835,13 +1836,13 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/UIGradient\"",
-					"\"${PODS_ROOT}/Crashlytics/iOS\"",
-					"\"${PODS_ROOT}/Fabric/iOS\"",
 					"\"${PODS_ROOT}/GoogleMaps/Base/Frameworks\"",
 					"\"${PODS_ROOT}/GoogleMaps/Maps/Frameworks\"",
 					"\"${PODS_ROOT}/GooglePlaces/Frameworks\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Inforu-Base-MVP/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = FOTD;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 4.8;
@@ -1872,15 +1873,11 @@
 					"-framework",
 					"\"CoreText\"",
 					"-framework",
-					"\"Crashlytics\"",
-					"-framework",
 					"\"FBSDKCoreKit\"",
 					"-framework",
 					"\"FBSDKLoginKit\"",
 					"-framework",
 					"\"FBSDKShareKit\"",
-					"-framework",
-					"\"Fabric\"",
 					"-framework",
 					"\"GLKit\"",
 					"-framework",
@@ -2028,7 +2025,10 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BM93ACT257;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Inforu-Base-MVP/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = FOTD;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 4.8;
@@ -2059,15 +2059,11 @@
 					"-framework",
 					"\"CoreText\"",
 					"-framework",
-					"\"Crashlytics\"",
-					"-framework",
 					"\"FBSDKCoreKit\"",
 					"-framework",
 					"\"FBSDKLoginKit\"",
 					"-framework",
 					"\"FBSDKShareKit\"",
-					"-framework",
-					"\"Fabric\"",
 					"-framework",
 					"\"GLKit\"",
 					"-framework",
@@ -2214,7 +2210,10 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BM93ACT257;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Inforu-Base-MVP/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = FOTD;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 4.8;
@@ -2245,15 +2244,11 @@
 					"-framework",
 					"\"CoreText\"",
 					"-framework",
-					"\"Crashlytics\"",
-					"-framework",
 					"\"FBSDKCoreKit\"",
 					"-framework",
 					"\"FBSDKLoginKit\"",
 					"-framework",
 					"\"FBSDKShareKit\"",
-					"-framework",
-					"\"Fabric\"",
 					"-framework",
 					"\"GLKit\"",
 					"-framework",
@@ -2458,6 +2453,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BM93ACT257;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/**",
@@ -2472,13 +2468,13 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/UIGradient\"",
-					"\"${PODS_ROOT}/Crashlytics/iOS\"",
-					"\"${PODS_ROOT}/Fabric/iOS\"",
 					"\"${PODS_ROOT}/GoogleMaps/Base/Frameworks\"",
 					"\"${PODS_ROOT}/GoogleMaps/Maps/Frameworks\"",
 					"\"${PODS_ROOT}/GooglePlaces/Frameworks\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Inforu-Base-MVP/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = FOTD;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 4.8;
@@ -2509,15 +2505,11 @@
 					"-framework",
 					"\"CoreText\"",
 					"-framework",
-					"\"Crashlytics\"",
-					"-framework",
 					"\"FBSDKCoreKit\"",
 					"-framework",
 					"\"FBSDKLoginKit\"",
 					"-framework",
 					"\"FBSDKShareKit\"",
-					"-framework",
-					"\"Fabric\"",
 					"-framework",
 					"\"GLKit\"",
 					"-framework",
@@ -2576,7 +2568,10 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BM93ACT257;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Inforu-Base-MVP/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = FOTD;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 4.8;
@@ -2607,15 +2602,11 @@
 					"-framework",
 					"\"CoreText\"",
 					"-framework",
-					"\"Crashlytics\"",
-					"-framework",
 					"\"FBSDKCoreKit\"",
 					"-framework",
 					"\"FBSDKLoginKit\"",
 					"-framework",
 					"\"FBSDKShareKit\"",
-					"-framework",
-					"\"Fabric\"",
 					"-framework",
 					"\"GLKit\"",
 					"-framework",
