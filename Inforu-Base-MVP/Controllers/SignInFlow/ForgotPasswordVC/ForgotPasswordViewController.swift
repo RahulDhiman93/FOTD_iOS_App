@@ -11,7 +11,6 @@ import UIKit
 class ForgotPasswordViewController: UIViewController {
     
     @IBOutlet weak var emailAddressTextField: UITextField!
-    @IBOutlet weak var bottomShape: UIView!
     
     var presenter : ForgotPasswordPresenter!
 
@@ -22,6 +21,10 @@ class ForgotPasswordViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     @IBAction func submitButtonTapped(_ sender: UIButton) {
         self.view.endEditing(true)
         self.presenter.sendForgotPasswordEmail()
@@ -29,7 +32,6 @@ class ForgotPasswordViewController: UIViewController {
     
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
-        self.bottomShape.isHidden = true
         self.navigationController?.popViewController(animated: true)
     }
     

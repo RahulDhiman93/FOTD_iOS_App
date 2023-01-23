@@ -30,6 +30,10 @@ class OtpVerificationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true

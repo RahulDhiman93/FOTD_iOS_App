@@ -20,6 +20,10 @@ class ResetPasswordViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }

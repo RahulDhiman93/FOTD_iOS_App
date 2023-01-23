@@ -26,6 +26,10 @@ class SplashViewController: UIViewController {
         ref.child("splashLog").setValue(["Log2" : "Log2"])
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     private func internetConnectivityCheck() {
         if IJReachability.isConnectedToNetwork() == true {
             print("Internet connection OK")

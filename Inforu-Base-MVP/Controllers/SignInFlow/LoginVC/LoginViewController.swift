@@ -28,6 +28,10 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     
     @IBAction func forgotPasswordTapped(_ sender: UIButton) {
         guard let vc = ForgotPasswordRouter.ForgotPasswordVC() else { return }
@@ -51,7 +55,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func registerTapped(_ sender: UIButton) {
         guard let vc = SignUpRouter.SignUpVC() else { return }
-        self.present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
